@@ -1,0 +1,414 @@
+{
+    "question": "How much of the content on the internet is AI generated?",
+    "lastRefreshed": "2026-04-24",
+    "rows": [
+        {
+            "series": "Graphite / Common Crawl new web articles",
+            "year": 2020,
+            "value": "2.48%",
+            "source": "https://docs.google.com/spreadsheets/d/1WamFyVahPDtAPFtvly30BG2QjyA-L1KYkO2UEYGKKcg/edit?gid=0",
+            "notes": "Graphite estimated that 2.48% of newly published English web articles in 2020 were AI-generated. It filtered Common Crawl pages by article markup, English language, and publish date, then classified them with Surfer's AI detector using a greater-than-50% threshold. This is one of the closest direct measures in the table, but it only covers newly published English articles and depends on detector performance.",
+            "publication_date": "2024-05-07"
+        },
+        {
+            "series": "Originality / Quora answers",
+            "year": 2020,
+            "value": "3.06%",
+            "source": "https://originality.ai/blog/ai-quora-answers-study",
+            "notes": "Originality.AI estimated that 3.06% of English-language Quora answers in 2020 were likely AI-generated. It scraped public Quora answers across multiple topics, kept answers of at least 50 words, and ran them through its detector. This is a direct platform-specific answer estimate, but it depends on scraper coverage and detector performance.",
+            "publication_date": "2025-10-23"
+        },
+        {
+            "series": "Originality / Walmart reviews",
+            "year": 2020,
+            "value": "4.55%",
+            "source": "https://originality.ai/blog/ai-walmart-reviews",
+            "notes": "Originality.AI estimated that 4.55% of Walmart product reviews in 2020 were likely AI-generated. It analyzed Walmart mobile-app reviews of at least 50 words and classified them with its detector across a year-by-year series. This is a detector-based estimate inside one retail-review platform, not a broad web-content measure.",
+            "publication_date": "2025-10-19"
+        },
+        {
+            "series": "Graphite / Common Crawl new web articles",
+            "year": 2021,
+            "value": "3.06%",
+            "source": "https://docs.google.com/spreadsheets/d/1WamFyVahPDtAPFtvly30BG2QjyA-L1KYkO2UEYGKKcg/edit?gid=0",
+            "notes": "Graphite estimated that 3.06% of newly published English web articles in 2021 were AI-generated. It filtered Common Crawl pages by article markup, English language, and publish date, then classified them with Surfer's AI detector using a greater-than-50% threshold. This is one of the closest direct measures in the table, but it only covers newly published English articles and depends on detector performance.",
+            "publication_date": "2024-05-07"
+        },
+        {
+            "series": "Originality / Walmart reviews",
+            "year": 2021,
+            "value": "5.19%",
+            "source": "https://originality.ai/blog/ai-walmart-reviews",
+            "notes": "Originality.AI estimated that 5.19% of Walmart product reviews in 2021 were likely AI-generated. It analyzed Walmart mobile-app reviews of at least 50 words and classified them with its detector across a year-by-year series. This is a detector-based estimate inside one retail-review platform, not a broad web-content measure.",
+            "publication_date": "2025-10-19"
+        },
+        {
+            "series": "ACL social media platforms",
+            "year": 2022,
+            "value": "1.77%",
+            "source": "https://arxiv.org/abs/2412.18148",
+            "notes": "The study-year median across Medium, Quora, and Reddit put AI-generated social-media posts at 1.77% in 2022. The paper trained and selected an AIGT detector, then applied it to a 2.4 million post corpus spanning January 2022 to October 2024. This gives one value for a major social-content dataset, but it remains platform-bound and detector-dependent.",
+            "publication_date": "2024-12-24"
+        },
+        {
+            "series": "Graphite / Common Crawl new web articles",
+            "year": 2022,
+            "value": "6.81%",
+            "source": "https://docs.google.com/spreadsheets/d/1WamFyVahPDtAPFtvly30BG2QjyA-L1KYkO2UEYGKKcg/edit?gid=0",
+            "notes": "Graphite estimated that 6.81% of newly published English web articles in 2022 were AI-generated. It filtered Common Crawl pages by article markup, English language, and publish date, then classified them with Surfer's AI detector using a greater-than-50% threshold. This is one of the closest direct measures in the table, but it only covers newly published English articles and depends on detector performance.",
+            "publication_date": "2024-05-07"
+        },
+        {
+            "series": "JAMA Network Open medical literature",
+            "year": 2022,
+            "value": "0.0%",
+            "source": "https://arxiv.org/abs/2603.19316",
+            "notes": "The January 2022 baseline put significant AI-generated text at 0.0% of JAMA Network Open articles. The study uses Originality.AI on a monthly series covering original investigations, research letters, and invited commentaries from January 2022 through March 2025. This is a narrow but still direct content-share estimate for one medical publishing venue.",
+            "publication_date": "2026-03-15"
+        },
+        {
+            "series": "Originality / Quora answers",
+            "year": 2022,
+            "value": "6.93%",
+            "source": "https://originality.ai/blog/ai-quora-answers-study",
+            "notes": "Originality.AI estimated that 6.93% of English-language Quora answers in 2022 were likely AI-generated. It scraped public Quora answers across multiple topics, kept answers of at least 50 words, and ran them through its detector. This is a direct platform-specific answer estimate, but it depends on scraper coverage and detector performance.",
+            "publication_date": "2025-10-23"
+        },
+        {
+            "series": "Originality / Walmart reviews",
+            "year": 2022,
+            "value": "5.40%",
+            "source": "https://originality.ai/blog/ai-walmart-reviews",
+            "notes": "Originality.AI estimated that 5.40% of Walmart product reviews in 2022 were likely AI-generated. It analyzed Walmart mobile-app reviews of at least 50 words and classified them with its detector across a year-by-year series. This is a detector-based estimate inside one retail-review platform, not a broad web-content measure.",
+            "publication_date": "2025-10-19"
+        },
+        {
+            "series": "OTSR orthopedics journal articles",
+            "year": 2022,
+            "value": "10.30%",
+            "source": "https://pubmed.ncbi.nlm.nih.gov/37776949/",
+            "notes": "The mean AI-generation score was 10.30% for OTSR orthopedics articles published before November 2022. The study ran ZeroGPT on the body plus abstract of 425 articles published from February 2022 to September 2023. This is a direct estimate within a defined journal corpus, though detector choice and single-journal scope are clear limitations.",
+            "publication_date": "2023-09-29"
+        },
+        {
+            "series": "Graphite / Common Crawl new web articles",
+            "year": 2023,
+            "value": "31.61%",
+            "source": "https://docs.google.com/spreadsheets/d/1WamFyVahPDtAPFtvly30BG2QjyA-L1KYkO2UEYGKKcg/edit?gid=0",
+            "notes": "Graphite estimated that 31.61% of newly published English web articles in 2023 were AI-generated. It filtered Common Crawl pages by article markup, English language, and publish date, then classified them with Surfer's AI detector using a greater-than-50% threshold. This is one of the closest direct measures in the table, but it only covers newly published English articles and depends on detector performance.",
+            "publication_date": "2024-05-07"
+        },
+        {
+            "series": "Originality / Google reviews",
+            "year": 2023,
+            "value": "12.21%",
+            "source": "https://originality.ai/blog/ai-google-reviews-study",
+            "notes": "Originality.AI estimated that 12.21% of Google reviews in 2023 were likely AI-generated. It analyzed Google reviews with its detector and reported a year-by-year series from 2019 to 2024. This is a broad review-platform estimate, but it is detector-based and limited to review text rather than general web content.",
+            "publication_date": "2025-10-11"
+        },
+        {
+            "series": "Originality / Quora answers",
+            "year": 2023,
+            "value": "11.86%",
+            "source": "https://originality.ai/blog/ai-quora-answers-study",
+            "notes": "Originality.AI estimated that 11.86% of English-language Quora answers in 2023 were likely AI-generated. It scraped public Quora answers across multiple topics, kept answers of at least 50 words, and ran them through its detector. This is a direct platform-specific answer estimate, but it depends on scraper coverage and detector performance.",
+            "publication_date": "2025-10-23"
+        },
+        {
+            "series": "OTSR orthopedics journal articles",
+            "year": 2023,
+            "value": "15.64%",
+            "source": "https://pubmed.ncbi.nlm.nih.gov/37776949/",
+            "notes": "The mean AI-generation score was 15.64% for OTSR orthopedics articles published after November 2022. The study ran ZeroGPT on the body plus abstract of 425 articles published from February 2022 to September 2023. This is a direct estimate within a defined journal corpus, though detector choice and single-journal scope are clear limitations.",
+            "publication_date": "2023-09-29"
+        },
+        {
+            "series": "Stanford / LLM-assisted writing across society",
+            "year": 2023,
+            "value": "12.7%",
+            "source": "https://arxiv.org/abs/2502.09747",
+            "notes": "The study-year median across the paper's real-world text domains put LLM-assisted writing at 12.7% in 2023. The paper uses a population-level statistical framework rather than a black-box detector and reports content-share estimates across several domains such as complaints, press releases, and job postings. This gives one balanced study-year value, but it still mixes narrower content sets rather than the internet as a whole.",
+            "publication_date": "2025-02-13"
+        },
+        {
+            "series": "Turnitin / student papers with >=80% AI writing",
+            "year": 2023,
+            "value": "3.3%",
+            "source": "https://www.turnitin.com/press/turnitin-ai-detection-feature-reviews-more-than-65-million-papers",
+            "notes": "Turnitin reported that 3.3% of submitted student papers in 2023 showed 80% or more text consistent with AI writing. The figure came from more than 65 million papers reviewed after the April 2023 launch of its AI detection feature. This is a direct large-scale prevalence estimate for heavily AI-written student work, but it is thresholded, detector-based, and narrower than broader measures of partial AI assistance.",
+            "publication_date": "2023-07-25"
+        },
+        {
+            "series": "Twitter profile images",
+            "year": 2023,
+            "value": "0.052%",
+            "source": "https://arxiv.org/abs/2404.14244",
+            "notes": "The study estimated that 0.052% of Twitter profile images in its 2023 corpus were AI-generated. The authors built a multi-stage detection pipeline and applied it to 14,989,385 profile images collected from March 7 to March 15, 2023. This is a direct estimate within a clearly defined image corpus, but it is narrowly focused on profile pictures rather than the broader web.",
+            "publication_date": "2024-04-22"
+        },
+        {
+            "series": "ACL social media platforms",
+            "year": 2024,
+            "value": "37.03%",
+            "source": "https://arxiv.org/abs/2412.18148",
+            "notes": "The study-year median across Medium, Quora, and Reddit put AI-generated social-media posts at 37.03% in 2024. The paper trained and selected an AIGT detector, then applied it to a 2.4 million post corpus spanning January 2022 to October 2024. This gives one value for a major social-content dataset, but it remains platform-bound and detector-dependent.",
+            "publication_date": "2024-12-24"
+        },
+        {
+            "series": "arXiv computer science abstracts",
+            "year": 2024,
+            "value": "17.5%",
+            "source": "https://arxiv.org/abs/2404.01268",
+            "notes": "The paper reported that 17.5% of arXiv computer science abstracts by February 2024 were LLM-modified. It used a population-level statistical framework across 950,965 papers from arXiv, bioRxiv, and Nature journals published between January 2020 and February 2024. This is a strong direct estimate within a clearly defined scholarly corpus, though it reflects one venue and field rather than the whole internet.",
+            "publication_date": "2024-04-01"
+        },
+        {
+            "series": "Biomedical abstracts / excess vocabulary",
+            "year": 2024,
+            "value": "13.5%",
+            "source": "https://arxiv.org/abs/2406.07016",
+            "notes": "The paper's lower-bound estimate put LLM-assisted writing at 13.5% of PubMed biomedical abstracts in 2024. It tracked excess use of LLM-associated style words across more than 15 million abstracts from 2010 to 2024 and attributed the post-ChatGPT jump to AI assistance. This is still more indirect than page-level AI-share estimates and focuses on scholarly abstracts rather than the wider web.",
+            "publication_date": "2024-06-11"
+        },
+        {
+            "series": "Chinese master?s theses",
+            "year": 2024,
+            "value": "5%",
+            "source": "https://gjs.nuist.edu.cn/2025/0912/c2490a289978/pagem.htm",
+            "notes": "A Chinese institutional summary reported that AI-generated content reached 5% of master's theses in 2024. The summary described a study of 230,000 theses from 2022 to 2024 using the AIGC-CHECK system and large-model semantic recognition. The original journal article was not readily accessible online, so this row relies on a reputable secondary source rather than a directly retrieved paper.",
+            "publication_date": "2025-09-06"
+        },
+        {
+            "series": "Copyleaks / web pages",
+            "year": 2024,
+            "value": "1.57%",
+            "source": "https://copyleaks.com/about-us/media/copyleaks-study-finds-explosive-growth-of-ai-content-on-the-web",
+            "notes": "Copyleaks estimated that 1.57% of sampled Common Crawl web pages in 2024 were AI-generated. It said its study analyzed one million pages from the Common Crawl dataset with the company's own detector. This is a genuine web-wide prevalence estimate with a clear sample frame, but it is still detector-based and company-published.",
+            "publication_date": "2024-04-30"
+        },
+        {
+            "series": "Graphite / Common Crawl new web articles",
+            "year": 2024,
+            "value": "45.92%",
+            "source": "https://docs.google.com/spreadsheets/d/1WamFyVahPDtAPFtvly30BG2QjyA-L1KYkO2UEYGKKcg/edit?gid=0",
+            "notes": "Graphite estimated that 45.92% of newly published English web articles in 2024 were AI-generated. It filtered Common Crawl pages by article markup, English language, and publish date, then classified them with Surfer's AI detector using a greater-than-50% threshold. This is one of the closest direct measures in the table, but it only covers newly published English articles and depends on detector performance.",
+            "publication_date": "2024-05-07"
+        },
+        {
+            "series": "ICLR peer reviews",
+            "year": 2024,
+            "value": "15.8%",
+            "source": "https://arxiv.org/abs/2405.02150",
+            "notes": "The paper estimated that at least 15.8% of ICLR 2024 peer reviews were AI-assisted. It used GPTZero as a lower-bound detector in a quasi-experimental study of the ICLR review set. This is a direct estimate within a defined scholarly content set, but it is framed as a lower bound and depends on detector performance.",
+            "publication_date": "2024-05-03"
+        },
+        {
+            "series": "Originality / Facebook long-form posts",
+            "year": 2024,
+            "value": "41.18%",
+            "source": "https://www.stanventures.com/news/facebook-flooded-with-ai-over-40-of-posts-are-machine-generated-1847/",
+            "notes": "A secondary writeup reported that 41.18% of long-form Facebook posts as of November 2024 were likely AI-generated. It summarized an Originality.AI study of 8,885 Facebook posts published from November 2018 to November 2024 and classified as long-form by detector-based rules. This is a useful platform-specific text estimate, but it comes through a secondary article because the original study URL now redirects.",
+            "publication_date": "2025-01-30"
+        },
+        {
+            "series": "Originality / LinkedIn long-form posts",
+            "year": 2024,
+            "value": "54%",
+            "source": "https://originality.ai/blog/ai-content-published-linkedin",
+            "notes": "Originality.AI estimated that 54% of long-form LinkedIn posts in October 2024 were likely AI-generated. It analyzed 8,795 LinkedIn posts of 100 words or more, spanning January 2018 to October 2024, with its own detector. This is a platform-specific detector-based estimate for long posts, not all LinkedIn content.",
+            "publication_date": "2025-10-28"
+        },
+        {
+            "series": "Originality / Quora answers",
+            "year": 2024,
+            "value": "10.94%",
+            "source": "https://originality.ai/blog/ai-quora-answers-study",
+            "notes": "Originality.AI estimated that 10.94% of English-language Quora answers in 2024 were likely AI-generated. It scraped public Quora answers across multiple topics, kept answers of at least 50 words, and ran them through its detector. This is a direct platform-specific answer estimate, but it depends on scraper coverage and detector performance.",
+            "publication_date": "2025-10-23"
+        },
+        {
+            "series": "Pixiv artworks",
+            "year": 2024,
+            "value": "16.2%",
+            "source": "https://arxiv.org/abs/2402.18463",
+            "notes": "The study estimated that 16.2% of Pixiv artworks in its pooled 2022 to 2024 corpus were AI-generated. It examined 15,203,948 artworks created between January 1, 2022 and January 5, 2024, of which 2,475,485 were tagged as AI-generated. This is a direct estimate within a very large online art platform, but the value is a pooled multi-year platform estimate rather than a single-calendar-year snapshot.",
+            "publication_date": "2024-02-28"
+        },
+        {
+            "series": "Princeton / English Wikipedia new pages",
+            "year": 2024,
+            "value": "5%",
+            "source": "https://arxiv.org/abs/2410.08044",
+            "notes": "The study estimated that up to 5% of new English Wikipedia pages in August 2024 contained significant AI-generated content. It used GPTZero and Binoculars, calibrated to a 1% false positive rate on pre-GPT-3.5 articles, on a set of 2,909 new pages. This is a direct estimate within one important public knowledge platform, but it is platform-specific and focused on newly created pages.",
+            "publication_date": "2024-10-10"
+        },
+        {
+            "series": "Stanford / LLM-assisted writing across society",
+            "year": 2024,
+            "value": "17.7%",
+            "source": "https://arxiv.org/abs/2502.09747",
+            "notes": "The study-year median across the paper's real-world text domains put LLM-assisted writing at 17.7% in 2024. The paper uses a population-level statistical framework rather than a black-box detector and reports content-share estimates across several domains such as complaints, press releases, and job postings. This gives one balanced study-year value, but it still mixes narrower content sets rather than the internet as a whole.",
+            "publication_date": "2025-02-13"
+        },
+        {
+            "series": "Turnitin / student papers with >=20% AI writing",
+            "year": 2024,
+            "value": "11%",
+            "source": "https://www.turnitin.com/blog/turnitin-celebrates-one-year-for-ai-writing-detection",
+            "notes": "Turnitin reported that 11% of submitted student papers reviewed by April 2024 contained at least 20% AI-written text. The figure came from more than 22 million submissions within roughly 200 million papers reviewed since launch of its AI writing detector. This is a direct large-scale prevalence estimate within student writing submitted through Turnitin, but it uses a proprietary detector and a thresholded definition rather than page-level human review.",
+            "publication_date": "2024-04-09"
+        },
+        {
+            "series": "X election images",
+            "year": 2024,
+            "value": "12%",
+            "source": "https://arxiv.org/abs/2502.11248",
+            "notes": "The study estimated that 12% of shared images in a large 2024 US presidential election dataset from X were AI-generated. It analyzed a clearly defined election-related image corpus from one major social platform. This is a direct estimate within that image set, but it is visual, political, and platform-specific rather than internet-wide.",
+            "publication_date": "2025-02-16"
+        },
+        {
+            "series": "Academic peer reviews",
+            "year": 2025,
+            "value": "16%",
+            "source": "https://arxiv.org/abs/2602.00319",
+            "notes": "The midpoint across ICLR and Nature Communications put AI-generated peer reviews at 16% in 2025. The longitudinal peer-review study reported roughly 20% for ICLR and 12% for Nature Communications, and this row uses the midpoint to keep one study-year value. This is a direct estimate within peer-review text, but it still reflects a narrow scholarly corpus rather than the wider internet.",
+            "publication_date": "2026-01-30"
+        },
+        {
+            "series": "Ahrefs / new webpages with AI content",
+            "year": 2025,
+            "value": "74.2%",
+            "source": "https://ahrefs.com/blog/what-percentage-of-new-content-is-ai-generated/",
+            "notes": "Ahrefs estimated that 74.2% of 900,000 newly detected English-language web pages in April 2025 contained some AI content. It used the company's own detector on a large sample of newly detected pages. This is relevant to the core question, but it measures pages containing some AI text rather than pages that are mostly AI-generated.",
+            "publication_date": "2025-05-19"
+        },
+        {
+            "series": "AI Forensics / TikTok + Instagram top search results",
+            "year": 2025,
+            "value": "17.3%",
+            "source": "https://aiforensics.org/uploads/GenAI%20Report.pdf",
+            "notes": "AI Forensics estimated that 17.3% of top search results across TikTok and Instagram in June 2025 contained synthetic AI imagery. It manually annotated 2,100 search results collected in Spain, Germany, and Poland and then built a weighted aggregate from the report's country-level counts. This is a useful direct social-platform estimate, but it is query-based, image-focused, and tied to search results rather than all feed content.",
+            "publication_date": "2025-07-31"
+        },
+        {
+            "series": "Deezer / new music uploads",
+            "year": 2025,
+            "value": "34%",
+            "source": "https://newsroom-deezer.com/2025/11/deezer-ipsos-survey-97-of-people-cant-tell-the-difference-between-fully-ai-generated-and-human-made-music-clear-desire-for-transparency-and-fairness-for-artists/",
+            "notes": "Deezer reported that 34% of all daily music deliveries to its platform in late 2025 were fully AI-generated tracks. It said its in-house AI-music detection system was identifying roughly 50,000 fully AI-generated uploads per day by the November 2025 update. This is a direct platform-level prevalence estimate, but it is narrowly about one music-streaming service and fully synthetic tracks rather than AI-assisted content more broadly.",
+            "publication_date": "2025-11-12"
+        },
+        {
+            "series": "Graphite / Common Crawl new web articles",
+            "year": 2025,
+            "value": "51.38%",
+            "source": "https://docs.google.com/spreadsheets/d/1WamFyVahPDtAPFtvly30BG2QjyA-L1KYkO2UEYGKKcg/edit?gid=0",
+            "notes": "Graphite estimated that 51.38% of newly published English web articles through May 2025 were AI-generated. It filtered Common Crawl pages by article markup, English language, and publish date, then classified them with Surfer's AI detector using a greater-than-50% threshold. This is one of the closest direct measures in the table, but it only covers newly published English articles and depends on detector performance.",
+            "publication_date": "2024-05-07"
+        },
+        {
+            "series": "Internet Archive / newly published websites",
+            "year": 2025,
+            "value": "35%",
+            "source": "https://ai-on-the-internet.github.io/",
+            "notes": "The study estimated that 35% of newly published websites by mid-2025 were AI-generated or AI-assisted. It used a representative Wayback Machine sample of websites published between 2022 and 2025 and selected Pangram v3 after robustness checks across detectors, text length, HTML versus plain text, model family, version, and language. This is one of the stronger web-wide estimates in the table, though it still relies on detector choice and focuses on newly published websites rather than the entire live web.",
+            "publication_date": "2026-04-15"
+        },
+        {
+            "series": "JAMA Network Open medical literature",
+            "year": 2025,
+            "value": "11.3%",
+            "source": "https://arxiv.org/abs/2603.19316",
+            "notes": "The March 2025 overall level put significant AI-generated text at 11.3% of JAMA Network Open articles. The study uses Originality.AI on a monthly series covering original investigations, research letters, and invited commentaries from January 2022 through March 2025. This is a narrow but still direct content-share estimate for one medical publishing venue.",
+            "publication_date": "2026-03-15"
+        },
+        {
+            "series": "Originality / LinkedIn long-form posts",
+            "year": 2025,
+            "value": "53.7%",
+            "source": "https://originality.ai/blog/linkedin-ai-study-engagement",
+            "notes": "Originality.AI estimated that 53.7% of long-form LinkedIn posts in its 2025 sample were likely AI-generated. It analyzed 3,368 posts from 99 influential profiles published from January to November 2025 and classified them with its detector. This is a detector-based estimate for a curated set of influential voices, not for all LinkedIn posts.",
+            "publication_date": "2026-01-22"
+        },
+        {
+            "series": "Originality / Reddit posts",
+            "year": 2025,
+            "value": "14.7%",
+            "source": "https://originality.ai/blog/ai-reddit-posts-study",
+            "notes": "Originality.AI estimated that 14.7% of Reddit posts in its 2025 sample were likely AI-generated. It collected posts using 50 unrelated search nouns, kept posts with at least 50 words, and ended with 497 posts after filtering. This is a direct forum-level estimate, but the sample is modest and detector-based.",
+            "publication_date": "2025-12-11"
+        },
+        {
+            "series": "Pangram / American newspapers",
+            "year": 2025,
+            "value": "9%",
+            "source": "https://arxiv.org/abs/2510.18774",
+            "notes": "Pangram estimated that 9% of newly published articles from roughly 1,500 American newspapers in summer 2025 were partially or fully AI-generated. It audited 186,000 articles and this row keeps the overall article estimate rather than the narrower opinion-piece split. This is a useful newspaper-sector estimate, but it still covers one media slice rather than the wider web.",
+            "publication_date": "2025-10-21"
+        },
+        {
+            "series": "SIMODS / Facebook AI-generated mis/disinformation",
+            "year": 2025,
+            "value": "7%",
+            "source": "https://science.feedback.org/second-measurement-mis-disinformation-major-platforms-europe/",
+            "notes": "Science Feedback estimated that 7% of Facebook mis/disinformation posts in its October 2025 SIMODS sample contained AI-generated images or video. It used exposure-weighted samples of public-interest mis/disinformation posts collected across four EU countries in the second SIMODS measurement. This is a narrow but useful prevalence estimate for misleading content, not for Facebook posts overall.",
+            "publication_date": "2026-03-19"
+        },
+        {
+            "series": "SIMODS / Instagram AI-generated mis/disinformation",
+            "year": 2025,
+            "value": "2.6%",
+            "source": "https://science.feedback.org/second-measurement-mis-disinformation-major-platforms-europe/",
+            "notes": "Science Feedback estimated that 2.6% of Instagram mis/disinformation posts in its October 2025 SIMODS sample contained AI-generated images or video. It used exposure-weighted samples of public-interest mis/disinformation posts collected across four EU countries in the second SIMODS measurement. This is a narrow platform-specific estimate for misleading content rather than Instagram content overall.",
+            "publication_date": "2026-03-19"
+        },
+        {
+            "series": "SIMODS / X/Twitter AI-generated mis/disinformation",
+            "year": 2025,
+            "value": "4.4%",
+            "source": "https://science.feedback.org/second-measurement-mis-disinformation-major-platforms-europe/",
+            "notes": "Science Feedback estimated that 4.4% of X/Twitter mis/disinformation posts in its October 2025 SIMODS sample contained AI-generated images or video. It used exposure-weighted samples of public-interest mis/disinformation posts collected across four EU countries in the second SIMODS measurement. This is a narrow X-specific estimate for misleading content, not for the full platform.",
+            "publication_date": "2026-03-19"
+        },
+        {
+            "series": "Spennemann / active web pages",
+            "year": 2025,
+            "value": "35%",
+            "source": "https://arxiv.org/abs/2504.08755",
+            "notes": "The paper's midpoint estimate put AI-generated text at 35% of active web pages in 2025. It inferred AI presence from the frequency of keywords associated with ChatGPT-style writing rather than direct page-by-page labeling. This is unusually close to the core question, but it relies on a heuristic marker method rather than direct classification.",
+            "publication_date": "2025-03-29"
+        },
+        {
+            "series": "AntiSlop / category-balanced web pages",
+            "year": 2026,
+            "value": "23%",
+            "source": "https://antislop.online/research/state-of-slop-2026",
+            "notes": "AntiSlop estimated that 23% of its category-balanced sample of web pages in March 2026 were AI-heavy. It sampled 2,000 pages, with 200 pages in each of 10 content categories, and classified them with AntiSlop's own detector using a greater-than-60% AI threshold. This is a rare early-2026 web estimate, but it is category-balanced rather than representative of the whole open web and depends on detector-based labeling.",
+            "publication_date": "2026-03-21"
+        },
+        {
+            "series": "Deezer / new music uploads",
+            "year": 2026,
+            "value": "44%",
+            "source": "https://newsroom-deezer.com/2026/04/ai-generated-tracks-represent-44-of-new-uploaded-music/",
+            "notes": "Deezer reported that 44% of all daily music uploads to its platform in April 2026 were fully AI-generated tracks. It said its in-house AI-music detection system was identifying nearly 75,000 fully AI-generated uploads per day by the April 2026 update. This is a direct platform-level prevalence estimate, but it is narrowly about one music-streaming service and fully synthetic tracks rather than the web at large.",
+            "publication_date": "2026-04-21"
+        },
+        {
+            "series": "Originality / Pinterest hiking guides",
+            "year": 2026,
+            "value": "8%",
+            "source": "https://originality.ai/blog/likely-ai-us-hiking-guides-pinterest",
+            "notes": "Originality.AI estimated that 8% of Pinterest-surfaced hiking guides published so far in 2026 were likely AI-generated. It analyzed 1,000 hiking-guide URLs surfaced by Pinterest searches across 40 US national park and trail keywords and then broke the results out by publication year. This is a query-based Pinterest travel subset, not a platform-wide prevalence estimate, and the 2026 figure is early-year only.",
+            "publication_date": "2026-04-23"
+        },
+        {
+            "series": "Originality / Pinterest medical diet recipes",
+            "year": 2026,
+            "value": "32.4%",
+            "source": "https://originality.ai/blog/likely-ai-medical-diet-recipes-on-pinterest",
+            "notes": "Originality.AI estimated that 32.4% of Pinterest medical-diet recipe URLs in its April 2026 sample were likely AI-generated. It collected 1,109 recipe URLs across five medically sensitive diet-search lanes and scored them with its detector. This is a narrow but important platform estimate for health-related recipe content, not for Pinterest overall.",
+            "publication_date": "2026-04-19"
+        }
+    ]
+}

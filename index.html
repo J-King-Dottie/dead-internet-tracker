@@ -1,0 +1,3324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dead Internet Tracker</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpolyline points='6,38 18,38 24,22 30,46 36,16 43,38 58,38' fill='none' stroke='%23000000' stroke-width='6.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08111f;
+      --bg-soft: #0d1830;
+      --panel: rgba(10, 20, 39, 0.88);
+      --panel-strong: rgba(9, 17, 32, 0.96);
+      --border: rgba(132, 164, 216, 0.14);
+      --copy-primary: #f7fbff;
+      --copy-secondary: rgba(255, 255, 255, 0.62);
+      --copy-tertiary: rgba(255, 255, 255, 0.32);
+      --chart-gridline: rgba(255, 255, 255, 0.14);
+      --text: var(--copy-primary);
+      --muted: var(--copy-secondary);
+      --muted-2: var(--copy-tertiary);
+      --accent-cyan: #58e6ff;
+      --accent-green: #7af59d;
+      --accent-gold: #ffd36a;
+      --accent-pink: #ff79c6;
+      --accent-orange: #ff9a62;
+      --accent-violet: #9d8cff;
+      --accent-red: #ff6f7c;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+      --radius-xl: clamp(20px, 2vw, 26px);
+      --radius-lg: clamp(14px, 1.4vw, 18px);
+      --radius-sm: clamp(10px, 1vw, 12px);
+      --max-width: clamp(1480px, 92vw, 1840px);
+      --page-gutter: clamp(20px, 2.6vw, 40px);
+      --page-top-gutter: 0px;
+      --content-inset: clamp(16px, 1.5vw, 24px);
+      --hero-top-inset: 0px;
+      --hero-title-offset: clamp(72px, 6.4vw, 98px);
+      --hero-block-gap: clamp(28px, 5vw, 64px);
+      --section-gap: clamp(56px, 8vw, 128px);
+      --glass-fill: rgba(12, 24, 42, 0.58);
+      --glass-border: rgba(190, 214, 255, 0.07);
+      --glass-blur: 0px;
+      --glass-saturation: 100%;
+      --glass-ring-opacity: 0.28;
+      --glass-shadow-outer: 0 10px 28px rgba(0, 0, 0, 0.06);
+      --glass-shadow-tight: 0 2px 6px rgba(0, 0, 0, 0.025);
+      --card-min-height: clamp(320px, 32vw, 390px);
+      --chart-min-height: clamp(288px, 27.6vw, 343px);
+      --chart-aspect: 2.35;
+      --card-min-width: min(100%, 30rem);
+      --control-size: clamp(26px, 2vw, 30px);
+      --micro-gap: clamp(4px, 0.55vw, 8px);
+      --small-gap: clamp(8px, 0.9vw, 12px);
+      --medium-gap: clamp(10px, 1.1vw, 14px);
+      --tooltip-width: min(28rem, calc(100vw - (var(--page-gutter) * 2)));
+      --tooltip-pad-y: clamp(12px, 1vw, 14px);
+      --tooltip-pad-x: clamp(13px, 1.1vw, 15px);
+      --tooltip-radius: clamp(14px, 1.5vw, 16px);
+      --grid-size: clamp(28px, 2.2vw, 34px);
+      --scrollbar-width: 12px;
+      --chart-stroke: clamp(2.1px, 0.23vw, 3px);
+      --chart-dot: clamp(7px, 0.68vw, 10px);
+      --takeaway-size: clamp(0.98rem, 1.34vw, 1.26rem);
+      --descriptor-size: clamp(0.74rem, 0.82vw, 0.88rem);
+      --axis-font-size: clamp(0.82rem, 0.92vw, 0.96rem);
+      --chart-label-gap: clamp(8px, 0.95vw, 12px);
+      --chart-grid-left: clamp(52px, 4.4vw, 68px);
+      --chart-grid-right: clamp(13px, 1.1vw, 17px);
+      --chart-grid-top: clamp(16px, 1.8vw, 22px);
+      --chart-grid-bottom: clamp(14px, 1.5vw, 18px);
+      --chart-wrap-shift-left: 0px;
+      --chart-tooltip-font: clamp(0.8rem, 0.9vw, 0.9rem);
+      --chart-tooltip-pad-y: clamp(10px, 1vw, 12px);
+      --chart-tooltip-pad-x: clamp(12px, 1.1vw, 14px);
+      --chart-tooltip-radius: clamp(14px, 1.35vw, 16px);
+      --chart-tooltip-swatch: clamp(8px, 0.65vw, 10px);
+      --chart-tooltip-row-gap: clamp(5px, 0.7vw, 7px);
+      --tooltip-copy-size: clamp(0.9rem, 0.92vw, 0.94rem);
+      --tooltip-meta-size: clamp(0.8rem, 0.84vw, 0.84rem);
+      --tooltip-viewport-margin: clamp(14px, 1.5vw, 20px);
+      --touch-target: clamp(44px, 10vw, 52px);
+      --sheet-max-height: min(70vh, 34rem);
+      --sheet-shadow: 0 20px 70px rgba(0, 0, 0, 0.42);
+      --font-sans: "Space Grotesk", "Segoe UI", sans-serif;
+      --font-mono: "IBM Plex Mono", monospace;
+      --accent-highlight: #00e5b0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      background-color: #08111f;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-y: scroll;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: var(--font-mono);
+      color: var(--text);
+      background-color: #08111f;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+      background-size: var(--grid-size) var(--grid-size);
+      letter-spacing: -0.01em;
+    }
+
+    body.tooltip-open {
+      overflow: hidden;
+    }
+
+    html::-webkit-scrollbar {
+      width: var(--scrollbar-width);
+      background: #08111f !important;
+    }
+
+    html::-webkit-scrollbar-track,
+    html::-webkit-scrollbar-track-piece,
+    html::-webkit-scrollbar-corner {
+      background: #08111f !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    html::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, rgba(88, 230, 255, 0.55), rgba(157, 140, 255, 0.5));
+      border-radius: 999px;
+      border: 2px solid #08111f;
+      background-clip: padding-box;
+    }
+
+    html::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, rgba(88, 230, 255, 0.72), rgba(157, 140, 255, 0.68));
+    }
+
+    html::-webkit-scrollbar-button {
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
+      -webkit-appearance: none !important;
+      appearance: none !important;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      color: transparent !important;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(calc(100% - (var(--page-gutter) * 2)), var(--max-width));
+      margin: 0 auto;
+      padding: var(--page-top-gutter) 0 var(--page-gutter);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero {
+      padding: var(--hero-top-inset) var(--content-inset) var(--content-inset);
+      position: relative;
+      display: grid;
+      gap: clamp(18px, 2.2vw, 26px);
+    }
+
+    .hero-top {
+      display: grid;
+      gap: clamp(6px, 0.8vw, 10px);
+    }
+
+    .hero::after {
+      content: none;
+    }
+
+    .hero-kicker {
+      display: inline-block;
+      width: fit-content;
+      margin: 0;
+      font-size: clamp(0.74rem, 0.76vw, 0.84rem);
+      line-height: 1.32;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--copy-tertiary);
+      opacity: 1;
+    }
+
+    .hero-kicker-attribution {
+      display: block;
+      margin-top: clamp(2px, 0.3vw, 4px);
+      font-size: 0.72em;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      color: var(--copy-tertiary);
+      opacity: 1;
+      text-align: right;
+    }
+
+    .title-line {
+      margin-bottom: clamp(2px, 0.35vw, 4px);
+    }
+
+    .hero-title-logo {
+      display: block;
+      width: min(100%, 48rem);
+      height: auto;
+      overflow: visible;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .hero-quote {
+      display: grid;
+      gap: 0;
+      margin-top: 0;
+      padding-left: var(--hero-title-offset);
+      margin-bottom: clamp(2px, 0.35vw, 6px);
+    }
+
+    .hero-columns {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: start;
+      gap: var(--page-gutter);
+    }
+
+    .hero-columns::before {
+      content: "";
+      position: absolute;
+      top: clamp(8px, 1vw, 14px);
+      bottom: clamp(8px, 1vw, 14px);
+      left: calc(50% - 0.5px);
+      width: 1px;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 229, 176, 0),
+        rgba(0, 229, 176, 0.18) 18%,
+        rgba(0, 229, 176, 0.8) 50%,
+        rgba(0, 229, 176, 0.18) 82%,
+        rgba(0, 229, 176, 0)
+      );
+      pointer-events: none;
+    }
+
+    .hero-main {
+      display: grid;
+      gap: clamp(34px, 3.5vw, 42px);
+      min-width: 0;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: clamp(10px, 1vw, 14px);
+      min-width: 0;
+      margin-left: 10%;
+      align-content: start;
+    }
+
+    .hero-intro {
+      display: grid;
+      gap: clamp(16px, 1.35vw, 22px);
+      margin-bottom: 0;
+    }
+
+    .hero-intro .hero-copy {
+      margin: 0;
+      font-family: var(--font-sans);
+      font-size: clamp(1.24rem, 1.95vw, 1.94rem);
+      line-height: 1.14;
+      color: var(--copy-primary);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      max-width: none;
+    }
+
+    .hero-intro .hero-copy-accent {
+      font-family: var(--font-sans);
+      font-size: clamp(1.24rem, 1.95vw, 1.94rem);
+      line-height: 1.14;
+      color: var(--copy-primary);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      opacity: 1;
+      font-style: normal;
+      margin: 0;
+    }
+
+    .hero-intro .hero-copy-final {
+      margin: 0;
+      font-family: var(--font-sans);
+      font-size: clamp(1.24rem, 1.95vw, 1.94rem);
+      line-height: 1.14;
+      color: var(--copy-primary);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      opacity: 1;
+    }
+
+    .hero-meta {
+      display: grid;
+      gap: clamp(6px, 0.55vw, 8px);
+      padding-left: 0;
+      border-left: none;
+      max-width: none;
+    }
+
+    .hero-research {
+      display: grid;
+      gap: clamp(12px, 1.1vw, 16px);
+      min-width: 0;
+      padding: clamp(14px, 1.45vw, 18px);
+      padding-bottom: clamp(10px, 1vw, 12px);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--glass-border);
+      background: var(--glass-fill);
+      box-shadow:
+        var(--glass-shadow-outer),
+        var(--glass-shadow-tight);
+      overflow: hidden;
+      isolation: isolate;
+      transform: translateZ(0);
+    }
+
+    .hero-research-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .hero-research-label {
+      margin: 0;
+      font-family: var(--font-mono);
+      font-size: clamp(0.78rem, 0.84vw, 0.84rem);
+      font-weight: 400;
+      line-height: 1.14;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--copy-secondary);
+    }
+
+    .hero-research-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .hero-research-date {
+      margin: 0;
+      font-size: 0.72rem;
+      line-height: 1.35;
+      color: var(--copy-tertiary);
+      font-weight: 700;
+    }
+
+    .hero-research-copy {
+      margin: 0;
+      font-size: 0.79rem;
+      line-height: 1.44;
+      color: var(--copy-secondary);
+      overflow-wrap: anywhere;
+      cursor: pointer;
+    }
+
+    .hero-research-copy.is-collapsed {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      line-clamp: 4;
+      overflow: hidden;
+    }
+
+    .hero-research-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .hero-research-nav button {
+      width: 28px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      border: 1px solid rgba(132, 164, 216, 0.2);
+      background: rgba(8, 17, 31, 0.82);
+      color: var(--copy-primary);
+      border-radius: 6px;
+      font: inherit;
+      line-height: 1;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .hero-research-nav button svg {
+      width: 12px;
+      height: 12px;
+      display: block;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      flex: 0 0 auto;
+    }
+
+    .hero-research-nav button:hover {
+      border-color: rgba(132, 164, 216, 0.36);
+      background: rgba(12, 25, 45, 0.94);
+    }
+
+    .hero-research-nav button:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+
+    .hero-research-index {
+      min-width: 3.2rem;
+      text-align: center;
+      font-size: 0.72rem;
+      color: var(--copy-tertiary);
+    }
+
+    .hero-research-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      font-size: 0.76rem;
+      color: var(--accent-highlight);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .hero-research-link svg {
+      width: 12px;
+      height: 12px;
+      display: block;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      flex: 0 0 auto;
+    }
+
+    .hero-research-link:hover {
+      text-decoration: underline;
+    }
+
+    .hero-callout,
+    .hero-readout {
+      margin: 0;
+      line-height: 1.5;
+      max-width: none;
+    }
+
+    .hero-callout {
+      font-size: clamp(0.92rem, 1.02vw, 1.04rem);
+      font-style: italic;
+      font-weight: 500;
+      color: var(--copy-secondary);
+      line-height: 1.28;
+      opacity: 1;
+    }
+
+    .hero-readout {
+      font-size: clamp(0.96rem, 1.05vw, 1.08rem);
+      font-weight: 700;
+      color: var(--copy-primary);
+    }
+
+    .hero-readout .highlight {
+      color: var(--accent-cyan);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--page-gutter);
+      margin-top: var(--section-gap);
+      align-items: stretch;
+    }
+
+    .card {
+      --card-accent: rgba(88, 230, 255, 0.72);
+      background: var(--glass-fill);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-xl);
+      box-shadow:
+        var(--glass-shadow-outer),
+        var(--glass-shadow-tight);
+      padding: var(--content-inset);
+      min-height: var(--card-min-height);
+      display: flex;
+      flex-direction: column;
+      gap: clamp(2px, 0.2vw, 4px);
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      transform: translateZ(0);
+      padding-bottom: calc(var(--content-inset) * 0.5);
+    }
+
+    .card-section {
+      width: 100%;
+      min-width: 0;
+    }
+
+    .card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .card.tall {
+      min-height: var(--card-min-height);
+    }
+
+    .card.future {
+      background: rgba(8, 17, 31, 0.06);
+      border-color: rgba(255, 255, 255, 0.055);
+      box-shadow:
+        var(--glass-shadow-outer),
+        var(--glass-shadow-tight);
+    }
+
+    .card.future h3 {
+      color: var(--copy-primary);
+    }
+
+    .card.future .legend-inline {
+      color: var(--copy-secondary);
+    }
+
+      .card-header {
+        display: flex;
+        gap: var(--small-gap);
+        align-items: flex-start;
+        justify-content: space-between;
+        min-height: 0;
+        margin-bottom: 0;
+      }
+
+    .card-title-wrap {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .card h3 {
+      margin: 0;
+      min-height: calc(2em * 1.12);
+      font-size: var(--takeaway-size);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      font-weight: 800;
+      color: var(--copy-primary);
+    }
+
+    .card h3 [data-dynamic] {
+      color: var(--accent-highlight);
+      font-weight: 800;
+      text-shadow: 0 0 18px rgba(0, 229, 176, 0.28);
+    }
+
+    .card-dek {
+      margin: clamp(28px, 2.4vw, 34px) 0 0;
+      color: var(--copy-secondary);
+      opacity: 1;
+      font-size: var(--descriptor-size);
+      font-weight: 500;
+      line-height: 1.05;
+      font-family: "IBM Plex Mono", monospace;
+      max-width: none;
+    }
+
+    .card-section--technical {
+      margin-bottom: clamp(10px, 1vw, 14px);
+    }
+
+    .card-section--legend {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+      box-sizing: border-box;
+    }
+
+    .card-section--chart {
+      flex: 1 1 auto;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .card-section--source {
+      margin-top: auto;
+      padding-top: clamp(14px, 1.4vw, 18px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: clamp(10px, 1vw, 14px);
+    }
+
+      .card-source {
+        margin: 0;
+        color: var(--copy-tertiary);
+        opacity: 1;
+        font-size: clamp(0.62rem, 0.7vw, 0.72rem);
+        line-height: 1.4;
+        font-style: normal;
+        font-weight: 400;
+        text-transform: none;
+        letter-spacing: 0;
+      }
+
+    .info {
+      position: static;
+      margin-left: auto;
+      flex-shrink: 0;
+      z-index: 200;
+    }
+
+    .info button {
+      width: clamp(18px, 1.1vw, 20px);
+      height: clamp(18px, 1.1vw, 20px);
+      border-radius: 999px;
+      border: 1px solid rgba(148, 182, 245, 0.18);
+      background: rgba(13, 24, 48, 0.9);
+      color: var(--copy-primary);
+      font: inherit;
+      font-size: clamp(10px, 0.72vw, 11px);
+      font-weight: 800;
+      line-height: 1;
+      cursor: pointer;
+      transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+      touch-action: manipulation;
+    }
+
+    .info button:hover,
+    .info button:focus-visible {
+      transform: translateY(-1px);
+      border-color: rgba(88, 230, 255, 0.38);
+      background: rgba(16, 30, 56, 0.96);
+      outline: none;
+    }
+
+    .tooltip {
+      display: none;
+    }
+
+    .tooltip strong {
+      display: block;
+      margin-bottom: var(--micro-gap);
+      font-size: 0.94rem;
+    }
+
+    .tooltip p {
+      margin: 0 0 var(--medium-gap);
+      color: var(--copy-secondary);
+      line-height: 1.5;
+      font-size: 0.92rem;
+    }
+
+    .tooltip p:last-child {
+      margin-bottom: 0;
+    }
+
+    .tooltip-meta {
+      padding-top: var(--medium-gap);
+      border-top: 1px solid rgba(144, 160, 196, 0.14);
+      color: var(--copy-tertiary);
+      font-size: 0.84rem;
+      line-height: 1.45;
+    }
+
+    .info-float-tooltip {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: min(var(--tooltip-width), calc(100vw - (var(--tooltip-viewport-margin) * 2)));
+      max-width: calc(100vw - (var(--tooltip-viewport-margin) * 2));
+      max-height: calc(100vh - (var(--tooltip-viewport-margin) * 2));
+      padding: var(--tooltip-pad-y) var(--tooltip-pad-x);
+      border-radius: var(--tooltip-radius);
+      border: 1px solid #1a324b;
+      background: #08111d;
+      color: var(--copy-primary);
+      box-shadow:
+        0 18px 60px rgba(0, 0, 0, 0.38),
+        0 0 0 1px rgba(8, 17, 29, 1) inset;
+      z-index: 999999;
+      pointer-events: auto;
+      opacity: 0;
+      visibility: hidden;
+      transform: translate3d(-9999px, -9999px, 0);
+      mix-blend-mode: normal;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .info-float-tooltip.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .info-float-tooltip strong {
+      display: block;
+      margin-bottom: var(--micro-gap);
+      font-size: var(--tooltip-copy-size);
+    }
+
+    .info-float-tooltip p {
+      margin: 0 0 var(--medium-gap);
+      color: var(--copy-secondary);
+      line-height: 1.5;
+      font-size: var(--tooltip-copy-size);
+    }
+
+    .info-float-tooltip p:last-child {
+      margin-bottom: 0;
+    }
+
+    .info-float-tooltip .tooltip-meta {
+      padding-top: var(--medium-gap);
+      border-top: 1px solid rgba(144, 160, 196, 0.14);
+      color: var(--copy-tertiary);
+      font-size: var(--tooltip-meta-size);
+      line-height: 1.45;
+    }
+
+    .tooltip-structured {
+      display: grid;
+      gap: var(--medium-gap);
+    }
+
+    .tooltip-description {
+      margin: 0;
+      color: var(--copy-secondary);
+      line-height: 1.5;
+      font-size: var(--tooltip-copy-size);
+    }
+
+    .tooltip-section {
+      display: grid;
+      gap: 4px;
+      padding-top: var(--medium-gap);
+      border-top: 1px solid rgba(144, 160, 196, 0.14);
+    }
+
+    .tooltip-label {
+      color: var(--copy-tertiary);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .tooltip-value {
+      color: var(--copy-secondary);
+      font-size: var(--tooltip-meta-size);
+      line-height: 1.45;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .info-float-tooltip.is-sheet {
+      left: var(--page-gutter);
+      right: var(--page-gutter);
+      top: auto;
+      bottom: var(--page-gutter);
+      width: auto;
+      max-height: var(--sheet-max-height);
+      overflow: auto;
+      pointer-events: auto;
+      box-shadow: var(--sheet-shadow);
+      transform: none !important;
+    }
+
+    .info-sheet-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--small-gap);
+      margin-bottom: var(--medium-gap);
+    }
+
+    .info-sheet-kicker {
+      margin: 0;
+      font-size: clamp(0.82rem, 0.86vw, 0.88rem);
+      color: var(--copy-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .info-float-close {
+      min-width: var(--touch-target);
+      min-height: var(--touch-target);
+      padding: 0 clamp(12px, 3vw, 16px);
+      border: 1px solid rgba(148, 182, 245, 0.18);
+      border-radius: 999px;
+      background: rgba(16, 30, 56, 0.96);
+      color: var(--copy-primary);
+      font: inherit;
+      font-size: clamp(0.88rem, 0.9vw, 0.92rem);
+      font-weight: 600;
+      touch-action: manipulation;
+    }
+
+    .info-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 10, 19, 0.62);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 140ms ease;
+      z-index: 999998;
+    }
+
+    .info-backdrop.visible {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+      .chart-wrap {
+        flex: 1;
+        min-height: var(--chart-min-height);
+        max-height: calc(var(--chart-min-height) * 1.03);
+        height: var(--chart-min-height);
+        aspect-ratio: var(--chart-aspect);
+        flex: 0 0 var(--chart-min-height);
+        align-self: stretch;
+        width: calc(100% + var(--chart-wrap-shift-left));
+        margin-left: calc(var(--chart-wrap-shift-left) * -1);
+        position: relative;
+        z-index: 1;
+      overflow: hidden;
+      background: transparent;
+      border: none;
+      border-radius: var(--radius-sm);
+      box-shadow: none;
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+    }
+
+    .chart-wrap svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      overflow: visible;
+    }
+
+      .legend-inline {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: clamp(6px, 0.8vw, 10px);
+        color: var(--copy-secondary);
+        font-size: var(--descriptor-size);
+        font-family: "IBM Plex Mono", monospace;
+        opacity: 1;
+        font-weight: 500;
+        margin: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        min-height: 0;
+      }
+
+      .legend-inline span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        line-height: 1.2;
+        color: inherit;
+      }
+
+      .swatch {
+        width: var(--chart-dot);
+        height: var(--chart-dot);
+        border-radius: 999px;
+        flex-shrink: 0;
+        border: 1px solid #08111e;
+        box-shadow: inset 0 0 0 1px rgba(8, 17, 31, 0.4);
+      }
+
+    @media (max-width: 720px) {
+        :root {
+          --page-gutter: clamp(16px, 4vw, 22px);
+          --page-top-gutter: 0px;
+        --content-inset: clamp(14px, 3.5vw, 18px);
+        --chart-wrap-shift-left: 0px;
+          --hero-top-inset: 0px;
+          --hero-title-offset: clamp(52px, 11vw, 72px);
+          --section-gap: clamp(36px, 9vw, 64px);
+          --hero-block-gap: clamp(18px, 6vw, 32px);
+          --glass-fill: rgba(8, 17, 31, 0.5);
+        --glass-border: rgba(190, 214, 255, 0.075);
+        --glass-blur: 0px;
+        --glass-saturation: 100%;
+        --glass-ring-opacity: 0.22;
+        --glass-shadow-outer: 0 14px 30px rgba(0, 0, 0, 0.1);
+        --glass-shadow-tight: 0 3px 8px rgba(0, 0, 0, 0.05);
+          --card-min-width: 100%;
+      --chart-min-height: clamp(230px, 41vw, 274px);
+        }
+
+      .page {
+        width: min(calc(100% - (var(--page-gutter) * 2)), var(--max-width));
+        padding-top: var(--page-top-gutter);
+        padding-bottom: var(--page-gutter);
+      }
+
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-columns {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero,
+      .card {
+        padding: var(--content-inset);
+        border-radius: var(--radius-lg);
+      }
+
+      .hero {
+        padding-top: var(--hero-top-inset);
+      }
+
+      .card {
+        padding-bottom: calc(var(--content-inset) * 0.5);
+      }
+
+      .hero::after {
+        left: var(--content-inset);
+        right: var(--content-inset);
+      }
+
+      .hero-intro .hero-copy {
+        max-width: 100%;
+      }
+
+      .hero-meta {
+        max-width: 100%;
+      }
+
+      .hero-title-logo {
+        width: min(100%, 34rem);
+      }
+
+      .card {
+        min-height: clamp(320px, 82vw, 380px);
+      }
+
+        .chart-wrap {
+          min-height: clamp(200px, 36vw, 238px);
+          max-height: clamp(204px, 38vw, 244px);
+          height: clamp(200px, 36vw, 238px);
+          flex-basis: clamp(200px, 36vw, 238px);
+          aspect-ratio: 2.1;
+        }
+
+        .legend-inline {
+          font-size: var(--descriptor-size);
+        }
+
+      .info button {
+        width: var(--touch-target);
+        height: var(--touch-target);
+        font-size: clamp(16px, 4vw, 18px);
+      }
+
+      .info-float-tooltip.is-sheet {
+        border-radius: max(var(--tooltip-radius), 20px);
+      }
+
+    }
+
+    @media (min-width: 1440px) {
+      :root {
+        --glass-fill: rgba(255, 255, 255, 0.006);
+        --glass-border: rgba(255, 255, 255, 0.078);
+        --glass-blur: 18px;
+        --glass-saturation: 132%;
+        --glass-ring-opacity: 0.3;
+      }
+    }
+
+    @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+      .card {
+        background: var(--glass-fill);
+      }
+    }
+
+    @media (hover: none), (pointer: coarse) {
+      .info button {
+        width: var(--touch-target);
+        height: var(--touch-target);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="hero-top">
+        <div class="title-line">
+          <h1 class="sr-only">Dead Internet Tracker</h1>
+          <svg class="hero-title-logo" viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="heroTitleLineFade" gradientUnits="userSpaceOnUse" x1="190" y1="148" x2="610" y2="148">
+                <stop offset="0%" stop-color="#00e5b0" stop-opacity="1"></stop>
+                <stop offset="42%" stop-color="#00e5b0" stop-opacity="1"></stop>
+                <stop offset="74%" stop-color="#00e5b0" stop-opacity="0.34"></stop>
+                <stop offset="100%" stop-color="#00e5b0" stop-opacity="0"></stop>
+              </linearGradient>
+            </defs>
+            <polyline points="0,148 28,148 40,148 48,80 56,216 64,98 72,152 80,148 190,148" fill="none" stroke="#00e5b0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></polyline>
+            <line id="heroTitleTail" x1="190" y1="148" x2="610" y2="148" stroke="url(#heroTitleLineFade)" stroke-width="2.5" stroke-linecap="round"></line>
+            <text id="heroTitleText" x="98" y="136" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="36" font-weight="700" fill="#ffffff" letter-spacing="-0.04em">Dead Internet Tracker</text>
+          </svg>
+        </div>
+        <div class="hero-quote">
+          <p class="hero-kicker">"The internet feels empty and devoid of people"<span class="hero-kicker-attribution">anonymous, 2019</span></p>
+        </div>
+      </div>
+      <div class="hero-columns">
+        <div class="hero-main">
+          <div class="hero-intro">
+            <p class="hero-copy">The dead internet theory says the internet is being taken over by AI.</p>
+            <p class="hero-copy hero-copy-accent">AI is writing it. AI is reading it.</p>
+            <p class="hero-copy hero-copy-final">We decided to track it.</p>
+          </div>
+          <div class="hero-meta">
+            <p class="hero-callout">This is hard to measure without big tech data.</p>
+            <p class="hero-callout">So we built what we could from the open web.</p>
+          </div>
+        </div>
+        <div class="hero-side">
+          <div class="hero-research" id="hero-research-box" aria-live="polite">
+            <div class="hero-research-head">
+              <h2 class="hero-research-label">Latest research</h2>
+              <div class="hero-research-nav">
+                <button type="button" id="hero-research-prev" aria-label="Previous research item">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M15 18l-6-6 6-6"></path>
+                  </svg>
+                </button>
+                <div class="hero-research-index" id="hero-research-index">0 / 0</div>
+                <button type="button" id="hero-research-next" aria-label="Next research item">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M9 6l6 6-6 6"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="hero-research-meta">
+              <p class="hero-research-date" id="hero-research-date">Publication date unknown</p>
+              <a class="hero-research-link" id="hero-research-link" href="#" target="_blank" rel="noreferrer" aria-label="Open source">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M10 14L19 5"></path>
+                  <path d="M19 14v5h-5"></path>
+                  <path d="M5 10v9h9"></path>
+                </svg>
+              </a>
+            </div>
+            <p class="hero-research-copy" id="hero-research-copy">Pulling the latest included study from the published-estimate scatter.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="grid">
+<article class="card content-2" style="--card-accent:#ffd36a;">
+        <div class="card-section card-section--takeaway">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <h3>No one knows how much of the web is AI-generated. Estimates average at <span data-dynamic="ai-content-2026-average">30%</span> of content being AI in 2026.</h3>
+            </div>
+            <div class="info">
+              <button type="button" aria-label="About AI content share meta review">i</button>
+              <div class="tooltip" role="tooltip">
+                <strong>AI content share meta review</strong>
+                <p>We included this because there is no single authoritative measure of AI-generated content online. So instead of pretending there is one clean number, this chart shows whether the published evidence points in the same direction.</p>
+                <div class="tooltip-meta">Source: saved deep research table<br>Last refreshed: 2026-04-22<br>Method: annual scatter from published estimates; ranges plotted at their midpoint; line shows the annual average of the included estimates.<br>Caveats: the estimates still come from different studies and content sets, so the levels are noisy and not perfectly comparable.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-section card-section--technical">
+          <p class="card-dek">Published estimates of how much online content was made with AI.</p>
+        </div>
+        <div class="card-section card-section--legend">
+          <div class="legend-inline">
+            <span><i class="swatch" style="background:#ffd36a"></i>Individual published estimates</span>
+            <span><i class="swatch" style="background:#58e6ff"></i>Annual average of included estimates</span>
+          </div>
+        </div>
+        <div class="card-section card-section--chart">
+          <div class="chart-wrap" data-chart="ai-content-meta-review"></div>
+        </div>
+        <div class="card-section card-section--source">
+          <p class="card-source">Source: Curated AI deep research using a guided source-review process.</p>
+        </div>
+      </article>
+
+<article class="card tall content-1" style="--card-accent:#ffd36a;">
+        <div class="card-section card-section--takeaway">
+          <div class="card-header">
+            <div class="card-title-wrap">
+                <h3>AI can play a small role or a big one. AI writing 'some of it' is <span data-dynamic="web-sample-partial-ratio">2.2x</span> more common than AI writing 'most of it'. Both are rising.</h3>
+            </div>
+            <div class="info">
+              <button type="button" aria-label="About monthly AI share in the web sample">i</button>
+              <div class="tooltip" role="tooltip">
+                <strong>Monthly AI share in the web sample</strong>
+                <p>We included this because it is our own recurring open-web check on whether AI-written pages are becoming more common over time. It gives us one consistent series, built the same way each month, instead of relying only on scattered outside estimates.</p>
+                <div class="tooltip-meta">Source: Common Crawl monthly samples classified under a research-guided rubric</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-section card-section--technical">
+          <p class="card-dek">Share of article-style web pages with detectable AI writing signals.</p>
+        </div>
+        <div class="card-section card-section--legend">
+          <div class="legend-inline">
+            <span><i class="swatch" style="background:#ff79c6"></i>Strong AI signal</span>
+            <span><i class="swatch" style="background:#8be9fd"></i>Partial AI signal</span>
+          </div>
+        </div>
+        <div class="card-section card-section--chart">
+          <div class="chart-wrap" data-chart="web-sample-classifications"></div>
+        </div>
+        <div class="card-section card-section--source">
+          <p class="card-source">Source: Common Crawl monthly samples classified under a research-guided rubric.</p>
+        </div>
+      </article>
+
+<article class="card tall traffic-1" style="--card-accent:#ff79c6;">
+  <div class="card-section card-section--takeaway">
+    <div class="card-header">
+      <div class="card-title-wrap">
+        <h3>AI is also 'using' the internet more. AI bot traffic now accounts for <span data-dynamic="cloudflare-latest-ai-bot-share">10%</span> of wider web traffic.</h3>
+      </div>
+      <div class="info">
+        <button type="button" aria-label="About Cloudflare AI bot traffic">i</button>
+        <div class="tooltip" role="tooltip">
+          <strong>Cloudflare Radar</strong>
+          <p>We included this because the dead internet theory is not just about AI writing the web. It is also about AI systems increasingly reading, crawling, and traversing it.</p>
+          <div class="tooltip-meta">Source: Cloudflare Radar<br>Last refreshed: 2026-04-21</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-section card-section--technical">
+    <p class="card-dek">Share of web traffic across a broad observed slice of the internet.</p>
+  </div>
+  <div class="card-section card-section--legend">
+    <div class="legend-inline">
+      <span><i class="swatch" style="background:#ff79c6"></i>AI bots</span>
+    </div>
+  </div>
+  <div class="card-section card-section--chart">
+    <div class="chart-wrap" data-chart="traffic-bot-human"></div>
+  </div>
+  <div class="card-section card-section--source">
+    <p class="card-source">Source: Cloudflare Radar monthly AI bot traffic snapshot</p>
+  </div>
+</article>
+
+<article class="card traffic-2" style="--card-accent:#58e6ff;">
+  <div class="card-section card-section--takeaway">
+    <div class="card-header">
+      <div class="card-title-wrap">
+        <h3>High-value websites (e.g. money or account-based) get targeted. Here, AI makes up <span data-dynamic="imperva-latest-automated-share">50%</span> of traffic.</h3>
+      </div>
+      <div class="info">
+        <button type="button" aria-label="About Imperva traffic profile">i</button>
+        <div class="tooltip" role="tooltip">
+          <strong>Imperva traffic profile</strong>
+          <p>We included this because some parts of the web are much more exposed to automation than others. This chart shows how far machine traffic can overwhelm humans on high-value, frequently targeted websites.</p>
+          <div class="tooltip-meta">Source: Imperva Bad Bot Report 2024 and 2025<br>Last refreshed: 2026-04-22<br>Method: Imperva annual traffic profile, with good bot and bad bot combined into automated traffic.<br>Caveat: Narrower and more security-focused than the Cloudflare chart. It reflects a more targeted slice of the web, so the levels are not directly comparable.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-section card-section--technical">
+    <p class="card-dek">Share of web traffic across a narrow security-focused slice of the internet.</p>
+  </div>
+  <div class="card-section card-section--legend">
+    <div class="legend-inline">
+      <span><i class="swatch" style="background:#ff9a62"></i>AI bots</span>
+      <span><i class="swatch" style="background:#58e6ff"></i>Human</span>
+    </div>
+  </div>
+  <div class="card-section card-section--chart">
+    <div class="chart-wrap" data-chart="imperva-traffic"></div>
+  </div>
+  <div class="card-section card-section--source">
+    <p class="card-source">Source: Imperva Bad Bot Reports, stitched annual traffic profile</p>
+  </div>
+</article>
+
+<article class="card content-3" style="--card-accent:#58e6ff;">
+  <div class="card-section card-section--takeaway">
+    <div class="card-header">
+      <div class="card-title-wrap">
+        <h3>Humanity's largest open-source knowledge project is slowly dying. Wikipedia editors are down <span data-dynamic="wikipedia-editor-decline">21%</span> from 2020. The diehards remain strong.</h3>
+      </div>
+      <div class="info">
+        <button type="button" aria-label="About Wikipedia activity">i</button>
+        <div class="tooltip" role="tooltip">
+          <strong>Wikipedia activity</strong>
+          <p>We included this because the dead internet theory is partly about human contribution fading from the public web. Wikipedia is one of the clearest places to see whether people are still doing open, sustained knowledge work together.</p>
+          <div class="tooltip-meta">Source: Wikimedia editor analytics<br>Last refreshed: 2026-04-21<br>Method: monthly editor counts.<br>Caveats: English Wikipedia only.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-section card-section--technical">
+    <p class="card-dek">How many registered users edited English Wikipedia articles each month.</p>
+  </div>
+  <div class="card-section card-section--legend">
+    <div class="legend-inline">
+      <span><i class="swatch" style="background:#58e6ff"></i>All editors (1+)</span>
+      <span><i class="swatch" style="background:#ff9a62"></i>Active editors (5+)</span>
+    </div>
+  </div>
+  <div class="card-section card-section--chart">
+    <div class="chart-wrap" data-chart="wikipedia"></div>
+  </div>
+  <div class="card-section card-section--source">
+    <p class="card-source">Source: Wikimedia editor analytics</p>
+  </div>
+</article>
+
+<article class="card traffic-3" style="--card-accent:#9d8cff;">
+  <div class="card-section card-section--takeaway">
+    <div class="card-header">
+      <div class="card-title-wrap">
+        <h3>While human contributors disappear, attacks rise. Account attacks are up <span data-dynamic="imperva-ato-change">51%</span> since 2022. The internet is becoming more dangerous.</h3>
+      </div>
+      <div class="info">
+        <button type="button" aria-label="About Imperva account takeover attacks">i</button>
+        <div class="tooltip" role="tooltip">
+          <strong>Imperva annual account takeover attacks</strong>
+          <p>We included this because a more machine-driven internet is not just emptier, it can also be more hostile. Rising account attacks are one concrete sign that cheap automation is making abuse more industrial.</p>
+          <div class="tooltip-meta">Source: Imperva 2024 and 2025 Bad Bot Reports<br>Last refreshed: 2026-04-22<br>Method: chart-read and stitched into one monthly series. Not perfect, but reasonably accurate.<br>Caveats: This is bot abuse, not a direct measure of AI content or human displacement.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-section card-section--technical">
+    <p class="card-dek">Annual account takeover attacks (when a bot tries to break into someone's account).</p>
+  </div>
+  <div class="card-section card-section--legend">
+    <div class="legend-inline">
+      <span><i class="swatch" style="background:#ff79c6"></i>Total recorded attacks</span>
+    </div>
+  </div>
+  <div class="card-section card-section--chart">
+    <div class="chart-wrap" data-chart="imperva-ato"></div>
+  </div>
+  <div class="card-section card-section--source">
+    <p class="card-source">Source: Imperva account takeover series reconstructed from annual reports</p>
+  </div>
+</article>
+
+<article class="card content-4" style="--card-accent:#7af59d;">
+  <div class="card-section card-section--takeaway">
+    <div class="card-header">
+      <div class="card-title-wrap">
+        <h3>Some parts of the internet are already dead. Stack Overflow questions are near zero. People just stopped needing it.</h3>
+      </div>
+      <div class="info">
+        <button type="button" aria-label="About Stack Overflow activity">i</button>
+        <div class="tooltip" role="tooltip">
+          <strong>Stack Overflow activity</strong>
+          <p>We included this because the dead internet theory is also about public human exchange collapsing, not just AI content rising. Stack Overflow is a clean test of whether people still need to ask other people for help in public.</p>
+          <div class="tooltip-meta">Source: Stack Exchange API monthly question counts<br>Status: monthly source</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-section card-section--technical">
+    <p class="card-dek">How many questions people posted to Stack Overflow.</p>
+  </div>
+  <div class="card-section card-section--legend">
+    <div class="legend-inline">
+      <span><i class="swatch" style="background:#7af59d"></i>Total new questions asked</span>
+    </div>
+  </div>
+  <div class="card-section card-section--chart">
+    <div class="chart-wrap" data-chart="stack-overflow"></div>
+  </div>
+  <div class="card-section card-section--source">
+    <p class="card-source">Source: Stack Exchange API monthly question counts</p>
+  </div>
+</article>
+
+    </section>
+  </main>
+
+  <div class="info-float-tooltip" id="info-float-tooltip" aria-hidden="true"></div>
+  <div class="info-backdrop" id="info-backdrop" hidden></div>
+
+  <script src="./data/cloudflare/cloudflare.js"></script>
+  <script src="./data/imperva/imperva.js"></script>
+  <script src="./data/imperva/imperva_ato.js"></script>
+  <script src="./data/wikipedia/wikipedia.js"></script>
+  <script src="./data/stackoverflow/stackoverflow.js"></script>
+  <script src="./data/ai-content-meta-review/ai_content_meta_review.js"></script>
+  <script src="./data/web-sample-lite/web_sample_lite_summary.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <script>
+    const defaultYears = ["2020", "2021", "2022", "2023", "2024", "2025", "2026"];
+
+      const chartData = {
+        "traffic-bot-human": {
+          type: "line",
+          xValues: [],
+          axisValueFormat: "percent1",
+          tooltipValueFormat: "percent2",
+          series: []
+        },
+      wikipedia: {
+        type: "line",
+        xValues: [],
+        axisValueFormat: "compact",
+        tooltipValueFormat: "integer",
+        series: []
+      },
+        "stack-overflow": {
+          type: "line",
+          xValues: [],
+          axisValueFormat: "compact",
+          tooltipValueFormat: "integer",
+          series: []
+        },
+      "web-sample-classifications": {
+        type: "line",
+        xValues: [],
+        axisValueFormat: "percent1",
+        tooltipValueFormat: "percent2",
+        series: [],
+        periods: []
+      },
+      "imperva-traffic": {
+        type: "band-line",
+        xValues: [],
+        axisValueFormat: "percent1",
+        tooltipValueFormat: "percent1",
+        fixedYMax: 100,
+        series: []
+      },
+      "imperva-ato": {
+        type: "bar",
+        xValues: [],
+        axisValueFormat: "compact",
+        tooltipValueFormat: "integer",
+        series: []
+      },
+      "ai-content-meta-review": {
+        type: "scatter-trend",
+        xValues: [],
+        axisValueFormat: "percent1",
+        tooltipValueFormat: "percent2",
+        series: []
+      }
+    };
+
+    const chartRegistry = new Map();
+    let activeInfoButton = null;
+    let pinnedInfoButton = null;
+    const heroResearchState = {
+      items: [],
+      index: 0
+    };
+
+    function clamp(value, min, max) {
+      return Math.max(min, Math.min(max, value));
+    }
+
+    function prefersTouchUi() {
+      return window.matchMedia("(hover: none), (pointer: coarse)").matches;
+    }
+
+    function percentile(sorted, p) {
+      const index = (sorted.length - 1) * p;
+      const lower = Math.floor(index);
+      const upper = Math.ceil(index);
+      if (lower === upper) return sorted[lower];
+      const weight = index - lower;
+      return sorted[lower] * (1 - weight) + sorted[upper] * weight;
+    }
+
+    let cssLengthProbe;
+
+    function resolveCssLengthVar(name, fallback) {
+      const rootStyle = getComputedStyle(document.documentElement);
+      const rawValue = rootStyle.getPropertyValue(name).trim();
+      const directValue = parseFloat(rawValue);
+
+      if (Number.isFinite(directValue) && !/[a-z(]/i.test(rawValue.replace(/px$/i, ""))) {
+        return directValue;
+      }
+
+      cssLengthProbe ||= document.createElement("div");
+      cssLengthProbe.style.position = "absolute";
+      cssLengthProbe.style.visibility = "hidden";
+      cssLengthProbe.style.pointerEvents = "none";
+      cssLengthProbe.style.inlineSize = `var(${name})`;
+      document.body.appendChild(cssLengthProbe);
+      const resolved = parseFloat(getComputedStyle(cssLengthProbe).width);
+      cssLengthProbe.remove();
+
+      return Number.isFinite(resolved) ? resolved : fallback;
+    }
+
+    function readPx(name, fallback) {
+      return resolveCssLengthVar(name, fallback);
+    }
+
+    function chartMetrics(width) {
+      const axisFont = clamp(width / 36, readPx("--axis-font-size", 14) - 1, readPx("--axis-font-size", 15) + 2);
+      const labelGap = clamp(width / 48, 8, readPx("--chart-label-gap", 12));
+      const chartDot = clamp(readPx("--chart-dot", 10), 7, 10);
+
+        return {
+          axisFont,
+          labelGap,
+          lineWidth: clamp(width / 280, 2.1, readPx("--chart-stroke", 3)),
+          dotSize: chartDot,
+        grid: {
+          left: readPx("--chart-grid-left", 56),
+          right: readPx("--chart-grid-right", readPx("--chart-grid-left", 56)),
+          top: readPx("--chart-grid-top", 18),
+          bottom: readPx("--chart-grid-bottom", 30)
+        },
+        tooltip: {
+          fontSize: clamp(width / 54, 12, readPx("--chart-tooltip-font", 14)),
+          padY: readPx("--chart-tooltip-pad-y", 12),
+          padX: readPx("--chart-tooltip-pad-x", 14),
+          radius: readPx("--chart-tooltip-radius", 16),
+          swatch: readPx("--chart-tooltip-swatch", 8),
+          rowGap: readPx("--chart-tooltip-row-gap", 6)
+        }
+      };
+    }
+
+    let axisMeasureCanvas;
+
+    function measureTextWidth(text, font) {
+      axisMeasureCanvas ||= document.createElement("canvas");
+      const context = axisMeasureCanvas.getContext("2d");
+      if (!context) return `${text}`.length * 8;
+      context.font = font;
+      return context.measureText(`${text}`).width;
+    }
+
+    function axisFontFamily() {
+      const style = getComputedStyle(document.documentElement);
+      return style.getPropertyValue("--font-mono").trim() || '"IBM Plex Mono", monospace';
+    }
+
+    function measuredYAxisInset(tickValues, width, format) {
+      const metrics = chartMetrics(width);
+      const font = `600 ${metrics.axisFont}px ${axisFontFamily()}`;
+      const maxLabelWidth = Math.ceil(
+        Math.max(
+          ...tickValues.map((value) => measureTextWidth(formatMetricValue(value, format), font)),
+          0
+        )
+      );
+      return maxLabelWidth + metrics.labelGap + 2;
+    }
+
+    function getAxisInterval(width, labels) {
+      const pxPerYear = width / labels.length;
+      if (pxPerYear < 42) return 2;
+      if (pxPerYear < 64) return 1;
+      return 0;
+    }
+
+    function getNumericYearStep(width, years) {
+      const count = Math.max(years.length, 1);
+      const pxPerYear = width / count;
+      if (pxPerYear < 52) return 2;
+      if (pxPerYear < 76) return 1;
+      return 0;
+    }
+
+    function isMonthlyLabel(label) {
+      return typeof label === "string" && /^\d{4}-\d{2}$/.test(label);
+    }
+
+    function formatMonthLabel(label) {
+      if (!isMonthlyLabel(label)) return label;
+      const [year, month] = label.split("-");
+      const monthNames = {
+        "01": "Jan",
+        "02": "Feb",
+        "03": "Mar",
+        "04": "Apr",
+        "05": "May",
+        "06": "Jun",
+        "07": "Jul",
+        "08": "Aug",
+        "09": "Sep",
+        "10": "Oct",
+        "11": "Nov",
+        "12": "Dec"
+      };
+      return `${monthNames[month]} ${year}`;
+    }
+
+    function monthSequence(startLabel, endLabel) {
+      const [startYear, startMonth] = startLabel.split("-").map(Number);
+      const [endYear, endMonth] = endLabel.split("-").map(Number);
+      const months = [];
+      let year = startYear;
+      let month = startMonth;
+
+      while (year < endYear || (year === endYear && month <= endMonth)) {
+        months.push(`${year}-${String(month).padStart(2, "0")}`);
+        if (month === 12) {
+          year += 1;
+          month = 1;
+        } else {
+          month += 1;
+        }
+      }
+
+      return months;
+    }
+
+    function monthlyYearTickIndices(labels, width) {
+      const januaryIndices = [];
+      const yearByIndex = [];
+
+      labels.forEach((label, index) => {
+        const [year, month] = label.split("-");
+        const yearNumber = Number(year);
+        yearByIndex[index] = yearNumber;
+        if (month === "01") januaryIndices.push(index);
+      });
+
+      if (!labels.length) return new Set();
+
+      const uniqueYears = [...new Set(yearByIndex)];
+      const maxLabels = clamp(Math.floor(width / 110), 3, 8);
+      const yearStep = Math.max(1, Math.ceil(uniqueYears.length / maxLabels));
+      const firstYear = uniqueYears[0];
+      const selected = [];
+
+      januaryIndices.forEach((index) => {
+        const year = yearByIndex[index];
+        if ((year - firstYear) % yearStep === 0) {
+          selected.push(index);
+        }
+      });
+
+      const lastIndex = labels.length - 1;
+      const lastYear = yearByIndex[lastIndex];
+      const lastSelectedIndex = selected[selected.length - 1];
+      const lastSelectedYear = lastSelectedIndex == null ? null : yearByIndex[lastSelectedIndex];
+
+      if (lastSelectedYear !== lastYear) {
+        if (lastSelectedYear != null && lastYear - lastSelectedYear < yearStep + 1) {
+          selected[selected.length - 1] = lastIndex;
+        } else {
+          selected.push(lastIndex);
+        }
+      }
+
+      return new Set(selected);
+    }
+
+    function normalizeSnapshotRange(snapshot) {
+      const labels = snapshot.xValues || [];
+      if (!labels.length) return snapshot;
+
+      if (isMonthlyLabel(labels[0])) {
+        const firstPopulatedIndex = (snapshot.series || []).reduce((best, series) => {
+          const index = (series.values || []).findIndex((value) => value != null && value !== "");
+          if (index === -1) return best;
+          return best == null ? index : Math.min(best, index);
+        }, null);
+        const firstDataLabel = firstPopulatedIndex == null ? labels[0] : labels[firstPopulatedIndex];
+        const startLabel = firstDataLabel > "2020-01" ? firstDataLabel : "2020-01";
+        const endLabel = labels[labels.length - 1];
+        const fullLabels = monthSequence(startLabel, endLabel);
+        const labelIndex = new Map(labels.map((label, index) => [label, index]));
+
+        return {
+          ...snapshot,
+          xValues: fullLabels,
+          series: (snapshot.series || []).map((series) => ({
+            ...series,
+            values: fullLabels.map((label) => {
+              const index = labelIndex.get(label);
+              return index == null ? null : series.values[index];
+            })
+          }))
+        };
+      }
+
+      const startYear = 2020;
+      const startIndex = labels.findIndex((label) => Number(label) >= startYear);
+      if (startIndex <= 0) return snapshot;
+
+      return {
+        ...snapshot,
+        xValues: labels.slice(startIndex),
+        series: (snapshot.series || []).map((series) => ({
+          ...series,
+          values: (series.values || []).slice(startIndex)
+        }))
+      };
+    }
+
+    function formatXAxisLabel(label, index, labels, width) {
+      if (!isMonthlyLabel(label)) {
+        const interval = getAxisInterval(width, labels);
+        if (interval === 0 || index % (interval + 1) === 0 || index === labels.length - 1) return label;
+        return "";
+      }
+
+      const tickIndices = monthlyYearTickIndices(labels, width);
+      return tickIndices.has(index) ? label.slice(0, 4) : "";
+    }
+
+    function themeColor(name, fallback) {
+      const value = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+      return value || fallback;
+    }
+
+    function baseGrid(width) {
+      const metrics = chartMetrics(width);
+      return {
+        left: metrics.grid.left,
+        right: metrics.grid.right,
+        top: metrics.grid.top,
+        bottom: metrics.grid.bottom,
+        containLabel: true
+      };
+    }
+
+    function baseXAxis(width, labels) {
+      const metrics = chartMetrics(width);
+      const secondaryText = themeColor("--copy-secondary", "rgba(255, 255, 255, 0.62)");
+      return {
+        type: "category",
+        data: labels,
+        boundaryGap: false,
+        axisTick: { show: false },
+        axisLine: {
+          show: true,
+          lineStyle: { color: "rgba(164, 182, 218, 0.42)", width: 1.2 }
+        },
+        axisLabel: {
+          color: secondaryText,
+          fontSize: metrics.axisFont,
+          fontWeight: 600,
+          margin: metrics.labelGap,
+          interval: 0,
+          hideOverlap: false,
+          alignMinLabel: "left",
+          alignMaxLabel: "right",
+          formatter: (value, index) => formatXAxisLabel(value, index, labels, width)
+        },
+        splitLine: { show: false }
+      };
+    }
+
+    function baseYAxis(max, width, format) {
+      const metrics = chartMetrics(width);
+      const secondaryText = themeColor("--copy-secondary", "rgba(255, 255, 255, 0.62)");
+      const gridlineColor = themeColor("--chart-gridline", "rgba(255, 255, 255, 0.14)");
+      const interval = niceInterval(max / 5);
+      const roundedMax = Math.ceil(max / interval) * interval;
+      return {
+        gridLeft: measuredYAxisInset(
+          Array.from({ length: Math.round(roundedMax / interval) + 1 }, (_, index) => index * interval),
+          width,
+          format
+        ),
+        axis: {
+        type: "value",
+        min: 0,
+        max: roundedMax,
+        interval,
+        splitNumber: Math.round(roundedMax / interval),
+        axisLine: { show: false },
+        axisTick: { show: false },
+        axisLabel: {
+          color: secondaryText,
+          fontSize: metrics.axisFont,
+          fontWeight: 600,
+          margin: metrics.labelGap,
+          formatter: (value) => formatMetricValue(value, format)
+        },
+        splitLine: {
+          show: true,
+          lineStyle: { color: gridlineColor, width: 1 }
+        }
+        }
+      };
+    }
+
+    function fixedPercentYAxis(width, format, max = 100) {
+      const metrics = chartMetrics(width);
+      const secondaryText = themeColor("--copy-secondary", "rgba(255, 255, 255, 0.62)");
+      const gridlineColor = themeColor("--chart-gridline", "rgba(255, 255, 255, 0.14)");
+      return {
+        gridLeft: measuredYAxisInset(
+          Array.from({ length: Math.round(max / 20) + 1 }, (_, index) => index * 20),
+          width,
+          format
+        ),
+        axis: {
+        type: "value",
+        min: 0,
+        max,
+        interval: 20,
+        splitNumber: 5,
+        axisLine: { show: false },
+        axisTick: { show: false },
+        axisLabel: {
+          color: secondaryText,
+          fontSize: metrics.axisFont,
+          fontWeight: 600,
+          margin: metrics.labelGap,
+          formatter: (value) => formatMetricValue(value, format)
+        },
+        splitLine: {
+          show: true,
+          lineStyle: { color: gridlineColor, width: 1 }
+        }
+        }
+      };
+    }
+
+    function niceInterval(max) {
+      const rough = max;
+      const magnitude = 10 ** Math.floor(Math.log10(rough));
+      const normalized = rough / magnitude;
+
+      let step;
+      if (normalized <= 1) step = 1;
+      else if (normalized <= 2) step = 2;
+      else if (normalized <= 2.5) step = 2;
+      else if (normalized <= 3) step = 2.5;
+      else if (normalized <= 4) step = 4;
+      else if (normalized <= 5) step = 5;
+      else step = 10;
+
+      return step * magnitude;
+    }
+
+      function formatMetricValue(value, format) {
+        if (value == null || value === "") return "";
+        const numeric = Number(value);
+        if (!Number.isFinite(numeric)) return `${value}`;
+
+        if (format === "percent1") {
+          return `${numeric.toFixed(0)}%`;
+        }
+
+        if (format === "percent2") {
+          return `${numeric.toFixed(1)}%`;
+        }
+
+        if (format === "compact") {
+          if (Math.abs(numeric) >= 1000000) {
+            return `${Math.round(numeric / 1000000)}m`;
+        }
+        if (Math.abs(numeric) >= 1000) {
+          return `${Math.round(numeric / 1000)}k`;
+        }
+        return `${Math.round(numeric)}`;
+      }
+
+      if (format === "integer") {
+        return numeric.toLocaleString("en-US");
+      }
+
+      return Number.isInteger(numeric) ? `${numeric}` : numeric.toFixed(1);
+    }
+
+    function parseEstimateMidpoint(value) {
+      if (value == null) return null;
+      const text = `${value}`
+        .replace(/â€“|â€”|âˆ’/g, "-")
+        .replace(/[–—−]/g, "-")
+        .replace(/,/g, "")
+        .replace(/%/g, "")
+        .trim();
+
+      if (!text) return null;
+
+      if (text.includes("-")) {
+        const parts = text
+          .split("-")
+          .map((part) => Number.parseFloat(part.trim()))
+          .filter(Number.isFinite);
+        if (parts.length === 2) return (parts[0] + parts[1]) / 2;
+      }
+
+      const numeric = Number.parseFloat(text);
+      return Number.isFinite(numeric) ? numeric : null;
+    }
+
+    function inferPublicationSortKey(row) {
+      const storedDate = `${row?.publication_date || ""}`.match(/^(20\d{2})-(\d{2})-(\d{2})$/);
+      if (storedDate) {
+        return Number(storedDate[1]) * 10000 + Number(storedDate[2]) * 100 + Number(storedDate[3]);
+      }
+
+      const source = `${row?.source || ""}`;
+
+      const arxivMatch = source.match(/arxiv\.org\/abs\/(\d{2})(\d{2})\.\d+/i);
+      if (arxivMatch) {
+        const year = 2000 + Number(arxivMatch[1]);
+        const month = Number(arxivMatch[2]);
+        return year * 10000 + month * 100 + 1;
+      }
+
+      const pathDateMatch = source.match(/\/(20\d{2})\/(\d{2})(?:\/(\d{2}))?(?:\/|$)/);
+      if (pathDateMatch) {
+        const year = Number(pathDateMatch[1]);
+        const month = Number(pathDateMatch[2]);
+        const day = Number(pathDateMatch[3] || 1);
+        return year * 10000 + month * 100 + day;
+      }
+
+      const compactDateMatch = source.match(/\/(20\d{2})\/(\d{2})(\d{2})(?:\/|$)/);
+      if (compactDateMatch) {
+        const year = Number(compactDateMatch[1]);
+        const month = Number(compactDateMatch[2]);
+        const day = Number(compactDateMatch[3]);
+        return year * 10000 + month * 100 + day;
+      }
+
+      return null;
+    }
+
+    function formatPublicationLabel(sortKey) {
+      if (!Number.isFinite(Number(sortKey))) return "Publication date unknown";
+      const numeric = Number(sortKey);
+      const year = Math.floor(numeric / 10000);
+      const month = Math.floor((numeric % 10000) / 100);
+      const day = numeric % 100;
+      const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      const monthLabel = months[Math.max(0, Math.min(11, month - 1))] || `${month}`.padStart(2, "0");
+      return day > 1 ? `${monthLabel} ${day}, ${year}` : `${monthLabel} ${year}`;
+    }
+
+    function buildHeroResearchItems(rows) {
+      return rows
+        .map((row) => ({
+          ...row,
+          publicationSortKey: inferPublicationSortKey(row)
+        }))
+        .sort((a, b) => {
+          const aHasDate = Number.isFinite(a.publicationSortKey);
+          const bHasDate = Number.isFinite(b.publicationSortKey);
+          if (aHasDate && bHasDate && a.publicationSortKey !== b.publicationSortKey) {
+            return b.publicationSortKey - a.publicationSortKey;
+          }
+          if (aHasDate !== bHasDate) {
+            return aHasDate ? -1 : 1;
+          }
+          if (b.year !== a.year) return b.year - a.year;
+          return `${a.series}`.localeCompare(`${b.series}`);
+        });
+    }
+
+    function renderHeroResearchItem() {
+      const copyEl = document.getElementById("hero-research-copy");
+      const linkEl = document.getElementById("hero-research-link");
+      const dateEl = document.getElementById("hero-research-date");
+      const indexEl = document.getElementById("hero-research-index");
+      const prevButton = document.getElementById("hero-research-prev");
+      const nextButton = document.getElementById("hero-research-next");
+      if (!copyEl || !linkEl || !dateEl || !indexEl || !prevButton || !nextButton) return;
+
+      const items = heroResearchState.items || [];
+      if (!items.length) {
+        copyEl.textContent = "This box will surface the newest published estimate included in the meta-review scatter.";
+        copyEl.classList.remove("is-collapsed");
+        linkEl.removeAttribute("href");
+        linkEl.textContent = "Source unavailable";
+        dateEl.textContent = "Publication date unknown";
+        indexEl.textContent = "0 / 0";
+        prevButton.disabled = true;
+        nextButton.disabled = true;
+        return;
+      }
+
+      heroResearchState.index = clamp(heroResearchState.index, 0, items.length - 1);
+      const item = items[heroResearchState.index];
+      copyEl.textContent = item.notes || "";
+      copyEl.classList.add("is-collapsed");
+      if (item.source) {
+        linkEl.href = item.source;
+        linkEl.setAttribute("aria-label", "Open source");
+      } else {
+        linkEl.removeAttribute("href");
+        linkEl.setAttribute("aria-label", "Source unavailable");
+      }
+      linkEl.innerHTML = item.source
+        ? `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5"></path><path d="M10 14L19 5"></path><path d="M19 14v5h-5"></path><path d="M5 10v9h9"></path></svg>`
+        : "Source unavailable";
+      dateEl.textContent = `Publication date: ${formatPublicationLabel(item.publicationSortKey)}`;
+      indexEl.textContent = `${heroResearchState.index + 1} / ${items.length}`;
+      prevButton.disabled = items.length <= 1;
+      nextButton.disabled = items.length <= 1;
+    }
+
+    function bindHeroResearchControls() {
+      const prevButton = document.getElementById("hero-research-prev");
+      const nextButton = document.getElementById("hero-research-next");
+      if (!prevButton || !nextButton || prevButton.dataset.bound === "true") return;
+
+      prevButton.dataset.bound = "true";
+      nextButton.dataset.bound = "true";
+
+      prevButton.addEventListener("click", () => {
+        if (!heroResearchState.items.length) return;
+        heroResearchState.index = (heroResearchState.index - 1 + heroResearchState.items.length) % heroResearchState.items.length;
+        renderHeroResearchItem();
+      });
+
+      nextButton.addEventListener("click", () => {
+        if (!heroResearchState.items.length) return;
+        heroResearchState.index = (heroResearchState.index + 1) % heroResearchState.items.length;
+        renderHeroResearchItem();
+      });
+    }
+
+    function bindHeroResearchSummaryToggle() {
+      const copyEl = document.getElementById("hero-research-copy");
+      if (!copyEl || copyEl.dataset.bound === "true") return;
+
+      copyEl.dataset.bound = "true";
+      copyEl.addEventListener("click", () => {
+        copyEl.classList.toggle("is-collapsed");
+      });
+    }
+
+    function percentileFromValues(values, p) {
+      if (!values.length) return null;
+      const sorted = [...values].sort((a, b) => a - b);
+      return percentile(sorted, p);
+    }
+
+    function averageFromValues(values) {
+      const numericValues = values
+        .filter((value) => Number.isFinite(Number(value)))
+        .map(Number);
+      if (!numericValues.length) return null;
+      return numericValues.reduce((sum, value) => sum + value, 0) / numericValues.length;
+    }
+
+    function inferSeriesMax(config) {
+      const seriesMax = (config.series || [])
+        .flatMap((series) => series.values || [])
+        .filter((value) => Number.isFinite(Number(value)))
+        .map(Number);
+
+      return seriesMax.length ? Math.max(...seriesMax) : 1;
+    }
+
+    function baseTooltip(width) {
+      const metrics = chartMetrics(width);
+      const primaryText = themeColor("--copy-primary", "#f7fbff");
+      return {
+        trigger: "axis",
+        triggerOn: "mousemove|click",
+        confine: true,
+        enterable: false,
+        backgroundColor: "#08111d",
+        borderColor: "rgba(88, 230, 255, 0.18)",
+        borderWidth: 1,
+        textStyle: {
+          color: primaryText,
+          fontFamily: "IBM Plex Mono",
+          fontSize: metrics.tooltip.fontSize
+        },
+        extraCssText: `box-shadow: 0 18px 60px rgba(0,0,0,0.38); border-radius: ${metrics.tooltip.radius}px; padding: ${metrics.tooltip.padY}px ${metrics.tooltip.padX}px; white-space: normal; overflow-wrap: anywhere; word-break: break-word;`,
+        axisPointer: {
+          type: "line",
+          snap: true,
+          lineStyle: { color: "rgba(255,255,255,0.18)", width: 1.5 }
+        }
+      };
+    }
+
+    function lineSeriesConfig(series, width, config = {}) {
+      const metrics = chartMetrics(width);
+      const monthlySeries = isMonthlyLabel((config.xValues || [])[0] || "");
+      const hoverOnlyMarkers = config.pointMode === "hover" || (config.pointMode !== "default" && monthlySeries);
+      return {
+        name: series.name,
+        type: "line",
+        smooth: 0.18,
+        symbol: "circle",
+        showSymbol: !hoverOnlyMarkers,
+        symbolSize: hoverOnlyMarkers ? Math.max(metrics.dotSize + 1, 7) : metrics.dotSize,
+        data: series.values,
+        lineStyle: { width: metrics.lineWidth, color: series.color, cap: "round", join: "round" },
+        itemStyle: { color: series.color, borderColor: "#08111f", borderWidth: 2 },
+        emphasis: {
+          focus: "none",
+          scale: false,
+          disabled: false,
+          itemStyle: hoverOnlyMarkers ? { opacity: 1 } : undefined
+        },
+        blur: {
+          lineStyle: { opacity: 1 },
+          itemStyle: { opacity: hoverOnlyMarkers ? 0 : 1 }
+        }
+      };
+    }
+
+    function lineTooltipFormatter(params, width, config) {
+      if (!Array.isArray(params) || params.length === 0) {
+        return "";
+      }
+      const metrics = chartMetrics(width);
+      const year = formatMonthLabel(params[0]?.axisValueLabel ?? "");
+      const rows = params.map((param) => {
+        const swatch = `<span style="display:inline-block;width:${metrics.tooltip.swatch}px;height:${metrics.tooltip.swatch}px;border-radius:999px;background:${param.color};margin-right:${metrics.tooltip.swatch}px;"></span>`;
+        return `<div style="margin-top:${metrics.tooltip.rowGap}px;white-space:nowrap;">${swatch}${param.seriesName}: ${formatMetricValue(param.data, config.tooltipValueFormat)}</div>`;
+      }).join("");
+      return `<div style="font-weight:700;margin-bottom:${Math.max(2, metrics.tooltip.rowGap - 3)}px;">${year}</div>${rows}`;
+    }
+
+    function buildLineOption(config, width) {
+      const labels = config.xValues || defaultYears;
+      const yMax = config.fixedYMax || inferSeriesMax(config);
+      const yAxisConfig = config.fixedYMax
+        ? fixedPercentYAxis(width, config.axisValueFormat, config.fixedYMax)
+        : baseYAxis(yMax, width, config.axisValueFormat);
+      return {
+        animation: false,
+        backgroundColor: "transparent",
+        legend: { show: false },
+        grid: {
+          ...baseGrid(width),
+          left: 6
+        },
+        tooltip: { ...baseTooltip(width), formatter: (params) => lineTooltipFormatter(params, width, config) },
+        xAxis: baseXAxis(width, labels),
+        yAxis: yAxisConfig.axis,
+        series: config.series.map((series) => lineSeriesConfig(series, width, config))
+      };
+    }
+
+    function buildBandLineOption(config, width) {
+      const labels = config.xValues || defaultYears;
+      const yAxisConfig = fixedPercentYAxis(width, config.axisValueFormat, config.fixedYMax || 100);
+
+      return {
+        animation: false,
+        backgroundColor: "transparent",
+        legend: { show: false },
+        grid: {
+          ...baseGrid(width),
+          left: 6
+        },
+        tooltip: { ...baseTooltip(width), formatter: (params) => lineTooltipFormatter(params, width, config) },
+        xAxis: baseXAxis(width, labels),
+        yAxis: yAxisConfig.axis,
+        series: config.series.map((series) => ({
+          ...lineSeriesConfig(series, width, config),
+          z: 3
+        }))
+      };
+    }
+
+    function stackedBarTooltipFormatter(params, width, config) {
+      if (!Array.isArray(params) || params.length === 0) {
+        return "";
+      }
+
+      const metrics = chartMetrics(width);
+      const secondaryText = themeColor("--copy-secondary", "rgba(255, 255, 255, 0.62)");
+      const label = params[0]?.axisValue ?? params[0]?.axisValueLabel ?? "";
+      const periodMeta = (config.periods || []).find((item) => item.period === label);
+      const rows = [...params]
+        .sort((a, b) => Number(b.data || 0) - Number(a.data || 0))
+        .map((param) => {
+          const swatch = `<span style="display:inline-block;width:${metrics.tooltip.swatch}px;height:${metrics.tooltip.swatch}px;border-radius:999px;background:${param.color};margin-right:${metrics.tooltip.swatch}px;"></span>`;
+          return `<div style="margin-top:${metrics.tooltip.rowGap}px;white-space:nowrap;">${swatch}${param.seriesName}: ${formatMetricValue(param.data, config.tooltipValueFormat)}</div>`;
+        })
+        .join("");
+
+      const meta = periodMeta
+        ? `<div style="margin-top:${Math.max(8, metrics.tooltip.rowGap + 2)}px;color:${secondaryText};line-height:1.45;">Sample: ${formatMetricValue(periodMeta.sample_size, "integer")} pages<br>Crawl: ${escapeHtml(periodMeta.sample_source)}</div>`
+        : "";
+
+      return `<div style="font-weight:700;margin-bottom:${Math.max(2, metrics.tooltip.rowGap - 3)}px;">${formatMonthLabel(label)}</div>${rows}${meta}`;
+    }
+
+    function buildStackedBarOption(config, width) {
+      const labels = config.xValues || defaultYears;
+      const maxBarWidth = clamp(width / Math.max(labels.length * 1.7, 16), 18, 34);
+      const yAxisConfig = fixedPercentYAxis(width, config.axisValueFormat, 100);
+
+      return {
+        animation: false,
+        backgroundColor: "transparent",
+        legend: { show: false },
+        grid: {
+          ...baseGrid(width),
+          left: 6
+        },
+        tooltip: {
+          ...baseTooltip(width),
+          trigger: "axis",
+          axisPointer: {
+            type: "shadow",
+            shadowStyle: { color: "rgba(255,255,255,0.08)" }
+          },
+          formatter: (params) => stackedBarTooltipFormatter(params, width, config)
+        },
+        xAxis: {
+          ...baseXAxis(width, labels),
+          boundaryGap: true
+        },
+        yAxis: yAxisConfig.axis,
+        series: (config.series || []).map((series, index, allSeries) => ({
+          name: series.name,
+          type: "bar",
+          stack: "web-sample-share",
+          data: series.values,
+          barMaxWidth: maxBarWidth,
+          itemStyle: {
+            color: series.color,
+            borderRadius: index === 0
+              ? [0, 0, 8, 8]
+              : index === allSeries.length - 1
+                ? [8, 8, 0, 0]
+                : 0
+          },
+          emphasis: {
+            focus: "none",
+            disabled: true
+          }
+        }))
+      };
+    }
+
+    function barTooltipFormatter(params, width, config) {
+      if (!Array.isArray(params) || params.length === 0) {
+        return "";
+      }
+
+      const metrics = chartMetrics(width);
+      const label = params[0]?.axisValue ?? params[0]?.axisValueLabel ?? "";
+      const rows = params.map((param) => {
+        const swatch = `<span style="display:inline-block;width:${metrics.tooltip.swatch}px;height:${metrics.tooltip.swatch}px;border-radius:999px;background:${param.color};margin-right:${metrics.tooltip.swatch}px;"></span>`;
+        return `<div style="margin-top:${metrics.tooltip.rowGap}px;white-space:nowrap;">${swatch}${param.seriesName}: ${formatMetricValue(param.data, config.tooltipValueFormat)}</div>`;
+      }).join("");
+
+      return `<div style="font-weight:700;margin-bottom:${Math.max(2, metrics.tooltip.rowGap - 3)}px;">${label}</div>${rows}`;
+    }
+
+    function buildBarOption(config, width) {
+      const labels = config.xValues || defaultYears;
+      const maxBarWidth = clamp(width / Math.max(labels.length * 2.8, 8), 30, 72);
+      const yMax = inferSeriesMax(config);
+      const yAxisConfig = baseYAxis(yMax, width, config.axisValueFormat);
+      const metrics = chartMetrics(width);
+      const secondaryText = themeColor("--copy-secondary", "rgba(255, 255, 255, 0.62)");
+
+      return {
+        animation: false,
+        backgroundColor: "transparent",
+        legend: { show: false },
+        grid: {
+          ...baseGrid(width),
+          left: 6
+        },
+        tooltip: {
+          ...baseTooltip(width),
+          trigger: "axis",
+          axisPointer: {
+            type: "shadow",
+            shadowStyle: { color: "rgba(255,255,255,0.08)" }
+          },
+          formatter: (params) => barTooltipFormatter(params, width, config)
+        },
+        xAxis: {
+          type: "category",
+          data: labels,
+          boundaryGap: true,
+          axisTick: {
+            show: false,
+            alignWithLabel: true
+          },
+          axisLine: {
+            show: true,
+            lineStyle: { color: "rgba(164, 182, 218, 0.42)", width: 1.2 }
+          },
+          axisLabel: {
+            color: secondaryText,
+            fontSize: metrics.axisFont,
+            fontWeight: 600,
+            margin: metrics.labelGap,
+            interval: 0
+          },
+          splitLine: { show: false }
+        },
+        yAxis: yAxisConfig.axis,
+        series: (config.series || []).map((series) => ({
+          name: series.name,
+          type: "bar",
+          data: series.values,
+          barMaxWidth: maxBarWidth,
+          itemStyle: {
+            color: series.color,
+            borderRadius: [8, 8, 0, 0]
+          },
+          emphasis: {
+            focus: "none",
+            itemStyle: {
+              color: series.color
+            }
+          }
+        }))
+      };
+    }
+
+    function escapeHtml(value) {
+      return `${value}`
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function buildInfoTooltipMarkup({ intent = "", description = "", source = "", lastRefreshed = "", method = "", caveats = "" }) {
+      const sections = [];
+      const intentValue = intent || description;
+      if (intentValue) {
+        sections.push(`
+          <div class="tooltip-section">
+            <div class="tooltip-label">Intent</div>
+            <div class="tooltip-value">${escapeHtml(intentValue)}</div>
+          </div>
+        `);
+      }
+      const sourceValue = [source, lastRefreshed ? `Last refreshed: ${lastRefreshed}` : ""].filter(Boolean).join(". ");
+      if (sourceValue) {
+        sections.push(`
+          <div class="tooltip-section">
+            <div class="tooltip-label">Source</div>
+            <div class="tooltip-value">${escapeHtml(sourceValue)}</div>
+          </div>
+        `);
+      }
+      if (method) {
+        sections.push(`
+          <div class="tooltip-section">
+            <div class="tooltip-label">Method</div>
+            <div class="tooltip-value">${escapeHtml(method)}</div>
+          </div>
+        `);
+      }
+      if (caveats) {
+        sections.push(`
+          <div class="tooltip-section">
+            <div class="tooltip-label">Caveat</div>
+            <div class="tooltip-value">${escapeHtml(caveats)}</div>
+          </div>
+        `);
+      }
+
+      return `
+        <div class="tooltip-structured">
+          ${sections.join("")}
+        </div>
+      `.trim();
+    }
+
+    function parseTooltipMeta(metaEl) {
+      const parsed = {};
+      if (!metaEl) return parsed;
+
+      const lines = metaEl.innerHTML
+        .split(/<br\s*\/?>/i)
+        .map((line) => {
+          const probe = document.createElement("div");
+          probe.innerHTML = line;
+          return (probe.textContent || "").trim();
+        })
+        .filter(Boolean);
+
+      lines.forEach((line) => {
+        const match = line.match(/^([^:]+):\s*(.*)$/);
+        if (!match) return;
+        const key = match[1].trim().toLowerCase();
+        const value = match[2].trim();
+        if (key === "source") parsed.source = value;
+        if (key === "last refreshed") parsed.lastRefreshed = value;
+        if (key === "method") parsed.method = value;
+        if (key === "caveats") parsed.caveats = value;
+      });
+
+      return parsed;
+    }
+
+    function normalizeTooltipMarkup(sourceEl) {
+      if (!sourceEl) return "";
+      if (sourceEl.querySelector(".tooltip-structured")) {
+        return sourceEl.innerHTML;
+      }
+
+      const description = sourceEl.querySelector("p")?.textContent?.trim() || "";
+      const meta = parseTooltipMeta(sourceEl.querySelector(".tooltip-meta"));
+      return buildInfoTooltipMarkup({
+        intent: description,
+        source: meta.source || "",
+        lastRefreshed: meta.lastRefreshed || "",
+        method: meta.method || "",
+        caveats: meta.caveats || ""
+      });
+    }
+
+    function estimateSummary(series) {
+      const metricLabels = {
+        "Graphite / Common Crawl new web articles": "new English web articles estimated AI-generated",
+        "ACL social media / Medium": "Medium posts estimated AI-generated",
+        "ACL social media / Quora": "Quora posts estimated AI-generated",
+        "ACL social media / Reddit": "Reddit posts estimated AI-generated",
+        "JAMA Network Open medical literature": "JAMA Network Open articles estimated AI-generated",
+        "JAMA Network Open / invited commentaries": "JAMA invited commentaries estimated AI-generated",
+        "JAMA Network Open / original investigations": "JAMA original investigations estimated AI-generated",
+        "JAMA Network Open / research letters": "JAMA research letters estimated AI-generated",
+        "OTSR orthopedics journal articles": "OTSR journal articles estimated AI-generated",
+        "Princeton / English Wikipedia new pages": "new English Wikipedia pages estimated AI-generated",
+        "Biomedical abstracts / excess vocabulary": "biomedical abstracts with LLM-attributed wording",
+        "Stanford / CFPB consumer complaints": "consumer complaint text estimated LLM-assisted",
+        "Stanford / Newswire press releases": "Newswire press-release text estimated LLM-assisted",
+        "Stanford / UN press releases": "UN press-release text estimated LLM-assisted",
+        "Stanford / small-firm job postings": "small-firm job-posting text estimated LLM-assisted",
+        "Spennemann / active web pages": "active web-page text estimated AI-generated",
+        "Ahrefs / new webpages with AI content": "new webpages containing some AI-generated content",
+        "Pangram / U.S. newspaper news articles": "U.S. newspaper articles estimated AI-generated",
+        "Pangram / major-newspaper opinion pieces": "major-newspaper opinion pieces estimated AI-generated",
+        "X election images": "X election images estimated AI-generated"
+      };
+      return metricLabels[series] || "online content estimated AI-generated";
+    }
+
+    function notesToScopeMethodCaveat(notes) {
+      const parts = `${notes || ""}`
+        .split(/(?<=[.!?])\s+/)
+        .map((part) => part.trim())
+        .filter(Boolean);
+
+      if (parts.length >= 3) {
+        return {
+          scope: parts[0],
+          method: parts[1],
+          caveat: parts.slice(2).join(" ")
+        };
+      }
+
+      return {
+        scope: parts[0] || "",
+        method: parts[1] || "",
+        caveat: parts[2] || ""
+      };
+    }
+
+    function scatterTooltipFormatter(params) {
+      const point = params?.data || {};
+      const color = params?.color || "#58e6ff";
+      const secondaryText = themeColor("--copy-secondary", "rgba(255, 255, 255, 0.62)");
+      const swatch = `<span style="display:inline-block;width:10px;height:10px;border-radius:999px;background:${escapeHtml(color)};margin-right:8px;vertical-align:middle;"></span>`;
+      const isAnnualAverage = (params?.seriesName || "") === "Annual average";
+      const shortLine = isAnnualAverage
+        ? `Annual average of included estimates: ${formatMetricValue(point.value?.[1], "percent2")}`
+        : (point.label || "");
+      const label = shortLine
+        ? `<div style="margin-bottom:4px;color:${secondaryText};line-height:1.35;">${swatch}${escapeHtml(shortLine)}</div>`
+        : "";
+      const summary = isAnnualAverage
+        ? ""
+        : (point.summary || `${point.rawValue ?? formatMetricValue(point.value?.[1], "percent2")} of online content estimated AI-generated`);
+      const source = point.source ? `<div style="margin-top:6px;line-height:1.4;">Source: <a href="${escapeHtml(point.source)}" target="_blank" rel="noreferrer" style="color:${secondaryText};text-decoration:none;">${escapeHtml(point.source)}</a></div>` : "";
+      return `
+        <div style="font-weight:700;margin-bottom:4px;">${point.year ?? ""}</div>
+        ${label}
+        ${summary ? `<div style="line-height:1.45;white-space:normal;overflow-wrap:anywhere;word-break:break-word;">${escapeHtml(summary)}</div>` : ""}
+        ${source}
+      `.trim();
+    }
+
+    function buildScatterTrendOption(config, width) {
+      const metrics = chartMetrics(width);
+      const secondaryText = themeColor("--copy-secondary", "rgba(255, 255, 255, 0.62)");
+      const allValues = (config.series || [])
+        .flatMap((series) => (series.data || []).map((point) => Number(point?.value?.[1])))
+        .filter(Number.isFinite);
+      const yMax = Math.max(...allValues, 1);
+      const yAxisConfig = baseYAxis(yMax, width, config.axisValueFormat);
+      const yearValues = (config.xValues || ["2020"]).map(Number).filter(Number.isFinite);
+      const firstYear = Math.min(...yearValues);
+      const lastYear = Math.max(...yearValues);
+      const yearStep = getNumericYearStep(width, yearValues);
+
+      return {
+        animation: false,
+        backgroundColor: "transparent",
+        legend: { show: false },
+        grid: {
+          ...baseGrid(width),
+          left: 6
+        },
+        tooltip: {
+          ...baseTooltip(width),
+          trigger: "item",
+          triggerOn: "mousemove|click",
+          enterable: true,
+          axisPointer: undefined,
+          formatter: scatterTooltipFormatter
+        },
+        xAxis: {
+          type: "value",
+          min: firstYear - 0.2,
+          max: lastYear + 0.2,
+          interval: 1,
+          boundaryGap: [0.04, 0.04],
+          axisTick: { show: false },
+          axisLine: {
+            show: true,
+            lineStyle: { color: "rgba(164, 182, 218, 0.42)", width: 1.2 }
+          },
+          axisLabel: {
+            color: secondaryText,
+            fontSize: metrics.axisFont,
+            fontWeight: 600,
+            margin: metrics.labelGap,
+            alignMinLabel: "left",
+            alignMaxLabel: "right",
+            formatter: (value) => {
+              const rounded = Math.round(value);
+              if (!yearValues.includes(rounded)) return "";
+              const label = `${rounded}`;
+              if (!(yearStep === 0 || rounded === firstYear || rounded === lastYear || (rounded - firstYear) % (yearStep + 1) === 0)) {
+                return "";
+              }
+              return label;
+            }
+          },
+          splitLine: { show: false }
+        },
+        yAxis: yAxisConfig.axis,
+        series: (config.series || []).map((series) => ({
+          name: series.name,
+          type: series.type || "scatter",
+          data: series.data || [],
+          smooth: series.type === "line" ? 0.16 : undefined,
+          symbol: "circle",
+          showSymbol: series.type === "line" ? false : true,
+          symbolSize: series.type === "line" || series.hoverTarget ? Math.max(metrics.dotSize + 1, 7) : metrics.dotSize,
+          itemStyle: series.hoverTarget
+            ? {
+                color: series.color,
+                borderColor: "#08111f",
+                borderWidth: 2,
+                opacity: 0
+              }
+            : series.type === "line"
+            ? {
+                color: series.color,
+                borderColor: "#08111f",
+                borderWidth: 2,
+                opacity: 1
+              }
+            : {
+                color: series.color,
+                borderColor: "#08111f",
+                borderWidth: 2,
+                opacity: 0.9
+              },
+            lineStyle: series.type === "line"
+              ? {
+                  color: series.color,
+                  width: metrics.lineWidth,
+                  type: "solid",
+                  cap: "round",
+                  join: "round"
+                }
+              : undefined,
+          emphasis: series.type === "line" || series.hoverTarget
+            ? {
+                focus: "none",
+                scale: false,
+                disabled: false,
+                itemStyle: { opacity: 1 }
+              }
+            : undefined,
+          z: series.hoverTarget ? 4 : series.type === "line" ? 2 : 3
+        }))
+      };
+    }
+
+    function renderCharts() {
+      document.querySelectorAll("[data-chart]").forEach((el) => {
+        const key = el.dataset.chart;
+        const config = chartData[key];
+        if (!config) return;
+
+        let chart = chartRegistry.get(el);
+        if (!chart) {
+          chart = echarts.init(el, null, { renderer: "svg" });
+          chartRegistry.set(el, chart);
+        }
+
+        const width = el.clientWidth || 820;
+        const option = config.type === "band-line"
+          ? buildBandLineOption(config, width)
+          : config.type === "scatter-trend"
+            ? buildScatterTrendOption(config, width)
+            : config.type === "stacked-bar"
+              ? buildStackedBarOption(config, width)
+            : config.type === "bar"
+              ? buildBarOption(config, width)
+            : buildLineOption(config, width);
+
+        chart.setOption(option, true);
+        chart.resize();
+      });
+    }
+
+    const syncedCardSectionSelectors = [
+      ".card-section--takeaway",
+      ".card-section--technical",
+      ".card-section--legend",
+      ".card-section--chart",
+      ".card-section--source"
+    ];
+
+    function resetChartCardRowHeights() {
+      document.querySelectorAll(".grid > .card").forEach((card) => {
+        card.style.minHeight = "";
+        syncedCardSectionSelectors.forEach((selector) => {
+          const section = card.querySelector(selector);
+          if (section) {
+            section.style.minHeight = "";
+          }
+        });
+      });
+    }
+
+    function chartCardRows() {
+      const cards = Array.from(document.querySelectorAll(".grid > .card"));
+      const rows = [];
+      const tolerance = 8;
+
+      cards.forEach((card) => {
+        const top = Math.round(card.getBoundingClientRect().top);
+        const existingRow = rows.find((row) => Math.abs(row.top - top) <= tolerance);
+        if (existingRow) {
+          existingRow.cards.push(card);
+          existingRow.top = Math.min(existingRow.top, top);
+        } else {
+          rows.push({ top, cards: [card] });
+        }
+      });
+
+      return rows;
+    }
+
+    function equalizeChartCardRows() {
+      resetChartCardRowHeights();
+
+      chartCardRows().forEach((row) => {
+        const maxCardHeight = Math.max(...row.cards.map((card) => card.offsetHeight), 0);
+        row.cards.forEach((card) => {
+          card.style.minHeight = `${maxCardHeight}px`;
+        });
+
+        syncedCardSectionSelectors.forEach((selector) => {
+          const sections = row.cards
+            .map((card) => card.querySelector(selector))
+            .filter(Boolean);
+          const maxSectionHeight = Math.max(...sections.map((section) => section.offsetHeight), 0);
+          sections.forEach((section) => {
+            section.style.minHeight = `${maxSectionHeight}px`;
+          });
+        });
+      });
+    }
+
+    function stackOverflowTooltipHtml(snapshot) {
+      return buildInfoTooltipMarkup({
+        ...snapshot,
+        source: "Stack Exchange API monthly question counts",
+        intent: "We included this because the dead internet theory is also about public human exchange collapsing, not just AI content rising. Stack Overflow is a clean test of whether people still need to ask other people for help in public."
+      });
+    }
+
+    function cloudflareTooltipHtml(snapshot) {
+      return buildInfoTooltipMarkup({
+        ...snapshot,
+        source: "Cloudflare Radar monthly AI bot traffic snapshot",
+        intent: "We included this because the dead internet theory is not just about AI writing the web. It is also about AI systems increasingly reading, crawling, and traversing it.",
+        caveats: "This reflects a broad observed slice of the public web, not the whole internet."
+      });
+    }
+
+    function wikipediaTooltipHtml(snapshot) {
+      return buildInfoTooltipMarkup({
+        ...snapshot,
+        source: "Wikimedia editor analytics",
+        intent: "We included this because the dead internet theory is partly about human contribution fading from the public web. Wikipedia is one of the clearest places to see whether people are still doing open, sustained knowledge work together."
+      });
+    }
+
+    function impervaTooltipHtml(snapshot) {
+      return buildInfoTooltipMarkup({
+        ...snapshot,
+        source: "Imperva Bad Bot Reports, stitched annual traffic profile",
+        intent: "We included this because some parts of the web are much more exposed to automation than others. This chart shows how far machine traffic can overwhelm humans on high-value, frequently targeted websites.",
+        method: "Imperva annual traffic profile, with good bot and bad bot combined into automated traffic.",
+        caveats: "Narrower and more security-focused than the Cloudflare chart. It reflects a more targeted slice of the web, so the levels are not directly comparable."
+      });
+    }
+
+    function impervaAtoTooltipHtml(snapshot) {
+      return buildInfoTooltipMarkup({
+        ...snapshot,
+        source: "Imperva account takeover series reconstructed from annual reports",
+        intent: "We included this because a more machine-driven internet is not just emptier, it can also be more hostile. Rising account attacks are one concrete sign that cheap automation is making abuse more industrial."
+      });
+    }
+
+    function aiContentMetaReviewTooltipHtml(snapshot) {
+      return buildInfoTooltipMarkup({
+        ...snapshot,
+        source: "Curated AI deep research using a guided source-review process.",
+        intent: "We included this because there is no single authoritative measure of AI-generated content online. So instead of pretending there is one clean number, this chart shows whether the published evidence points in the same direction."
+      });
+    }
+
+    function webSampleTooltipHtml(snapshot) {
+      return buildInfoTooltipMarkup({
+        ...snapshot,
+        source: "Common Crawl monthly samples classified under a research-guided rubric.",
+        intent: "We included this because it is our own recurring open-web check on whether AI-written pages are becoming more common over time. It gives us one consistent series, built the same way each month, instead of relying only on scattered outside estimates."
+      });
+    }
+
+    function applyCloudflareSnapshot(snapshot) {
+      const normalized = normalizeSnapshotRange(snapshot);
+      const config = chartData["traffic-bot-human"];
+      config.xValues = normalized.xValues;
+      config.axisValueFormat = normalized.axisValueFormat;
+      config.tooltipValueFormat = normalized.tooltipValueFormat;
+      config.series = (normalized.series || []).map((series) => ({
+        ...series,
+        name: "AI bots"
+      }));
+
+      const latestShareEl = document.querySelector('[data-dynamic="cloudflare-latest-ai-bot-share"]');
+      const aiBotSeries = config.series.find((series) => series.name === "AI bot share") || config.series[0];
+      if (latestShareEl && aiBotSeries?.values?.length) {
+        for (let index = aiBotSeries.values.length - 1; index >= 0; index -= 1) {
+          const latestValue = Number(aiBotSeries.values[index]);
+          if (Number.isFinite(latestValue)) {
+            latestShareEl.textContent = formatMetricValue(latestValue, "percent1");
+            break;
+          }
+        }
+      }
+
+      const tooltipEl = document.querySelector('[data-chart="traffic-bot-human"]')?.closest(".card")?.querySelector(".tooltip");
+      if (tooltipEl) {
+        tooltipEl.innerHTML = cloudflareTooltipHtml(normalized);
+      }
+    }
+
+    async function loadCloudflareSnapshot() {
+      const snapshot = window.__CLOUDFLARE_SNAPSHOT__;
+      if (!snapshot) {
+        throw new Error("Missing Cloudflare snapshot");
+      }
+      applyCloudflareSnapshot(snapshot);
+    }
+
+    function applyWikipediaSnapshot(snapshot) {
+      const normalized = normalizeSnapshotRange(snapshot);
+      const config = chartData.wikipedia;
+      config.xValues = normalized.xValues;
+      config.axisValueFormat = normalized.axisValueFormat;
+      config.tooltipValueFormat = normalized.tooltipValueFormat;
+      config.series = (normalized.series || []).map((series) => ({
+        ...series,
+        name: series.name === "All editors" ? "All editors (1+)" : "Active editors (5+)"
+      }));
+      config.pointMode = isMonthlyLabel((normalized.xValues || [])[0] || "") ? "hover" : "default";
+
+      const declineEl = document.querySelector('[data-dynamic="wikipedia-editor-decline"]');
+      const allEditors = config.series.find((series) => series.name === "All editors (1+)") || config.series[0];
+      if (declineEl && allEditors?.values?.length) {
+        const peak2020 = config.xValues.reduce((peak, label, index) => {
+          const value = Number(allEditors.values[index]);
+          if (!`${label}`.startsWith("2020-") || !Number.isFinite(value)) return peak;
+          return value > peak ? value : peak;
+        }, 0);
+        const latestValue = [...allEditors.values]
+          .reverse()
+          .map(Number)
+          .find((value) => Number.isFinite(value));
+        if (peak2020 > 0 && Number.isFinite(latestValue)) {
+          const decline = ((peak2020 - latestValue) / peak2020) * 100;
+          declineEl.textContent = formatMetricValue(decline, "percent1");
+        }
+      }
+
+      const tooltipEl = document.querySelector('[data-chart="wikipedia"]')?.closest(".card")?.querySelector(".tooltip");
+      if (tooltipEl) {
+        tooltipEl.innerHTML = wikipediaTooltipHtml(normalized);
+      }
+    }
+
+    async function loadWikipediaSnapshot() {
+      const snapshot = window.__WIKIPEDIA_SNAPSHOT__;
+      if (!snapshot) {
+        throw new Error("Missing Wikipedia snapshot");
+      }
+      applyWikipediaSnapshot(snapshot);
+    }
+
+    function applyImpervaSnapshot(snapshot) {
+      const normalized = normalizeSnapshotRange(snapshot);
+      const config = chartData["imperva-traffic"];
+      config.xValues = normalized.xValues;
+      config.axisValueFormat = normalized.axisValueFormat;
+      config.tooltipValueFormat = normalized.tooltipValueFormat;
+      const badBot = normalized.series.find((series) => series.name === "Bad bot");
+      const goodBot = normalized.series.find((series) => series.name === "Good bot");
+      const human = normalized.series.find((series) => series.name === "Human");
+      const automatedValues = normalized.xValues.map((_, index) => {
+        const bad = Number(badBot?.values?.[index] || 0);
+        const good = Number(goodBot?.values?.[index] || 0);
+        return bad + good;
+      });
+      config.series = [
+        { name: "AI bots", color: "#ff9a62", values: automatedValues },
+        { name: "Human", color: "#58e6ff", values: human?.values || [] }
+      ];
+
+      const latestAutomatedShareEl = document.querySelector('[data-dynamic="imperva-latest-automated-share"]');
+      if (latestAutomatedShareEl && automatedValues.length) {
+        for (let index = automatedValues.length - 1; index >= 0; index -= 1) {
+          const latestValue = Number(automatedValues[index]);
+          if (Number.isFinite(latestValue)) {
+            latestAutomatedShareEl.textContent = formatMetricValue(latestValue, "percent1");
+            break;
+          }
+        }
+      }
+
+      const tooltipEl = document.querySelector('[data-chart="imperva-traffic"]')?.closest(".card")?.querySelector(".tooltip");
+      if (tooltipEl) {
+        tooltipEl.innerHTML = impervaTooltipHtml(normalized);
+      }
+    }
+
+    async function loadImpervaSnapshot() {
+      const snapshot = window.__IMPERVA_SNAPSHOT__;
+      if (!snapshot) {
+        throw new Error("Missing Imperva snapshot");
+      }
+      applyImpervaSnapshot(snapshot);
+    }
+
+    function applyImpervaAtoSnapshot(snapshot) {
+      const normalized = normalizeSnapshotRange(snapshot);
+      const config = chartData["imperva-ato"];
+      const sourceSeries = normalized.series[0];
+      const annualTotals = normalized.xValues.reduce((totals, label, index) => {
+        const year = `${label}`.slice(0, 4);
+        const value = Number(sourceSeries?.values?.[index]);
+        if (!year || !Number.isFinite(value)) return totals;
+        totals[year] = (totals[year] || 0) + value;
+        return totals;
+      }, {});
+      const years = Object.keys(annualTotals).sort();
+
+      config.xValues = years;
+      config.axisValueFormat = normalized.axisValueFormat;
+      config.tooltipValueFormat = normalized.tooltipValueFormat;
+      config.series = [{
+        name: "Total recorded attacks",
+        color: sourceSeries?.color || "#ff79c6",
+        values: years.map((year) => annualTotals[year])
+      }];
+
+      const atoChangeEl = document.querySelector('[data-dynamic="imperva-ato-change"]');
+      if (atoChangeEl && years.length) {
+        const baseYear = "2022";
+        const latestYear = years[years.length - 1];
+        const baseValue = annualTotals[baseYear];
+        const latestValue = annualTotals[latestYear];
+        if (baseValue > 0 && Number.isFinite(latestValue)) {
+          const change = ((latestValue - baseValue) / baseValue) * 100;
+          atoChangeEl.textContent = formatMetricValue(change, "percent1");
+        }
+      }
+
+      const tooltipEl = document.querySelector('[data-chart="imperva-ato"]')?.closest(".card")?.querySelector(".tooltip");
+      if (tooltipEl) {
+        tooltipEl.innerHTML = impervaAtoTooltipHtml(normalized);
+      }
+    }
+
+    async function loadImpervaAtoSnapshot() {
+      const snapshot = window.__IMPERVA_ATO_SNAPSHOT__;
+      if (!snapshot) {
+        throw new Error("Missing Imperva ATO snapshot");
+      }
+      applyImpervaAtoSnapshot(snapshot);
+    }
+
+    function applyAiContentMetaReviewSnapshot(snapshot) {
+      const rows = (snapshot.rows || [])
+        .map((row) => ({
+          ...row,
+          year: Number(row.year),
+          numericValue: parseEstimateMidpoint(row.value)
+        }))
+        .filter((row) => Number.isFinite(row.year) && Number.isFinite(row.numericValue) && row.year >= 2020);
+
+      heroResearchState.items = buildHeroResearchItems(rows);
+      heroResearchState.index = 0;
+      renderHeroResearchItem();
+
+      const grouped = rows.reduce((map, row) => {
+        if (!map.has(row.year)) map.set(row.year, []);
+        map.get(row.year).push(row);
+        return map;
+      }, new Map());
+
+      const years = [...grouped.keys()].sort((a, b) => a - b);
+      const scatterSeries = { name: "Published estimates", color: "#ffd36a", data: [] };
+      const trendData = years.map((year) => {
+        const rowsForYear = grouped.get(year) || [];
+        const average = averageFromValues(rowsForYear.map((row) => row.numericValue));
+        return {
+          value: [year, average],
+          year,
+          rawValue: average == null ? "" : formatMetricValue(average, "percent2"),
+          label: "",
+          summary: average == null
+            ? "No included estimates for this year."
+            : `${formatMetricValue(average, "percent2")} average of the included published estimates.`
+        };
+      });
+
+      const latestYear = 2026;
+      const latestAverage = trendData.find((point) => Number(point.year) === latestYear)?.value?.[1];
+      const latestAverageEl = document.querySelector('[data-dynamic="ai-content-2026-average"]');
+      if (latestAverageEl && Number.isFinite(Number(latestAverage))) {
+        latestAverageEl.textContent = `${Math.round(Number(latestAverage))}%`;
+      }
+
+      years.forEach((year) => {
+        const rowsForYear = [...(grouped.get(year) || [])]
+          .map((row) => ({
+            ...row,
+            publicationSortKey: inferPublicationSortKey(row)
+          }))
+          .sort((a, b) => {
+            const aHasDate = Number.isFinite(a.publicationSortKey);
+            const bHasDate = Number.isFinite(b.publicationSortKey);
+            if (aHasDate && bHasDate && a.publicationSortKey !== b.publicationSortKey) {
+              return a.publicationSortKey - b.publicationSortKey;
+            }
+            if (aHasDate !== bHasDate) {
+              return aHasDate ? -1 : 1;
+            }
+            return `${a.series}`.localeCompare(`${b.series}`);
+          });
+        const spacing = rowsForYear.length > 1 ? Math.min(0.12, 0.56 / rowsForYear.length) : 0;
+        const start = -((rowsForYear.length - 1) * spacing) / 2;
+
+        rowsForYear.forEach((row, index) => {
+          const point = {
+            value: [year + start + (index * spacing), row.numericValue],
+            year: row.year,
+            rawValue: row.value,
+            label: row.series,
+            source: row.source,
+            summary: row.notes || `${row.value} of ${estimateSummary(row.series)}`
+          };
+          scatterSeries.data.push(point);
+        });
+      });
+
+      chartData["ai-content-meta-review"] = {
+        type: "scatter-trend",
+        xValues: years.map(String),
+        axisValueFormat: "percent1",
+        tooltipValueFormat: "percent2",
+        series: [
+          scatterSeries,
+          { name: "Annual average", color: "#58e6ff", type: "line", data: trendData },
+          { name: "Annual average", color: "#58e6ff", type: "scatter", hoverTarget: true, data: trendData }
+        ]
+      };
+
+      const tooltipEl = document.querySelector('[data-chart="ai-content-meta-review"]')?.closest(".card")?.querySelector(".tooltip");
+      if (tooltipEl) {
+        tooltipEl.innerHTML = aiContentMetaReviewTooltipHtml({
+          title: "AI content share meta review",
+          description: "This is the deep-research scatter. Each dot is a published estimate we judged relevant enough to the core question. It matters because there is no single authoritative dataset, so the shape of the evidence matters more than any one number.",
+          source: "Compiled deep research table",
+          lastRefreshed: snapshot.lastRefreshed || "",
+          method: "Annual scatter from published estimates; ranges plotted at their midpoint; line shows the annual average of the included estimates.",
+          caveats: "The estimates still come from different studies and content sets, so the levels are noisy and not perfectly comparable."
+        });
+      }
+    }
+
+    async function loadAiContentMetaReviewSnapshot() {
+      const embedded = window.__AI_CONTENT_META_REVIEW_SNAPSHOT__;
+      if (embedded?.rows?.length) {
+        applyAiContentMetaReviewSnapshot(embedded);
+        return;
+      }
+
+      const path = window.AI_CONTENT_META_REVIEW?.path || "./data/ai-content-meta-review/ai_content_meta_review.json";
+      const response = await fetch(path);
+      if (!response.ok) {
+        throw new Error("Missing AI content meta review snapshot");
+      }
+      const snapshot = await response.json();
+      applyAiContentMetaReviewSnapshot(snapshot);
+    }
+
+    function trailingMovingAverage(values, windowSize = 3) {
+      const numericValues = Array.isArray(values) ? values : [];
+      return numericValues.map((_, index) => {
+        const start = Math.max(0, index - windowSize + 1);
+        const windowValues = numericValues
+          .slice(start, index + 1)
+          .filter((value) => Number.isFinite(Number(value)))
+          .map((value) => Number(value));
+        if (!windowValues.length) return null;
+        const average = windowValues.reduce((sum, value) => sum + value, 0) / windowValues.length;
+        return Number(average.toFixed(2));
+      });
+    }
+
+    function buildWebSampleMovingAverageSnapshot(snapshot, windowSize = 3) {
+      return {
+        ...snapshot,
+        title: "Monthly AI share in the web sample",
+        description: "This tracks a trailing 3-month moving average of the monthly share of sampled article-style web pages classified as AI and AI-influenced.",
+        method: "The chart plots trailing 3-month moving averages built from the monthly lite series. Each underlying month comes from a deterministic random 1,000-page subset drawn from the full prepared 5,000-page article-style Common Crawl sample.",
+        caveats: "This is a stable sample of article-style open-web pages, not the whole internet. The line is smoothed with a trailing 3-month moving average, so turning points appear more gradually.",
+        series: (snapshot.series || []).map((series) => ({
+          ...series,
+          values: trailingMovingAverage(series.values || [], windowSize)
+        }))
+      };
+    }
+
+    function applyWebSampleDashboardSnapshot(snapshot) {
+      const averagedSnapshot = buildWebSampleMovingAverageSnapshot(snapshot, 3);
+      const config = chartData["web-sample-classifications"];
+      config.xValues = averagedSnapshot.xValues || [];
+      config.axisValueFormat = averagedSnapshot.axisValueFormat || "percent1";
+      config.tooltipValueFormat = averagedSnapshot.tooltipValueFormat || "percent2";
+      config.series = (averagedSnapshot.series || []).map((series) => ({
+        ...series,
+        name: series.name === "AI share" ? "Strong AI signal" : "Partial AI signal"
+      }));
+      config.periods = averagedSnapshot.periods || [];
+      config.pointMode = "hover";
+
+      const strongSeries = (averagedSnapshot.series || []).find((series) => series.name === "AI share") || averagedSnapshot.series?.[0];
+      const partialSeries = (averagedSnapshot.series || []).find((series) => series.name === "AI-influenced share") || averagedSnapshot.series?.[1];
+      const ratioEl = document.querySelector('[data-dynamic="web-sample-partial-ratio"]');
+      if (ratioEl && strongSeries?.values?.length && partialSeries?.values?.length) {
+        for (let index = Math.min(strongSeries.values.length, partialSeries.values.length) - 1; index >= 0; index -= 1) {
+          const strong = Number(strongSeries.values[index]);
+          const partial = Number(partialSeries.values[index]);
+          if (Number.isFinite(strong) && strong > 0 && Number.isFinite(partial)) {
+            ratioEl.textContent = `${(partial / strong).toFixed(1)}x`;
+            break;
+          }
+        }
+      }
+
+      const tooltipEl = document.querySelector('[data-chart="web-sample-classifications"]')?.closest(".card")?.querySelector(".tooltip");
+      if (tooltipEl) {
+        tooltipEl.innerHTML = webSampleTooltipHtml(averagedSnapshot);
+      }
+    }
+
+    async function loadWebSampleDashboardSnapshot() {
+      const snapshot = window.__WEB_SAMPLE_LITE_SUMMARY_SNAPSHOT__;
+      if (!snapshot) {
+        throw new Error("Missing web sample dashboard snapshot");
+      }
+      applyWebSampleDashboardSnapshot(snapshot);
+    }
+
+    function applyStackOverflowSnapshot(snapshot) {
+      const normalized = normalizeSnapshotRange(snapshot);
+      const config = chartData["stack-overflow"];
+      config.xValues = normalized.xValues;
+      config.axisValueFormat = normalized.axisValueFormat;
+      config.tooltipValueFormat = normalized.tooltipValueFormat;
+      config.series = (normalized.series || []).map((series) => ({
+        ...series,
+        name: "Total new questions asked"
+      }));
+      config.pointMode = isMonthlyLabel((normalized.xValues || [])[0] || "") ? "hover" : "default";
+
+      const tooltipEl = document.querySelector('[data-chart="stack-overflow"]')?.closest(".card")?.querySelector(".tooltip");
+      if (tooltipEl) {
+        tooltipEl.innerHTML = stackOverflowTooltipHtml(normalized);
+      }
+    }
+
+    async function loadStackOverflowSnapshot() {
+      const snapshot = window.__STACKOVERFLOW_SNAPSHOT__;
+      if (!snapshot) {
+        throw new Error("Missing Stack Overflow snapshot");
+      }
+      applyStackOverflowSnapshot(snapshot);
+    }
+
+    let resizeFrame = null;
+
+    function scheduleRender() {
+      if (resizeFrame) cancelAnimationFrame(resizeFrame);
+      resizeFrame = requestAnimationFrame(() => {
+        equalizeChartCardRows();
+        renderCharts();
+        hideInfoTooltip();
+      });
+    }
+
+    const infoTooltip = document.getElementById("info-float-tooltip");
+    const infoBackdrop = document.getElementById("info-backdrop");
+
+    function positionInfoTooltip(button) {
+      if (!button || infoTooltip.classList.contains("is-sheet")) return;
+      const margin = readPx("--tooltip-viewport-margin", 18);
+      const rect = button.getBoundingClientRect();
+      const cardRect = button.closest(".card")?.getBoundingClientRect();
+      const tooltipWidth = infoTooltip.offsetWidth || 340;
+      const tooltipHeight = infoTooltip.offsetHeight || 240;
+      const minX = cardRect ? Math.max(cardRect.left + margin, margin) : margin;
+      const maxX = cardRect
+        ? Math.min(cardRect.right - tooltipWidth - margin, window.innerWidth - tooltipWidth - margin)
+        : window.innerWidth - tooltipWidth - margin;
+      const minY = cardRect ? Math.max(cardRect.top + margin, margin) : margin;
+      const maxY = cardRect
+        ? Math.min(cardRect.bottom - tooltipHeight - margin, window.innerHeight - tooltipHeight - margin)
+        : window.innerHeight - tooltipHeight - margin;
+
+      let x = rect.left;
+      let y = rect.top - tooltipHeight;
+
+      if (y < minY) {
+        y = rect.bottom + 10;
+      }
+
+      x = clamp(x, minX, Math.max(minX, maxX));
+      y = clamp(y, minY, Math.max(minY, maxY));
+      infoTooltip.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+    }
+
+    function setActiveInfoButton(button) {
+      if (activeInfoButton && activeInfoButton !== button) {
+        activeInfoButton.setAttribute("aria-expanded", "false");
+      }
+      activeInfoButton = button;
+      if (button) button.setAttribute("aria-expanded", "true");
+    }
+
+    function clearActiveInfoButton() {
+      if (activeInfoButton) activeInfoButton.setAttribute("aria-expanded", "false");
+      activeInfoButton = null;
+    }
+
+    function isInfoTooltipPinned() {
+      return pinnedInfoButton != null;
+    }
+
+    function shouldKeepInfoTooltipOpen(target) {
+      if (!target) return false;
+      if (target.closest("#info-float-tooltip")) return true;
+      if (target.closest(".info") && activeInfoButton && target.closest(".info").contains(activeInfoButton)) return true;
+      return false;
+    }
+
+    function showInfoTooltip(sourceEl, button) {
+      const mobileSheet = prefersTouchUi();
+      infoTooltip.innerHTML = normalizeTooltipMarkup(sourceEl);
+      infoTooltip.classList.toggle("is-sheet", mobileSheet);
+      infoTooltip.classList.add("visible");
+      infoTooltip.setAttribute("aria-hidden", "false");
+      infoTooltip.scrollTop = 0;
+      setActiveInfoButton(button);
+      if (mobileSheet) {
+        document.body.classList.add("tooltip-open");
+        infoBackdrop.hidden = false;
+        infoBackdrop.classList.add("visible");
+        infoTooltip.style.transform = "none";
+      } else {
+        positionInfoTooltip(button);
+      }
+    }
+
+    function hideInfoTooltip() {
+      infoTooltip.classList.remove("visible");
+      infoTooltip.classList.remove("is-sheet");
+      infoTooltip.setAttribute("aria-hidden", "true");
+      infoTooltip.style.transform = "translate3d(-9999px, -9999px, 0)";
+      document.body.classList.remove("tooltip-open");
+      infoBackdrop.classList.remove("visible");
+      infoBackdrop.hidden = true;
+      pinnedInfoButton = null;
+      clearActiveInfoButton();
+    }
+
+    function bindInfoTooltips() {
+      document.querySelectorAll(".info").forEach((info) => {
+        const button = info.querySelector("button");
+        const content = info.querySelector(".tooltip");
+        if (!button || !content) return;
+
+        button.setAttribute("aria-expanded", "false");
+        button.addEventListener("mouseenter", () => {
+          if (isInfoTooltipPinned()) return;
+          showInfoTooltip(content, button);
+        });
+        button.addEventListener("focus", () => {
+          if (isInfoTooltipPinned()) return;
+          showInfoTooltip(content, button);
+        });
+        info.addEventListener("mouseleave", (event) => {
+          if (isInfoTooltipPinned() || shouldKeepInfoTooltipOpen(event.relatedTarget)) return;
+          hideInfoTooltip();
+        });
+        button.addEventListener("blur", () => {
+          if (isInfoTooltipPinned()) return;
+          hideInfoTooltip();
+        });
+        button.addEventListener("click", (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          pinnedInfoButton = button;
+          showInfoTooltip(content, button);
+        });
+      });
+
+      infoBackdrop.addEventListener("click", hideInfoTooltip);
+
+      infoTooltip.addEventListener("mouseleave", (event) => {
+        if (isInfoTooltipPinned() || shouldKeepInfoTooltipOpen(event.relatedTarget)) return;
+        hideInfoTooltip();
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") hideInfoTooltip();
+      });
+
+      document.addEventListener("click", (event) => {
+        const clickedButton = event.target.closest(".info button");
+        const insideTooltip = event.target.closest("#info-float-tooltip");
+        if (!clickedButton && !insideTooltip && infoTooltip.classList.contains("visible")) {
+          hideInfoTooltip();
+        }
+      });
+
+      window.addEventListener("resize", () => {
+        if (activeInfoButton && infoTooltip.classList.contains("visible") && !prefersTouchUi()) {
+          positionInfoTooltip(activeInfoButton);
+        }
+      });
+
+      window.addEventListener("scroll", () => {
+        if (activeInfoButton && infoTooltip.classList.contains("visible") && !prefersTouchUi()) {
+          positionInfoTooltip(activeInfoButton);
+        }
+      }, { passive: true });
+    }
+
+    function moveInfoButtonsToSourceRow() {
+      document.querySelectorAll(".grid > .card").forEach((card) => {
+        const sourceSection = card.querySelector(".card-section--source");
+        const info = card.querySelector(".card-section--takeaway .info");
+        if (!sourceSection || !info || sourceSection.contains(info)) return;
+        sourceSection.appendChild(info);
+      });
+    }
+
+    const chartResizeObserver = new ResizeObserver(() => scheduleRender());
+    document.querySelectorAll(".chart-wrap").forEach((el) => chartResizeObserver.observe(el));
+
+    function syncHeroTitleLine() {
+      const svg = document.querySelector(".hero-title-logo");
+      const titleText = document.getElementById("heroTitleText");
+      const titleTail = document.getElementById("heroTitleTail");
+      const titleFade = document.getElementById("heroTitleLineFade");
+      if (!svg || !titleText || !titleTail || !titleFade) return;
+
+      const viewBoxWidth = svg.viewBox.baseVal.width || 760;
+      const lineStart = Number(titleTail.getAttribute("x1")) || 190;
+      const textBox = titleText.getBBox();
+      const lineEnd = Math.min(textBox.x + textBox.width + 8, viewBoxWidth - 8);
+
+      titleTail.setAttribute("x2", lineEnd.toFixed(1));
+      titleFade.setAttribute("x1", String(lineStart));
+      titleFade.setAttribute("y1", titleTail.getAttribute("y1") || "148");
+      titleFade.setAttribute("x2", lineEnd.toFixed(1));
+      titleFade.setAttribute("y2", titleTail.getAttribute("y1") || "148");
+    }
+
+    function syncHeroQuotePosition() {
+      const svg = document.querySelector(".hero-title-logo");
+      const titleText = document.getElementById("heroTitleText");
+      const titleTail = document.getElementById("heroTitleTail");
+      const quote = document.querySelector(".hero-quote");
+      if (!svg || !titleText || !titleTail || !quote) return;
+
+      quote.style.marginTop = "0px";
+
+      const svgRect = svg.getBoundingClientRect();
+      const titleRect = titleText.getBoundingClientRect();
+      const lineY = Number(titleTail.getAttribute("y1")) || 148;
+      const viewBoxHeight = svg.viewBox.baseVal.height || 240;
+      const lineScreenY = svgRect.top + (lineY / viewBoxHeight) * svgRect.height;
+      const gapAbove = Math.max(0, lineScreenY - titleRect.bottom);
+      const desiredQuoteTop = lineScreenY + gapAbove + 4;
+      const currentQuoteTop = quote.getBoundingClientRect().top;
+      const quoteShift = desiredQuoteTop - currentQuoteTop;
+      const titleOffset = Math.max(0, titleRect.left - svgRect.left);
+
+      quote.style.marginTop = `${quoteShift.toFixed(1)}px`;
+      quote.style.paddingLeft = `${titleOffset.toFixed(1)}px`;
+    }
+
+    window.addEventListener("resize", scheduleRender);
+    window.addEventListener("resize", syncHeroTitleLine);
+    window.addEventListener("resize", syncHeroQuotePosition);
+
+    async function initializeDashboard() {
+      if (document.fonts?.ready) {
+        await document.fonts.ready;
+      }
+
+      bindHeroResearchControls();
+      bindHeroResearchSummaryToggle();
+      renderHeroResearchItem();
+      syncHeroTitleLine();
+      syncHeroQuotePosition();
+      await loadCloudflareSnapshot();
+      await loadImpervaSnapshot();
+      await loadImpervaAtoSnapshot();
+      await loadWikipediaSnapshot();
+      await loadStackOverflowSnapshot();
+      await loadAiContentMetaReviewSnapshot();
+      await loadWebSampleDashboardSnapshot();
+      moveInfoButtonsToSourceRow();
+      syncHeroTitleLine();
+      syncHeroQuotePosition();
+      equalizeChartCardRows();
+      renderCharts();
+      bindInfoTooltips();
+    }
+
+    initializeDashboard();
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,17 @@
+{
+  "create_database": {
+    "queryExecutionId": "d5362309-4ff0-4e82-b073-290fa9b433e0",
+    "status": "SUCCEEDED",
+    "reason": null
+  },
+  "create_table": {
+    "queryExecutionId": "0abcce20-9e01-4011-a793-f139e0501cb0",
+    "status": "SUCCEEDED",
+    "reason": null
+  },
+  "repair_table": {
+    "queryExecutionId": "2bf74859-b445-4490-800e-a1785d5a52c8",
+    "status": "SUCCEEDED",
+    "reason": null
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "series": "web-sample-lite-v1",
+  "year": 2025,
+  "sampleSize": 1000,
+  "groupSize": 20,
+  "model": "gpt-5-mini",
+  "periods": [
+    {
+      "period": "2025-01",
+      "parentPrepared": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample\\web_sample_prepared_2025-01.json",
+      "preparedPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_prepared_2025-01.json",
+      "requestsPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_requests_2025-01.jsonl",
+      "sampleSeed": "8944701031577048227",
+      "sampleSizePrepared": 1000,
+      "requestCount": 50,
+      "model": "gpt-5-mini"
+    },
+    {
+      "period": "2025-02",
+      "parentPrepared": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample\\web_sample_prepared_2025-02.json",
+      "preparedPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_prepared_2025-02.json",
+      "requestsPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_requests_2025-02.jsonl",
+      "sampleSeed": "64882363420347186",
+      "sampleSizePrepared": 1000,
+      "requestCount": 50,
+      "model": "gpt-5-mini"
+    },
+    {
+      "period": "2025-03",
+      "parentPrepared": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample\\web_sample_prepared_2025-03.json",
+      "preparedPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_prepared_2025-03.json",
+      "requestsPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_requests_2025-03.jsonl",
+      "sampleSeed": "980052752703517694",
+      "sampleSizePrepared": 1000,
+      "requestCount": 50,
+      "model": "gpt-5-mini"
+    },
+    {
+      "period": "2025-04",
+      "parentPrepared": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample\\web_sample_prepared_2025-04.json",
+      "preparedPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_prepared_2025-04.json",
+      "requestsPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_requests_2025-04.jsonl",
+      "sampleSeed": "16669938809429297502",
+      "sampleSizePrepared": 1000,
+      "requestCount": 50,
+      "model": "gpt-5-mini"
+    },
+    {
+      "period": "2025-05",
+      "parentPrepared": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample\\web_sample_prepared_2025-05.json",
+      "preparedPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_prepared_2025-05.json",
+      "requestsPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_requests_2025-05.jsonl",
+      "sampleSeed": "10577886981393624468",
+      "sampleSizePrepared": 1000,
+      "requestCount": 50,
+      "model": "gpt-5-mini"
+    },
+    {
+      "period": "2025-06",
+      "parentPrepared": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample\\web_sample_prepared_2025-06.json",
+      "preparedPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_prepared_2025-06.json",
+      "requestsPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_requests_2025-06.jsonl",
+      "sampleSeed": "4931601289704757794",
+      "sampleSizePrepared": 1000,
+      "requestCount": 50,
+      "model": "gpt-5-mini"
+    },
+    {
+      "period": "2025-07",
+      "parentPrepared": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample\\web_sample_prepared_2025-07.json",
+      "preparedPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_prepared_2025-07.json",
+      "requestsPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_requests_2025-07.jsonl",
+      "sampleSeed": "4106402612607774759",
+      "sampleSizePrepared": 1000,
+      "requestCount": 50,
+      "model": "gpt-5-mini"
+    },
+    {
+      "period": "2025-08",
+      "parentPrepared": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample\\web_sample_prepared_2025-08.json",
+      "preparedPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_prepared_2025-08.json",
+      "requestsPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_requests_2025-08.jsonl",
+      "sampleSeed": "13869455372316975112",
+      "sampleSizePrepared": 1000,
+      "requestCount": 50,
+      "model": "gpt-5-mini"
+    },
+    {
+      "period": "2025-09",
+      "parentPrepared": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample\\web_sample_prepared_2025-09.json",
+      "preparedPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_prepared_2025-09.json",
+      "requestsPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_requests_2025-09.jsonl",
+      "sampleSeed": "17355987459974647377",
+      "sampleSizePrepared": 1000,
+      "requestCount": 50,
+      "model": "gpt-5-mini"
+    },
+    {
+      "period": "2025-10",
+      "parentPrepared": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample\\web_sample_prepared_2025-10.json",
+      "preparedPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_prepared_2025-10.json",
+      "requestsPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_requests_2025-10.jsonl",
+      "sampleSeed": "13727552752331045476",
+      "sampleSizePrepared": 1000,
+      "requestCount": 50,
+      "model": "gpt-5-mini"
+    },
+    {
+      "period": "2025-11",
+      "parentPrepared": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample\\web_sample_prepared_2025-11.json",
+      "preparedPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_prepared_2025-11.json",
+      "requestsPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_requests_2025-11.jsonl",
+      "sampleSeed": "2513618973272527229",
+      "sampleSizePrepared": 1000,
+      "requestCount": 50,
+      "model": "gpt-5-mini"
+    },
+    {
+      "period": "2025-12",
+      "parentPrepared": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample\\web_sample_prepared_2025-12.json",
+      "preparedPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_prepared_2025-12.json",
+      "requestsPath": "\\\\wsl.localhost\\Ubuntu\\home\\projects\\dead-internet-theory\\data\\web-sample-lite\\web_sample_lite_requests_2025-12.jsonl",
+      "sampleSeed": "14197661815657013786",
+      "sampleSizePrepared": 1000,
+      "requestCount": 50,
+      "model": "gpt-5-mini"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+*
+!.gitignore
+!README.md
+!athena_commoncrawl_setup.json
+!commoncrawl_month_map.json
+!commoncrawl_month_map.md

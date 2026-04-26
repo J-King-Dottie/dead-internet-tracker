@@ -1,0 +1,11 @@
+services:
+  - name: dead-internet-tracker
+    type: web
+    runtime: static
+    plan: free
+    buildCommand: "true"
+    staticPublishPath: .
+    autoDeployTrigger: commit
+    envVars:
+      - key: SKIP_INSTALL_DEPS
+        value: "true"

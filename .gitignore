@@ -1,0 +1,10 @@
+.env
+.deps/
+.vendor/
+__pycache__/
+*.py[cod]
+*.Zone.Identifier
+.DS_Store
+.pytest_cache/
+research/
+tmp_*
