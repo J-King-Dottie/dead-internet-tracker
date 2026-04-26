@@ -643,6 +643,23 @@
       opacity: 1;
     }
 
+    .hero-update-timer {
+      margin: 0;
+      font-family: var(--font-mono);
+      font-size: clamp(0.72rem, 0.8vw, 0.8rem);
+      line-height: 1.45;
+      color: var(--copy-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .hero-update-timer strong {
+      color: var(--accent-highlight);
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
     .hero-readout {
       font-size: clamp(0.96rem, 1.05vw, 1.08rem);
       font-weight: 700;
@@ -1276,6 +1293,7 @@
           </div>
           <div class="hero-meta">
             <p class="hero-callout">This page is a collection of what the available evidence is saying.</p>
+            <p class="hero-update-timer" id="hero-update-timer">Next update in <strong>calculating...</strong></p>
           </div>
         </div>
         <div class="hero-side">
@@ -3501,6 +3519,36 @@
       quote.style.paddingLeft = `${titleOffset.toFixed(1)}px`;
     }
 
+    function getNextWeeklyResearchRefresh(now = new Date()) {
+      const next = new Date(now);
+      next.setUTCSeconds(0, 0);
+      next.setUTCHours(9, 30, 0, 0);
+      const daysUntilMonday = (8 - next.getUTCDay()) % 7;
+      next.setUTCDate(next.getUTCDate() + daysUntilMonday);
+      if (next <= now) {
+        next.setUTCDate(next.getUTCDate() + 7);
+      }
+      return next;
+    }
+
+    function formatHeroCountdown(milliseconds) {
+      const totalSeconds = Math.max(0, Math.floor(milliseconds / 1000));
+      const days = Math.floor(totalSeconds / 86400);
+      const hours = Math.floor((totalSeconds % 86400) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+      return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    function updateHeroRefreshCountdown() {
+      const timerEl = document.getElementById("hero-update-timer");
+      if (!timerEl) return;
+      const now = new Date();
+      const nextRefresh = getNextWeeklyResearchRefresh(now);
+      const remaining = nextRefresh.getTime() - now.getTime();
+      timerEl.innerHTML = `Next update in <strong>${formatHeroCountdown(remaining)}</strong>`;
+    }
+
     window.addEventListener("resize", scheduleRender);
     window.addEventListener("resize", syncHeroTitleLine);
     window.addEventListener("resize", syncHeroQuotePosition);
@@ -3512,6 +3560,8 @@
 
       bindHeroResearchControls();
       renderHeroResearchItem();
+      updateHeroRefreshCountdown();
+      window.setInterval(updateHeroRefreshCountdown, 1000);
       syncHeroTitleLine();
       syncHeroQuotePosition();
       await loadCloudflareSnapshot();
