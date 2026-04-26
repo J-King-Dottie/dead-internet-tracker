@@ -1129,6 +1129,37 @@
         grid-template-columns: minmax(0, 1fr);
       }
 
+      .hero-columns::before {
+        content: none;
+      }
+
+      .hero-main {
+        position: relative;
+        padding-bottom: clamp(18px, 5vw, 24px);
+      }
+
+      .hero-main::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          rgba(0, 229, 176, 0),
+          rgba(0, 229, 176, 0.18) 18%,
+          rgba(0, 229, 176, 0.8) 50%,
+          rgba(0, 229, 176, 0.18) 82%,
+          rgba(0, 229, 176, 0)
+        );
+        pointer-events: none;
+      }
+
+      .hero-side {
+        margin-left: 0;
+      }
+
       .hero,
       .card {
         padding: var(--content-inset);
