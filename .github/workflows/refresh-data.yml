@@ -6,12 +6,16 @@ on:
     # Monthly API-backed charts.
     # GitHub Actions cron runs in UTC.
     - cron: "15 10 2 * *"
+    # Weekly recent-source sweep for the AI content meta-review.
+    # 09:30 UTC is overnight in the US.
+    - cron: "30 9 * * 1"
 
 permissions:
   contents: write
 
 jobs:
   refresh-monthly-api-snapshots:
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '15 10 2 * *'
     runs-on: ubuntu-latest
 
     steps:
@@ -58,4 +62,39 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/cloudflare data/wikipedia data/stackoverflow
           git commit -m "Refresh monthly API snapshots"
+          git push
+
+  refresh-ai-content-meta-review:
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '30 9 * * 1'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run recent-source research sweep
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_RESEARCH_MODEL: ${{ vars.OPENAI_RESEARCH_MODEL || 'gpt-5' }}
+          RESEARCH_LOOKBACK_DAYS: ${{ vars.RESEARCH_LOOKBACK_DAYS || '35' }}
+        run: python scripts/refresh_ai_content_meta_review.py
+
+      - name: Commit and push if research changed
+        run: |
+          if git diff --quiet -- data/ai-content-meta-review; then
+            echo "No AI content meta-review changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ai-content-meta-review
+          git commit -m "Refresh AI content meta-review"
           git push
