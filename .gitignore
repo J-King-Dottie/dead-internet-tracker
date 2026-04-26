@@ -1,4 +1,5 @@
 .env
+public/
 .deps/
 .vendor/
 __pycache__/

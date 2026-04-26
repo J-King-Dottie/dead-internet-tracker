@@ -3,8 +3,8 @@ services:
     type: web
     runtime: static
     plan: free
-    buildCommand: "true"
-    staticPublishPath: .
+    buildCommand: "bash scripts/render_build.sh"
+    staticPublishPath: public
     autoDeployTrigger: commit
     envVars:
       - key: SKIP_INSTALL_DEPS
