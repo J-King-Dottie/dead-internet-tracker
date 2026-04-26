@@ -1,0 +1,61 @@
+name: Refresh Data Snapshots
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Monthly API-backed charts.
+    # GitHub Actions cron runs in UTC.
+    - cron: "15 10 2 * *"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-monthly-api-snapshots:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Write local env file for refresh scripts
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN"
+          cat > .env <<EOF
+          CLOUDFLARE_API_TOKEN=$CLOUDFLARE_API_TOKEN
+          EOF
+
+      - name: Refresh monthly snapshots
+        run: |
+          python scripts/refresh_stackoverflow.py
+          python scripts/refresh_wikipedia.py
+          python scripts/refresh_cloudflare.py
+
+      - name: Remove local env file
+        if: always()
+        run: rm -f .env
+
+      - name: Commit and push if data changed
+        run: |
+          if git diff --quiet -- data/cloudflare data/wikipedia data/stackoverflow; then
+            echo "No snapshot changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/cloudflare data/wikipedia data/stackoverflow
+          git commit -m "Refresh monthly API snapshots"
+          git push
