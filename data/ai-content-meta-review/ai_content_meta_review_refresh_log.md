@@ -14,6 +14,17 @@ For the actual sweep standard and what context to store per estimate, use:
 
 - `data/ai-content-meta-review/ai_content_meta_review_research_protocol.md`
 
+## 2026-04-26 - Dead Internet Monitor Source Add
+
+- scope: targeted review of Dead Internet Monitor after a source suggestion
+- added:
+  - Dead Internet Monitor / discussion posts (2026)
+- notes:
+  - kept as a beta multi-platform discussion-content estimate because the methodology gives a source mix and an approximate current AI content rate
+  - treated as narrow discussion-content evidence, not a whole-internet estimate
+- gaps still thin:
+  - independent validation of broad cross-platform discussion-content prevalence estimates
+
 ## 2026-04-24 - Literature Review Upgrade
 
 - scope: upgraded this metric from a lightweight running list to a structured literature-review workflow

@@ -1,6 +1,6 @@
 {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-04-24",
+    "lastRefreshed": "2026-04-27",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -385,6 +385,14 @@
             "source": "https://antislop.online/research/state-of-slop-2026",
             "notes": "AntiSlop estimated that 23% of its category-balanced sample of web pages in March 2026 were AI-heavy. It sampled 2,000 pages, with 200 pages in each of 10 content categories, and classified them with AntiSlop's own detector using a greater-than-60% AI threshold. This is a rare early-2026 web estimate, but it is category-balanced rather than representative of the whole open web and depends on detector-based labeling.",
             "publication_date": "2026-03-21"
+        },
+        {
+            "series": "Dead Internet Monitor / discussion posts",
+            "year": 2026,
+            "value": "11%",
+            "source": "https://www.deadinternetmonitor.com/methodology",
+            "notes": "Dead Internet Monitor reports an approximately 11% AI content rate across its monitored discussion-content mix in 2026. It samples posts, comments, answers, news comments, and reviews across sources including Reddit, Hacker News, YouTube, Mastodon, Bluesky, Stack Overflow, Lobsters, The Guardian, and Steam, then classifies items with an LLM pipeline. This is a beta multi-platform discussion-content estimate, not a calibrated whole-internet content share.",
+            "publication_date": "2026-04-15"
         },
         {
             "series": "Deezer / new music uploads",

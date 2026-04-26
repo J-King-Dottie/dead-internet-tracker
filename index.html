@@ -653,6 +653,26 @@
       color: var(--accent-cyan);
     }
 
+    .page-footer-note {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 0 0 36px;
+      font-size: 0.72rem;
+      line-height: 1.5;
+      color: var(--copy-tertiary);
+      text-align: center;
+    }
+
+    .page-footer-note p {
+      margin: 0;
+    }
+
+    .page-footer-note a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 0.14em;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1224,8 +1244,7 @@
             <p class="hero-copy hero-copy-final">We decided to track it.</p>
           </div>
           <div class="hero-meta">
-            <p class="hero-callout">This is hard to measure without big tech data.</p>
-            <p class="hero-callout">So we built what we could from the open web.</p>
+            <p class="hero-callout">This page is a collection of what the available evidence is saying.</p>
           </div>
         </div>
         <div class="hero-side">
@@ -1268,7 +1287,7 @@
         <div class="card-section card-section--takeaway">
           <div class="card-header">
             <div class="card-title-wrap">
-              <h3>No one knows how much of the web is AI-generated. Estimates average at <span data-dynamic="ai-content-2026-average">30%</span> of content being AI in 2026.</h3>
+              <h3>No one knows how much of the web is AI-generated. Estimates average at a rough <span data-dynamic="ai-content-2026-average">30%</span> of content being AI in 2026.</h3>
             </div>
             <div class="info">
               <button type="button" aria-label="About AI content share meta review">i</button>
@@ -1494,6 +1513,9 @@
 
     </section>
   </main>
+  <footer class="page-footer-note">
+    <p>This website is human curated and AI generated. Does that mean it contributes to the dead internet?<br>Produced by <a href="https://dottieaistudio.com.au/" target="_blank" rel="noreferrer">Dottie AI Studio</a>.</p>
+  </footer>
 
   <div class="info-float-tooltip" id="info-float-tooltip" aria-hidden="true"></div>
   <div class="info-backdrop" id="info-backdrop" hidden></div>
