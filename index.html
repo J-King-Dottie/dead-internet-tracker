@@ -184,13 +184,21 @@
       --radius-xl: clamp(20px, 2vw, 26px);
       --radius-lg: clamp(14px, 1.4vw, 18px);
       --radius-sm: clamp(10px, 1vw, 12px);
-      --max-width: clamp(1480px, 92vw, 1840px);
-      --page-gutter: clamp(20px, 2.6vw, 40px);
+      --max-width: clamp(1460px, 90vw, 1760px);
+      --page-gutter: clamp(28px, 2.8vw, 40px);
       --page-top-gutter: 0px;
       --content-inset: clamp(16px, 1.5vw, 24px);
       --hero-top-inset: 0px;
       --hero-title-offset: clamp(72px, 6.4vw, 98px);
       --hero-block-gap: clamp(28px, 5vw, 64px);
+      --hero-shell-gap: clamp(26px, 3vw, 40px);
+      --hero-main-gap: clamp(34px, 3.8vw, 48px);
+      --hero-side-gap: clamp(14px, 1.2vw, 18px);
+      --hero-divider-gap: clamp(24px, 3vw, 34px);
+      --hero-first-screen-min: 32rem;
+      --hero-first-screen-max: 62rem;
+      --chart-grid-gap: clamp(28px, 2.8vw, 40px);
+      --chart-grid-row-gap: clamp(40px, 4.2vw, 56px);
       --section-gap: clamp(56px, 8vw, 128px);
       --glass-fill: rgba(12, 24, 42, 0.58);
       --glass-border: rgba(190, 214, 255, 0.07);
@@ -325,21 +333,26 @@
     .page {
       width: min(calc(100% - (var(--page-gutter) * 2)), var(--max-width));
       margin: 0 auto;
-      padding: var(--page-top-gutter) 0 var(--page-gutter);
+      padding: var(--page-top-gutter) 0 0;
       position: relative;
       z-index: 1;
     }
 
     .hero {
-      padding: var(--hero-top-inset) var(--content-inset) var(--content-inset);
+      padding: var(--hero-top-inset) 0 0;
       position: relative;
       display: grid;
-      gap: clamp(18px, 2.2vw, 26px);
+      grid-template-rows: auto 1fr;
+      gap: var(--hero-shell-gap);
+      min-height: min(
+        var(--hero-first-screen-max),
+        max(var(--hero-first-screen-min), calc(100svh - var(--page-gutter)))
+      );
     }
 
     .hero-top {
       display: grid;
-      gap: clamp(6px, 0.8vw, 10px);
+      gap: clamp(10px, 1vw, 14px);
     }
 
     .hero::after {
@@ -347,9 +360,11 @@
     }
 
     .hero-kicker {
-      display: inline-block;
-      width: fit-content;
+      display: block;
+      width: 100%;
+      max-width: 100%;
       margin: 0;
+      overflow-wrap: anywhere;
       font-size: clamp(0.74rem, 0.76vw, 0.84rem);
       line-height: 1.32;
       font-style: italic;
@@ -398,26 +413,30 @@
       gap: 0;
       margin-top: 0;
       padding-left: var(--hero-title-offset);
-      margin-bottom: clamp(2px, 0.35vw, 6px);
+      margin-bottom: clamp(6px, 0.7vw, 10px);
     }
 
-    .hero-columns {
-      position: relative;
+    .hero-quote-frame {
+      width: min(100%, 32rem);
+    }
+
+    .hero-stack {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      align-items: start;
-      gap: var(--page-gutter);
+      gap: 0;
+      align-self: end;
     }
 
-    .hero-columns::before {
-      content: "";
-      position: absolute;
-      top: clamp(8px, 1vw, 14px);
-      bottom: clamp(8px, 1vw, 14px);
-      left: calc(50% - 0.5px);
-      width: 1px;
+    .hero-main {
+      display: grid;
+      gap: var(--hero-main-gap);
+      min-width: 0;
+      padding-bottom: var(--hero-divider-gap);
+    }
+
+    .hero-divider {
+      height: 1px;
       background: linear-gradient(
-        180deg,
+        90deg,
         rgba(0, 229, 176, 0),
         rgba(0, 229, 176, 0.18) 18%,
         rgba(0, 229, 176, 0.8) 50%,
@@ -427,18 +446,13 @@
       pointer-events: none;
     }
 
-    .hero-main {
-      display: grid;
-      gap: clamp(34px, 3.5vw, 42px);
-      min-width: 0;
-    }
-
     .hero-side {
       display: grid;
-      gap: clamp(10px, 1vw, 14px);
+      gap: var(--hero-side-gap);
       min-width: 0;
-      margin-left: 10%;
       align-content: start;
+      margin-top: var(--chart-grid-row-gap);
+      margin-bottom: var(--chart-grid-row-gap);
     }
 
     .hero-intro {
@@ -632,6 +646,7 @@
       margin: 0;
       line-height: 1.5;
       max-width: none;
+      overflow-wrap: anywhere;
     }
 
     .hero-callout {
@@ -671,9 +686,9 @@
     }
 
     .page-footer-note {
-      width: min(1180px, calc(100% - 40px));
+      width: 100%;
       margin: 0 auto;
-      padding: 0 0 36px;
+      padding: 0 0 clamp(18px, 2.4vw, 28px);
       font-size: 0.72rem;
       line-height: 1.5;
       color: var(--copy-tertiary);
@@ -693,8 +708,9 @@
     .grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: var(--page-gutter);
-      margin-top: var(--section-gap);
+      column-gap: var(--chart-grid-gap);
+      row-gap: var(--chart-grid-row-gap);
+      margin: 0 0 var(--chart-grid-row-gap);
       align-items: stretch;
     }
 
@@ -709,7 +725,7 @@
         var(--glass-shadow-outer),
         var(--glass-shadow-tight);
       padding: var(--content-inset);
-      min-height: var(--card-min-height);
+      min-height: 0;
       display: flex;
       flex-direction: column;
       gap: clamp(2px, 0.2vw, 4px);
@@ -731,7 +747,7 @@
     }
 
     .card.tall {
-      min-height: var(--card-min-height);
+      min-height: 0;
     }
 
     .card.future {
@@ -767,6 +783,7 @@
     .card h3 {
       margin: 0;
       min-height: calc(2em * 1.12);
+      overflow-wrap: anywhere;
       font-size: var(--takeaway-size);
       line-height: 1.12;
       letter-spacing: -0.03em;
@@ -1113,68 +1130,41 @@
 
     @media (max-width: 720px) {
         :root {
-          --page-gutter: clamp(16px, 4vw, 22px);
+          --page-gutter: clamp(16px, 4.5vw, 24px);
           --page-top-gutter: 0px;
-        --content-inset: clamp(14px, 3.5vw, 18px);
-        --chart-wrap-shift-left: 0px;
+          --content-inset: clamp(12px, 3.5vw, 16px);
+          --chart-wrap-shift-left: 0px;
           --hero-top-inset: 0px;
           --hero-title-offset: clamp(52px, 11vw, 72px);
+          --hero-shell-gap: clamp(26px, 7vw, 38px);
+          --hero-main-gap: clamp(28px, 7vw, 40px);
+          --hero-side-gap: clamp(14px, 4vw, 18px);
+          --hero-divider-gap: clamp(26px, 7vw, 34px);
+          --hero-first-screen-min: 28rem;
+          --hero-first-screen-max: 54rem;
+          --chart-grid-gap: clamp(16px, 4.5vw, 24px);
+          --chart-grid-row-gap: clamp(44px, 10vw, 56px);
           --section-gap: clamp(36px, 9vw, 64px);
           --hero-block-gap: clamp(18px, 6vw, 32px);
           --glass-fill: rgba(8, 17, 31, 0.5);
-        --glass-border: rgba(190, 214, 255, 0.075);
-        --glass-blur: 0px;
-        --glass-saturation: 100%;
-        --glass-ring-opacity: 0.22;
-        --glass-shadow-outer: 0 14px 30px rgba(0, 0, 0, 0.1);
-        --glass-shadow-tight: 0 3px 8px rgba(0, 0, 0, 0.05);
+          --glass-border: rgba(190, 214, 255, 0.075);
+          --glass-blur: 0px;
+          --glass-saturation: 100%;
+          --glass-ring-opacity: 0.22;
+          --glass-shadow-outer: 0 14px 30px rgba(0, 0, 0, 0.1);
+          --glass-shadow-tight: 0 3px 8px rgba(0, 0, 0, 0.05);
           --card-min-width: 100%;
-      --chart-min-height: clamp(230px, 41vw, 274px);
+          --chart-min-height: clamp(230px, 41vw, 274px);
         }
 
       .page {
         width: min(calc(100% - (var(--page-gutter) * 2)), var(--max-width));
         padding-top: var(--page-top-gutter);
-        padding-bottom: var(--page-gutter);
+        padding-bottom: 0;
       }
 
       .grid {
         grid-template-columns: minmax(0, 1fr);
-      }
-
-      .hero-columns {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .hero-columns::before {
-        content: none;
-      }
-
-      .hero-main {
-        position: relative;
-        padding-bottom: clamp(18px, 5vw, 24px);
-      }
-
-      .hero-main::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 1px;
-        background: linear-gradient(
-          90deg,
-          rgba(0, 229, 176, 0),
-          rgba(0, 229, 176, 0.18) 18%,
-          rgba(0, 229, 176, 0.8) 50%,
-          rgba(0, 229, 176, 0.18) 82%,
-          rgba(0, 229, 176, 0)
-        );
-        pointer-events: none;
-      }
-
-      .hero-side {
-        margin-left: 0;
       }
 
       .hero,
@@ -1185,15 +1175,9 @@
 
       .hero {
         padding-top: var(--hero-top-inset);
-      }
-
-      .card {
-        padding-bottom: var(--content-inset);
-      }
-
-      .hero::after {
-        left: var(--content-inset);
-        right: var(--content-inset);
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
       }
 
       .hero-intro .hero-copy {
@@ -1208,8 +1192,41 @@
         width: min(100%, 34rem);
       }
 
-      .card {
-        min-height: clamp(320px, 82vw, 380px);
+      .hero-quote {
+        padding-left: clamp(36px, 9vw, 48px);
+      }
+
+      .hero-quote-frame {
+        width: auto !important;
+        max-width: 100% !important;
+      }
+
+      .hero-kicker {
+        font-size: clamp(0.68rem, 2.8vw, 0.76rem);
+      }
+
+      .hero-kicker-attribution {
+        text-align: left;
+      }
+
+      .hero-intro .hero-copy,
+      .hero-intro .hero-copy-accent,
+      .hero-intro .hero-copy-final {
+        font-size: clamp(1.06rem, 6.2vw, 1.42rem);
+        line-height: 1.12;
+      }
+
+      .hero-callout {
+        font-size: clamp(0.84rem, 3.8vw, 0.94rem);
+      }
+
+      .hero-research-copy {
+        font-size: 0.75rem;
+        line-height: 1.48;
+      }
+
+      .card h3 {
+        min-height: 0;
       }
 
         .chart-wrap {
@@ -1221,6 +1238,7 @@
         }
 
         .legend-inline {
+          flex-wrap: wrap;
           font-size: var(--descriptor-size);
         }
 
@@ -1280,11 +1298,13 @@
             <text id="heroTitleText" x="98" y="136" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="36" font-weight="700" fill="#ffffff" letter-spacing="-0.04em">Dead Internet Tracker</text>
           </svg>
         </div>
-        <div class="hero-quote">
-          <p class="hero-kicker">"The internet feels empty and devoid of people"<span class="hero-kicker-attribution">anonymous, 2019</span></p>
+      <div class="hero-quote">
+          <div class="hero-quote-frame">
+            <p class="hero-kicker">"The internet feels empty and devoid of people"<span class="hero-kicker-attribution">anonymous, 2019</span></p>
+          </div>
         </div>
       </div>
-      <div class="hero-columns">
+      <div class="hero-stack">
         <div class="hero-main">
           <div class="hero-intro">
             <p class="hero-copy">The dead internet theory says the internet is being taken over by AI.</p>
@@ -1292,42 +1312,44 @@
             <p class="hero-copy hero-copy-final">We decided to track it.</p>
           </div>
           <div class="hero-meta">
-            <p class="hero-callout">This page is a collection of what the available evidence is saying.</p>
+            <p class="hero-callout">This page does not present any single metric. It is a collection of what the available evidence is saying.</p>
             <p class="hero-update-timer" id="hero-update-timer">Next update in <strong>calculating...</strong></p>
           </div>
         </div>
-        <div class="hero-side">
-          <div class="hero-research" id="hero-research-box" aria-live="polite">
-            <div class="hero-research-head">
-              <h2 class="hero-research-label">Latest research</h2>
-              <div class="hero-research-nav">
-                <button type="button" id="hero-research-prev" aria-label="Previous research item">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M15 18l-6-6 6-6"></path>
-                  </svg>
-                </button>
-                <div class="hero-research-index" id="hero-research-index">0 / 0</div>
-                <button type="button" id="hero-research-next" aria-label="Next research item">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M9 6l6 6-6 6"></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="hero-research-meta">
-              <p class="hero-research-date" id="hero-research-date">Publication date unknown</p>
-              <a class="hero-research-link" id="hero-research-link" href="#" target="_blank" rel="noreferrer" aria-label="Open source">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M14 5h5v5"></path>
-                  <path d="M10 14L19 5"></path>
-                  <path d="M19 14v5h-5"></path>
-                  <path d="M5 10v9h9"></path>
-                </svg>
-              </a>
-            </div>
-            <p class="hero-research-copy" id="hero-research-copy">Pulling the latest included study from the published-estimate scatter.</p>
+        <div class="hero-divider" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="hero-side">
+      <div class="hero-research" id="hero-research-box" aria-live="polite">
+        <div class="hero-research-head">
+          <h2 class="hero-research-label">Latest research</h2>
+          <div class="hero-research-nav">
+            <button type="button" id="hero-research-prev" aria-label="Previous research item">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15 18l-6-6 6-6"></path>
+              </svg>
+            </button>
+            <div class="hero-research-index" id="hero-research-index">0 / 0</div>
+            <button type="button" id="hero-research-next" aria-label="Next research item">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 6l6 6-6 6"></path>
+              </svg>
+            </button>
           </div>
         </div>
+        <div class="hero-research-meta">
+          <p class="hero-research-date" id="hero-research-date">Publication date unknown</p>
+          <a class="hero-research-link" id="hero-research-link" href="#" target="_blank" rel="noreferrer" aria-label="Open source">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 5h5v5"></path>
+              <path d="M10 14L19 5"></path>
+              <path d="M19 14v5h-5"></path>
+              <path d="M5 10v9h9"></path>
+            </svg>
+          </a>
+        </div>
+        <p class="hero-research-copy" id="hero-research-copy">Pulling the latest included study from the published-estimate scatter.</p>
       </div>
     </section>
 
@@ -1563,7 +1585,7 @@
     </section>
   </main>
   <footer class="page-footer-note">
-    <p>Produced by <a href="https://dottieaistudio.com.au/" target="_blank" rel="noreferrer">Dottie AI Studio</a>.</p>
+    <p>Produced by <a href="https://dottieaistudio.com.au/" target="_blank" rel="noreferrer">Dottie AI Studio</a></p>
   </footer>
 
   <div class="info-float-tooltip" id="info-float-tooltip" aria-hidden="true"></div>
@@ -2838,23 +2860,6 @@
 
     function equalizeChartCardRows() {
       resetChartCardRowHeights();
-
-      chartCardRows().forEach((row) => {
-        const maxCardHeight = Math.max(...row.cards.map((card) => card.offsetHeight), 0);
-        row.cards.forEach((card) => {
-          card.style.minHeight = `${maxCardHeight}px`;
-        });
-
-        syncedCardSectionSelectors.forEach((selector) => {
-          const sections = row.cards
-            .map((card) => card.querySelector(selector))
-            .filter(Boolean);
-          const maxSectionHeight = Math.max(...sections.map((section) => section.offsetHeight), 0);
-          sections.forEach((section) => {
-            section.style.minHeight = `${maxSectionHeight}px`;
-          });
-        });
-      });
     }
 
     function stackOverflowTooltipHtml(snapshot) {
@@ -3199,13 +3204,7 @@
         return;
       }
 
-      const path = window.AI_CONTENT_META_REVIEW?.path || "./data/ai-content-meta-review/ai_content_meta_review.json";
-      const response = await fetch(path);
-      if (!response.ok) {
-        throw new Error("Missing AI content meta review snapshot");
-      }
-      const snapshot = await response.json();
-      applyAiContentMetaReviewSnapshot(snapshot);
+      throw new Error("Missing embedded AI content meta review snapshot");
     }
 
     function trailingMovingAverage(values, windowSize = 3) {
@@ -3500,6 +3499,7 @@
       const titleText = document.getElementById("heroTitleText");
       const titleTail = document.getElementById("heroTitleTail");
       const quote = document.querySelector(".hero-quote");
+      const quoteFrame = document.querySelector(".hero-quote-frame");
       if (!svg || !titleText || !titleTail || !quote) return;
 
       quote.style.marginTop = "0px";
@@ -3514,9 +3514,14 @@
       const currentQuoteTop = quote.getBoundingClientRect().top;
       const quoteShift = desiredQuoteTop - currentQuoteTop;
       const titleOffset = Math.max(0, titleRect.left - svgRect.left);
+      const titleWidth = Math.max(0, titleRect.width);
 
       quote.style.marginTop = `${quoteShift.toFixed(1)}px`;
       quote.style.paddingLeft = `${titleOffset.toFixed(1)}px`;
+      if (quoteFrame) {
+        quoteFrame.style.width = `${titleWidth.toFixed(1)}px`;
+        quoteFrame.style.maxWidth = "100%";
+      }
     }
 
     function getNextWeeklyResearchRefresh(now = new Date()) {
