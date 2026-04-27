@@ -423,13 +423,15 @@
     .hero-stack {
       display: grid;
       gap: 0;
-      align-self: end;
+      align-self: stretch;
+      grid-template-rows: 1fr auto;
     }
 
     .hero-main {
       display: grid;
       gap: var(--hero-main-gap);
       min-width: 0;
+      align-content: center;
       padding-bottom: var(--hero-divider-gap);
     }
 
@@ -1193,12 +1195,7 @@
       }
 
       .hero-quote {
-        padding-left: clamp(36px, 9vw, 48px);
-      }
-
-      .hero-quote-frame {
-        width: auto !important;
-        max-width: 100% !important;
+        padding-left: var(--hero-title-offset);
       }
 
       .hero-kicker {
@@ -1206,7 +1203,7 @@
       }
 
       .hero-kicker-attribution {
-        text-align: left;
+        text-align: right;
       }
 
       .hero-intro .hero-copy,
@@ -1243,9 +1240,9 @@
         }
 
       .info button {
-        width: var(--touch-target);
-        height: var(--touch-target);
-        font-size: clamp(16px, 4vw, 18px);
+        width: clamp(18px, 4vw, 20px);
+        height: clamp(18px, 4vw, 20px);
+        font-size: clamp(10px, 2.8vw, 11px);
       }
 
       .info-float-tooltip.is-sheet {
@@ -1272,8 +1269,8 @@
 
     @media (hover: none), (pointer: coarse) {
       .info button {
-        width: var(--touch-target);
-        height: var(--touch-target);
+        width: clamp(18px, 4vw, 20px);
+        height: clamp(18px, 4vw, 20px);
       }
     }
   </style>
