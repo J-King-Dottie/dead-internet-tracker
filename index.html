@@ -401,10 +401,6 @@
       overflow: visible;
     }
 
-    #heroTitleText {
-      font-size: 36px;
-    }
-
     .sr-only {
       position: absolute;
       width: 1px;
@@ -1212,10 +1208,6 @@
 
       .hero-title-logo {
         width: min(100%, 34rem);
-      }
-
-      #heroTitleText {
-        font-size: 44px;
       }
 
       .hero-quote {
@@ -3496,6 +3488,32 @@
     const chartResizeObserver = new ResizeObserver(() => scheduleRender());
     document.querySelectorAll(".chart-wrap").forEach((el) => chartResizeObserver.observe(el));
 
+    function syncHeroLogoLayout() {
+      const svg = document.querySelector(".hero-title-logo");
+      const titleText = document.getElementById("heroTitleText");
+      const titleTail = document.getElementById("heroTitleTail");
+      if (!svg || !titleText || !titleTail) return;
+
+      const isMobile = window.matchMedia("(max-width: 720px)").matches;
+      if (isMobile) {
+        svg.setAttribute("viewBox", "0 0 560 240");
+        titleText.setAttribute("x", "88");
+        titleText.setAttribute("y", "132");
+        titleText.setAttribute("font-size", "64");
+        titleTail.setAttribute("x1", "190");
+        titleTail.setAttribute("y1", "148");
+        titleTail.setAttribute("y2", "148");
+      } else {
+        svg.setAttribute("viewBox", "0 0 760 240");
+        titleText.setAttribute("x", "98");
+        titleText.setAttribute("y", "136");
+        titleText.setAttribute("font-size", "36");
+        titleTail.setAttribute("x1", "190");
+        titleTail.setAttribute("y1", "148");
+        titleTail.setAttribute("y2", "148");
+      }
+    }
+
     function syncHeroTitleLine() {
       const svg = document.querySelector(".hero-title-logo");
       const titleText = document.getElementById("heroTitleText");
@@ -3577,6 +3595,7 @@
     }
 
     window.addEventListener("resize", scheduleRender);
+    window.addEventListener("resize", syncHeroLogoLayout);
     window.addEventListener("resize", syncHeroTitleLine);
     window.addEventListener("resize", syncHeroQuotePosition);
 
@@ -3589,6 +3608,7 @@
       renderHeroResearchItem();
       updateHeroRefreshCountdown();
       window.setInterval(updateHeroRefreshCountdown, 1000);
+      syncHeroLogoLayout();
       syncHeroTitleLine();
       syncHeroQuotePosition();
       document.querySelector(".hero")?.classList.add("is-ready");
