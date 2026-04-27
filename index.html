@@ -348,6 +348,11 @@
         var(--hero-first-screen-max),
         max(var(--hero-first-screen-min), calc(100svh - var(--page-gutter)))
       );
+      visibility: hidden;
+    }
+
+    .hero.is-ready {
+      visibility: visible;
     }
 
     .hero-top {
@@ -418,10 +423,16 @@
       margin-top: 0;
       padding-left: var(--hero-title-offset);
       margin-bottom: clamp(6px, 0.7vw, 10px);
+      opacity: 0;
+      transition: opacity 140ms ease;
     }
 
     .hero-quote-frame {
       width: min(100%, 32rem);
+    }
+
+    .hero-quote.is-ready {
+      opacity: 1;
     }
 
     .hero-stack {
@@ -459,6 +470,11 @@
       align-content: start;
       margin-top: var(--chart-grid-row-gap);
       margin-bottom: var(--chart-grid-row-gap);
+      visibility: hidden;
+    }
+
+    .hero-side.is-ready {
+      visibility: visible;
     }
 
     .hero-intro {
@@ -1143,7 +1159,7 @@
           --hero-top-inset: 0px;
           --hero-title-offset: clamp(52px, 11vw, 72px);
           --hero-shell-gap: clamp(26px, 7vw, 38px);
-          --hero-main-gap: clamp(48px, 10vw, 68px);
+          --hero-main-gap: clamp(80px, 16vw, 112px);
           --hero-side-gap: clamp(14px, 4vw, 18px);
           --hero-divider-gap: clamp(26px, 7vw, 34px);
           --hero-first-screen-min: 28rem;
@@ -1199,7 +1215,7 @@
       }
 
       #heroTitleText {
-        font-size: 39px;
+        font-size: 44px;
       }
 
       .hero-quote {
@@ -3527,6 +3543,7 @@
         quoteFrame.style.width = `${titleWidth.toFixed(1)}px`;
         quoteFrame.style.maxWidth = "100%";
       }
+      quote.classList.add("is-ready");
     }
 
     function getNextWeeklyResearchRefresh(now = new Date()) {
@@ -3574,6 +3591,8 @@
       window.setInterval(updateHeroRefreshCountdown, 1000);
       syncHeroTitleLine();
       syncHeroQuotePosition();
+      document.querySelector(".hero")?.classList.add("is-ready");
+      document.querySelector(".hero-side")?.classList.add("is-ready");
       await loadCloudflareSnapshot();
       await loadImpervaSnapshot();
       await loadImpervaAtoSnapshot();
