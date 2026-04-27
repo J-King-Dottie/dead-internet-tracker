@@ -3503,6 +3503,15 @@
         titleTail.setAttribute("x1", "190");
         titleTail.setAttribute("y1", "148");
         titleTail.setAttribute("y2", "148");
+
+        const viewBoxWidth = svg.viewBox.baseVal.width || 560;
+        const titleX = Number(titleText.getAttribute("x")) || 88;
+        const maxTitleWidth = Math.max(0, viewBoxWidth * 0.75);
+        const measuredWidth = titleText.getBBox().width || 0;
+        if (measuredWidth > 0 && measuredWidth > maxTitleWidth) {
+          const nextFontSize = Math.max(44, Math.floor((64 * maxTitleWidth) / measuredWidth));
+          titleText.setAttribute("font-size", String(nextFontSize));
+        }
       } else {
         svg.setAttribute("viewBox", "0 0 760 240");
         titleText.setAttribute("x", "98");
