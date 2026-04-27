@@ -34,3 +34,7 @@ Some research pipelines write large intermediate files locally. Those are intent
 ## Deploying to Render
 
 This repo includes a root `render.yaml` for a static-site deploy. Connect the GitHub repo in Render and deploy it as a Blueprint or Static Site.
+
+Live URL:
+
+- [https://dead-internet-tracker.onrender.com/](https://dead-internet-tracker.onrender.com/)
