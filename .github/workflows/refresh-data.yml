@@ -68,6 +68,8 @@ jobs:
           python scripts/refresh_stackoverflow.py
           python scripts/refresh_wikipedia.py
           python scripts/refresh_cloudflare.py
+          python scripts/build_dashboard_readable.py
+          python scripts/embed_dashboard_readable.py
 
       - name: Remove local env file
         if: always()
@@ -75,14 +77,14 @@ jobs:
 
       - name: Commit and push if data changed
         run: |
-          if git diff --quiet -- data/cloudflare data/wikipedia data/stackoverflow; then
+          if git diff --quiet -- data/cloudflare data/wikipedia data/stackoverflow data/dashboard_readable.json index.html; then
             echo "No snapshot changes."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/cloudflare data/wikipedia data/stackoverflow
+          git add data/cloudflare data/wikipedia data/stackoverflow data/dashboard_readable.json index.html
           git commit -m "Refresh monthly API snapshots"
           git push
 
@@ -106,18 +108,21 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_RESEARCH_MODEL: ${{ vars.OPENAI_RESEARCH_MODEL || 'gpt-5' }}
           RESEARCH_LOOKBACK_DAYS: ${{ vars.RESEARCH_LOOKBACK_DAYS || '35' }}
-        run: python scripts/refresh_ai_content_meta_review.py
+        run: |
+          python scripts/refresh_ai_content_meta_review.py
+          python scripts/build_dashboard_readable.py
+          python scripts/embed_dashboard_readable.py
 
       - name: Commit and push if research changed
         run: |
-          if git diff --quiet -- data/ai-content-meta-review; then
+          if git diff --quiet -- data/ai-content-meta-review data/dashboard_readable.json index.html; then
             echo "No AI content meta-review changes."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/ai-content-meta-review
+          git add data/ai-content-meta-review data/dashboard_readable.json index.html
           git commit -m "Refresh AI content meta-review"
           git push
 
@@ -190,7 +195,7 @@ jobs:
       - name: Commit and push if web sample changed
         if: steps.web_sample_check.outputs.available == 'true'
         run: |
-          if git diff --quiet -- data/web-sample-lite data/dashboard_readable.json; then
+          if git diff --quiet -- data/web-sample-lite data/dashboard_readable.json index.html; then
             echo "No web sample changes."
             exit 0
           fi
@@ -200,6 +205,7 @@ jobs:
           git add data/web-sample-lite/web_sample_lite_summary.json \
             data/web-sample-lite/web_sample_lite_summary.js \
             data/web-sample-lite/web_sample_lite_setup_range.json \
-            data/dashboard_readable.json
+            data/dashboard_readable.json \
+            index.html
           git commit -m "Refresh web sample lite"
           git push
