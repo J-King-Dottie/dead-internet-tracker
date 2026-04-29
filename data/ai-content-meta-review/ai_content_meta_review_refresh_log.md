@@ -14,16 +14,32 @@ For the actual sweep standard and what context to store per estimate, use:
 
 - `data/ai-content-meta-review/ai_content_meta_review_research_protocol.md`
 
-## 2026-04-26 - Dead Internet Monitor Source Add
+## 2026-04-30 - 2025 and 2026 Research Expansion
 
-- scope: targeted review of Dead Internet Monitor after a source suggestion
+- scope: targeted refresh for late-2025 and early-2026 estimates, with extra review of the previous beta monitor row
 - added:
-  - Dead Internet Monitor / discussion posts (2026)
+  - Apple Music / new uploads (2026)
+  - Originality / Canadian car dealership reviews (2025)
+  - Originality / house cleaning reviews (2025)
+  - Originality / lawn care and landscaping reviews (2025)
+  - Originality / Home Depot and Lowe's reviews (2025)
+  - Originality / neuroscience abstracts (2025)
+  - Originality / luxury hotel reviews (2025)
+  - Originality / Amazon Success self-help books (2025)
+  - Originality / Amazon pet-loss books (2025)
+  - Originality / HEA public comments (2025)
+  - Originality / Trustpilot Temu reviews (2025)
+  - Originality / holiday recipes (2025)
+  - Plastic surgery literature (2025)
+  - Turkish online news articles (2026)
+- removed:
+  - Dead Internet Monitor / discussion posts (2026), because the linked methodology page describes a live beta monitor rather than a fixed, dated published estimate
 - notes:
-  - kept as a beta multi-platform discussion-content estimate because the methodology gives a source mix and an approximate current AI content rate
-  - treated as narrow discussion-content evidence, not a whole-internet estimate
+  - kept the new rows narrow by naming the exact corpus or platform in each series label
+  - updated the Turkish news row to describe the January 2026 external-validation slice instead of framing it as a multi-year average
+  - rejected YouTube Shorts feed-share and AI content-farm network counts as chart dots because they describe recommendations or entity counts rather than a stable content denominator
 - gaps still thin:
-  - independent validation of broad cross-platform discussion-content prevalence estimates
+  - broad fixed 2026 web-content estimates with clear denominators
 
 ## 2026-04-24 - Literature Review Upgrade
 

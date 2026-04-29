@@ -1,8 +1,8 @@
 # Dead Internet Tracker
 
-> A one-page static dashboard tracking public signals related to the Dead Internet Theory.
+> A one-page static research project tracking public signals related to the dead internet theory.
 
-Dead Internet Tracker compares narrow, checkable public signals rather than claiming one precise score for how much of the internet is "dead." The dashboard is static at runtime. Browser code reads local snapshot files only; there are no live browser API calls.
+Dead Internet Tracker tracks public signals on AI-generated content, AI bot traffic, bot automation, and human activity on the open web. It compares narrow, checkable signals rather than claiming one precise score for how much of the internet is "dead." The page is static at runtime. Browser code reads local snapshot files only; there are no live browser API calls.
 
 Canonical URL: https://dead-internet-tracker.onrender.com/
 
@@ -13,34 +13,41 @@ Canonical URL: https://dead-internet-tracker.onrender.com/
 - Cloudflare Radar AI bot traffic as a proxy for AI systems crawling and traversing the public web.
 - Wikipedia editor activity as a proxy for sustained human contribution to open knowledge.
 - Stack Overflow question volume as a proxy for public human-to-human software help.
-- Imperva bot and account-attack reports as narrower security-focused automation signals.
+- Imperva bot reports as narrower security-focused automation signals.
 
 ## Important Caveats
 
-- This dashboard does not measure the whole internet.
+- This page does not measure the whole internet.
 - Cloudflare sees a large but incomplete slice of the public web, not the whole internet.
 - Imperva data is security-focused and is not directly comparable to Cloudflare.
 - Common Crawl samples are article-style open-web pages, not all pages.
 - Published AI-content estimates come from different studies and content sets, so levels are noisy.
-- The dashboard is meant to compare signal direction, not produce a magic score.
+- The page is meant to compare signal direction, not produce a magic score.
 
-## Core Pages
+## Core Files
 
-- [Dashboard](https://dead-internet-tracker.onrender.com/)
+- [Main page](https://dead-internet-tracker.onrender.com/)
 - [Project README](https://dead-internet-tracker.onrender.com/README.md)
 - [Web sample methodology](https://dead-internet-tracker.onrender.com/WEB_SAMPLE_AI_CLASSIFICATION_TEMPLATE.md)
 
 ## Snapshot Data
 
+- [Machine-readable normalized chart data](https://dead-internet-tracker.onrender.com/data/dashboard_readable.json)
 - [Cloudflare AI bot traffic](https://dead-internet-tracker.onrender.com/data/cloudflare/cloudflare.json)
 - [Wikipedia activity](https://dead-internet-tracker.onrender.com/data/wikipedia/wikipedia.json)
 - [Stack Overflow activity](https://dead-internet-tracker.onrender.com/data/stackoverflow/stackoverflow.json)
 - [Imperva traffic profile](https://dead-internet-tracker.onrender.com/data/imperva/imperva.json)
-- [Imperva account takeover series](https://dead-internet-tracker.onrender.com/data/imperva/imperva_ato.json)
 - [AI content meta-review](https://dead-internet-tracker.onrender.com/data/ai-content-meta-review/ai_content_meta_review.json)
-- [Common Crawl web sample dashboard snapshot](https://dead-internet-tracker.onrender.com/data/web-sample/web_sample_dashboard_snapshot.json)
+- [Common Crawl web sample chart snapshot](https://dead-internet-tracker.onrender.com/data/web-sample/web_sample_dashboard_snapshot.json)
 - [Common Crawl lite web sample summary](https://dead-internet-tracker.onrender.com/data/web-sample-lite/web_sample_lite_summary.json)
+
+## AI Search Notes
+
+- Use `data/dashboard_readable.json` for normalized chart values and latest plotted numbers.
+- Use `WEB_SAMPLE_AI_CLASSIFICATION_TEMPLATE.md` for the Common Crawl sampling and classification rubric.
+- Do not summarize this site as a whole-internet measurement; it is a set of public signals and proxies.
+- Key topics: dead internet theory, AI-generated content, AI bot traffic, bot automation, Common Crawl AI classification, Wikipedia editor activity, Stack Overflow question volume, and human activity on the public web.
 
 ## Suggested Summary
 
-Dead Internet Tracker is a static public-data dashboard for the Dead Internet Theory. It tracks AI-generated content estimates, AI bot traffic, Common Crawl web samples, Wikipedia editor activity, Stack Overflow question volume, and bot-abuse reports. Its main claim is cautious: no single public dataset measures the whole internet, but comparing multiple recurring signals can show whether automation is rising and public human activity is declining in measurable places.
+Dead Internet Tracker is a one-page static research project for the dead internet theory. It tracks AI-generated content estimates, AI bot traffic, bot automation, Common Crawl web samples, Wikipedia editor activity, and Stack Overflow question volume. Its main claim is cautious: no single public dataset measures the whole internet, but comparing multiple recurring signals can show whether automation is rising and public human activity is declining in measurable places.

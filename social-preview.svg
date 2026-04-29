@@ -1,18 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">Dead Internet Tracker</title>
-  <desc id="desc">A dashboard tracking public signals behind the dead internet theory.</desc>
+  <desc id="desc">Public signals on AI-generated content, AI bot traffic, bot automation, and human activity.</desc>
   <rect width="1200" height="630" fill="#08111f"/>
-  <path d="M0 540H1200" stroke="#00e5b0" stroke-width="3" opacity=".55"/>
-  <path d="M80 355h70l34-132 45 244 56-318 54 206h210" fill="none" stroke="#00e5b0" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="80" y="170" fill="#f7fbff" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="78" font-weight="700">Dead Internet Tracker</text>
-  <text x="82" y="248" fill="#b9c6d8" font-family="IBM Plex Mono, Consolas, monospace" font-size="31">AI content, bot traffic, and human activity on the open web</text>
-  <g fill="none" stroke="#58e6ff" stroke-width="2" opacity=".24">
-    <path d="M80 470H1120"/>
-    <path d="M80 410H1120"/>
-    <path d="M80 350H1120"/>
-    <path d="M80 290H1120"/>
+  <g stroke="#13223a" stroke-width="1">
+    <path d="M80 94H1120"/>
+    <path d="M80 186H1120"/>
+    <path d="M80 278H1120"/>
+    <path d="M80 370H1120"/>
+    <path d="M80 462H1120"/>
+    <path d="M80 554H1120"/>
+    <path d="M170 70V560"/>
+    <path d="M330 70V560"/>
+    <path d="M490 70V560"/>
+    <path d="M650 70V560"/>
+    <path d="M810 70V560"/>
+    <path d="M970 70V560"/>
   </g>
-  <g fill="#ffd36a" font-family="IBM Plex Mono, Consolas, monospace" font-size="24">
-    <text x="80" y="555">dead-internet-tracker.onrender.com</text>
+  <path d="M80 548H1120" stroke="#00e5b0" stroke-width="3" opacity=".55"/>
+  <text x="82" y="160" fill="#8ea1bd" font-family="IBM Plex Mono, Consolas, monospace" font-size="24" font-weight="600" letter-spacing="2">PUBLIC RESEARCH PAGE</text>
+  <text x="80" y="275" fill="#f7fbff" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="86" font-weight="800">Dead Internet Tracker</text>
+  <text x="82" y="356" fill="#d7e1ef" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="34" font-weight="600">AI-generated content, AI bot traffic, and human activity</text>
+  <text x="82" y="428" fill="#9baac0" font-family="IBM Plex Mono, Consolas, monospace" font-size="27" font-style="italic">No single score. Just the best available signals.</text>
+  <g font-family="IBM Plex Mono, Consolas, monospace" font-size="22" font-weight="600">
+    <text x="82" y="526" fill="#00e5b0">dead-internet-tracker.onrender.com</text>
   </g>
 </svg>

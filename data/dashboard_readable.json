@@ -1,0 +1,3790 @@
+{
+  "title": "Dead Internet Tracker machine-readable chart data",
+  "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
+  "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
+  "generatedAt": "2026-04-29",
+  "charts": [
+    {
+      "chartKey": "ai-content-meta-review",
+      "title": "AI content share meta review",
+      "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
+      "source": "Curated AI deep research using a guided source-review process.",
+      "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
+      "lastRefreshed": "2026-04-30",
+      "unit": "percent",
+      "xValues": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "series": [
+        {
+          "name": "Published estimates",
+          "values": [
+            {
+              "year": 2020,
+              "value": 2.48,
+              "rawValue": "2.48%",
+              "series": "Graphite / Common Crawl new web articles",
+              "source": "https://docs.google.com/spreadsheets/d/1WamFyVahPDtAPFtvly30BG2QjyA-L1KYkO2UEYGKKcg/edit?gid=0",
+              "notes": "Graphite estimated that 2.48% of newly published English web articles in 2020 were AI-generated. It filtered Common Crawl pages by article markup, English language, and publish date, then classified them with Surfer's AI detector using a greater-than-50% threshold. This is one of the closest direct measures in the table, but it only covers newly published English articles and depends on detector performance.",
+              "publicationDate": "2024-05-07"
+            },
+            {
+              "year": 2020,
+              "value": 4.55,
+              "rawValue": "4.55%",
+              "series": "Originality / Walmart reviews",
+              "source": "https://originality.ai/blog/ai-walmart-reviews",
+              "notes": "Originality.AI estimated that 4.55% of Walmart product reviews in 2020 were likely AI-generated. It analyzed Walmart mobile-app reviews of at least 50 words and classified them with its detector across a year-by-year series. This is a detector-based estimate inside one retail-review platform, not a broad web-content measure.",
+              "publicationDate": "2025-10-19"
+            },
+            {
+              "year": 2020,
+              "value": 3.06,
+              "rawValue": "3.06%",
+              "series": "Originality / Quora answers",
+              "source": "https://originality.ai/blog/ai-quora-answers-study",
+              "notes": "Originality.AI estimated that 3.06% of English-language Quora answers in 2020 were likely AI-generated. It scraped public Quora answers across multiple topics, kept answers of at least 50 words, and ran them through its detector. This is a direct platform-specific answer estimate, but it depends on scraper coverage and detector performance.",
+              "publicationDate": "2025-10-23"
+            },
+            {
+              "year": 2021,
+              "value": 3.06,
+              "rawValue": "3.06%",
+              "series": "Graphite / Common Crawl new web articles",
+              "source": "https://docs.google.com/spreadsheets/d/1WamFyVahPDtAPFtvly30BG2QjyA-L1KYkO2UEYGKKcg/edit?gid=0",
+              "notes": "Graphite estimated that 3.06% of newly published English web articles in 2021 were AI-generated. It filtered Common Crawl pages by article markup, English language, and publish date, then classified them with Surfer's AI detector using a greater-than-50% threshold. This is one of the closest direct measures in the table, but it only covers newly published English articles and depends on detector performance.",
+              "publicationDate": "2024-05-07"
+            },
+            {
+              "year": 2021,
+              "value": 5.19,
+              "rawValue": "5.19%",
+              "series": "Originality / Walmart reviews",
+              "source": "https://originality.ai/blog/ai-walmart-reviews",
+              "notes": "Originality.AI estimated that 5.19% of Walmart product reviews in 2021 were likely AI-generated. It analyzed Walmart mobile-app reviews of at least 50 words and classified them with its detector across a year-by-year series. This is a detector-based estimate inside one retail-review platform, not a broad web-content measure.",
+              "publicationDate": "2025-10-19"
+            },
+            {
+              "year": 2022,
+              "value": 10.3,
+              "rawValue": "10.30%",
+              "series": "OTSR orthopedics journal articles",
+              "source": "https://pubmed.ncbi.nlm.nih.gov/37776949/",
+              "notes": "The mean AI-generation score was 10.30% for OTSR orthopedics articles published before November 2022. The study ran ZeroGPT on the body plus abstract of 425 articles published from February 2022 to September 2023. This is a direct estimate within a defined journal corpus, though detector choice and single-journal scope are clear limitations.",
+              "publicationDate": "2023-09-29"
+            },
+            {
+              "year": 2022,
+              "value": 6.81,
+              "rawValue": "6.81%",
+              "series": "Graphite / Common Crawl new web articles",
+              "source": "https://docs.google.com/spreadsheets/d/1WamFyVahPDtAPFtvly30BG2QjyA-L1KYkO2UEYGKKcg/edit?gid=0",
+              "notes": "Graphite estimated that 6.81% of newly published English web articles in 2022 were AI-generated. It filtered Common Crawl pages by article markup, English language, and publish date, then classified them with Surfer's AI detector using a greater-than-50% threshold. This is one of the closest direct measures in the table, but it only covers newly published English articles and depends on detector performance.",
+              "publicationDate": "2024-05-07"
+            },
+            {
+              "year": 2022,
+              "value": 1.77,
+              "rawValue": "1.77%",
+              "series": "ACL social media platforms",
+              "source": "https://arxiv.org/abs/2412.18148",
+              "notes": "The study-year median across Medium, Quora, and Reddit put AI-generated social-media posts at 1.77% in 2022. The paper trained and selected an AIGT detector, then applied it to a 2.4 million post corpus spanning January 2022 to October 2024. This gives one value for a major social-content dataset, but it remains platform-bound and detector-dependent.",
+              "publicationDate": "2024-12-24"
+            },
+            {
+              "year": 2022,
+              "value": 5.4,
+              "rawValue": "5.40%",
+              "series": "Originality / Walmart reviews",
+              "source": "https://originality.ai/blog/ai-walmart-reviews",
+              "notes": "Originality.AI estimated that 5.40% of Walmart product reviews in 2022 were likely AI-generated. It analyzed Walmart mobile-app reviews of at least 50 words and classified them with its detector across a year-by-year series. This is a detector-based estimate inside one retail-review platform, not a broad web-content measure.",
+              "publicationDate": "2025-10-19"
+            },
+            {
+              "year": 2022,
+              "value": 6.93,
+              "rawValue": "6.93%",
+              "series": "Originality / Quora answers",
+              "source": "https://originality.ai/blog/ai-quora-answers-study",
+              "notes": "Originality.AI estimated that 6.93% of English-language Quora answers in 2022 were likely AI-generated. It scraped public Quora answers across multiple topics, kept answers of at least 50 words, and ran them through its detector. This is a direct platform-specific answer estimate, but it depends on scraper coverage and detector performance.",
+              "publicationDate": "2025-10-23"
+            },
+            {
+              "year": 2022,
+              "value": 0.0,
+              "rawValue": "0.0%",
+              "series": "JAMA Network Open medical literature",
+              "source": "https://arxiv.org/abs/2603.19316",
+              "notes": "The January 2022 baseline put significant AI-generated text at 0.0% of JAMA Network Open articles. The study uses Originality.AI on a monthly series covering original investigations, research letters, and invited commentaries from January 2022 through March 2025. This is a narrow but still direct content-share estimate for one medical publishing venue.",
+              "publicationDate": "2026-03-15"
+            },
+            {
+              "year": 2023,
+              "value": 3.3,
+              "rawValue": "3.3%",
+              "series": "Turnitin / student papers with >=80% AI writing",
+              "source": "https://www.turnitin.com/press/turnitin-ai-detection-feature-reviews-more-than-65-million-papers",
+              "notes": "Turnitin reported that 3.3% of submitted student papers in 2023 showed 80% or more text consistent with AI writing. The figure came from more than 65 million papers reviewed after the April 2023 launch of its AI detection feature. This is a direct large-scale prevalence estimate for heavily AI-written student work, but it is thresholded, detector-based, and narrower than broader measures of partial AI assistance.",
+              "publicationDate": "2023-07-25"
+            },
+            {
+              "year": 2023,
+              "value": 15.64,
+              "rawValue": "15.64%",
+              "series": "OTSR orthopedics journal articles",
+              "source": "https://pubmed.ncbi.nlm.nih.gov/37776949/",
+              "notes": "The mean AI-generation score was 15.64% for OTSR orthopedics articles published after November 2022. The study ran ZeroGPT on the body plus abstract of 425 articles published from February 2022 to September 2023. This is a direct estimate within a defined journal corpus, though detector choice and single-journal scope are clear limitations.",
+              "publicationDate": "2023-09-29"
+            },
+            {
+              "year": 2023,
+              "value": 0.052,
+              "rawValue": "0.052%",
+              "series": "Twitter profile images",
+              "source": "https://arxiv.org/abs/2404.14244",
+              "notes": "The study estimated that 0.052% of Twitter profile images in its 2023 corpus were AI-generated. The authors built a multi-stage detection pipeline and applied it to 14,989,385 profile images collected from March 7 to March 15, 2023. This is a direct estimate within a clearly defined image corpus, but it is narrowly focused on profile pictures rather than the broader web.",
+              "publicationDate": "2024-04-22"
+            },
+            {
+              "year": 2023,
+              "value": 31.61,
+              "rawValue": "31.61%",
+              "series": "Graphite / Common Crawl new web articles",
+              "source": "https://docs.google.com/spreadsheets/d/1WamFyVahPDtAPFtvly30BG2QjyA-L1KYkO2UEYGKKcg/edit?gid=0",
+              "notes": "Graphite estimated that 31.61% of newly published English web articles in 2023 were AI-generated. It filtered Common Crawl pages by article markup, English language, and publish date, then classified them with Surfer's AI detector using a greater-than-50% threshold. This is one of the closest direct measures in the table, but it only covers newly published English articles and depends on detector performance.",
+              "publicationDate": "2024-05-07"
+            },
+            {
+              "year": 2023,
+              "value": 12.7,
+              "rawValue": "12.7%",
+              "series": "Stanford / LLM-assisted writing across society",
+              "source": "https://arxiv.org/abs/2502.09747",
+              "notes": "The study-year median across the paper's real-world text domains put LLM-assisted writing at 12.7% in 2023. The paper uses a population-level statistical framework rather than a black-box detector and reports content-share estimates across several domains such as complaints, press releases, and job postings. This gives one balanced study-year value, but it still mixes narrower content sets rather than the internet as a whole.",
+              "publicationDate": "2025-02-13"
+            },
+            {
+              "year": 2023,
+              "value": 12.21,
+              "rawValue": "12.21%",
+              "series": "Originality / Google reviews",
+              "source": "https://originality.ai/blog/ai-google-reviews-study",
+              "notes": "Originality.AI estimated that 12.21% of Google reviews in 2023 were likely AI-generated. It analyzed Google reviews with its detector and reported a year-by-year series from 2019 to 2024. This is a broad review-platform estimate, but it is detector-based and limited to review text rather than general web content.",
+              "publicationDate": "2025-10-11"
+            },
+            {
+              "year": 2023,
+              "value": 11.86,
+              "rawValue": "11.86%",
+              "series": "Originality / Quora answers",
+              "source": "https://originality.ai/blog/ai-quora-answers-study",
+              "notes": "Originality.AI estimated that 11.86% of English-language Quora answers in 2023 were likely AI-generated. It scraped public Quora answers across multiple topics, kept answers of at least 50 words, and ran them through its detector. This is a direct platform-specific answer estimate, but it depends on scraper coverage and detector performance.",
+              "publicationDate": "2025-10-23"
+            },
+            {
+              "year": 2024,
+              "value": 16.2,
+              "rawValue": "16.2%",
+              "series": "Pixiv artworks",
+              "source": "https://arxiv.org/abs/2402.18463",
+              "notes": "The study estimated that 16.2% of Pixiv artworks in its pooled 2022 to 2024 corpus were AI-generated. It examined 15,203,948 artworks created between January 1, 2022 and January 5, 2024, of which 2,475,485 were tagged as AI-generated. This is a direct estimate within a very large online art platform, but the value is a pooled multi-year platform estimate rather than a single-calendar-year snapshot.",
+              "publicationDate": "2024-02-28"
+            },
+            {
+              "year": 2024,
+              "value": 17.5,
+              "rawValue": "17.5%",
+              "series": "arXiv computer science abstracts",
+              "source": "https://arxiv.org/abs/2404.01268",
+              "notes": "The paper reported that 17.5% of arXiv computer science abstracts by February 2024 were LLM-modified. It used a population-level statistical framework across 950,965 papers from arXiv, bioRxiv, and Nature journals published between January 2020 and February 2024. This is a strong direct estimate within a clearly defined scholarly corpus, though it reflects one venue and field rather than the whole internet.",
+              "publicationDate": "2024-04-01"
+            },
+            {
+              "year": 2024,
+              "value": 11.0,
+              "rawValue": "11%",
+              "series": "Turnitin / student papers with >=20% AI writing",
+              "source": "https://www.turnitin.com/blog/turnitin-celebrates-one-year-for-ai-writing-detection",
+              "notes": "Turnitin reported that 11% of submitted student papers reviewed by April 2024 contained at least 20% AI-written text. The figure came from more than 22 million submissions within roughly 200 million papers reviewed since launch of its AI writing detector. This is a direct large-scale prevalence estimate within student writing submitted through Turnitin, but it uses a proprietary detector and a thresholded definition rather than page-level human review.",
+              "publicationDate": "2024-04-09"
+            },
+            {
+              "year": 2024,
+              "value": 1.57,
+              "rawValue": "1.57%",
+              "series": "Copyleaks / web pages",
+              "source": "https://copyleaks.com/about-us/media/copyleaks-study-finds-explosive-growth-of-ai-content-on-the-web",
+              "notes": "Copyleaks estimated that 1.57% of sampled Common Crawl web pages in 2024 were AI-generated. It said its study analyzed one million pages from the Common Crawl dataset with the company's own detector. This is a genuine web-wide prevalence estimate with a clear sample frame, but it is still detector-based and company-published.",
+              "publicationDate": "2024-04-30"
+            },
+            {
+              "year": 2024,
+              "value": 15.8,
+              "rawValue": "15.8%",
+              "series": "ICLR peer reviews",
+              "source": "https://arxiv.org/abs/2405.02150",
+              "notes": "The paper estimated that at least 15.8% of ICLR 2024 peer reviews were AI-assisted. It used GPTZero as a lower-bound detector in a quasi-experimental study of the ICLR review set. This is a direct estimate within a defined scholarly content set, but it is framed as a lower bound and depends on detector performance.",
+              "publicationDate": "2024-05-03"
+            },
+            {
+              "year": 2024,
+              "value": 45.92,
+              "rawValue": "45.92%",
+              "series": "Graphite / Common Crawl new web articles",
+              "source": "https://docs.google.com/spreadsheets/d/1WamFyVahPDtAPFtvly30BG2QjyA-L1KYkO2UEYGKKcg/edit?gid=0",
+              "notes": "Graphite estimated that 45.92% of newly published English web articles in 2024 were AI-generated. It filtered Common Crawl pages by article markup, English language, and publish date, then classified them with Surfer's AI detector using a greater-than-50% threshold. This is one of the closest direct measures in the table, but it only covers newly published English articles and depends on detector performance.",
+              "publicationDate": "2024-05-07"
+            },
+            {
+              "year": 2024,
+              "value": 13.5,
+              "rawValue": "13.5%",
+              "series": "Biomedical abstracts / excess vocabulary",
+              "source": "https://arxiv.org/abs/2406.07016",
+              "notes": "The paper's lower-bound estimate put LLM-assisted writing at 13.5% of PubMed biomedical abstracts in 2024. It tracked excess use of LLM-associated style words across more than 15 million abstracts from 2010 to 2024 and attributed the post-ChatGPT jump to AI assistance. This is still more indirect than page-level AI-share estimates and focuses on scholarly abstracts rather than the wider web.",
+              "publicationDate": "2024-06-11"
+            },
+            {
+              "year": 2024,
+              "value": 5.0,
+              "rawValue": "5%",
+              "series": "Princeton / English Wikipedia new pages",
+              "source": "https://arxiv.org/abs/2410.08044",
+              "notes": "The study estimated that up to 5% of new English Wikipedia pages in August 2024 contained significant AI-generated content. It used GPTZero and Binoculars, calibrated to a 1% false positive rate on pre-GPT-3.5 articles, on a set of 2,909 new pages. This is a direct estimate within one important public knowledge platform, but it is platform-specific and focused on newly created pages.",
+              "publicationDate": "2024-10-10"
+            },
+            {
+              "year": 2024,
+              "value": 37.03,
+              "rawValue": "37.03%",
+              "series": "ACL social media platforms",
+              "source": "https://arxiv.org/abs/2412.18148",
+              "notes": "The study-year median across Medium, Quora, and Reddit put AI-generated social-media posts at 37.03% in 2024. The paper trained and selected an AIGT detector, then applied it to a 2.4 million post corpus spanning January 2022 to October 2024. This gives one value for a major social-content dataset, but it remains platform-bound and detector-dependent.",
+              "publicationDate": "2024-12-24"
+            },
+            {
+              "year": 2024,
+              "value": 41.18,
+              "rawValue": "41.18%",
+              "series": "Originality / Facebook long-form posts",
+              "source": "https://www.stanventures.com/news/facebook-flooded-with-ai-over-40-of-posts-are-machine-generated-1847/",
+              "notes": "A secondary writeup reported that 41.18% of long-form Facebook posts as of November 2024 were likely AI-generated. It summarized an Originality.AI study of 8,885 Facebook posts published from November 2018 to November 2024 and classified as long-form by detector-based rules. This is a useful platform-specific text estimate, but it comes through a secondary article because the original study URL now redirects.",
+              "publicationDate": "2025-01-30"
+            },
+            {
+              "year": 2024,
+              "value": 17.7,
+              "rawValue": "17.7%",
+              "series": "Stanford / LLM-assisted writing across society",
+              "source": "https://arxiv.org/abs/2502.09747",
+              "notes": "The study-year median across the paper's real-world text domains put LLM-assisted writing at 17.7% in 2024. The paper uses a population-level statistical framework rather than a black-box detector and reports content-share estimates across several domains such as complaints, press releases, and job postings. This gives one balanced study-year value, but it still mixes narrower content sets rather than the internet as a whole.",
+              "publicationDate": "2025-02-13"
+            },
+            {
+              "year": 2024,
+              "value": 12.0,
+              "rawValue": "12%",
+              "series": "X election images",
+              "source": "https://arxiv.org/abs/2502.11248",
+              "notes": "The study estimated that 12% of shared images in a large 2024 US presidential election dataset from X were AI-generated. It analyzed a clearly defined election-related image corpus from one major social platform. This is a direct estimate within that image set, but it is visual, political, and platform-specific rather than internet-wide.",
+              "publicationDate": "2025-02-16"
+            },
+            {
+              "year": 2024,
+              "value": 5.0,
+              "rawValue": "5%",
+              "series": "Chinese master?s theses",
+              "source": "https://gjs.nuist.edu.cn/2025/0912/c2490a289978/pagem.htm",
+              "notes": "A Chinese institutional summary reported that AI-generated content reached 5% of master's theses in 2024. The summary described a study of 230,000 theses from 2022 to 2024 using the AIGC-CHECK system and large-model semantic recognition. The original journal article was not readily accessible online, so this row relies on a reputable secondary source rather than a directly retrieved paper.",
+              "publicationDate": "2025-09-06"
+            },
+            {
+              "year": 2024,
+              "value": 10.94,
+              "rawValue": "10.94%",
+              "series": "Originality / Quora answers",
+              "source": "https://originality.ai/blog/ai-quora-answers-study",
+              "notes": "Originality.AI estimated that 10.94% of English-language Quora answers in 2024 were likely AI-generated. It scraped public Quora answers across multiple topics, kept answers of at least 50 words, and ran them through its detector. This is a direct platform-specific answer estimate, but it depends on scraper coverage and detector performance.",
+              "publicationDate": "2025-10-23"
+            },
+            {
+              "year": 2024,
+              "value": 54.0,
+              "rawValue": "54%",
+              "series": "Originality / LinkedIn long-form posts",
+              "source": "https://originality.ai/blog/ai-content-published-linkedin",
+              "notes": "Originality.AI estimated that 54% of long-form LinkedIn posts in October 2024 were likely AI-generated. It analyzed 8,795 LinkedIn posts of 100 words or more, spanning January 2018 to October 2024, with its own detector. This is a platform-specific detector-based estimate for long posts, not all LinkedIn content.",
+              "publicationDate": "2025-10-28"
+            },
+            {
+              "year": 2025,
+              "value": 51.38,
+              "rawValue": "51.38%",
+              "series": "Graphite / Common Crawl new web articles",
+              "source": "https://docs.google.com/spreadsheets/d/1WamFyVahPDtAPFtvly30BG2QjyA-L1KYkO2UEYGKKcg/edit?gid=0",
+              "notes": "Graphite estimated that 51.38% of newly published English web articles through May 2025 were AI-generated. It filtered Common Crawl pages by article markup, English language, and publish date, then classified them with Surfer's AI detector using a greater-than-50% threshold. This is one of the closest direct measures in the table, but it only covers newly published English articles and depends on detector performance.",
+              "publicationDate": "2024-05-07"
+            },
+            {
+              "year": 2025,
+              "value": 35.0,
+              "rawValue": "35%",
+              "series": "Spennemann / active web pages",
+              "source": "https://arxiv.org/abs/2504.08755",
+              "notes": "The paper's midpoint estimate put AI-generated text at 35% of active web pages in 2025. It inferred AI presence from the frequency of keywords associated with ChatGPT-style writing rather than direct page-by-page labeling. This is unusually close to the core question, but it relies on a heuristic marker method rather than direct classification.",
+              "publicationDate": "2025-03-29"
+            },
+            {
+              "year": 2025,
+              "value": 74.2,
+              "rawValue": "74.2%",
+              "series": "Ahrefs / new webpages with AI content",
+              "source": "https://ahrefs.com/blog/what-percentage-of-new-content-is-ai-generated/",
+              "notes": "Ahrefs estimated that 74.2% of 900,000 newly detected English-language web pages in April 2025 contained some AI content. It used the company's own detector on a large sample of newly detected pages. This is relevant to the core question, but it measures pages containing some AI text rather than pages that are mostly AI-generated.",
+              "publicationDate": "2025-05-19"
+            },
+            {
+              "year": 2025,
+              "value": 17.3,
+              "rawValue": "17.3%",
+              "series": "AI Forensics / TikTok + Instagram top search results",
+              "source": "https://aiforensics.org/uploads/GenAI%20Report.pdf",
+              "notes": "AI Forensics estimated that 17.3% of top search results across TikTok and Instagram in June 2025 contained synthetic AI imagery. It manually annotated 2,100 search results collected in Spain, Germany, and Poland and then built a weighted aggregate from the report's country-level counts. This is a useful direct social-platform estimate, but it is query-based, image-focused, and tied to search results rather than all feed content.",
+              "publicationDate": "2025-07-31"
+            },
+            {
+              "year": 2025,
+              "value": 9.0,
+              "rawValue": "9%",
+              "series": "Pangram / American newspapers",
+              "source": "https://arxiv.org/abs/2510.18774",
+              "notes": "Pangram estimated that 9% of newly published articles from roughly 1,500 American newspapers in summer 2025 were partially or fully AI-generated. It audited 186,000 articles and this row keeps the overall article estimate rather than the narrower opinion-piece split. This is a useful newspaper-sector estimate, but it still covers one media slice rather than the wider web.",
+              "publicationDate": "2025-10-21"
+            },
+            {
+              "year": 2025,
+              "value": 34.0,
+              "rawValue": "34%",
+              "series": "Deezer / new music uploads",
+              "source": "https://newsroom-deezer.com/2025/11/deezer-ipsos-survey-97-of-people-cant-tell-the-difference-between-fully-ai-generated-and-human-made-music-clear-desire-for-transparency-and-fairness-for-artists/",
+              "notes": "Deezer reported that 34% of all daily music deliveries to its platform in late 2025 were fully AI-generated tracks. It said its in-house AI-music detection system was identifying roughly 50,000 fully AI-generated uploads per day by the November 2025 update. This is a direct platform-level prevalence estimate, but it is narrowly about one music-streaming service and fully synthetic tracks rather than AI-assisted content more broadly.",
+              "publicationDate": "2025-11-12"
+            },
+            {
+              "year": 2025,
+              "value": 4.6,
+              "rawValue": "4.6%",
+              "series": "Originality / Home Depot and Lowe's reviews",
+              "source": "https://originality.ai/blog/ai-home-depot-lowes-reviews",
+              "notes": "Originality.AI estimated that 4.6% of 2025 Trustpilot reviews for Home Depot and Lowe's were likely AI-generated. The study examined public customer feedback for the two home-improvement retailers from 2018 to 2025 and classified reviews with its detector. This is a useful low-AI counterexample inside retail reviews, but it covers two brands on one review platform.",
+              "publicationDate": "2025-11-12"
+            },
+            {
+              "year": 2025,
+              "value": 46.4,
+              "rawValue": "46.4%",
+              "series": "Originality / neuroscience abstracts",
+              "source": "https://originality.ai/blog/ai-neuroscience-abstracts",
+              "notes": "Originality.AI estimated that 46.4% of neuroscience journal abstracts in 2025 were likely AI-generated. It retrieved abstracts from OpenAlex by year, collected up to 500 non-empty abstracts per year, reconstructed the abstract text, and scanned abstracts of at least 50 words with the Originality.AI detector. This is a detector-based academic-abstract estimate and should be read as AI-writing signal in one research field, not as proof that the papers themselves were AI-written.",
+              "publicationDate": "2025-11-12"
+            },
+            {
+              "year": 2025,
+              "value": 28.6,
+              "rawValue": "28.6%",
+              "series": "Originality / Canadian car dealership reviews",
+              "source": "https://originality.ai/blog/ai-car-dealership-reviews",
+              "notes": "Originality.AI estimated that 28.6% of Canadian car dealership reviews in 2025 were likely AI-written. The study used a Google Maps-based business data API, sampled 100 dealerships across 10 Canadian cities, retained 2,000+ reviews of at least 100 words, and classified them with the Originality.AI API. This is a review-platform estimate for one retail category, not a general web-content measure.",
+              "publicationDate": "2025-12-11"
+            },
+            {
+              "year": 2025,
+              "value": 14.7,
+              "rawValue": "14.7%",
+              "series": "Originality / Reddit posts",
+              "source": "https://originality.ai/blog/ai-reddit-posts-study",
+              "notes": "Originality.AI estimated that 14.7% of Reddit posts in its 2025 sample were likely AI-generated. It collected posts using 50 unrelated search nouns, kept posts with at least 50 words, and ended with 497 posts after filtering. This is a direct forum-level estimate, but the sample is modest and detector-based.",
+              "publicationDate": "2025-12-11"
+            },
+            {
+              "year": 2025,
+              "value": 21.3,
+              "rawValue": "21.3%",
+              "series": "Originality / house cleaning reviews",
+              "source": "https://originality.ai/blog/ai-house-cleaning-reviews",
+              "notes": "Originality.AI estimated that 21.3% of US house-cleaning service reviews in 2025 were likely AI-generated. It sampled 100 businesses across 10 major US cities, retained 700+ reviews of at least 100 words after cleaning, and scored them with the Originality.AI API. This is a local-services review estimate, useful as a narrow consumer-feedback signal rather than as a broad web average.",
+              "publicationDate": "2025-12-11"
+            },
+            {
+              "year": 2025,
+              "value": 16.4,
+              "rawValue": "16.4%",
+              "series": "Originality / lawn care and landscaping reviews",
+              "source": "https://originality.ai/blog/ai-lawn-care-landscaping-reviews",
+              "notes": "Originality.AI estimated that 16.4% of US lawn-care and landscaping reviews in 2025 were likely AI-generated. It sampled 100 businesses across 10 major US cities, kept 700+ reviews of at least 100 words, and classified reviews with the Originality.AI API. This is a narrow local-services review slice, and the article notes that earlier years in the dataset had fewer available reviews.",
+              "publicationDate": "2025-12-11"
+            },
+            {
+              "year": 2025,
+              "value": 10.9,
+              "rawValue": "10.90%",
+              "series": "Originality / Trustpilot Temu reviews",
+              "source": "https://originality.ai/blog/ai-temu-reviews",
+              "notes": "Originality.AI estimated that 10.90% of Trustpilot reviews about Temu in 2025 were likely AI-generated. The study tracked Temu review text on Trustpilot from 2022 to 2025 and reported a year-by-year increase from 0.75% in 2022 to 10.90% in 2025. This is a direct review-platform estimate, but it covers reviews about one company on one third-party review site.",
+              "publicationDate": "2026-01-09"
+            },
+            {
+              "year": 2025,
+              "value": 4.1,
+              "rawValue": "4.1%",
+              "series": "Originality / holiday recipes",
+              "source": "https://originality.ai/blog/ai-holiday-recipes-study",
+              "notes": "Originality.AI estimated that 4.1% of Christmas and holiday recipe pages in its 2025 holiday-season sample were likely AI-generated. The study collected 636 recipe articles from holiday and Christmas recipe searches, then classified pages with an Originality.AI detector threshold of 0.5 or higher. This is a narrow recipe-search estimate and is useful partly because it shows a low-AI counterexample among online content niches.",
+              "publicationDate": "2026-01-09"
+            },
+            {
+              "year": 2025,
+              "value": 53.7,
+              "rawValue": "53.7%",
+              "series": "Originality / LinkedIn long-form posts",
+              "source": "https://originality.ai/blog/linkedin-ai-study-engagement",
+              "notes": "Originality.AI estimated that 53.7% of long-form LinkedIn posts in its 2025 sample were likely AI-generated. It analyzed 3,368 posts from 99 influential profiles published from January to November 2025 and classified them with its detector. This is a detector-based estimate for a curated set of influential voices, not for all LinkedIn posts.",
+              "publicationDate": "2026-01-22"
+            },
+            {
+              "year": 2025,
+              "value": 20.0,
+              "rawValue": "20%",
+              "series": "Originality / luxury hotel reviews",
+              "source": "https://originality.ai/blog/ai-luxury-hotel-reviews",
+              "notes": "Originality.AI reported that more than 20% of 2025 luxury hotel reviews in its sample were likely AI-generated. It analyzed reviews for 4- and 5-star luxury hotels across 10 major US cities using a Google Maps-powered local business API and the Originality.AI detector. This row uses 20% as a conservative floor because the article states over 20% rather than publishing a more exact 2025 value in text.",
+              "publicationDate": "2026-01-26"
+            },
+            {
+              "year": 2025,
+              "value": 77.0,
+              "rawValue": "77%",
+              "series": "Originality / Amazon Success self-help books",
+              "source": "https://originality.ai/blog/likely-ai-success-self-help-book-study",
+              "notes": "Originality.AI estimated that 77% of Amazon Success self-help books published from August 31 to November 28, 2025 were likely AI-written. It scanned 844 English paperback titles in the Success subcategory and checked descriptions, author bios, and sample pages with Originality.AI Lite 1.0.2. This is a high-signal platform estimate for one self-publishing niche, but it is not representative of books or the web overall.",
+              "publicationDate": "2026-01-28"
+            },
+            {
+              "year": 2025,
+              "value": 16.0,
+              "rawValue": "16%",
+              "series": "Academic peer reviews",
+              "source": "https://arxiv.org/abs/2602.00319",
+              "notes": "The midpoint across ICLR and Nature Communications put AI-generated peer reviews at 16% in 2025. The longitudinal peer-review study reported roughly 20% for ICLR and 12% for Nature Communications, and this row uses the midpoint to keep one study-year value. This is a direct estimate within peer-review text, but it still reflects a narrow scholarly corpus rather than the wider internet.",
+              "publicationDate": "2026-01-30"
+            },
+            {
+              "year": 2025,
+              "value": 66.8,
+              "rawValue": "66.8%",
+              "series": "Originality / Amazon pet-loss books",
+              "source": "https://originality.ai/blog/likely-ai-pet-loss-books-study",
+              "notes": "Originality.AI found that likely AI-written pet-loss books overtook likely human-written pet-loss books on Amazon in 2025, with 147 likely AI titles versus 73 likely human titles. This row converts those 2025 counts into a 66.8% likely-AI share for the year while keeping the article's broader context that 32% of analyzable 2010-2025 titles contained likely AI content. The estimate is limited to one Amazon book subcategory and depends on available samples and detector performance.",
+              "publicationDate": "2026-03-05"
+            },
+            {
+              "year": 2025,
+              "value": 11.3,
+              "rawValue": "11.3%",
+              "series": "JAMA Network Open medical literature",
+              "source": "https://arxiv.org/abs/2603.19316",
+              "notes": "The March 2025 overall level put significant AI-generated text at 11.3% of JAMA Network Open articles. The study uses Originality.AI on a monthly series covering original investigations, research letters, and invited commentaries from January 2022 through March 2025. This is a narrow but still direct content-share estimate for one medical publishing venue.",
+              "publicationDate": "2026-03-15"
+            },
+            {
+              "year": 2025,
+              "value": 30.41,
+              "rawValue": "30.41%",
+              "series": "Originality / HEA public comments",
+              "source": "https://originality.ai/blog/higher-education-act-changes-public-feedback-study",
+              "notes": "Originality.AI estimated that 30.41% of public comments on 2025 Higher Education Act student-aid changes were likely AI-generated. The study used a compiled Regulations.gov comment dataset, excluded submissions under 100 words, and scored 707 comments with the Originality.AI detector. This is a narrow public-comment estimate, not a general web measure, but it captures AI use in an official online civic feedback channel.",
+              "publicationDate": "2026-03-16"
+            },
+            {
+              "year": 2025,
+              "value": 7.0,
+              "rawValue": "7%",
+              "series": "SIMODS / Facebook AI-generated mis/disinformation",
+              "source": "https://science.feedback.org/second-measurement-mis-disinformation-major-platforms-europe/",
+              "notes": "Science Feedback estimated that 7% of Facebook mis/disinformation posts in its October 2025 SIMODS sample contained AI-generated images or video. It used exposure-weighted samples of public-interest mis/disinformation posts collected across four EU countries in the second SIMODS measurement. This is a narrow but useful prevalence estimate for misleading content, not for Facebook posts overall.",
+              "publicationDate": "2026-03-19"
+            },
+            {
+              "year": 2025,
+              "value": 2.6,
+              "rawValue": "2.6%",
+              "series": "SIMODS / Instagram AI-generated mis/disinformation",
+              "source": "https://science.feedback.org/second-measurement-mis-disinformation-major-platforms-europe/",
+              "notes": "Science Feedback estimated that 2.6% of Instagram mis/disinformation posts in its October 2025 SIMODS sample contained AI-generated images or video. It used exposure-weighted samples of public-interest mis/disinformation posts collected across four EU countries in the second SIMODS measurement. This is a narrow platform-specific estimate for misleading content rather than Instagram content overall.",
+              "publicationDate": "2026-03-19"
+            },
+            {
+              "year": 2025,
+              "value": 4.4,
+              "rawValue": "4.4%",
+              "series": "SIMODS / X/Twitter AI-generated mis/disinformation",
+              "source": "https://science.feedback.org/second-measurement-mis-disinformation-major-platforms-europe/",
+              "notes": "Science Feedback estimated that 4.4% of X/Twitter mis/disinformation posts in its October 2025 SIMODS sample contained AI-generated images or video. It used exposure-weighted samples of public-interest mis/disinformation posts collected across four EU countries in the second SIMODS measurement. This is a narrow X-specific estimate for misleading content, not for the full platform.",
+              "publicationDate": "2026-03-19"
+            },
+            {
+              "year": 2025,
+              "value": 29.0,
+              "rawValue": "29%",
+              "series": "Plastic surgery literature",
+              "source": "https://doi.org/10.1097/PRS.0000000000013114",
+              "notes": "A 2026 Plastic and Reconstructive Surgery study reported that 29% of 2025 articles in 10 major plastic-surgery journals exceeded its threshold for substantial AI involvement. The authors reviewed 1,627 manuscripts published from January 2024 through May 2025 and used ZeroGPT, with the substantial-involvement threshold calibrated on 300 pre-ChatGPT manuscripts. This is a specialized academic-literature estimate, and detector thresholds may capture AI-assisted editing as well as fuller AI drafting.",
+              "publicationDate": "2026-04-09"
+            },
+            {
+              "year": 2025,
+              "value": 35.0,
+              "rawValue": "35%",
+              "series": "Internet Archive / newly published websites",
+              "source": "https://ai-on-the-internet.github.io/",
+              "notes": "The study estimated that 35% of newly published websites by mid-2025 were AI-generated or AI-assisted. It used a representative Wayback Machine sample of websites published between 2022 and 2025 and selected Pangram v3 after robustness checks across detectors, text length, HTML versus plain text, model family, version, and language. This is one of the stronger web-wide estimates in the table, though it still relies on detector choice and focuses on newly published websites rather than the entire live web.",
+              "publicationDate": "2026-04-15"
+            },
+            {
+              "year": 2026,
+              "value": 2.5,
+              "rawValue": "2.5%",
+              "series": "Turkish online news articles",
+              "source": "https://arxiv.org/abs/2602.13504",
+              "notes": "A 2026 arXiv preprint estimated that 2.5% of January 2026 news articles across three Turkish online media outlets were rewritten or revised by LLMs. The author fine-tuned a Turkish BERT classifier on 3,600 labeled articles, then applied it to 300 randomly selected articles per year from each outlet for 2023 through 2026. This is a primary academic estimate with a clear news corpus, but it covers three Turkish outlets and uses model predictions rather than human labels for the external-year estimates.",
+              "publicationDate": "2026-02-13"
+            },
+            {
+              "year": 2026,
+              "value": 23.0,
+              "rawValue": "23%",
+              "series": "AntiSlop / category-balanced web pages",
+              "source": "https://antislop.online/research/state-of-slop-2026",
+              "notes": "AntiSlop estimated that 23% of its category-balanced sample of web pages in March 2026 were AI-heavy. It sampled 2,000 pages, with 200 pages in each of 10 content categories, and classified them with AntiSlop's own detector using a greater-than-60% AI threshold. This is a rare early-2026 web estimate, but it is category-balanced rather than representative of the whole open web and depends on detector-based labeling.",
+              "publicationDate": "2026-03-21"
+            },
+            {
+              "year": 2026,
+              "value": 32.4,
+              "rawValue": "32.4%",
+              "series": "Originality / Pinterest medical diet recipes",
+              "source": "https://originality.ai/blog/likely-ai-medical-diet-recipes-on-pinterest",
+              "notes": "Originality.AI estimated that 32.4% of Pinterest medical-diet recipe URLs in its April 2026 sample were likely AI-generated. It collected 1,109 recipe URLs across five medically sensitive diet-search lanes and scored them with its detector. This is a narrow but important platform estimate for health-related recipe content, not for Pinterest overall.",
+              "publicationDate": "2026-04-19"
+            },
+            {
+              "year": 2026,
+              "value": 44.0,
+              "rawValue": "44%",
+              "series": "Deezer / new music uploads",
+              "source": "https://newsroom-deezer.com/2026/04/ai-generated-tracks-represent-44-of-new-uploaded-music/",
+              "notes": "Deezer reported that 44% of all daily music uploads to its platform in April 2026 were fully AI-generated tracks. It said its in-house AI-music detection system was identifying nearly 75,000 fully AI-generated uploads per day by the April 2026 update. This is a direct platform-level prevalence estimate, but it is narrowly about one music-streaming service and fully synthetic tracks rather than the web at large.",
+              "publicationDate": "2026-04-21"
+            },
+            {
+              "year": 2026,
+              "value": 8.0,
+              "rawValue": "8%",
+              "series": "Originality / Pinterest hiking guides",
+              "source": "https://originality.ai/blog/likely-ai-us-hiking-guides-pinterest",
+              "notes": "Originality.AI estimated that 8% of Pinterest-surfaced hiking guides published so far in 2026 were likely AI-generated. It analyzed 1,000 hiking-guide URLs surfaced by Pinterest searches across 40 US national park and trail keywords and then broke the results out by publication year. This is a query-based Pinterest travel subset, not a platform-wide prevalence estimate, and the 2026 figure is early-year only.",
+              "publicationDate": "2026-04-25"
+            },
+            {
+              "year": 2026,
+              "value": 33.3,
+              "rawValue": "33.3%",
+              "series": "Apple Music / new uploads",
+              "source": "https://www.techradar.com/audio/apple-music/every-label-in-the-world-is-delivering-ai-apple-music-executive-says-over-a-third-of-uploads-are-100-percent-ai-as-it-clamps-down-on-ai-fraud",
+              "notes": "Apple Music's VP Oliver Schusser said more than a third of tracks delivered to the platform today are 100% AI. This row uses 33.3% as a conservative floor for that 2026 upload-intake claim, based on trade-press reporting of a Billboard interview rather than a public audited dataset. It is a platform-specific music-upload signal, and it does not mean one-third of listening or the whole Apple Music catalog is AI.",
+              "publicationDate": "2026-04-27"
+            }
+          ]
+        },
+        {
+          "name": "Annual average",
+          "values": [
+            {
+              "year": 2020,
+              "value": 3.3633,
+              "estimateCount": 3
+            },
+            {
+              "year": 2021,
+              "value": 4.125,
+              "estimateCount": 2
+            },
+            {
+              "year": 2022,
+              "value": 5.2017,
+              "estimateCount": 6
+            },
+            {
+              "year": 2023,
+              "value": 12.4817,
+              "estimateCount": 7
+            },
+            {
+              "year": 2024,
+              "value": 20.2893,
+              "estimateCount": 15
+            },
+            {
+              "year": 2025,
+              "value": 27.7342,
+              "estimateCount": 26
+            },
+            {
+              "year": 2026,
+              "value": 23.8667,
+              "estimateCount": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chartKey": "web-sample-classifications",
+      "title": "Monthly AI share in the web sample",
+      "description": "Trailing 6-month moving averages of sampled article-style web pages classified as strong AI signal or partial AI signal. The two lines are exclusive.",
+      "source": "Common Crawl monthly samples classified under a research-guided rubric",
+      "sourceSnapshot": "data/web-sample-lite/web_sample_lite_summary.json",
+      "lastRefreshed": "2026-04-24",
+      "method": "Each month samples 1,000 article-style Common Crawl pages and classifies excerpts with an LLM rubric. The plotted values are trailing 6-month moving averages.",
+      "caveats": "This is a stable sample of article-style open-web pages, not the whole internet. The lite series is cheaper and faster than the full 5,000-page run, but noisier month to month.",
+      "xValues": [
+        "2020-01",
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06",
+        "2020-07",
+        "2020-08",
+        "2020-09",
+        "2020-10",
+        "2020-11",
+        "2020-12",
+        "2021-01",
+        "2021-02",
+        "2021-03",
+        "2021-04",
+        "2021-05",
+        "2021-06",
+        "2021-07",
+        "2021-08",
+        "2021-09",
+        "2021-10",
+        "2021-11",
+        "2021-12",
+        "2022-01",
+        "2022-02",
+        "2022-03",
+        "2022-04",
+        "2022-05",
+        "2022-06",
+        "2022-07",
+        "2022-08",
+        "2022-09",
+        "2022-10",
+        "2022-11",
+        "2022-12",
+        "2023-01",
+        "2023-02",
+        "2023-03",
+        "2023-04",
+        "2023-05",
+        "2023-06",
+        "2023-07",
+        "2023-08",
+        "2023-09",
+        "2023-10",
+        "2023-11",
+        "2023-12",
+        "2024-01",
+        "2024-02",
+        "2024-03",
+        "2024-04",
+        "2024-05",
+        "2024-06",
+        "2024-07",
+        "2024-08",
+        "2024-09",
+        "2024-10",
+        "2024-11",
+        "2024-12",
+        "2025-01",
+        "2025-02",
+        "2025-03",
+        "2025-04",
+        "2025-05",
+        "2025-06",
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02"
+      ],
+      "series": [
+        {
+          "name": "Strong AI signal",
+          "unit": "percent",
+          "values": [
+            {
+              "period": "2020-01",
+              "value": 4.3
+            },
+            {
+              "period": "2020-02",
+              "value": 4.25
+            },
+            {
+              "period": "2020-03",
+              "value": 3.87
+            },
+            {
+              "period": "2020-04",
+              "value": 3.98
+            },
+            {
+              "period": "2020-05",
+              "value": 3.88
+            },
+            {
+              "period": "2020-06",
+              "value": 4.05
+            },
+            {
+              "period": "2020-07",
+              "value": 4.08
+            },
+            {
+              "period": "2020-08",
+              "value": 3.98
+            },
+            {
+              "period": "2020-09",
+              "value": 4.18
+            },
+            {
+              "period": "2020-10",
+              "value": 4.3
+            },
+            {
+              "period": "2020-11",
+              "value": 4.37
+            },
+            {
+              "period": "2020-12",
+              "value": 4.25
+            },
+            {
+              "period": "2021-01",
+              "value": 4.33
+            },
+            {
+              "period": "2021-02",
+              "value": 4.55
+            },
+            {
+              "period": "2021-03",
+              "value": 4.73
+            },
+            {
+              "period": "2021-04",
+              "value": 4.62
+            },
+            {
+              "period": "2021-05",
+              "value": 4.92
+            },
+            {
+              "period": "2021-06",
+              "value": 4.82
+            },
+            {
+              "period": "2021-07",
+              "value": 4.95
+            },
+            {
+              "period": "2021-08",
+              "value": 5.08
+            },
+            {
+              "period": "2021-09",
+              "value": 5.24
+            },
+            {
+              "period": "2021-10",
+              "value": 5.43
+            },
+            {
+              "period": "2021-11",
+              "value": 5.27
+            },
+            {
+              "period": "2021-12",
+              "value": 5.52
+            },
+            {
+              "period": "2022-01",
+              "value": 5.45
+            },
+            {
+              "period": "2022-02",
+              "value": 5.25
+            },
+            {
+              "period": "2022-03",
+              "value": 5.08
+            },
+            {
+              "period": "2022-04",
+              "value": 4.9
+            },
+            {
+              "period": "2022-05",
+              "value": 4.97
+            },
+            {
+              "period": "2022-06",
+              "value": 4.9
+            },
+            {
+              "period": "2022-07",
+              "value": 4.83
+            },
+            {
+              "period": "2022-08",
+              "value": 5.15
+            },
+            {
+              "period": "2022-09",
+              "value": 5.27
+            },
+            {
+              "period": "2022-10",
+              "value": 5.58
+            },
+            {
+              "period": "2022-11",
+              "value": 5.68
+            },
+            {
+              "period": "2022-12",
+              "value": 5.88
+            },
+            {
+              "period": "2023-01",
+              "value": 6.22
+            },
+            {
+              "period": "2023-02",
+              "value": 6.28
+            },
+            {
+              "period": "2023-03",
+              "value": 6.12
+            },
+            {
+              "period": "2023-04",
+              "value": 6.12
+            },
+            {
+              "period": "2023-05",
+              "value": 6.27
+            },
+            {
+              "period": "2023-06",
+              "value": 6.58
+            },
+            {
+              "period": "2023-07",
+              "value": 6.7
+            },
+            {
+              "period": "2023-08",
+              "value": 6.52
+            },
+            {
+              "period": "2023-09",
+              "value": 6.87
+            },
+            {
+              "period": "2023-10",
+              "value": 7.05
+            },
+            {
+              "period": "2023-11",
+              "value": 7.17
+            },
+            {
+              "period": "2023-12",
+              "value": 7.22
+            },
+            {
+              "period": "2024-01",
+              "value": 7.25
+            },
+            {
+              "period": "2024-02",
+              "value": 7.98
+            },
+            {
+              "period": "2024-03",
+              "value": 8.18
+            },
+            {
+              "period": "2024-04",
+              "value": 8.3
+            },
+            {
+              "period": "2024-05",
+              "value": 8.85
+            },
+            {
+              "period": "2024-06",
+              "value": 9.07
+            },
+            {
+              "period": "2024-07",
+              "value": 9.55
+            },
+            {
+              "period": "2024-08",
+              "value": 9.43
+            },
+            {
+              "period": "2024-09",
+              "value": 9.62
+            },
+            {
+              "period": "2024-10",
+              "value": 9.57
+            },
+            {
+              "period": "2024-11",
+              "value": 9.4
+            },
+            {
+              "period": "2024-12",
+              "value": 9.33
+            },
+            {
+              "period": "2025-01",
+              "value": 9.07
+            },
+            {
+              "period": "2025-02",
+              "value": 9.37
+            },
+            {
+              "period": "2025-03",
+              "value": 9.07
+            },
+            {
+              "period": "2025-04",
+              "value": 9.62
+            },
+            {
+              "period": "2025-05",
+              "value": 9.68
+            },
+            {
+              "period": "2025-06",
+              "value": 9.73
+            },
+            {
+              "period": "2025-07",
+              "value": 9.67
+            },
+            {
+              "period": "2025-08",
+              "value": 8.88
+            },
+            {
+              "period": "2025-09",
+              "value": 8.9
+            },
+            {
+              "period": "2025-10",
+              "value": 8.17
+            },
+            {
+              "period": "2025-11",
+              "value": 7.97
+            },
+            {
+              "period": "2025-12",
+              "value": 7.73
+            },
+            {
+              "period": "2026-01",
+              "value": 7.52
+            },
+            {
+              "period": "2026-02",
+              "value": 7.88
+            }
+          ]
+        },
+        {
+          "name": "Partial AI signal",
+          "unit": "percent",
+          "values": [
+            {
+              "period": "2020-01",
+              "value": 7.7
+            },
+            {
+              "period": "2020-02",
+              "value": 8.15
+            },
+            {
+              "period": "2020-03",
+              "value": 7.53
+            },
+            {
+              "period": "2020-04",
+              "value": 7.42
+            },
+            {
+              "period": "2020-05",
+              "value": 7.38
+            },
+            {
+              "period": "2020-06",
+              "value": 7.27
+            },
+            {
+              "period": "2020-07",
+              "value": 7.18
+            },
+            {
+              "period": "2020-08",
+              "value": 7.07
+            },
+            {
+              "period": "2020-09",
+              "value": 7.38
+            },
+            {
+              "period": "2020-10",
+              "value": 7.0
+            },
+            {
+              "period": "2020-11",
+              "value": 6.77
+            },
+            {
+              "period": "2020-12",
+              "value": 6.98
+            },
+            {
+              "period": "2021-01",
+              "value": 6.93
+            },
+            {
+              "period": "2021-02",
+              "value": 6.88
+            },
+            {
+              "period": "2021-03",
+              "value": 6.38
+            },
+            {
+              "period": "2021-04",
+              "value": 6.38
+            },
+            {
+              "period": "2021-05",
+              "value": 6.74
+            },
+            {
+              "period": "2021-06",
+              "value": 7.11
+            },
+            {
+              "period": "2021-07",
+              "value": 7.14
+            },
+            {
+              "period": "2021-08",
+              "value": 6.99
+            },
+            {
+              "period": "2021-09",
+              "value": 7.19
+            },
+            {
+              "period": "2021-10",
+              "value": 7.86
+            },
+            {
+              "period": "2021-11",
+              "value": 7.85
+            },
+            {
+              "period": "2021-12",
+              "value": 7.62
+            },
+            {
+              "period": "2022-01",
+              "value": 7.68
+            },
+            {
+              "period": "2022-02",
+              "value": 8.13
+            },
+            {
+              "period": "2022-03",
+              "value": 8.2
+            },
+            {
+              "period": "2022-04",
+              "value": 8.02
+            },
+            {
+              "period": "2022-05",
+              "value": 8.08
+            },
+            {
+              "period": "2022-06",
+              "value": 8.47
+            },
+            {
+              "period": "2022-07",
+              "value": 8.95
+            },
+            {
+              "period": "2022-08",
+              "value": 8.93
+            },
+            {
+              "period": "2022-09",
+              "value": 9.12
+            },
+            {
+              "period": "2022-10",
+              "value": 9.63
+            },
+            {
+              "period": "2022-11",
+              "value": 10.02
+            },
+            {
+              "period": "2022-12",
+              "value": 9.4
+            },
+            {
+              "period": "2023-01",
+              "value": 9.53
+            },
+            {
+              "period": "2023-02",
+              "value": 9.35
+            },
+            {
+              "period": "2023-03",
+              "value": 9.6
+            },
+            {
+              "period": "2023-04",
+              "value": 9.3
+            },
+            {
+              "period": "2023-05",
+              "value": 9.08
+            },
+            {
+              "period": "2023-06",
+              "value": 9.35
+            },
+            {
+              "period": "2023-07",
+              "value": 9.13
+            },
+            {
+              "period": "2023-08",
+              "value": 9.43
+            },
+            {
+              "period": "2023-09",
+              "value": 9.53
+            },
+            {
+              "period": "2023-10",
+              "value": 9.6
+            },
+            {
+              "period": "2023-11",
+              "value": 9.52
+            },
+            {
+              "period": "2023-12",
+              "value": 9.82
+            },
+            {
+              "period": "2024-01",
+              "value": 9.98
+            },
+            {
+              "period": "2024-02",
+              "value": 9.85
+            },
+            {
+              "period": "2024-03",
+              "value": 10.1
+            },
+            {
+              "period": "2024-04",
+              "value": 10.37
+            },
+            {
+              "period": "2024-05",
+              "value": 10.53
+            },
+            {
+              "period": "2024-06",
+              "value": 10.55
+            },
+            {
+              "period": "2024-07",
+              "value": 10.4
+            },
+            {
+              "period": "2024-08",
+              "value": 10.65
+            },
+            {
+              "period": "2024-09",
+              "value": 10.5
+            },
+            {
+              "period": "2024-10",
+              "value": 10.42
+            },
+            {
+              "period": "2024-11",
+              "value": 10.53
+            },
+            {
+              "period": "2024-12",
+              "value": 10.67
+            },
+            {
+              "period": "2025-01",
+              "value": 10.93
+            },
+            {
+              "period": "2025-02",
+              "value": 10.8
+            },
+            {
+              "period": "2025-03",
+              "value": 10.8
+            },
+            {
+              "period": "2025-04",
+              "value": 10.97
+            },
+            {
+              "period": "2025-05",
+              "value": 10.8
+            },
+            {
+              "period": "2025-06",
+              "value": 10.38
+            },
+            {
+              "period": "2025-07",
+              "value": 10.38
+            },
+            {
+              "period": "2025-08",
+              "value": 10.85
+            },
+            {
+              "period": "2025-09",
+              "value": 10.75
+            },
+            {
+              "period": "2025-10",
+              "value": 10.32
+            },
+            {
+              "period": "2025-11",
+              "value": 10.07
+            },
+            {
+              "period": "2025-12",
+              "value": 10.18
+            },
+            {
+              "period": "2026-01",
+              "value": 9.95
+            },
+            {
+              "period": "2026-02",
+              "value": 9.45
+            }
+          ]
+        }
+      ],
+      "underlyingMonthlyCounts": [
+        {
+          "period": "2020-01",
+          "sample_size": 1000,
+          "ai_count": 43,
+          "mixed_count": 77,
+          "human_count": 880,
+          "ai_share": 4.3,
+          "ai_influenced_share": 12.0,
+          "sample_source": "CC-MAIN-2020-10",
+          "sample_seed": "8632484978838943494",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 7.7
+        },
+        {
+          "period": "2020-02",
+          "sample_size": 1000,
+          "ai_count": 42,
+          "mixed_count": 86,
+          "human_count": 872,
+          "ai_share": 4.2,
+          "ai_influenced_share": 12.8,
+          "sample_source": "CC-MAIN-2020-16",
+          "sample_seed": "10424567974234447003",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 8.6
+        },
+        {
+          "period": "2020-03",
+          "sample_size": 1000,
+          "ai_count": 31,
+          "mixed_count": 63,
+          "human_count": 906,
+          "ai_share": 3.1,
+          "ai_influenced_share": 9.4,
+          "sample_source": "CC-MAIN-2020-24",
+          "sample_seed": "17319646795711237335",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 6.3
+        },
+        {
+          "period": "2020-04",
+          "sample_size": 1000,
+          "ai_count": 43,
+          "mixed_count": 71,
+          "human_count": 886,
+          "ai_share": 4.3,
+          "ai_influenced_share": 11.4,
+          "sample_source": "CC-MAIN-2020-24",
+          "sample_seed": "15774001054958371330",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 7.1
+        },
+        {
+          "period": "2020-05",
+          "sample_size": 1000,
+          "ai_count": 35,
+          "mixed_count": 72,
+          "human_count": 893,
+          "ai_share": 3.5,
+          "ai_influenced_share": 10.7,
+          "sample_source": "CC-MAIN-2020-29",
+          "sample_seed": "10510617422434721822",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 7.2
+        },
+        {
+          "period": "2020-06",
+          "sample_size": 1000,
+          "ai_count": 49,
+          "mixed_count": 67,
+          "human_count": 884,
+          "ai_share": 4.9,
+          "ai_influenced_share": 11.6,
+          "sample_source": "CC-MAIN-2020-29",
+          "sample_seed": "13427336887195982844",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 6.7
+        },
+        {
+          "period": "2020-07",
+          "sample_size": 1000,
+          "ai_count": 45,
+          "mixed_count": 72,
+          "human_count": 883,
+          "ai_share": 4.5,
+          "ai_influenced_share": 11.7,
+          "sample_source": "CC-MAIN-2020-34",
+          "sample_seed": "17151433041071950231",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 7.2
+        },
+        {
+          "period": "2020-08",
+          "sample_size": 1000,
+          "ai_count": 36,
+          "mixed_count": 79,
+          "human_count": 885,
+          "ai_share": 3.6,
+          "ai_influenced_share": 11.5,
+          "sample_source": "CC-MAIN-2020-40",
+          "sample_seed": "13136097918182674844",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 7.9
+        },
+        {
+          "period": "2020-09",
+          "sample_size": 1000,
+          "ai_count": 43,
+          "mixed_count": 82,
+          "human_count": 875,
+          "ai_share": 4.3,
+          "ai_influenced_share": 12.5,
+          "sample_source": "CC-MAIN-2020-45",
+          "sample_seed": "10138380947400282775",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 8.2
+        },
+        {
+          "period": "2020-10",
+          "sample_size": 1000,
+          "ai_count": 50,
+          "mixed_count": 48,
+          "human_count": 902,
+          "ai_share": 5.0,
+          "ai_influenced_share": 9.8,
+          "sample_source": "CC-MAIN-2020-50",
+          "sample_seed": "17920598106320330602",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 4.8
+        },
+        {
+          "period": "2020-11",
+          "sample_size": 1000,
+          "ai_count": 39,
+          "mixed_count": 58,
+          "human_count": 903,
+          "ai_share": 3.9,
+          "ai_influenced_share": 9.7,
+          "sample_source": "CC-MAIN-2021-04",
+          "sample_seed": "14598926167331220410",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 5.8
+        },
+        {
+          "period": "2020-12",
+          "sample_size": 1000,
+          "ai_count": 42,
+          "mixed_count": 80,
+          "human_count": 878,
+          "ai_share": 4.2,
+          "ai_influenced_share": 12.2,
+          "sample_source": "CC-MAIN-2021-04",
+          "sample_seed": "15135264440815144656",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 8.0
+        },
+        {
+          "period": "2021-01",
+          "sample_size": 1000,
+          "ai_count": 50,
+          "mixed_count": 69,
+          "human_count": 881,
+          "ai_share": 5.0,
+          "ai_influenced_share": 11.9,
+          "sample_source": "CC-MAIN-2021-10",
+          "sample_seed": "1491569323768230960",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 6.9
+        },
+        {
+          "period": "2021-02",
+          "sample_size": 1000,
+          "ai_count": 49,
+          "mixed_count": 76,
+          "human_count": 875,
+          "ai_share": 4.9,
+          "ai_influenced_share": 12.5,
+          "sample_source": "CC-MAIN-2021-17",
+          "sample_seed": "6937180136060202795",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 7.6
+        },
+        {
+          "period": "2021-03",
+          "sample_size": 1000,
+          "ai_count": 54,
+          "mixed_count": 52,
+          "human_count": 894,
+          "ai_share": 5.4,
+          "ai_influenced_share": 10.6,
+          "sample_source": "CC-MAIN-2021-17",
+          "sample_seed": "8798106126269540200",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 5.2
+        },
+        {
+          "period": "2021-04",
+          "sample_size": 1000,
+          "ai_count": 43,
+          "mixed_count": 48,
+          "human_count": 909,
+          "ai_share": 4.3,
+          "ai_influenced_share": 9.1,
+          "sample_source": "CC-MAIN-2021-21",
+          "sample_seed": "1097885827497319561",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 4.8
+        },
+        {
+          "period": "2021-05",
+          "sample_size": 980,
+          "ai_count": 56,
+          "mixed_count": 78,
+          "human_count": 846,
+          "ai_share": 5.71,
+          "ai_influenced_share": 13.67,
+          "sample_source": "CC-MAIN-2021-25",
+          "sample_seed": "16878335950964113952",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 7.96
+        },
+        {
+          "period": "2021-06",
+          "sample_size": 1000,
+          "ai_count": 36,
+          "mixed_count": 102,
+          "human_count": 862,
+          "ai_share": 3.6,
+          "ai_influenced_share": 13.8,
+          "sample_source": "CC-MAIN-2021-31",
+          "sample_seed": "1295091990464618200",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 10.2
+        },
+        {
+          "period": "2021-07",
+          "sample_size": 1000,
+          "ai_count": 58,
+          "mixed_count": 71,
+          "human_count": 871,
+          "ai_share": 5.8,
+          "ai_influenced_share": 12.9,
+          "sample_source": "CC-MAIN-2021-39",
+          "sample_seed": "5644034607386426485",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 7.1
+        },
+        {
+          "period": "2021-08",
+          "sample_size": 1000,
+          "ai_count": 57,
+          "mixed_count": 67,
+          "human_count": 876,
+          "ai_share": 5.7,
+          "ai_influenced_share": 12.4,
+          "sample_source": "CC-MAIN-2021-39",
+          "sample_seed": "1002875618659427730",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 6.7
+        },
+        {
+          "period": "2021-09",
+          "sample_size": 1000,
+          "ai_count": 63,
+          "mixed_count": 64,
+          "human_count": 873,
+          "ai_share": 6.3,
+          "ai_influenced_share": 12.7,
+          "sample_source": "CC-MAIN-2021-43",
+          "sample_seed": "15716231203882444821",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 6.4
+        },
+        {
+          "period": "2021-10",
+          "sample_size": 1000,
+          "ai_count": 55,
+          "mixed_count": 88,
+          "human_count": 857,
+          "ai_share": 5.5,
+          "ai_influenced_share": 14.3,
+          "sample_source": "CC-MAIN-2021-49",
+          "sample_seed": "14786686240277817718",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 8.8
+        },
+        {
+          "period": "2021-11",
+          "sample_size": 1000,
+          "ai_count": 47,
+          "mixed_count": 79,
+          "human_count": 874,
+          "ai_share": 4.7,
+          "ai_influenced_share": 12.6,
+          "sample_source": "CC-MAIN-2022-05",
+          "sample_seed": "835159915837472684",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 7.9
+        },
+        {
+          "period": "2021-12",
+          "sample_size": 1000,
+          "ai_count": 51,
+          "mixed_count": 88,
+          "human_count": 861,
+          "ai_share": 5.1,
+          "ai_influenced_share": 13.9,
+          "sample_source": "CC-MAIN-2022-05",
+          "sample_seed": "4915438945728670331",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 8.8
+        },
+        {
+          "period": "2022-01",
+          "sample_size": 1000,
+          "ai_count": 54,
+          "mixed_count": 75,
+          "human_count": 871,
+          "ai_share": 5.4,
+          "ai_influenced_share": 12.9,
+          "sample_source": "CC-MAIN-2022-21",
+          "sample_seed": "1812481081525736222",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 7.5
+        },
+        {
+          "period": "2022-02",
+          "sample_size": 1000,
+          "ai_count": 45,
+          "mixed_count": 94,
+          "human_count": 861,
+          "ai_share": 4.5,
+          "ai_influenced_share": 13.9,
+          "sample_source": "CC-MAIN-2022-21",
+          "sample_seed": "16022128221722210897",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 9.4
+        },
+        {
+          "period": "2022-03",
+          "sample_size": 1000,
+          "ai_count": 53,
+          "mixed_count": 68,
+          "human_count": 879,
+          "ai_share": 5.3,
+          "ai_influenced_share": 12.1,
+          "sample_source": "CC-MAIN-2022-21",
+          "sample_seed": "7012466888818917075",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 6.8
+        },
+        {
+          "period": "2022-04",
+          "sample_size": 1000,
+          "ai_count": 44,
+          "mixed_count": 77,
+          "human_count": 879,
+          "ai_share": 4.4,
+          "ai_influenced_share": 12.1,
+          "sample_source": "CC-MAIN-2022-21",
+          "sample_seed": "8317617727544654711",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 7.7
+        },
+        {
+          "period": "2022-05",
+          "sample_size": 1000,
+          "ai_count": 51,
+          "mixed_count": 83,
+          "human_count": 866,
+          "ai_share": 5.1,
+          "ai_influenced_share": 13.4,
+          "sample_source": "CC-MAIN-2022-27",
+          "sample_seed": "15196064937287864193",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 8.3
+        },
+        {
+          "period": "2022-06",
+          "sample_size": 1000,
+          "ai_count": 47,
+          "mixed_count": 111,
+          "human_count": 842,
+          "ai_share": 4.7,
+          "ai_influenced_share": 15.8,
+          "sample_source": "CC-MAIN-2022-33",
+          "sample_seed": "13527742017307205518",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 11.1
+        },
+        {
+          "period": "2022-07",
+          "sample_size": 1000,
+          "ai_count": 50,
+          "mixed_count": 104,
+          "human_count": 846,
+          "ai_share": 5.0,
+          "ai_influenced_share": 15.4,
+          "sample_source": "CC-MAIN-2022-33",
+          "sample_seed": "1531232961789844717",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 10.4
+        },
+        {
+          "period": "2022-08",
+          "sample_size": 1000,
+          "ai_count": 64,
+          "mixed_count": 93,
+          "human_count": 843,
+          "ai_share": 6.4,
+          "ai_influenced_share": 15.7,
+          "sample_source": "CC-MAIN-2022-40",
+          "sample_seed": "4858285802304901908",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 9.3
+        },
+        {
+          "period": "2022-09",
+          "sample_size": 1000,
+          "ai_count": 60,
+          "mixed_count": 79,
+          "human_count": 861,
+          "ai_share": 6.0,
+          "ai_influenced_share": 13.9,
+          "sample_source": "CC-MAIN-2022-49",
+          "sample_seed": "5618290440438684772",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 7.9
+        },
+        {
+          "period": "2022-10",
+          "sample_size": 1000,
+          "ai_count": 63,
+          "mixed_count": 108,
+          "human_count": 829,
+          "ai_share": 6.3,
+          "ai_influenced_share": 17.1,
+          "sample_source": "CC-MAIN-2022-49",
+          "sample_seed": "10325761955077892337",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 10.8
+        },
+        {
+          "period": "2022-11",
+          "sample_size": 1000,
+          "ai_count": 57,
+          "mixed_count": 106,
+          "human_count": 837,
+          "ai_share": 5.7,
+          "ai_influenced_share": 16.3,
+          "sample_source": "CC-MAIN-2023-06",
+          "sample_seed": "3718962286358145051",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 10.6
+        },
+        {
+          "period": "2022-12",
+          "sample_size": 1000,
+          "ai_count": 59,
+          "mixed_count": 74,
+          "human_count": 867,
+          "ai_share": 5.9,
+          "ai_influenced_share": 13.3,
+          "sample_source": "CC-MAIN-2023-06",
+          "sample_seed": "17790839596349769795",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 7.4
+        },
+        {
+          "period": "2023-01",
+          "sample_size": 1000,
+          "ai_count": 70,
+          "mixed_count": 112,
+          "human_count": 818,
+          "ai_share": 7.0,
+          "ai_influenced_share": 18.2,
+          "sample_source": "CC-MAIN-2023-14",
+          "sample_seed": "12031378530555719935",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 11.2
+        },
+        {
+          "period": "2023-02",
+          "sample_size": 1000,
+          "ai_count": 68,
+          "mixed_count": 82,
+          "human_count": 850,
+          "ai_share": 6.8,
+          "ai_influenced_share": 15.0,
+          "sample_source": "CC-MAIN-2023-14",
+          "sample_seed": "6833853356831343351",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 8.2
+        },
+        {
+          "period": "2023-03",
+          "sample_size": 1000,
+          "ai_count": 50,
+          "mixed_count": 94,
+          "human_count": 856,
+          "ai_share": 5.0,
+          "ai_influenced_share": 14.4,
+          "sample_source": "CC-MAIN-2023-23",
+          "sample_seed": "16437936863239401525",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 9.4
+        },
+        {
+          "period": "2023-04",
+          "sample_size": 1000,
+          "ai_count": 63,
+          "mixed_count": 90,
+          "human_count": 847,
+          "ai_share": 6.3,
+          "ai_influenced_share": 15.3,
+          "sample_source": "CC-MAIN-2023-23",
+          "sample_seed": "11282927661614194440",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 9.0
+        },
+        {
+          "period": "2023-05",
+          "sample_size": 1000,
+          "ai_count": 66,
+          "mixed_count": 93,
+          "human_count": 841,
+          "ai_share": 6.6,
+          "ai_influenced_share": 15.9,
+          "sample_source": "CC-MAIN-2023-40",
+          "sample_seed": "8388254788571546985",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 9.3
+        },
+        {
+          "period": "2023-06",
+          "sample_size": 1000,
+          "ai_count": 78,
+          "mixed_count": 90,
+          "human_count": 832,
+          "ai_share": 7.8,
+          "ai_influenced_share": 16.8,
+          "sample_source": "CC-MAIN-2023-40",
+          "sample_seed": "11444393578605865167",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 9.0
+        },
+        {
+          "period": "2023-07",
+          "sample_size": 1000,
+          "ai_count": 77,
+          "mixed_count": 99,
+          "human_count": 824,
+          "ai_share": 7.7,
+          "ai_influenced_share": 17.6,
+          "sample_source": "CC-MAIN-2023-40",
+          "sample_seed": "17545466594801898220",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 9.9
+        },
+        {
+          "period": "2023-08",
+          "sample_size": 1000,
+          "ai_count": 57,
+          "mixed_count": 100,
+          "human_count": 843,
+          "ai_share": 5.7,
+          "ai_influenced_share": 15.7,
+          "sample_source": "CC-MAIN-2023-40",
+          "sample_seed": "13822023080611932177",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 10.0
+        },
+        {
+          "period": "2023-09",
+          "sample_size": 1000,
+          "ai_count": 71,
+          "mixed_count": 100,
+          "human_count": 829,
+          "ai_share": 7.1,
+          "ai_influenced_share": 17.1,
+          "sample_source": "CC-MAIN-2023-50",
+          "sample_seed": "5962341924928042845",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 10.0
+        },
+        {
+          "period": "2023-10",
+          "sample_size": 1000,
+          "ai_count": 74,
+          "mixed_count": 94,
+          "human_count": 832,
+          "ai_share": 7.4,
+          "ai_influenced_share": 16.8,
+          "sample_source": "CC-MAIN-2023-50",
+          "sample_seed": "17307765793791810207",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 9.4
+        },
+        {
+          "period": "2023-11",
+          "sample_size": 1000,
+          "ai_count": 73,
+          "mixed_count": 88,
+          "human_count": 839,
+          "ai_share": 7.3,
+          "ai_influenced_share": 16.1,
+          "sample_source": "CC-MAIN-2024-10",
+          "sample_seed": "11418656515663348415",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 8.8
+        },
+        {
+          "period": "2023-12",
+          "sample_size": 1000,
+          "ai_count": 81,
+          "mixed_count": 108,
+          "human_count": 811,
+          "ai_share": 8.1,
+          "ai_influenced_share": 18.9,
+          "sample_source": "CC-MAIN-2024-10",
+          "sample_seed": "6664395524760460777",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 10.8
+        },
+        {
+          "period": "2024-01",
+          "sample_size": 1000,
+          "ai_count": 79,
+          "mixed_count": 109,
+          "human_count": 812,
+          "ai_share": 7.9,
+          "ai_influenced_share": 18.8,
+          "sample_source": "CC-MAIN-2024-10",
+          "sample_seed": "14964141255514283204",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 10.9
+        },
+        {
+          "period": "2024-02",
+          "sample_size": 1000,
+          "ai_count": 101,
+          "mixed_count": 92,
+          "human_count": 807,
+          "ai_share": 10.1,
+          "ai_influenced_share": 19.3,
+          "sample_source": "CC-MAIN-2024-18",
+          "sample_seed": "2871578912778556174",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 9.2
+        },
+        {
+          "period": "2024-03",
+          "sample_size": 1000,
+          "ai_count": 83,
+          "mixed_count": 115,
+          "human_count": 802,
+          "ai_share": 8.3,
+          "ai_influenced_share": 19.8,
+          "sample_source": "CC-MAIN-2024-18",
+          "sample_seed": "4383410070188019163",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 11.5
+        },
+        {
+          "period": "2024-04",
+          "sample_size": 1000,
+          "ai_count": 81,
+          "mixed_count": 110,
+          "human_count": 809,
+          "ai_share": 8.1,
+          "ai_influenced_share": 19.1,
+          "sample_source": "CC-MAIN-2024-22",
+          "sample_seed": "6142808899675484078",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 11.0
+        },
+        {
+          "period": "2024-05",
+          "sample_size": 1000,
+          "ai_count": 106,
+          "mixed_count": 98,
+          "human_count": 796,
+          "ai_share": 10.6,
+          "ai_influenced_share": 20.4,
+          "sample_source": "CC-MAIN-2024-26",
+          "sample_seed": "8327409183008207504",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 9.8
+        },
+        {
+          "period": "2024-06",
+          "sample_size": 1000,
+          "ai_count": 94,
+          "mixed_count": 109,
+          "human_count": 797,
+          "ai_share": 9.4,
+          "ai_influenced_share": 20.3,
+          "sample_source": "CC-MAIN-2024-30",
+          "sample_seed": "4177264161821541819",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 10.9
+        },
+        {
+          "period": "2024-07",
+          "sample_size": 1000,
+          "ai_count": 108,
+          "mixed_count": 100,
+          "human_count": 792,
+          "ai_share": 10.8,
+          "ai_influenced_share": 20.8,
+          "sample_source": "CC-MAIN-2024-33",
+          "sample_seed": "14814149304165545801",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 10.0
+        },
+        {
+          "period": "2024-08",
+          "sample_size": 1000,
+          "ai_count": 94,
+          "mixed_count": 107,
+          "human_count": 799,
+          "ai_share": 9.4,
+          "ai_influenced_share": 20.1,
+          "sample_source": "CC-MAIN-2024-38",
+          "sample_seed": "881405579199470165",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 10.7
+        },
+        {
+          "period": "2024-09",
+          "sample_size": 1000,
+          "ai_count": 94,
+          "mixed_count": 106,
+          "human_count": 800,
+          "ai_share": 9.4,
+          "ai_influenced_share": 20.0,
+          "sample_source": "CC-MAIN-2024-42",
+          "sample_seed": "13758979614703743863",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 10.6
+        },
+        {
+          "period": "2024-10",
+          "sample_size": 1000,
+          "ai_count": 78,
+          "mixed_count": 105,
+          "human_count": 817,
+          "ai_share": 7.8,
+          "ai_influenced_share": 18.3,
+          "sample_source": "CC-MAIN-2024-46",
+          "sample_seed": "11600964717168733480",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 10.5
+        },
+        {
+          "period": "2024-11",
+          "sample_size": 1000,
+          "ai_count": 96,
+          "mixed_count": 105,
+          "human_count": 799,
+          "ai_share": 9.6,
+          "ai_influenced_share": 20.1,
+          "sample_source": "CC-MAIN-2024-51",
+          "sample_seed": "13450534976273273320",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 10.5
+        },
+        {
+          "period": "2024-12",
+          "sample_size": 1000,
+          "ai_count": 90,
+          "mixed_count": 117,
+          "human_count": 793,
+          "ai_share": 9.0,
+          "ai_influenced_share": 20.7,
+          "sample_source": "CC-MAIN-2025-05",
+          "sample_seed": "10889772311641647220",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 11.7
+        },
+        {
+          "period": "2025-01",
+          "sample_size": 1000,
+          "ai_count": 92,
+          "mixed_count": 116,
+          "human_count": 792,
+          "ai_share": 9.2,
+          "ai_influenced_share": 20.8,
+          "sample_source": "CC-MAIN-2025-08",
+          "sample_seed": "8944701031577048227",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 11.6
+        },
+        {
+          "period": "2025-02",
+          "sample_size": 1000,
+          "ai_count": 112,
+          "mixed_count": 99,
+          "human_count": 789,
+          "ai_share": 11.2,
+          "ai_influenced_share": 21.1,
+          "sample_source": "CC-MAIN-2025-13",
+          "sample_seed": "64882363420347186",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 9.9
+        },
+        {
+          "period": "2025-03",
+          "sample_size": 1000,
+          "ai_count": 76,
+          "mixed_count": 106,
+          "human_count": 818,
+          "ai_share": 7.6,
+          "ai_influenced_share": 18.2,
+          "sample_source": "CC-MAIN-2025-18",
+          "sample_seed": "980052752703517694",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 10.6
+        },
+        {
+          "period": "2025-04",
+          "sample_size": 1000,
+          "ai_count": 111,
+          "mixed_count": 115,
+          "human_count": 774,
+          "ai_share": 11.1,
+          "ai_influenced_share": 22.6,
+          "sample_source": "CC-MAIN-2025-21",
+          "sample_seed": "16669938809429297502",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 11.5
+        },
+        {
+          "period": "2025-05",
+          "sample_size": 1000,
+          "ai_count": 100,
+          "mixed_count": 95,
+          "human_count": 805,
+          "ai_share": 10.0,
+          "ai_influenced_share": 19.5,
+          "sample_source": "CC-MAIN-2025-26",
+          "sample_seed": "10577886981393624468",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 9.5
+        },
+        {
+          "period": "2025-06",
+          "sample_size": 1000,
+          "ai_count": 93,
+          "mixed_count": 92,
+          "human_count": 815,
+          "ai_share": 9.3,
+          "ai_influenced_share": 18.5,
+          "sample_source": "CC-MAIN-2025-30",
+          "sample_seed": "4931601289704757794",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 9.2
+        },
+        {
+          "period": "2025-07",
+          "sample_size": 1000,
+          "ai_count": 88,
+          "mixed_count": 116,
+          "human_count": 796,
+          "ai_share": 8.8,
+          "ai_influenced_share": 20.4,
+          "sample_source": "CC-MAIN-2025-33",
+          "sample_seed": "4106402612607774759",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 11.6
+        },
+        {
+          "period": "2025-08",
+          "sample_size": 1000,
+          "ai_count": 65,
+          "mixed_count": 127,
+          "human_count": 808,
+          "ai_share": 6.5,
+          "ai_influenced_share": 19.2,
+          "sample_source": "CC-MAIN-2025-38",
+          "sample_seed": "13869455372316975112",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 12.7
+        },
+        {
+          "period": "2025-09",
+          "sample_size": 1000,
+          "ai_count": 77,
+          "mixed_count": 100,
+          "human_count": 823,
+          "ai_share": 7.7,
+          "ai_influenced_share": 17.7,
+          "sample_source": "CC-MAIN-2025-43",
+          "sample_seed": "17355987459974647377",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 10.0
+        },
+        {
+          "period": "2025-10",
+          "sample_size": 1000,
+          "ai_count": 67,
+          "mixed_count": 89,
+          "human_count": 844,
+          "ai_share": 6.7,
+          "ai_influenced_share": 15.6,
+          "sample_source": "CC-MAIN-2025-47",
+          "sample_seed": "13727552752331045476",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 8.9
+        },
+        {
+          "period": "2025-11",
+          "sample_size": 1000,
+          "ai_count": 88,
+          "mixed_count": 80,
+          "human_count": 832,
+          "ai_share": 8.8,
+          "ai_influenced_share": 16.8,
+          "sample_source": "CC-MAIN-2025-51",
+          "sample_seed": "2513618973272527229",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 8.0
+        },
+        {
+          "period": "2025-12",
+          "sample_size": 1000,
+          "ai_count": 79,
+          "mixed_count": 99,
+          "human_count": 822,
+          "ai_share": 7.9,
+          "ai_influenced_share": 17.8,
+          "sample_source": "CC-MAIN-2026-04",
+          "sample_seed": "14197661815657013786",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 9.9
+        },
+        {
+          "period": "2026-01",
+          "sample_size": 1000,
+          "ai_count": 75,
+          "mixed_count": 102,
+          "human_count": 823,
+          "ai_share": 7.5,
+          "ai_influenced_share": 17.7,
+          "sample_source": "CC-MAIN-2026-08",
+          "sample_seed": "6300450927267123623",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 10.2
+        },
+        {
+          "period": "2026-02",
+          "sample_size": 1000,
+          "ai_count": 87,
+          "mixed_count": 97,
+          "human_count": 816,
+          "ai_share": 8.7,
+          "ai_influenced_share": 18.4,
+          "sample_source": "CC-MAIN-2026-12",
+          "sample_seed": "13607471465359663862",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
+          "mixed_share": 9.7
+        }
+      ],
+      "latestValues": {
+        "Strong AI signal": {
+          "period": "2026-02",
+          "value": 7.88
+        },
+        "Partial AI signal": {
+          "period": "2026-02",
+          "value": 9.45
+        }
+      }
+    },
+    {
+      "chartKey": "traffic-bot-human",
+      "title": "Estimated AI bot share of total traffic",
+      "description": "This estimates how much of total web traffic is AI bots. It matters because it gets closer to the machine share of web traversal than general bot traffic does.",
+      "source": "Cloudflare Radar bot share and bot category time series",
+      "sourceSnapshot": "data/cloudflare/cloudflare.json",
+      "lastRefreshed": "2026-04-21",
+      "method": "We estimate AI bot share by combining Cloudflare's bot share of total traffic with its AI bot categories. The chart shows observed monthly values only.",
+      "caveats": "Crawlers learn from the internet. Search bots use it. Cloudflare sees a large but incomplete slice of the web, with weaker coverage in places like China. This tracks AI bot traffic, not all AI activity. AI search only appears separately from June 2025, so the measure gets better over time.",
+      "xValues": [
+        "2024-09",
+        "2024-10",
+        "2024-11",
+        "2024-12",
+        "2025-01",
+        "2025-02",
+        "2025-03",
+        "2025-04",
+        "2025-05",
+        "2025-06",
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03"
+      ],
+      "series": [
+        {
+          "name": "AI bots",
+          "unit": "percent1",
+          "values": [
+            {
+              "period": "2024-09",
+              "value": 3.57
+            },
+            {
+              "period": "2024-10",
+              "value": 3.75
+            },
+            {
+              "period": "2024-11",
+              "value": 3.33
+            },
+            {
+              "period": "2024-12",
+              "value": 3.36
+            },
+            {
+              "period": "2025-01",
+              "value": 4.01
+            },
+            {
+              "period": "2025-02",
+              "value": 4.76
+            },
+            {
+              "period": "2025-03",
+              "value": 6.05
+            },
+            {
+              "period": "2025-04",
+              "value": 5.13
+            },
+            {
+              "period": "2025-05",
+              "value": 5.57
+            },
+            {
+              "period": "2025-06",
+              "value": 7.11
+            },
+            {
+              "period": "2025-07",
+              "value": 6.29
+            },
+            {
+              "period": "2025-08",
+              "value": 5.76
+            },
+            {
+              "period": "2025-09",
+              "value": 5.64
+            },
+            {
+              "period": "2025-10",
+              "value": 5.19
+            },
+            {
+              "period": "2025-11",
+              "value": 5.84
+            },
+            {
+              "period": "2025-12",
+              "value": 6.02
+            },
+            {
+              "period": "2026-01",
+              "value": 6.58
+            },
+            {
+              "period": "2026-02",
+              "value": 7.93
+            },
+            {
+              "period": "2026-03",
+              "value": 8.38
+            }
+          ],
+          "color": "#ff79c6"
+        }
+      ],
+      "latestValues": {
+        "AI bots": {
+          "period": "2026-03",
+          "value": 8.38
+        }
+      }
+    },
+    {
+      "chartKey": "imperva-traffic",
+      "title": "Imperva traffic profile",
+      "description": "This tracks Imperva's published traffic split over time. For this chart, automated traffic means good bot plus bad bot. It matters because it shows automation overtaking humans in a large observed slice of the web.",
+      "source": "Imperva Bad Bot Report 2024 and 2025",
+      "sourceSnapshot": "data/imperva/imperva.json",
+      "lastRefreshed": "2026-04-22",
+      "method": "We compile the annual traffic profile Imperva publishes in its Bad Bot Report, then combine good bot and bad bot into one automated line. The 2024 point comes from the 2025 report update.",
+      "caveats": "This is broader than the Cloudflare chart. Cloudflare above tracks AI bot traffic only; this chart tracks all automation. The levels differ because the metric is broader and the two companies see different slices of the web.",
+      "xValues": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024"
+      ],
+      "series": [
+        {
+          "name": "Automated traffic",
+          "unit": "percent",
+          "values": [
+            {
+              "period": "2020",
+              "value": 40.8
+            },
+            {
+              "period": "2021",
+              "value": 42.3
+            },
+            {
+              "period": "2022",
+              "value": 47.5
+            },
+            {
+              "period": "2023",
+              "value": 49.6
+            },
+            {
+              "period": "2024",
+              "value": 51.0
+            }
+          ]
+        },
+        {
+          "name": "Human",
+          "unit": "percent",
+          "values": [
+            {
+              "period": "2020",
+              "value": 59.2
+            },
+            {
+              "period": "2021",
+              "value": 57.7
+            },
+            {
+              "period": "2022",
+              "value": 52.6
+            },
+            {
+              "period": "2023",
+              "value": 50.4
+            },
+            {
+              "period": "2024",
+              "value": 49.0
+            }
+          ]
+        }
+      ],
+      "latestValues": {
+        "Automated traffic": {
+          "period": "2024",
+          "value": 51.0
+        },
+        "Human": {
+          "period": "2024",
+          "value": 49.0
+        }
+      }
+    },
+    {
+      "chartKey": "wikipedia",
+      "title": "Wikipedia activity",
+      "description": "This tracks monthly human editors on English Wikipedia content pages. It matters because it shows whether people are still doing sustained public knowledge work.",
+      "source": "Wikimedia editor analytics for en.wikipedia.org content pages",
+      "sourceSnapshot": "data/wikipedia/wikipedia.json",
+      "lastRefreshed": "2026-04-21",
+      "method": "Active editors are users making 5 or more edits in a month. The chart shows observed monthly counts only.",
+      "caveats": "This is English Wikipedia only, not all Wikipedias. It measures editor participation, not article quality or total knowledge output.",
+      "xValues": [
+        "2020-01",
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06",
+        "2020-07",
+        "2020-08",
+        "2020-09",
+        "2020-10",
+        "2020-11",
+        "2020-12",
+        "2021-01",
+        "2021-02",
+        "2021-03",
+        "2021-04",
+        "2021-05",
+        "2021-06",
+        "2021-07",
+        "2021-08",
+        "2021-09",
+        "2021-10",
+        "2021-11",
+        "2021-12",
+        "2022-01",
+        "2022-02",
+        "2022-03",
+        "2022-04",
+        "2022-05",
+        "2022-06",
+        "2022-07",
+        "2022-08",
+        "2022-09",
+        "2022-10",
+        "2022-11",
+        "2022-12",
+        "2023-01",
+        "2023-02",
+        "2023-03",
+        "2023-04",
+        "2023-05",
+        "2023-06",
+        "2023-07",
+        "2023-08",
+        "2023-09",
+        "2023-10",
+        "2023-11",
+        "2023-12",
+        "2024-01",
+        "2024-02",
+        "2024-03",
+        "2024-04",
+        "2024-05",
+        "2024-06",
+        "2024-07",
+        "2024-08",
+        "2024-09",
+        "2024-10",
+        "2024-11",
+        "2024-12",
+        "2025-01",
+        "2025-02",
+        "2025-03",
+        "2025-04",
+        "2025-05",
+        "2025-06",
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03"
+      ],
+      "series": [
+        {
+          "name": "All editors (1+)",
+          "unit": "compact",
+          "values": [
+            {
+              "period": "2020-01",
+              "value": 113500
+            },
+            {
+              "period": "2020-02",
+              "value": 108892
+            },
+            {
+              "period": "2020-03",
+              "value": 111042
+            },
+            {
+              "period": "2020-04",
+              "value": 116865
+            },
+            {
+              "period": "2020-05",
+              "value": 121375
+            },
+            {
+              "period": "2020-06",
+              "value": 113648
+            },
+            {
+              "period": "2020-07",
+              "value": 107159
+            },
+            {
+              "period": "2020-08",
+              "value": 105534
+            },
+            {
+              "period": "2020-09",
+              "value": 105732
+            },
+            {
+              "period": "2020-10",
+              "value": 106777
+            },
+            {
+              "period": "2020-11",
+              "value": 105275
+            },
+            {
+              "period": "2020-12",
+              "value": 107010
+            },
+            {
+              "period": "2021-01",
+              "value": 118076
+            },
+            {
+              "period": "2021-02",
+              "value": 110741
+            },
+            {
+              "period": "2021-03",
+              "value": 118684
+            },
+            {
+              "period": "2021-04",
+              "value": 113543
+            },
+            {
+              "period": "2021-05",
+              "value": 113188
+            },
+            {
+              "period": "2021-06",
+              "value": 104986
+            },
+            {
+              "period": "2021-07",
+              "value": 102529
+            },
+            {
+              "period": "2021-08",
+              "value": 102554
+            },
+            {
+              "period": "2021-09",
+              "value": 101782
+            },
+            {
+              "period": "2021-10",
+              "value": 103128
+            },
+            {
+              "period": "2021-11",
+              "value": 102385
+            },
+            {
+              "period": "2021-12",
+              "value": 100095
+            },
+            {
+              "period": "2022-01",
+              "value": 107387
+            },
+            {
+              "period": "2022-02",
+              "value": 101612
+            },
+            {
+              "period": "2022-03",
+              "value": 107622
+            },
+            {
+              "period": "2022-04",
+              "value": 104117
+            },
+            {
+              "period": "2022-05",
+              "value": 104016
+            },
+            {
+              "period": "2022-06",
+              "value": 98978
+            },
+            {
+              "period": "2022-07",
+              "value": 98631
+            },
+            {
+              "period": "2022-08",
+              "value": 99470
+            },
+            {
+              "period": "2022-09",
+              "value": 99286
+            },
+            {
+              "period": "2022-10",
+              "value": 103795
+            },
+            {
+              "period": "2022-11",
+              "value": 101866
+            },
+            {
+              "period": "2022-12",
+              "value": 100820
+            },
+            {
+              "period": "2023-01",
+              "value": 108343
+            },
+            {
+              "period": "2023-02",
+              "value": 101219
+            },
+            {
+              "period": "2023-03",
+              "value": 109681
+            },
+            {
+              "period": "2023-04",
+              "value": 105273
+            },
+            {
+              "period": "2023-05",
+              "value": 104907
+            },
+            {
+              "period": "2023-06",
+              "value": 98609
+            },
+            {
+              "period": "2023-07",
+              "value": 100286
+            },
+            {
+              "period": "2023-08",
+              "value": 102431
+            },
+            {
+              "period": "2023-09",
+              "value": 100036
+            },
+            {
+              "period": "2023-10",
+              "value": 103047
+            },
+            {
+              "period": "2023-11",
+              "value": 102664
+            },
+            {
+              "period": "2023-12",
+              "value": 100599
+            },
+            {
+              "period": "2024-01",
+              "value": 107541
+            },
+            {
+              "period": "2024-02",
+              "value": 101777
+            },
+            {
+              "period": "2024-03",
+              "value": 105686
+            },
+            {
+              "period": "2024-04",
+              "value": 103867
+            },
+            {
+              "period": "2024-05",
+              "value": 103412
+            },
+            {
+              "period": "2024-06",
+              "value": 97662
+            },
+            {
+              "period": "2024-07",
+              "value": 99532
+            },
+            {
+              "period": "2024-08",
+              "value": 98495
+            },
+            {
+              "period": "2024-09",
+              "value": 97382
+            },
+            {
+              "period": "2024-10",
+              "value": 101517
+            },
+            {
+              "period": "2024-11",
+              "value": 100738
+            },
+            {
+              "period": "2024-12",
+              "value": 99843
+            },
+            {
+              "period": "2025-01",
+              "value": 105521
+            },
+            {
+              "period": "2025-02",
+              "value": 99047
+            },
+            {
+              "period": "2025-03",
+              "value": 103860
+            },
+            {
+              "period": "2025-04",
+              "value": 97864
+            },
+            {
+              "period": "2025-05",
+              "value": 99281
+            },
+            {
+              "period": "2025-06",
+              "value": 90603
+            },
+            {
+              "period": "2025-07",
+              "value": 91691
+            },
+            {
+              "period": "2025-08",
+              "value": 90041
+            },
+            {
+              "period": "2025-09",
+              "value": 91058
+            },
+            {
+              "period": "2025-10",
+              "value": 95428
+            },
+            {
+              "period": "2025-11",
+              "value": 94977
+            },
+            {
+              "period": "2025-12",
+              "value": 92546
+            },
+            {
+              "period": "2026-01",
+              "value": 95253
+            },
+            {
+              "period": "2026-02",
+              "value": 89952
+            },
+            {
+              "period": "2026-03",
+              "value": 95470
+            }
+          ],
+          "color": "#58e6ff"
+        },
+        {
+          "name": "Active editors (5+)",
+          "unit": "compact",
+          "values": [
+            {
+              "period": "2020-01",
+              "value": 31646
+            },
+            {
+              "period": "2020-02",
+              "value": 30589
+            },
+            {
+              "period": "2020-03",
+              "value": 31883
+            },
+            {
+              "period": "2020-04",
+              "value": 33791
+            },
+            {
+              "period": "2020-05",
+              "value": 35396
+            },
+            {
+              "period": "2020-06",
+              "value": 32933
+            },
+            {
+              "period": "2020-07",
+              "value": 31977
+            },
+            {
+              "period": "2020-08",
+              "value": 31945
+            },
+            {
+              "period": "2020-09",
+              "value": 31403
+            },
+            {
+              "period": "2020-10",
+              "value": 31367
+            },
+            {
+              "period": "2020-11",
+              "value": 31870
+            },
+            {
+              "period": "2020-12",
+              "value": 32347
+            },
+            {
+              "period": "2021-01",
+              "value": 33947
+            },
+            {
+              "period": "2021-02",
+              "value": 32841
+            },
+            {
+              "period": "2021-03",
+              "value": 35392
+            },
+            {
+              "period": "2021-04",
+              "value": 34423
+            },
+            {
+              "period": "2021-05",
+              "value": 34358
+            },
+            {
+              "period": "2021-06",
+              "value": 31977
+            },
+            {
+              "period": "2021-07",
+              "value": 31884
+            },
+            {
+              "period": "2021-08",
+              "value": 31817
+            },
+            {
+              "period": "2021-09",
+              "value": 31159
+            },
+            {
+              "period": "2021-10",
+              "value": 31276
+            },
+            {
+              "period": "2021-11",
+              "value": 31262
+            },
+            {
+              "period": "2021-12",
+              "value": 31107
+            },
+            {
+              "period": "2022-01",
+              "value": 32570
+            },
+            {
+              "period": "2022-02",
+              "value": 30416
+            },
+            {
+              "period": "2022-03",
+              "value": 32706
+            },
+            {
+              "period": "2022-04",
+              "value": 31737
+            },
+            {
+              "period": "2022-05",
+              "value": 32322
+            },
+            {
+              "period": "2022-06",
+              "value": 30496
+            },
+            {
+              "period": "2022-07",
+              "value": 31313
+            },
+            {
+              "period": "2022-08",
+              "value": 30887
+            },
+            {
+              "period": "2022-09",
+              "value": 30237
+            },
+            {
+              "period": "2022-10",
+              "value": 31608
+            },
+            {
+              "period": "2022-11",
+              "value": 30977
+            },
+            {
+              "period": "2022-12",
+              "value": 30812
+            },
+            {
+              "period": "2023-01",
+              "value": 32529
+            },
+            {
+              "period": "2023-02",
+              "value": 29798
+            },
+            {
+              "period": "2023-03",
+              "value": 32425
+            },
+            {
+              "period": "2023-04",
+              "value": 31965
+            },
+            {
+              "period": "2023-05",
+              "value": 31614
+            },
+            {
+              "period": "2023-06",
+              "value": 30095
+            },
+            {
+              "period": "2023-07",
+              "value": 30992
+            },
+            {
+              "period": "2023-08",
+              "value": 31201
+            },
+            {
+              "period": "2023-09",
+              "value": 30203
+            },
+            {
+              "period": "2023-10",
+              "value": 30961
+            },
+            {
+              "period": "2023-11",
+              "value": 31137
+            },
+            {
+              "period": "2023-12",
+              "value": 30984
+            },
+            {
+              "period": "2024-01",
+              "value": 32573
+            },
+            {
+              "period": "2024-02",
+              "value": 31064
+            },
+            {
+              "period": "2024-03",
+              "value": 32521
+            },
+            {
+              "period": "2024-04",
+              "value": 32092
+            },
+            {
+              "period": "2024-05",
+              "value": 31761
+            },
+            {
+              "period": "2024-06",
+              "value": 30586
+            },
+            {
+              "period": "2024-07",
+              "value": 31540
+            },
+            {
+              "period": "2024-08",
+              "value": 30810
+            },
+            {
+              "period": "2024-09",
+              "value": 29705
+            },
+            {
+              "period": "2024-10",
+              "value": 31061
+            },
+            {
+              "period": "2024-11",
+              "value": 31074
+            },
+            {
+              "period": "2024-12",
+              "value": 31579
+            },
+            {
+              "period": "2025-01",
+              "value": 32557
+            },
+            {
+              "period": "2025-02",
+              "value": 30701
+            },
+            {
+              "period": "2025-03",
+              "value": 32488
+            },
+            {
+              "period": "2025-04",
+              "value": 31120
+            },
+            {
+              "period": "2025-05",
+              "value": 31719
+            },
+            {
+              "period": "2025-06",
+              "value": 29696
+            },
+            {
+              "period": "2025-07",
+              "value": 30185
+            },
+            {
+              "period": "2025-08",
+              "value": 29546
+            },
+            {
+              "period": "2025-09",
+              "value": 29863
+            },
+            {
+              "period": "2025-10",
+              "value": 30902
+            },
+            {
+              "period": "2025-11",
+              "value": 31655
+            },
+            {
+              "period": "2025-12",
+              "value": 31105
+            },
+            {
+              "period": "2026-01",
+              "value": 31657
+            },
+            {
+              "period": "2026-02",
+              "value": 29761
+            },
+            {
+              "period": "2026-03",
+              "value": 32202
+            }
+          ],
+          "color": "#ff9a62"
+        }
+      ],
+      "latestValues": {
+        "All editors (1+)": {
+          "period": "2026-03",
+          "value": 95470
+        },
+        "Active editors (5+)": {
+          "period": "2026-03",
+          "value": 32202
+        }
+      }
+    },
+    {
+      "chartKey": "stack-overflow",
+      "title": "Stack Overflow activity",
+      "description": "This tracks monthly new questions on Stack Overflow. It matters because it shows whether people are still asking other people for help in public.",
+      "source": "Stack Exchange API monthly question counts for Stack Overflow",
+      "sourceSnapshot": "data/stackoverflow/stackoverflow.json",
+      "lastRefreshed": "2026-04-24",
+      "method": "Monthly question counts are pulled from the official Stack Exchange API using each month's creation-date window. The chart shows observed monthly counts only.",
+      "caveats": "This is a public web proxy, not a measure of all problem-solving. This monthly feed currently covers questions asked, not answered-question counts.",
+      "xValues": [
+        "2020-01",
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06",
+        "2020-07",
+        "2020-08",
+        "2020-09",
+        "2020-10",
+        "2020-11",
+        "2020-12",
+        "2021-01",
+        "2021-02",
+        "2021-03",
+        "2021-04",
+        "2021-05",
+        "2021-06",
+        "2021-07",
+        "2021-08",
+        "2021-09",
+        "2021-10",
+        "2021-11",
+        "2021-12",
+        "2022-01",
+        "2022-02",
+        "2022-03",
+        "2022-04",
+        "2022-05",
+        "2022-06",
+        "2022-07",
+        "2022-08",
+        "2022-09",
+        "2022-10",
+        "2022-11",
+        "2022-12",
+        "2023-01",
+        "2023-02",
+        "2023-03",
+        "2023-04",
+        "2023-05",
+        "2023-06",
+        "2023-07",
+        "2023-08",
+        "2023-09",
+        "2023-10",
+        "2023-11",
+        "2023-12",
+        "2024-01",
+        "2024-02",
+        "2024-03",
+        "2024-04",
+        "2024-05",
+        "2024-06",
+        "2024-07",
+        "2024-08",
+        "2024-09",
+        "2024-10",
+        "2024-11",
+        "2024-12",
+        "2025-01",
+        "2025-02",
+        "2025-03",
+        "2025-04",
+        "2025-05",
+        "2025-06",
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03"
+      ],
+      "series": [
+        {
+          "name": "Total new questions asked",
+          "unit": "compact",
+          "values": [
+            {
+              "period": "2020-01",
+              "value": 146662
+            },
+            {
+              "period": "2020-02",
+              "value": 145112
+            },
+            {
+              "period": "2020-03",
+              "value": 155966
+            },
+            {
+              "period": "2020-04",
+              "value": 182915
+            },
+            {
+              "period": "2020-05",
+              "value": 186469
+            },
+            {
+              "period": "2020-06",
+              "value": 171911
+            },
+            {
+              "period": "2020-07",
+              "value": 166047
+            },
+            {
+              "period": "2020-08",
+              "value": 148359
+            },
+            {
+              "period": "2020-09",
+              "value": 141789
+            },
+            {
+              "period": "2020-10",
+              "value": 141820
+            },
+            {
+              "period": "2020-11",
+              "value": 134951
+            },
+            {
+              "period": "2020-12",
+              "value": 133922
+            },
+            {
+              "period": "2021-01",
+              "value": 139891
+            },
+            {
+              "period": "2021-02",
+              "value": 131700
+            },
+            {
+              "period": "2021-03",
+              "value": 148783
+            },
+            {
+              "period": "2021-04",
+              "value": 135899
+            },
+            {
+              "period": "2021-05",
+              "value": 133830
+            },
+            {
+              "period": "2021-06",
+              "value": 129017
+            },
+            {
+              "period": "2021-07",
+              "value": 124017
+            },
+            {
+              "period": "2021-08",
+              "value": 122115
+            },
+            {
+              "period": "2021-09",
+              "value": 119801
+            },
+            {
+              "period": "2021-10",
+              "value": 118924
+            },
+            {
+              "period": "2021-11",
+              "value": 119168
+            },
+            {
+              "period": "2021-12",
+              "value": 112190
+            },
+            {
+              "period": "2022-01",
+              "value": 119348
+            },
+            {
+              "period": "2022-02",
+              "value": 114024
+            },
+            {
+              "period": "2022-03",
+              "value": 123494
+            },
+            {
+              "period": "2022-04",
+              "value": 114256
+            },
+            {
+              "period": "2022-05",
+              "value": 116221
+            },
+            {
+              "period": "2022-06",
+              "value": 111527
+            },
+            {
+              "period": "2022-07",
+              "value": 110930
+            },
+            {
+              "period": "2022-08",
+              "value": 112948
+            },
+            {
+              "period": "2022-09",
+              "value": 103843
+            },
+            {
+              "period": "2022-10",
+              "value": 106220
+            },
+            {
+              "period": "2022-11",
+              "value": 109579
+            },
+            {
+              "period": "2022-12",
+              "value": 96620
+            },
+            {
+              "period": "2023-01",
+              "value": 97019
+            },
+            {
+              "period": "2023-02",
+              "value": 85866
+            },
+            {
+              "period": "2023-03",
+              "value": 87369
+            },
+            {
+              "period": "2023-04",
+              "value": 68631
+            },
+            {
+              "period": "2023-05",
+              "value": 66612
+            },
+            {
+              "period": "2023-06",
+              "value": 63731
+            },
+            {
+              "period": "2023-07",
+              "value": 62853
+            },
+            {
+              "period": "2023-08",
+              "value": 60190
+            },
+            {
+              "period": "2023-09",
+              "value": 52837
+            },
+            {
+              "period": "2023-10",
+              "value": 52428
+            },
+            {
+              "period": "2023-11",
+              "value": 50366
+            },
+            {
+              "period": "2023-12",
+              "value": 42416
+            },
+            {
+              "period": "2024-01",
+              "value": 47700
+            },
+            {
+              "period": "2024-02",
+              "value": 46057
+            },
+            {
+              "period": "2024-03",
+              "value": 44802
+            },
+            {
+              "period": "2024-04",
+              "value": 42472
+            },
+            {
+              "period": "2024-05",
+              "value": 40157
+            },
+            {
+              "period": "2024-06",
+              "value": 32014
+            },
+            {
+              "period": "2024-07",
+              "value": 31500
+            },
+            {
+              "period": "2024-08",
+              "value": 27863
+            },
+            {
+              "period": "2024-09",
+              "value": 24793
+            },
+            {
+              "period": "2024-10",
+              "value": 23219
+            },
+            {
+              "period": "2024-11",
+              "value": 20846
+            },
+            {
+              "period": "2024-12",
+              "value": 17971
+            },
+            {
+              "period": "2025-01",
+              "value": 18238
+            },
+            {
+              "period": "2025-02",
+              "value": 15565
+            },
+            {
+              "period": "2025-03",
+              "value": 15129
+            },
+            {
+              "period": "2025-04",
+              "value": 12349
+            },
+            {
+              "period": "2025-05",
+              "value": 11549
+            },
+            {
+              "period": "2025-06",
+              "value": 9195
+            },
+            {
+              "period": "2025-07",
+              "value": 7751
+            },
+            {
+              "period": "2025-08",
+              "value": 5837
+            },
+            {
+              "period": "2025-09",
+              "value": 6061
+            },
+            {
+              "period": "2025-10",
+              "value": 5370
+            },
+            {
+              "period": "2025-11",
+              "value": 5434
+            },
+            {
+              "period": "2025-12",
+              "value": 4247
+            },
+            {
+              "period": "2026-01",
+              "value": 3773
+            },
+            {
+              "period": "2026-02",
+              "value": 3217
+            },
+            {
+              "period": "2026-03",
+              "value": 3380
+            }
+          ],
+          "color": "#7af59d"
+        }
+      ],
+      "latestValues": {
+        "Total new questions asked": {
+          "period": "2026-03",
+          "value": 3380
+        }
+      }
+    }
+  ]
+}

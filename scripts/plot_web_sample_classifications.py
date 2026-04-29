@@ -105,7 +105,7 @@ def render_svg(rows: list[Row]) -> str:
     bars: list[str] = []
     x_labels: list[str] = []
     ai_points: list[str] = []
-    influenced_points: list[str] = []
+    mixed_points: list[str] = []
     for idx, row in enumerate(rows):
         x_left = chart_x0 + idx * step + bar_gap / 2.0
         x_mid = x_left + bar_width / 2.0
@@ -132,7 +132,7 @@ def render_svg(rows: list[Row]) -> str:
             f'rx="4" fill="{colors["ai"]}" /></g>'
         )
         ai_points.append(f"{x_mid:.1f},{y_scale(row.ai_share):.1f}")
-        influenced_points.append(f"{x_mid:.1f},{y_scale(row.ai_share + row.mixed_share):.1f}")
+        mixed_points.append(f"{x_mid:.1f},{y_scale(row.mixed_share):.1f}")
 
         label = row.period[2:]
         x_labels.append(
@@ -143,7 +143,6 @@ def render_svg(rows: list[Row]) -> str:
     latest = rows[-1]
     note_box_x = width - 350
     note_box_y = 44
-    latest_mixed_plus_ai = latest.ai_share + latest.mixed_share
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
   <rect width="100%" height="100%" fill="{colors["bg"]}" />
@@ -153,17 +152,17 @@ def render_svg(rows: list[Row]) -> str:
   <rect x="{note_box_x}" y="{note_box_y}" width="280" height="92" rx="14" fill="{colors["card"]}" stroke="{colors["grid"]}" />
   <text x="{note_box_x + 18}" y="{note_box_y + 30}" font-size="18" font-weight="700" fill="{colors["label"]}">Latest month: {latest.period}</text>
   <text x="{note_box_x + 18}" y="{note_box_y + 56}" font-size="17" fill="{colors["ai"]}">AI share: {fmt_pct(latest.ai_share)}</text>
-  <text x="{note_box_x + 18}" y="{note_box_y + 80}" font-size="17" fill="{colors["mixed"]}">AI-influenced share: {fmt_pct(latest_mixed_plus_ai)}</text>
+  <text x="{note_box_x + 18}" y="{note_box_y + 80}" font-size="17" fill="{colors["mixed"]}">Mixed share: {fmt_pct(latest.mixed_share)}</text>
 
   <rect x="{chart_x0}" y="{chart_y0}" width="{chart_width}" height="{chart_height}" rx="18" fill="{colors["card"]}" stroke="{colors["grid"]}" />
   {''.join(grid_lines)}
   <line x1="{chart_x0}" y1="{chart_y1}" x2="{chart_x0 + chart_width}" y2="{chart_y1}" stroke="{colors["axis"]}" stroke-width="1.5" />
   {''.join(bars)}
-  <polyline points="{' '.join(influenced_points)}" fill="none" stroke="{colors["mixed"]}" stroke-width="3" stroke-dasharray="8 6" />
+  <polyline points="{' '.join(mixed_points)}" fill="none" stroke="{colors["mixed"]}" stroke-width="3" stroke-dasharray="8 6" />
   <polyline points="{' '.join(ai_points)}" fill="none" stroke="{colors["ai"]}" stroke-width="3.5" />
   {''.join(x_labels)}
 
-  <text x="{margin_left}" y="{height - 72}" font-size="18" fill="{colors["muted"]}">Stacked bars show Human, Mixed, and AI shares. Dashed line marks AI + Mixed.</text>
+  <text x="{margin_left}" y="{height - 72}" font-size="18" fill="{colors["muted"]}">Stacked bars show Human, Mixed, and AI shares. Dashed line marks Mixed only.</text>
   <g transform="translate({margin_left},{height - 46})">
     <rect x="0" y="-12" width="18" height="18" rx="4" fill="{colors["human"]}" />
     <text x="28" y="2" font-size="18" fill="{colors["label"]}">Human</text>
@@ -172,7 +171,7 @@ def render_svg(rows: list[Row]) -> str:
     <rect x="228" y="-12" width="18" height="18" rx="4" fill="{colors["ai"]}" />
     <text x="256" y="2" font-size="18" fill="{colors["label"]}">AI</text>
     <line x1="328" y1="-3" x2="366" y2="-3" stroke="{colors["mixed"]}" stroke-width="3" stroke-dasharray="8 6" />
-    <text x="378" y="2" font-size="18" fill="{colors["label"]}">AI-influenced</text>
+    <text x="378" y="2" font-size="18" fill="{colors["label"]}">Mixed</text>
   </g>
 </svg>
 """

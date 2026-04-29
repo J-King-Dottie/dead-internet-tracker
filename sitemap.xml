@@ -2,13 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dead-internet-tracker.onrender.com/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://dead-internet-tracker.onrender.com/llms.txt</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://dead-internet-tracker.onrender.com/README.md</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dead-internet-tracker.onrender.com/WEB_SAMPLE_AI_CLASSIFICATION_TEMPLATE.md</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dead-internet-tracker.onrender.com/data/dashboard_readable.json</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>

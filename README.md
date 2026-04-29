@@ -1,13 +1,13 @@
 # Dead Internet Tracker
 
-One-page static dashboard for tracking public signals related to the Dead Internet Theory.
+One-page static research project tracking public signals related to the dead internet theory.
 
 The site ships as plain HTML plus local snapshot files. There are no live browser API calls at runtime.
 
 ## What is in the repo
 
-- `index.html`: the dashboard
-- `data/`: published snapshots consumed by the dashboard
+- `index.html`: the public page
+- `data/`: published snapshots consumed by the page
 - `scripts/`: refresh scripts for rebuilding those snapshots
 - `render.yaml`: Render static-site blueprint
 

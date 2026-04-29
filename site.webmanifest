@@ -1,0 +1,10 @@
+{
+  "name": "Dead Internet Tracker",
+  "short_name": "Dead Internet Tracker",
+  "description": "A one-page static research project tracking public signals on AI-generated content, AI bot traffic, bot automation, and human activity on the open web.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#08111f",
+  "theme_color": "#08111f"
+}

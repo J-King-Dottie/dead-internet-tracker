@@ -418,7 +418,7 @@ Each refresh should:
 6. build the OpenAI request JSONL
 7. run the live direct API classifier with `20` excerpts per request and `10` concurrent requests
 8. apply the labels back onto the page rows
-9. update the aggregate summary, including both `AI share` and `AI-influenced share`
+9. update the aggregate summary, including `AI share`, `Mixed share`, and `AI-influenced share`
 10. append a short refresh note
 
 ## Sources

@@ -3,27 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dead Internet Tracker | Data on AI Content, Bots, and Human Activity</title>
-  <meta name="description" content="Dead Internet Tracker is a one-page dashboard tracking public signals behind the dead internet theory: AI-generated content, AI bot traffic, Wikipedia activity, Stack Overflow activity, and recurring open-web samples.">
+  <title>Dead Internet Tracker | AI Content, AI Bot Traffic & Human Web Activity</title>
+  <meta name="description" content="Dead Internet Tracker is a one-page static research project tracking public signals behind the dead internet theory: AI-generated content, AI bot traffic, bot automation, and human activity on the open web.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
   <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large">
-  <meta name="keywords" content="dead internet theory, dead internet, AI-generated content, AI bot traffic, bot traffic, Common Crawl AI content, Wikipedia editor activity, Stack Overflow questions">
+  <meta name="keywords" content="dead internet theory, dead internet, AI-generated content, AI content detection, AI bot traffic, internet bot traffic, bot automation, Common Crawl AI content, Wikipedia editor activity, Stack Overflow questions, human web activity">
   <meta name="author" content="Dead Internet Tracker">
+  <meta name="theme-color" content="#08111f">
+  <meta name="color-scheme" content="dark">
   <link rel="canonical" href="https://dead-internet-tracker.onrender.com/">
   <link rel="sitemap" type="application/xml" href="https://dead-internet-tracker.onrender.com/sitemap.xml">
   <link rel="alternate" type="text/markdown" title="LLM-readable summary" href="https://dead-internet-tracker.onrender.com/llms.txt">
+  <link rel="alternate" type="application/json" title="Machine-readable chart data" href="https://dead-internet-tracker.onrender.com/data/dashboard_readable.json">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Dead Internet Tracker">
   <meta property="og:title" content="Dead Internet Tracker">
-  <meta property="og:description" content="A public-data dashboard for the dead internet theory, tracking AI-generated content, AI bot traffic, and human activity on the open web.">
+  <meta property="og:description" content="A static research project tracking AI-generated content, AI bot traffic, bot automation, and human activity on the open web.">
   <meta property="og:url" content="https://dead-internet-tracker.onrender.com/">
-  <meta property="og:image" content="https://dead-internet-tracker.onrender.com/social-preview.svg">
+  <meta property="og:image" content="https://dead-internet-tracker.onrender.com/social-preview.png">
+  <meta property="og:image:secure_url" content="https://dead-internet-tracker.onrender.com/social-preview.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Dead Internet Tracker: public signals on AI-generated content, AI bot traffic, bot automation, and human activity.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dead Internet Tracker">
-  <meta name="twitter:description" content="Track public signals behind the dead internet theory: AI content, AI bot traffic, Wikipedia, Stack Overflow, and open-web samples.">
-  <meta name="twitter:image" content="https://dead-internet-tracker.onrender.com/social-preview.svg">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpolyline points='6,38 18,38 24,22 30,46 36,16 43,38 58,38' fill='none' stroke='%23000000' stroke-width='6.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <meta name="twitter:description" content="Track public signals behind the dead internet theory: AI-generated content, AI bot traffic, bot automation, and human activity.">
+  <meta name="twitter:image" content="https://dead-internet-tracker.onrender.com/social-preview.png">
+  <meta name="twitter:image:alt" content="Dead Internet Tracker: public signals on AI-generated content, AI bot traffic, bot automation, and human activity.">
+  <link rel="icon" type="image/svg+xml" href="https://dead-internet-tracker.onrender.com/favicon.svg">
+  <link rel="manifest" href="https://dead-internet-tracker.onrender.com/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
@@ -33,13 +43,26 @@
       "@type": "WebSite",
       "name": "Dead Internet Tracker",
       "url": "https://dead-internet-tracker.onrender.com/",
-      "description": "A public-data dashboard tracking signals related to the dead internet theory.",
+      "description": "A one-page static research project tracking public signals related to the dead internet theory.",
       "inLanguage": "en",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Dottie AI Studio",
+        "url": "https://dottieaistudio.com.au/"
+      },
+      "keywords": [
+        "dead internet theory",
+        "AI-generated content",
+        "AI bot traffic",
+        "bot automation",
+        "human web activity"
+      ],
       "about": [
         "dead internet theory",
         "AI-generated content",
         "AI bot traffic",
-        "public web activity"
+        "bot automation",
+        "human activity on the public web"
       ]
     }
   </script>
@@ -49,14 +72,28 @@
       "@type": "WebPage",
       "name": "Dead Internet Tracker",
       "url": "https://dead-internet-tracker.onrender.com/",
-      "description": "A one-page dashboard tracking public signals behind the dead internet theory: AI-generated content, AI bot traffic, Wikipedia activity, Stack Overflow activity, and recurring open-web samples.",
+      "description": "A one-page static research project tracking public signals behind the dead internet theory: AI-generated content, AI bot traffic, bot automation, and human activity on the open web.",
       "isPartOf": {
         "@type": "WebSite",
         "name": "Dead Internet Tracker",
         "url": "https://dead-internet-tracker.onrender.com/"
       },
       "inLanguage": "en",
-      "dateModified": "2026-04-27",
+      "dateModified": "2026-04-30",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Dottie AI Studio",
+        "url": "https://dottieaistudio.com.au/"
+      },
+      "keywords": [
+        "dead internet theory",
+        "AI-generated content",
+        "AI bot traffic",
+        "bot automation",
+        "Common Crawl AI content",
+        "Wikipedia editor activity",
+        "Stack Overflow question activity"
+      ],
       "mainEntity": {
         "@id": "https://dead-internet-tracker.onrender.com/#dataset"
       },
@@ -77,15 +114,21 @@
       "url": "https://dead-internet-tracker.onrender.com/",
       "applicationCategory": "DataVisualizationApplication",
       "operatingSystem": "Any",
-      "description": "A one-page public-data dashboard tracking signals related to the dead internet theory, including AI-generated content estimates, AI bot traffic, Wikipedia editor activity, Stack Overflow question activity, and recurring Common Crawl samples.",
+      "description": "A one-page static research project tracking public signals related to the dead internet theory, including AI-generated content estimates, AI bot traffic, bot automation, Wikipedia editor activity, Stack Overflow question activity, and recurring Common Crawl samples.",
       "keywords": [
         "dead internet theory",
         "dead internet",
         "AI-generated content",
         "AI bot traffic",
+        "bot automation",
         "internet bot traffic",
         "Common Crawl AI content"
       ],
+      "creator": {
+        "@type": "Organization",
+        "name": "Dottie AI Studio",
+        "url": "https://dottieaistudio.com.au/"
+      },
       "isAccessibleForFree": true
     }
   </script>
@@ -96,9 +139,31 @@
       "@id": "https://dead-internet-tracker.onrender.com/#dataset",
       "name": "Dead Internet Tracker public signal snapshots",
       "url": "https://dead-internet-tracker.onrender.com/",
-      "description": "Small local snapshots used by Dead Internet Tracker to compare public signals related to the dead internet theory.",
+      "description": "Small local snapshots used by Dead Internet Tracker to compare public signals related to the dead internet theory: AI-generated content, AI bot traffic, bot automation, and human activity on the open web.",
       "license": "https://dead-internet-tracker.onrender.com/LICENSE",
-      "dateModified": "2026-04-27",
+      "dateModified": "2026-04-30",
+      "creator": {
+        "@type": "Organization",
+        "name": "Dottie AI Studio",
+        "url": "https://dottieaistudio.com.au/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Dottie AI Studio",
+        "url": "https://dottieaistudio.com.au/"
+      },
+      "keywords": [
+        "dead internet theory",
+        "AI-generated content estimates",
+        "AI bot traffic",
+        "bot automation",
+        "Common Crawl AI classification",
+        "Wikipedia editor activity",
+        "Stack Overflow question volume",
+        "human activity on the public web"
+      ],
+      "temporalCoverage": "2020/2026",
+      "isAccessibleForFree": true,
       "measurementTechnique": [
         "Common Crawl monthly sampling",
         "Cloudflare Radar monthly AI bot traffic snapshots",
@@ -114,6 +179,12 @@
         "AI writing signals in sampled article-style pages"
       ],
       "distribution": [
+        {
+          "@type": "DataDownload",
+          "name": "Machine-readable normalized chart data",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://dead-internet-tracker.onrender.com/data/dashboard_readable.json"
+        },
         {
           "@type": "DataDownload",
           "name": "Cloudflare AI bot traffic snapshot",
@@ -146,7 +217,7 @@
         },
         {
           "@type": "DataDownload",
-          "name": "Common Crawl web sample dashboard snapshot",
+          "name": "Common Crawl web sample chart snapshot",
           "encodingFormat": "application/json",
           "contentUrl": "https://dead-internet-tracker.onrender.com/data/web-sample/web_sample_dashboard_snapshot.json"
         },
@@ -714,7 +785,11 @@
     }
 
     .page-footer-note p {
-      margin: 0;
+      margin: 0 0 0.28rem;
+    }
+
+    .page-footer-note p:last-child {
+      margin-bottom: 0;
     }
 
     .page-footer-note a {
@@ -877,20 +952,27 @@
     }
 
     .info button {
-      width: clamp(18px, 1.1vw, 20px);
-      height: clamp(18px, 1.1vw, 20px);
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      min-height: 20px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       padding: 0;
+      box-sizing: border-box;
       border-radius: 999px;
       border: 1px solid rgba(148, 182, 245, 0.18);
       background: rgba(13, 24, 48, 0.9);
       color: var(--copy-primary);
-      font: inherit;
-      font-size: clamp(10px, 0.72vw, 11px);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      font-style: normal;
       font-weight: 800;
       line-height: 1;
+      letter-spacing: 0;
+      text-align: center;
       cursor: pointer;
       transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
       touch-action: manipulation;
@@ -1005,7 +1087,7 @@
       gap: 4px;
     }
 
-    .tooltip-section--caveat {
+    .tooltip-section + .tooltip-section {
       padding-top: var(--medium-gap);
       border-top: 1px solid rgba(144, 160, 196, 0.14);
     }
@@ -1255,12 +1337,6 @@
           font-size: var(--descriptor-size);
         }
 
-      .info button {
-        width: clamp(18px, 4vw, 20px);
-        height: clamp(18px, 4vw, 20px);
-        font-size: clamp(10px, 2.8vw, 11px);
-      }
-
       .info-float-tooltip.is-sheet {
         border-radius: max(var(--tooltip-radius), 20px);
       }
@@ -1285,8 +1361,8 @@
 
     @media (hover: none), (pointer: coarse) {
       .info button {
-        width: clamp(18px, 4vw, 20px);
-        height: clamp(18px, 4vw, 20px);
+        width: 20px;
+        height: 20px;
       }
     }
   </style>
@@ -1371,15 +1447,11 @@
         <div class="card-section card-section--takeaway">
           <div class="card-header">
             <div class="card-title-wrap">
-              <h3>No one knows how much of the web is AI-generated. Estimates average at a rough <span data-dynamic="ai-content-2026-average">30%</span> of content being AI in 2026.</h3>
+              <h3>No one knows how much of the web is AI-generated. Estimates average at a rough <span data-dynamic="ai-content-2026-average"></span> of content being AI in 2026.</h3>
             </div>
             <div class="info">
               <button type="button" aria-label="About AI content share meta review">i</button>
-              <div class="tooltip" role="tooltip">
-                <strong>AI content share meta review</strong>
-                <p>We included this because there is no single authoritative measure of AI-generated content online. So instead of pretending there is one clean number, this chart shows whether the published evidence points in the same direction.</p>
-                <div class="tooltip-meta">Source: Curated AI deep research using a guided source-review process.<br>Method: Annual scatter from published estimates; ranges are plotted at their midpoints, and the line shows the annual average of the included estimates.<br>Caveat: The estimates come from different studies and content sets, so the levels are noisy and not perfectly comparable.</div>
-              </div>
+              <div class="tooltip" role="tooltip"></div>
             </div>
           </div>
         </div>
@@ -1404,20 +1476,16 @@
         <div class="card-section card-section--takeaway">
           <div class="card-header">
             <div class="card-title-wrap">
-                <h3>AI can play a small role or a big one. AI writing 'some of it' is <span data-dynamic="web-sample-partial-ratio">2.2x</span> more common than AI writing 'most of it'. Both are rising.</h3>
+                <h3>The internet is not flipping from human to AI all at once. Some pages look mostly AI written, others show partial AI influence.</h3>
             </div>
             <div class="info">
               <button type="button" aria-label="About monthly AI share in the web sample">i</button>
-              <div class="tooltip" role="tooltip">
-                <strong>Monthly AI share in the web sample</strong>
-                <p>We included this because it is our own recurring open-web check on whether AI-written pages are becoming more common over time. It gives us one consistent series, built the same way each month, instead of relying only on scattered outside estimates.</p>
-                <div class="tooltip-meta">Source: Common Crawl monthly samples classified under a research-guided rubric.</div>
-              </div>
+              <div class="tooltip" role="tooltip"></div>
             </div>
           </div>
         </div>
         <div class="card-section card-section--technical">
-          <p class="card-dek">Share of article-style web pages with detectable AI writing signals.</p>
+          <p class="card-dek">Share of article-style web pages classified as AI-written or mixed.</p>
         </div>
         <div class="card-section card-section--legend">
           <div class="legend-inline">
@@ -1437,24 +1505,20 @@
   <div class="card-section card-section--takeaway">
     <div class="card-header">
       <div class="card-title-wrap">
-        <h3>AI is also 'using' the internet more. AI bot traffic now accounts for <span data-dynamic="cloudflare-latest-ai-bot-share">10%</span> of wider web traffic.</h3>
+        <h3>AI is also 'using' the internet more. AI bot traffic now accounts for <span data-dynamic="cloudflare-latest-ai-bot-share"></span> of wider web traffic.</h3>
       </div>
       <div class="info">
         <button type="button" aria-label="About Cloudflare AI bot traffic">i</button>
-        <div class="tooltip" role="tooltip">
-          <strong>Cloudflare Radar</strong>
-          <p>We included this because the dead internet theory is not just about AI writing the web. It is also about AI systems increasingly reading, crawling, and traversing it.</p>
-          <div class="tooltip-meta">Source: Cloudflare Radar monthly AI bot traffic snapshot.</div>
-        </div>
+        <div class="tooltip" role="tooltip"></div>
       </div>
     </div>
   </div>
   <div class="card-section card-section--technical">
-    <p class="card-dek">Share of web traffic across a broad observed slice of the internet.</p>
+    <p class="card-dek">Share of traffic across a broad observed slice of the internet.</p>
   </div>
   <div class="card-section card-section--legend">
     <div class="legend-inline">
-      <span><i class="swatch" style="background:#58e6ff"></i>AI bots</span>
+      <span><i class="swatch" style="background:#ff9a62"></i>AI bots</span>
     </div>
   </div>
   <div class="card-section card-section--chart">
@@ -1469,24 +1533,20 @@
   <div class="card-section card-section--takeaway">
     <div class="card-header">
       <div class="card-title-wrap">
-        <h3>High-value websites (e.g. money or account-based) get targeted. Here, AI makes up <span data-dynamic="imperva-latest-automated-share">50%</span> of traffic.</h3>
+        <h3>Some parts of the web are already more machine than human. On high-value sites, like banking, bots now make up <span data-dynamic="imperva-latest-automated-share"></span> of observed traffic.</h3>
       </div>
       <div class="info">
         <button type="button" aria-label="About Imperva traffic profile">i</button>
-        <div class="tooltip" role="tooltip">
-          <strong>Imperva traffic profile</strong>
-          <p>We included this because some parts of the web are much more exposed to automation than others. This chart shows how far machine traffic can outnumber human traffic on high-value, frequently targeted websites.</p>
-          <div class="tooltip-meta">Source: Imperva Bad Bot Reports, stitched annual traffic profile.<br>Method: Imperva annual traffic profile, with good and bad bots combined as automated traffic.<br>Caveat: This is narrower and more security-focused than the Cloudflare chart. It reflects a more targeted slice of the web, so the levels are not directly comparable.</div>
-        </div>
+        <div class="tooltip" role="tooltip"></div>
       </div>
     </div>
   </div>
   <div class="card-section card-section--technical">
-    <p class="card-dek">Share of web traffic across a narrow security-focused slice of the internet.</p>
+    <p class="card-dek">Share of observed traffic across a security-focused slice of the web.</p>
   </div>
   <div class="card-section card-section--legend">
     <div class="legend-inline">
-      <span><i class="swatch" style="background:#ff9a62"></i>AI bots</span>
+      <span><i class="swatch" style="background:#ff9a62"></i>Automated traffic</span>
       <span><i class="swatch" style="background:#58e6ff"></i>Human</span>
     </div>
   </div>
@@ -1502,15 +1562,11 @@
   <div class="card-section card-section--takeaway">
     <div class="card-header">
       <div class="card-title-wrap">
-        <h3>Humanity's largest open-source knowledge project is slowly dying. Wikipedia editors are down <span data-dynamic="wikipedia-editor-decline">21%</span> from 2020. The diehards remain strong.</h3>
+        <h3>Humanity's largest open-source knowledge project is slowly dying. Wikipedia editors are down <span data-dynamic="wikipedia-editor-decline"></span> from 2020. The diehards remain strong.</h3>
       </div>
       <div class="info">
         <button type="button" aria-label="About Wikipedia activity">i</button>
-        <div class="tooltip" role="tooltip">
-          <strong>Wikipedia activity</strong>
-          <p>We included this because the dead internet theory is partly about human contribution fading from the public web. Wikipedia is one of the clearest places to see whether people are still doing open, sustained knowledge work together.</p>
-          <div class="tooltip-meta">Source: Wikimedia editor analytics.<br>Method: Monthly editor counts.<br>Caveat: English Wikipedia only.</div>
-        </div>
+        <div class="tooltip" role="tooltip"></div>
       </div>
     </div>
   </div>
@@ -1519,8 +1575,8 @@
   </div>
   <div class="card-section card-section--legend">
     <div class="legend-inline">
-      <span><i class="swatch" style="background:#58e6ff"></i>All editors (1+)</span>
-      <span><i class="swatch" style="background:#ff9a62"></i>Active editors (5+)</span>
+      <span><i class="swatch" style="background:#ff9a62"></i>All editors (1+)</span>
+      <span><i class="swatch" style="background:#58e6ff"></i>Active editors (5+)</span>
     </div>
   </div>
   <div class="card-section card-section--chart">
@@ -1528,38 +1584,6 @@
   </div>
   <div class="card-section card-section--source">
     <p class="card-source">Source: Wikimedia editor analytics.</p>
-  </div>
-</article>
-
-<article class="card traffic-3" style="--card-accent:#9d8cff;">
-  <div class="card-section card-section--takeaway">
-    <div class="card-header">
-      <div class="card-title-wrap">
-        <h3>While human contributors disappear, attacks rise. Account attacks are up <span data-dynamic="imperva-ato-change">51%</span> since 2022. The internet is becoming more dangerous.</h3>
-      </div>
-      <div class="info">
-        <button type="button" aria-label="About Imperva account takeover attacks">i</button>
-        <div class="tooltip" role="tooltip">
-          <strong>Imperva annual account takeover attacks</strong>
-          <p>We included this because a more machine-driven internet is not just emptier, it can also be more hostile. Rising account attacks are one concrete sign that cheap automation is making abuse more industrial.</p>
-          <div class="tooltip-meta">Source: Imperva account takeover series reconstructed from annual reports.<br>Method: Values were read from annual report charts and stitched into one monthly series. Not perfect, but reasonably accurate.<br>Caveat: This is bot abuse, not a direct measure of AI content or human displacement.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card-section card-section--technical">
-    <p class="card-dek">Annual account takeover attacks (when a bot tries to break into someone's account).</p>
-  </div>
-  <div class="card-section card-section--legend">
-    <div class="legend-inline">
-      <span><i class="swatch" style="background:#58e6ff"></i>Total recorded attacks</span>
-    </div>
-  </div>
-  <div class="card-section card-section--chart">
-    <div class="chart-wrap" data-chart="imperva-ato"></div>
-  </div>
-  <div class="card-section card-section--source">
-    <p class="card-source">Source: Imperva account takeover series reconstructed from annual reports.</p>
   </div>
 </article>
 
@@ -1571,11 +1595,7 @@
       </div>
       <div class="info">
         <button type="button" aria-label="About Stack Overflow activity">i</button>
-        <div class="tooltip" role="tooltip">
-          <strong>Stack Overflow activity</strong>
-          <p>We included this because the dead internet theory is also about public human exchange declining, not just AI content rising. Stack Overflow is a clean test of whether people still need to ask other people for help in public.</p>
-          <div class="tooltip-meta">Source: Stack Exchange API monthly question counts.<br>Method: Monthly source.</div>
-        </div>
+        <div class="tooltip" role="tooltip"></div>
       </div>
     </div>
   </div>
@@ -1598,6 +1618,8 @@
     </section>
   </main>
   <footer class="page-footer-note">
+    <p>We built this project as a practical demonstration of low-cost, AI-assisted research.</p>
+    <p>With a structured workflow, AI and automation keep it current for less than A$50 a year.</p>
     <p>Produced by <a href="https://dottieaistudio.com.au/" target="_blank" rel="noreferrer">Dottie AI Studio</a></p>
   </footer>
 
@@ -1606,7 +1628,6 @@
 
   <script src="./data/cloudflare/cloudflare.js"></script>
   <script src="./data/imperva/imperva.js"></script>
-  <script src="./data/imperva/imperva_ato.js"></script>
   <script src="./data/wikipedia/wikipedia.js"></script>
   <script src="./data/stackoverflow/stackoverflow.js"></script>
   <script src="./data/ai-content-meta-review/ai_content_meta_review.js"></script>
@@ -1653,13 +1674,6 @@
         fixedYMax: 100,
         series: []
       },
-      "imperva-ato": {
-        type: "bar",
-        xValues: [],
-        axisValueFormat: "compact",
-        tooltipValueFormat: "integer",
-        series: []
-      },
       "ai-content-meta-review": {
         type: "scatter-trend",
         xValues: [],
@@ -1671,6 +1685,45 @@
     const semanticChartColors = {
       primary: "#ff9a62",
       secondary: "#58e6ff"
+    };
+
+    const chartTooltipCopy = {
+      "ai-content-meta-review": {
+        source: "Curated AI deep research using a guided source-review process.",
+        intent: "There is no single authoritative measure of AI-generated content online. This chart gives a bird's-eye view of the published estimates and whether they point in the same direction.",
+        method: "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
+        caveats: "The studies measure different content sets, so the average line is a rough trend signal, not a true whole-internet rate."
+      },
+      "web-sample-classifications": {
+        source: "Common Crawl monthly samples classified under a research-guided rubric.",
+        intent: "Published estimates often do not make clear what \"AI-written\" means. This chart fills that gap by separating pages that look mostly AI-written from pages that show partial AI influence.",
+        method: "Each month samples 1,000 article-style Common Crawl pages and classifies excerpts with an LLM rubric grounded in published AI-writing cues. Strong signal means the page looks mostly AI-written; partial signal means AI influence is present but not dominant.",
+        caveats: "This simple classifier is imperfect, so the main value is the consistent month-to-month trend and the split between strong and partial signal, not the exact level."
+      },
+      "traffic-bot-human": {
+        source: "Cloudflare Radar monthly AI bot traffic snapshot.",
+        intent: "The dead internet theory is not just about AI writing the web. It is also about AI systems increasingly reading, crawling, and traversing it.",
+        method: "Cloudflare Radar estimates bot traffic from HTTP requests it observes, then classifies AI bot categories such as AI crawler and AI search. We combine overall bot share with those AI-bot category shares to estimate AI-bot share of total traffic.",
+        caveats: "Cloudflare sees a large but incomplete slice of the public web, not the whole internet."
+      },
+      "imperva-traffic": {
+        source: "Imperva Bad Bot Reports, stitched annual traffic profile.",
+        intent: "Machine traffic is not spread evenly across the internet. This chart shows how automated traffic can dominate in high-value, abuse-sensitive parts of the web.",
+        method: "The annual report draws on traffic observed across Imperva's application-security network and splits it into human, good bot, and bad bot traffic. We combine good and bad bots into one automated-traffic line.",
+        caveats: "This reflects a more targeted slice of the web than the Cloudflare chart, and it measures all bot automation rather than just AI bots. The levels are not directly comparable."
+      },
+      wikipedia: {
+        source: "Wikimedia editor analytics.",
+        intent: "Wikipedia is a useful slow-decline signal for public human contribution. It shows whether people are still doing sustained knowledge work together in the open.",
+        method: "Monthly editor counts are pulled from the Wikimedia API for English Wikipedia content pages; active editors are users with at least five edits in a month.",
+        caveats: "This counts editor participation, not article quality or whether any edits used AI; it is a signal of human editing activity in one public knowledge project."
+      },
+      "stack-overflow": {
+        source: "Stack Exchange API monthly question counts.",
+        intent: "Stack Overflow is a sharper example of public human exchange falling away. It shows what happens when people stop asking other people for help in public and shift to AI instead.",
+        method: "Monthly question counts are pulled from the Stack Exchange API by creation-date window for Stack Overflow.",
+        caveats: "This is a defined public Q&A source, not all developer problem-solving; it tracks questions asked, not whether people still solve problems elsewhere."
+      }
     };
 
     const chartRegistry = new Map();
@@ -2372,160 +2425,6 @@
       };
     }
 
-    function stackedBarTooltipFormatter(params, width, config) {
-      if (!Array.isArray(params) || params.length === 0) {
-        return "";
-      }
-
-      const metrics = chartMetrics(width);
-      const secondaryText = themeColor("--copy-secondary", "rgba(255, 255, 255, 0.62)");
-      const label = params[0]?.axisValue ?? params[0]?.axisValueLabel ?? "";
-      const periodMeta = (config.periods || []).find((item) => item.period === label);
-      const rows = [...params]
-        .sort((a, b) => Number(b.data || 0) - Number(a.data || 0))
-        .map((param) => {
-          const swatch = `<span style="display:inline-block;width:${metrics.tooltip.swatch}px;height:${metrics.tooltip.swatch}px;border-radius:999px;background:${param.color};margin-right:${metrics.tooltip.swatch}px;"></span>`;
-          return `<div style="margin-top:${metrics.tooltip.rowGap}px;white-space:nowrap;">${swatch}${param.seriesName}: ${formatMetricValue(param.data, config.tooltipValueFormat)}</div>`;
-        })
-        .join("");
-
-      const meta = periodMeta
-        ? `<div style="margin-top:${Math.max(8, metrics.tooltip.rowGap + 2)}px;color:${secondaryText};line-height:1.45;">Sample: ${formatMetricValue(periodMeta.sample_size, "integer")} pages<br>Crawl: ${escapeHtml(periodMeta.sample_source)}</div>`
-        : "";
-
-      return `<div style="font-weight:700;margin-bottom:${Math.max(2, metrics.tooltip.rowGap - 3)}px;">${formatMonthLabel(label)}</div>${rows}${meta}`;
-    }
-
-    function buildStackedBarOption(config, width) {
-      const labels = config.xValues || defaultYears;
-      const maxBarWidth = clamp(width / Math.max(labels.length * 1.7, 16), 18, 34);
-      const yAxisConfig = fixedPercentYAxis(width, config.axisValueFormat, 100);
-
-      return {
-        animation: false,
-        backgroundColor: "transparent",
-        legend: { show: false },
-        grid: {
-          ...baseGrid(width),
-          left: 6
-        },
-        tooltip: {
-          ...baseTooltip(width),
-          trigger: "axis",
-          axisPointer: {
-            type: "shadow",
-            shadowStyle: { color: "rgba(255,255,255,0.08)" }
-          },
-          formatter: (params) => stackedBarTooltipFormatter(params, width, config)
-        },
-        xAxis: {
-          ...baseXAxis(width, labels),
-          boundaryGap: true
-        },
-        yAxis: yAxisConfig.axis,
-        series: (config.series || []).map((series, index, allSeries) => ({
-          name: series.name,
-          type: "bar",
-          stack: "web-sample-share",
-          data: series.values,
-          barMaxWidth: maxBarWidth,
-          itemStyle: {
-            color: series.color,
-            borderRadius: index === 0
-              ? [0, 0, 8, 8]
-              : index === allSeries.length - 1
-                ? [8, 8, 0, 0]
-                : 0
-          },
-          emphasis: {
-            focus: "none",
-            disabled: true
-          }
-        }))
-      };
-    }
-
-    function barTooltipFormatter(params, width, config) {
-      if (!Array.isArray(params) || params.length === 0) {
-        return "";
-      }
-
-      const metrics = chartMetrics(width);
-      const label = params[0]?.axisValue ?? params[0]?.axisValueLabel ?? "";
-      const rows = params.map((param) => {
-        const swatch = `<span style="display:inline-block;width:${metrics.tooltip.swatch}px;height:${metrics.tooltip.swatch}px;border-radius:999px;background:${param.color};margin-right:${metrics.tooltip.swatch}px;"></span>`;
-        return `<div style="margin-top:${metrics.tooltip.rowGap}px;white-space:nowrap;">${swatch}${param.seriesName}: ${formatMetricValue(param.data, config.tooltipValueFormat)}</div>`;
-      }).join("");
-
-      return `<div style="font-weight:700;margin-bottom:${Math.max(2, metrics.tooltip.rowGap - 3)}px;">${label}</div>${rows}`;
-    }
-
-    function buildBarOption(config, width) {
-      const labels = config.xValues || defaultYears;
-      const maxBarWidth = clamp(width / Math.max(labels.length * 2.8, 8), 30, 72);
-      const yMax = inferSeriesMax(config);
-      const yAxisConfig = baseYAxis(yMax, width, config.axisValueFormat);
-      const metrics = chartMetrics(width);
-      const secondaryText = themeColor("--copy-secondary", "rgba(255, 255, 255, 0.62)");
-
-      return {
-        animation: false,
-        backgroundColor: "transparent",
-        legend: { show: false },
-        grid: {
-          ...baseGrid(width),
-          left: 6
-        },
-        tooltip: {
-          ...baseTooltip(width),
-          trigger: "axis",
-          axisPointer: {
-            type: "shadow",
-            shadowStyle: { color: "rgba(255,255,255,0.08)" }
-          },
-          formatter: (params) => barTooltipFormatter(params, width, config)
-        },
-        xAxis: {
-          type: "category",
-          data: labels,
-          boundaryGap: true,
-          axisTick: {
-            show: false,
-            alignWithLabel: true
-          },
-          axisLine: {
-            show: true,
-            lineStyle: { color: "rgba(164, 182, 218, 0.42)", width: 1.2 }
-          },
-          axisLabel: {
-            color: secondaryText,
-            fontSize: metrics.axisFont,
-            fontWeight: 600,
-            margin: metrics.labelGap,
-            interval: 0
-          },
-          splitLine: { show: false }
-        },
-        yAxis: yAxisConfig.axis,
-        series: (config.series || []).map((series) => ({
-          name: series.name,
-          type: "bar",
-          data: series.values,
-          barMaxWidth: maxBarWidth,
-          itemStyle: {
-            color: series.color,
-            borderRadius: [8, 8, 0, 0]
-          },
-          emphasis: {
-            focus: "none",
-            itemStyle: {
-              color: series.color
-            }
-          }
-        }))
-      };
-    }
-
     function escapeHtml(value) {
       return `${value}`
         .replace(/&/g, "&amp;")
@@ -2579,48 +2478,17 @@
       `.trim();
     }
 
-    function parseTooltipMeta(metaEl) {
-      const parsed = {};
-      if (!metaEl) return parsed;
-
-      const lines = metaEl.innerHTML
-        .split(/<br\s*\/?>/i)
-        .map((line) => {
-          const probe = document.createElement("div");
-          probe.innerHTML = line;
-          return (probe.textContent || "").trim();
-        })
-        .filter(Boolean);
-
-      lines.forEach((line) => {
-        const match = line.match(/^([^:]+):\s*(.*)$/);
-        if (!match) return;
-        const key = match[1].trim().toLowerCase();
-        const value = match[2].trim();
-        if (key === "source") parsed.source = value;
-        if (key === "last refreshed") parsed.lastRefreshed = value;
-        if (key === "method") parsed.method = value;
-        if (key === "caveat" || key === "caveats") parsed.caveats = value;
+    function chartInfoTooltipHtml(chartKey, snapshot = {}, overrides = {}) {
+      return buildInfoTooltipMarkup({
+        ...snapshot,
+        ...(chartTooltipCopy[chartKey] || {}),
+        ...overrides
       });
-
-      return parsed;
     }
 
     function normalizeTooltipMarkup(sourceEl) {
       if (!sourceEl) return "";
-      if (sourceEl.querySelector(".tooltip-structured")) {
-        return sourceEl.innerHTML;
-      }
-
-      const description = sourceEl.querySelector("p")?.textContent?.trim() || "";
-      const meta = parseTooltipMeta(sourceEl.querySelector(".tooltip-meta"));
-      return buildInfoTooltipMarkup({
-        intent: description,
-        source: meta.source || "",
-        lastRefreshed: meta.lastRefreshed || "",
-        method: meta.method || "",
-        caveats: meta.caveats || ""
-      });
+      return sourceEl.innerHTML;
     }
 
     function estimateSummary(series) {
@@ -2821,10 +2689,6 @@
           ? buildBandLineOption(config, width)
           : config.type === "scatter-trend"
             ? buildScatterTrendOption(config, width)
-            : config.type === "stacked-bar"
-              ? buildStackedBarOption(config, width)
-            : config.type === "bar"
-              ? buildBarOption(config, width)
             : buildLineOption(config, width);
 
         chart.setOption(option, true);
@@ -2876,63 +2740,29 @@
     }
 
     function stackOverflowTooltipHtml(snapshot) {
-      return buildInfoTooltipMarkup({
-        ...snapshot,
-        source: "Stack Exchange API monthly question counts.",
-        intent: "We included this because the dead internet theory is also about public human exchange declining, not just AI content rising. Stack Overflow is a clean test of whether people still need to ask other people for help in public.",
-        method: snapshot.method || "Monthly source."
+      return chartInfoTooltipHtml("stack-overflow", snapshot, {
+        method: snapshot.method || chartTooltipCopy["stack-overflow"].method
       });
     }
 
     function cloudflareTooltipHtml(snapshot) {
-      return buildInfoTooltipMarkup({
-        ...snapshot,
-        source: "Cloudflare Radar monthly AI bot traffic snapshot.",
-        intent: "We included this because the dead internet theory is not just about AI writing the web. It is also about AI systems increasingly reading, crawling, and traversing it.",
-        caveats: "This reflects a broad observed slice of the public web, not the whole internet."
-      });
+      return chartInfoTooltipHtml("traffic-bot-human", snapshot);
     }
 
     function wikipediaTooltipHtml(snapshot) {
-      return buildInfoTooltipMarkup({
-        ...snapshot,
-        source: "Wikimedia editor analytics.",
-        intent: "We included this because the dead internet theory is partly about human contribution fading from the public web. Wikipedia is one of the clearest places to see whether people are still doing open, sustained knowledge work together."
-      });
+      return chartInfoTooltipHtml("wikipedia", snapshot);
     }
 
     function impervaTooltipHtml(snapshot) {
-      return buildInfoTooltipMarkup({
-        ...snapshot,
-        source: "Imperva Bad Bot Reports, stitched annual traffic profile.",
-        intent: "We included this because some parts of the web are much more exposed to automation than others. This chart shows how far machine traffic can outnumber human traffic on high-value, frequently targeted websites.",
-        method: "Imperva annual traffic profile, with good and bad bots combined as automated traffic.",
-        caveats: "This is narrower and more security-focused than the Cloudflare chart. It reflects a more targeted slice of the web, so the levels are not directly comparable."
-      });
-    }
-
-    function impervaAtoTooltipHtml(snapshot) {
-      return buildInfoTooltipMarkup({
-        ...snapshot,
-        source: "Imperva account takeover series reconstructed from annual reports.",
-        intent: "We included this because a more machine-driven internet is not just emptier, it can also be more hostile. Rising account attacks are one concrete sign that cheap automation is making abuse more industrial."
-      });
+      return chartInfoTooltipHtml("imperva-traffic", snapshot);
     }
 
     function aiContentMetaReviewTooltipHtml(snapshot) {
-      return buildInfoTooltipMarkup({
-        ...snapshot,
-        source: "Curated AI deep research using a guided source-review process.",
-        intent: "We included this because there is no single authoritative measure of AI-generated content online. So instead of pretending there is one clean number, this chart shows whether the published evidence points in the same direction."
-      });
+      return chartInfoTooltipHtml("ai-content-meta-review", snapshot);
     }
 
     function webSampleTooltipHtml(snapshot) {
-      return buildInfoTooltipMarkup({
-        ...snapshot,
-        source: "Common Crawl monthly samples classified under a research-guided rubric.",
-        intent: "We included this because it is our own recurring open-web check on whether AI-written pages are becoming more common over time. It gives us one consistent series, built the same way each month, instead of relying only on scattered outside estimates."
-      });
+      return chartInfoTooltipHtml("web-sample-classifications", snapshot);
     }
 
     function applyCloudflareSnapshot(snapshot) {
@@ -2982,7 +2812,7 @@
       config.series = (normalized.series || []).map((series) => ({
         ...series,
         name: series.name === "All editors" ? "All editors (1+)" : "Active editors (5+)",
-        color: series.name === "All editors" ? semanticChartColors.secondary : semanticChartColors.primary
+        color: series.name === "All editors" ? semanticChartColors.primary : semanticChartColors.secondary
       }));
       config.pointMode = isMonthlyLabel((normalized.xValues || [])[0] || "") ? "hover" : "default";
 
@@ -3033,7 +2863,7 @@
         return bad + good;
       });
       config.series = [
-        { name: "AI bots", color: semanticChartColors.primary, values: automatedValues },
+        { name: "Automated traffic", color: semanticChartColors.primary, values: automatedValues },
         { name: "Human", color: semanticChartColors.secondary, values: human?.values || [] }
       ];
 
@@ -3060,54 +2890,6 @@
         throw new Error("Missing Imperva snapshot");
       }
       applyImpervaSnapshot(snapshot);
-    }
-
-    function applyImpervaAtoSnapshot(snapshot) {
-      const normalized = normalizeSnapshotRange(snapshot);
-      const config = chartData["imperva-ato"];
-      const sourceSeries = normalized.series[0];
-      const annualTotals = normalized.xValues.reduce((totals, label, index) => {
-        const year = `${label}`.slice(0, 4);
-        const value = Number(sourceSeries?.values?.[index]);
-        if (!year || !Number.isFinite(value)) return totals;
-        totals[year] = (totals[year] || 0) + value;
-        return totals;
-      }, {});
-      const years = Object.keys(annualTotals).sort();
-
-      config.xValues = years;
-      config.axisValueFormat = normalized.axisValueFormat;
-      config.tooltipValueFormat = normalized.tooltipValueFormat;
-      config.series = [{
-        name: "Total recorded attacks",
-        color: semanticChartColors.primary,
-        values: years.map((year) => annualTotals[year])
-      }];
-
-      const atoChangeEl = document.querySelector('[data-dynamic="imperva-ato-change"]');
-      if (atoChangeEl && years.length) {
-        const baseYear = "2022";
-        const latestYear = years[years.length - 1];
-        const baseValue = annualTotals[baseYear];
-        const latestValue = annualTotals[latestYear];
-        if (baseValue > 0 && Number.isFinite(latestValue)) {
-          const change = ((latestValue - baseValue) / baseValue) * 100;
-          atoChangeEl.textContent = formatMetricValue(change, "percent1");
-        }
-      }
-
-      const tooltipEl = document.querySelector('[data-chart="imperva-ato"]')?.closest(".card")?.querySelector(".tooltip");
-      if (tooltipEl) {
-        tooltipEl.innerHTML = impervaAtoTooltipHtml(normalized);
-      }
-    }
-
-    async function loadImpervaAtoSnapshot() {
-      const snapshot = window.__IMPERVA_ATO_SNAPSHOT__;
-      if (!snapshot) {
-        throw new Error("Missing Imperva ATO snapshot");
-      }
-      applyImpervaAtoSnapshot(snapshot);
     }
 
     function applyAiContentMetaReviewSnapshot(snapshot) {
@@ -3200,12 +2982,7 @@
       const tooltipEl = document.querySelector('[data-chart="ai-content-meta-review"]')?.closest(".card")?.querySelector(".tooltip");
       if (tooltipEl) {
         tooltipEl.innerHTML = aiContentMetaReviewTooltipHtml({
-          title: "AI content share meta review",
-          description: "This is the deep research scatter. Each dot is a published estimate we judged relevant enough to the core question. It matters because there is no single authoritative dataset, so the shape of the evidence matters more than any one number.",
-          source: "Curated AI deep research using a guided source-review process.",
-          lastRefreshed: snapshot.lastRefreshed || "",
-          method: "Annual scatter from published estimates; ranges are plotted at their midpoints, and the line shows the annual average of the included estimates.",
-          caveats: "The estimates come from different studies and content sets, so the levels are noisy and not perfectly comparable."
+          lastRefreshed: snapshot.lastRefreshed || ""
         });
       }
     }
@@ -3234,14 +3011,55 @@
       });
     }
 
-    function buildWebSampleMovingAverageSnapshot(snapshot, windowSize = 3) {
+    function buildExclusiveWebSampleSnapshot(snapshot) {
+      const sourceSeries = snapshot.series || [];
+      const aiSeries = sourceSeries.find((series) => series.name === "AI share" || series.name === "AI") || sourceSeries[0];
+      const mixedSeries = sourceSeries.find((series) => series.name === "Mixed share" || series.name === "Mixed");
+      const influencedSeries = sourceSeries.find((series) => series.name === "AI-influenced share");
+      const aiValues = aiSeries?.values || [];
+      const mixedValues = mixedSeries?.values || (influencedSeries?.values || []).map((value, index) => {
+        const influenced = Number(value);
+        const ai = Number(aiValues[index]);
+        if (!Number.isFinite(influenced) || !Number.isFinite(ai)) return null;
+        return Number(Math.max(0, influenced - ai).toFixed(2));
+      });
+
       return {
         ...snapshot,
+        periods: (snapshot.periods || []).map((period) => {
+          if (Number.isFinite(Number(period.mixed_share))) return period;
+          const aiShare = Number(period.ai_share);
+          const influencedShare = Number(period.ai_influenced_share);
+          if (!Number.isFinite(aiShare) || !Number.isFinite(influencedShare)) return period;
+          return {
+            ...period,
+            mixed_share: Number(Math.max(0, influencedShare - aiShare).toFixed(2))
+          };
+        }),
+        series: [
+          {
+            ...(aiSeries || {}),
+            name: "AI share",
+            values: aiValues
+          },
+          {
+            ...(mixedSeries || influencedSeries || {}),
+            name: "Mixed share",
+            values: mixedValues
+          }
+        ].filter((series) => Array.isArray(series.values) && series.values.length)
+      };
+    }
+
+    function buildWebSampleMovingAverageSnapshot(snapshot, windowSize = 6) {
+      const exclusiveSnapshot = buildExclusiveWebSampleSnapshot(snapshot);
+      return {
+        ...exclusiveSnapshot,
         title: "Monthly AI share in the web sample",
-        description: "This tracks a trailing 3-month moving average of the monthly share of sampled article-style web pages classified as AI and AI-influenced.",
-        method: "The chart plots trailing 3-month moving averages built from the monthly lite series. Each underlying month comes from a deterministic random 1,000-page subset drawn from the full prepared 5,000-page article-style Common Crawl sample.",
-        caveats: "This is a stable sample of article-style open-web pages, not the whole internet. The line uses a trailing 3-month moving average, so turning points appear more gradually.",
-        series: (snapshot.series || []).map((series) => ({
+        description: "This tracks trailing 6-month moving averages of sampled article-style web pages classified as AI or Mixed. The two lines are exclusive.",
+        method: "The chart plots trailing 6-month moving averages built from the monthly lite series. Each underlying month comes from a deterministic random 1,000-page subset drawn from the full prepared 5,000-page article-style Common Crawl sample.",
+        caveats: "This is a stable sample of article-style open-web pages, not the whole internet. The lines use a trailing 6-month moving average, so turning points appear more gradually.",
+        series: (exclusiveSnapshot.series || []).map((series) => ({
           ...series,
           values: trailingMovingAverage(series.values || [], windowSize)
         }))
@@ -3249,7 +3067,7 @@
     }
 
     function applyWebSampleDashboardSnapshot(snapshot) {
-      const averagedSnapshot = buildWebSampleMovingAverageSnapshot(snapshot, 3);
+      const averagedSnapshot = buildWebSampleMovingAverageSnapshot(snapshot, 6);
       const config = chartData["web-sample-classifications"];
       config.xValues = averagedSnapshot.xValues || [];
       config.axisValueFormat = averagedSnapshot.axisValueFormat || "percent1";
@@ -3263,7 +3081,7 @@
       config.pointMode = "hover";
 
       const strongSeries = (averagedSnapshot.series || []).find((series) => series.name === "AI share") || averagedSnapshot.series?.[0];
-      const partialSeries = (averagedSnapshot.series || []).find((series) => series.name === "AI-influenced share") || averagedSnapshot.series?.[1];
+      const partialSeries = (averagedSnapshot.series || []).find((series) => series.name === "Mixed share") || averagedSnapshot.series?.[1];
       const ratioEl = document.querySelector('[data-dynamic="web-sample-partial-ratio"]');
       if (ratioEl && strongSeries?.values?.length && partialSeries?.values?.length) {
         for (let index = Math.min(strongSeries.values.length, partialSeries.values.length) - 1; index >= 0; index -= 1) {
@@ -3624,7 +3442,6 @@
       document.querySelector(".hero-side")?.classList.add("is-ready");
       await loadCloudflareSnapshot();
       await loadImpervaSnapshot();
-      await loadImpervaAtoSnapshot();
       await loadWikipediaSnapshot();
       await loadStackOverflowSnapshot();
       await loadAiContentMetaReviewSnapshot();

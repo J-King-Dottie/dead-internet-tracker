@@ -48,7 +48,10 @@ def load_labels(path: Path) -> dict[str, str]:
 def build_snapshot(period_rows: list[dict], summary_rows: list[dict], model_name: str) -> dict:
     periods = [row["period"] for row in summary_rows]
     ai_shares = [row["ai_share"] for row in summary_rows]
-    ai_influenced_shares = [row["ai_influenced_share"] for row in summary_rows]
+    mixed_shares = [
+        row.get("mixed_share", round(row["ai_influenced_share"] - row["ai_share"], 2))
+        for row in summary_rows
+    ]
     now = datetime.now(timezone.utc).date().isoformat()
     return {
         "chartKey": "web-sample-ai-human",
@@ -78,9 +81,9 @@ def build_snapshot(period_rows: list[dict], summary_rows: list[dict], model_name
                 "values": ai_shares,
             },
             {
-                "name": "AI-influenced share",
+                "name": "Mixed share",
                 "color": "#8be9fd",
-                "values": ai_influenced_shares,
+                "values": mixed_shares,
             },
         ],
         "periods": summary_rows,
@@ -125,6 +128,7 @@ def main() -> None:
     human_count = sum(1 for row in page_rows if row["classification"] == "Human")
     sample_size = ai_count + mixed_count + human_count
     ai_share = round(ai_count / sample_size * 100.0, 2)
+    mixed_share = round(mixed_count / sample_size * 100.0, 2)
     ai_influenced_share = round((ai_count + mixed_count) / sample_size * 100.0, 2)
 
     summary_row = {
@@ -134,6 +138,7 @@ def main() -> None:
         "mixed_count": mixed_count,
         "human_count": human_count,
         "ai_share": ai_share,
+        "mixed_share": mixed_share,
         "ai_influenced_share": ai_influenced_share,
         "sample_source": page_rows[0]["sample_source"],
         "dropped_count": prepared.get("droppedCount", 0),
