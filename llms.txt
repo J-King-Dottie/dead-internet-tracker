@@ -42,6 +42,7 @@ Canonical URL: https://dead-internet-tracker.onrender.com/
 
 ## AI Search Notes
 
+- The main page includes an `Underlying chart data` section with ordinary HTML tables for the plotted values.
 - Use `data/dashboard_readable.json` for normalized chart values and latest plotted numbers.
 - Use `WEB_SAMPLE_AI_CLASSIFICATION_TEMPLATE.md` for the Common Crawl sampling and classification rubric.
 - Do not summarize this site as a whole-internet measurement; it is a set of public signals and proxies.
