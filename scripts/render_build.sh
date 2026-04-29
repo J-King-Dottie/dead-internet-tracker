@@ -44,4 +44,31 @@ for file in "${files[@]}"; do
   cp "$file" "$public_dir/$file"
 done
 
+python3 - <<'PY'
+import json
+from pathlib import Path
+
+index_path = Path("public/index.html")
+data_path = Path("data/dashboard_readable.json")
+
+dashboard_data = json.loads(data_path.read_text(encoding="utf-8"))
+payload = json.dumps(dashboard_data, ensure_ascii=False, separators=(",", ":")).replace(
+    "</script>",
+    "<\\/script>",
+)
+block = (
+    '  <script type="application/json" id="dashboard-readable-data">\n'
+    f"{payload}\n"
+    "  </script>\n"
+)
+
+html = index_path.read_text(encoding="utf-8")
+if 'id="dashboard-readable-data"' in html:
+    raise SystemExit("dashboard-readable-data is already embedded in public/index.html")
+if "</head>" not in html:
+    raise SystemExit("Cannot embed dashboard-readable-data because </head> was not found")
+
+index_path.write_text(html.replace("</head>", block + "</head>", 1), encoding="utf-8")
+PY
+
 echo "Static dashboard build prepared in $public_dir."
