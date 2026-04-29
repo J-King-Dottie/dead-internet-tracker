@@ -768,6 +768,37 @@
       color: var(--accent-cyan);
     }
 
+    .ai-key-metrics {
+      width: min(calc(100% - (var(--page-gutter) * 2)), var(--max-width));
+      margin: clamp(10px, 1.4vw, 16px) auto 0;
+      padding: clamp(10px, 1.4vw, 14px) 0 0;
+      border-top: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: clamp(0.68rem, 0.78vw, 0.76rem);
+      line-height: 1.5;
+      color: var(--copy-tertiary);
+    }
+
+    .ai-key-metrics h2 {
+      margin: 0 0 0.35rem;
+      font-size: 0.72rem;
+      color: var(--copy-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .ai-key-metrics p {
+      margin: 0 0 0.45rem;
+    }
+
+    .ai-key-metrics ul {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.2rem 1rem;
+      margin: 0;
+      padding-left: 1rem;
+    }
+
     .page-footer-note {
       width: 100%;
       margin: 0 auto;
@@ -1329,6 +1360,10 @@
         grid-template-columns: minmax(0, 1fr);
       }
 
+      .ai-key-metrics ul {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
       .hero,
       .card {
         padding: var(--content-inset);
@@ -1428,6 +1463,23 @@
       }
     }
   </style></head><body>
+  <!-- DASHBOARD_KEY_METRICS_START -->
+  <section class="ai-key-metrics" id="ai-key-metrics" aria-labelledby="ai-key-metrics-title">
+    <h2 id="ai-key-metrics-title">Key metrics</h2>
+    <p>Current snapshot of the Dead Internet Tracker. These values are generated from the same local snapshots as the charts and are placed near the top of the HTML for search engines and AI readers.</p>
+    <ul>
+      <li>Published AI-content estimates: latest included estimates average about 23.87% in 2026, but sources vary across content types.</li>
+      <li>Web sample: strong AI signal is 7.88% in 2026-02; partial AI signal is 9.45% in 2026-02 across sampled article-style Common Crawl pages.</li>
+      <li>AI bot traffic: Cloudflare&#x27;s latest monthly snapshot puts AI bots at 8.38% of total observed traffic in 2026-03.</li>
+      <li>High-value site traffic: automated traffic reached 51% in 2024 on security-focused sites such as banking.</li>
+      <li>Wikipedia activity: English Wikipedia had 95,470 editors in 2026-03, including 32,202 active editors.</li>
+      <li>Stack Overflow activity: Stack Overflow had 3,380 new questions in 2026-03, down sharply from 2020 levels.</li>
+    </ul>
+  </section>
+  <!-- DASHBOARD_KEY_METRICS_END -->
+
+
+
   <main class="page">
     <section class="hero">
       <div class="hero-top">
@@ -1677,6 +1729,10 @@
 
     </section>
   </main>
+
+
+
+
 
 
   <!-- DASHBOARD_READABLE_SUMMARY_START -->
