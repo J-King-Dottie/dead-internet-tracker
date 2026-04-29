@@ -38,7 +38,6 @@ Canonical URL: https://dead-internet-tracker.onrender.com/
 - [Stack Overflow activity](https://dead-internet-tracker.onrender.com/data/stackoverflow/stackoverflow.json)
 - [Imperva traffic profile](https://dead-internet-tracker.onrender.com/data/imperva/imperva.json)
 - [AI content meta-review](https://dead-internet-tracker.onrender.com/data/ai-content-meta-review/ai_content_meta_review.json)
-- [Common Crawl web sample chart snapshot](https://dead-internet-tracker.onrender.com/data/web-sample/web_sample_dashboard_snapshot.json)
 - [Common Crawl lite web sample summary](https://dead-internet-tracker.onrender.com/data/web-sample-lite/web_sample_lite_summary.json)
 
 ## AI Search Notes

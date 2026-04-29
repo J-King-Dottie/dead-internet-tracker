@@ -28,8 +28,6 @@ files=(
   "data/stackoverflow/stackoverflow.js"
   "data/ai-content-meta-review/ai_content_meta_review.json"
   "data/ai-content-meta-review/ai_content_meta_review.js"
-  "data/web-sample/web_sample_dashboard_snapshot.json"
-  "data/web-sample/web_sample_dashboard_snapshot.js"
   "data/web-sample-lite/web_sample_lite_summary.json"
   "data/web-sample-lite/web_sample_lite_summary.js"
 )
