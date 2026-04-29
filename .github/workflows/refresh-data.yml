@@ -2,20 +2,42 @@ name: Refresh Data Snapshots
 
 on:
   workflow_dispatch:
+    inputs:
+      target:
+        description: "Which refresh job to run"
+        required: true
+        default: "monthly-api"
+        type: choice
+        options:
+          - monthly-api
+          - ai-content-meta-review
+          - web-sample-lite
+          - all
   schedule:
-    # Monthly API-backed charts.
+    # Monthly API-backed charts: Stack Exchange is near real time, Cloudflare
+    # has daily data, and Wikimedia publishes monthly buckets. Running on the
+    # 2nd gives the prior completed month time to settle without adding much lag.
     # GitHub Actions cron runs in UTC.
     - cron: "15 10 2 * *"
-    # Weekly recent-source sweep for the AI content meta-review.
-    # 09:30 UTC is overnight in the US.
+    # Weekly recent-source sweep for the AI content meta-review. This is not tied
+    # to a fixed monthly API bucket, so a weekly cadence is enough to catch new
+    # public research without hammering sources.
     - cron: "30 9 * * 1"
+    # Weekly Common Crawl availability probe. The first step only checks the live
+    # collection list; AWS/OpenAI work runs only when a crawl exists that starts
+    # after the next missing target month ends.
+    - cron: "15 13 * * 3"
 
 permissions:
   contents: write
 
+concurrency:
+  group: refresh-data-snapshots
+  cancel-in-progress: false
+
 jobs:
   refresh-monthly-api-snapshots:
-    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '15 10 2 * *'
+    if: github.event.schedule == '15 10 2 * *' || (github.event_name == 'workflow_dispatch' && (github.event.inputs.target == 'monthly-api' || github.event.inputs.target == 'all'))
     runs-on: ubuntu-latest
 
     steps:
@@ -65,7 +87,7 @@ jobs:
           git push
 
   refresh-ai-content-meta-review:
-    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '30 9 * * 1'
+    if: github.event.schedule == '30 9 * * 1' || (github.event_name == 'workflow_dispatch' && (github.event.inputs.target == 'ai-content-meta-review' || github.event.inputs.target == 'all'))
     runs-on: ubuntu-latest
 
     steps:
@@ -97,4 +119,87 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/ai-content-meta-review
           git commit -m "Refresh AI content meta-review"
+          git push
+
+  refresh-web-sample-lite:
+    if: github.event.schedule == '15 13 * * 3' || (github.event_name == 'workflow_dispatch' && (github.event.inputs.target == 'web-sample-lite' || github.event.inputs.target == 'all'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check Common Crawl availability
+        id: web_sample_check
+        run: python scripts/refresh_web_sample_lite_month.py --check-only
+
+      - name: Install AWS dependencies
+        if: steps.web_sample_check.outputs.available == 'true'
+        run: pip install -r requirements-aws.txt
+
+      - name: Write local env file for refresh scripts
+        if: steps.web_sample_check.outputs.available == 'true'
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          ATHENA_REGION: ${{ secrets.ATHENA_REGION }}
+          ATHENA_RESULTS_S3: ${{ secrets.ATHENA_RESULTS_S3 }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          test -n "$AWS_ACCESS_KEY_ID"
+          test -n "$AWS_SECRET_ACCESS_KEY"
+          test -n "$ATHENA_REGION"
+          test -n "$ATHENA_RESULTS_S3"
+          test -n "$OPENAI_API_KEY"
+          cat > .env <<EOF
+          AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+          AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+          ATHENA_REGION=$ATHENA_REGION
+          ATHENA_RESULTS_S3=$ATHENA_RESULTS_S3
+          OPENAI_API_KEY=$OPENAI_API_KEY
+          EOF
+
+      - name: Ensure Common Crawl Athena table exists
+        if: steps.web_sample_check.outputs.available == 'true'
+        run: python scripts/setup_commoncrawl_athena.py
+
+      - name: Refresh web sample lite month
+        if: steps.web_sample_check.outputs.available == 'true'
+        env:
+          WEB_SAMPLE_CLASSIFIER_MODEL: ${{ vars.WEB_SAMPLE_CLASSIFIER_MODEL || 'gpt-5-mini' }}
+        run: |
+          python scripts/refresh_web_sample_lite_month.py \
+            --model "$WEB_SAMPLE_CLASSIFIER_MODEL"
+
+      - name: Remove local env file
+        if: always()
+        run: rm -f .env
+
+      - name: Build static output
+        if: steps.web_sample_check.outputs.available == 'true'
+        run: bash scripts/render_build.sh
+
+      - name: Commit and push if web sample changed
+        if: steps.web_sample_check.outputs.available == 'true'
+        run: |
+          if git diff --quiet -- data/web-sample-lite data/dashboard_readable.json; then
+            echo "No web sample changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/web-sample-lite/web_sample_lite_summary.json \
+            data/web-sample-lite/web_sample_lite_summary.js \
+            data/web-sample-lite/web_sample_lite_setup_range.json \
+            data/dashboard_readable.json
+          git commit -m "Refresh web sample lite"
           git push
