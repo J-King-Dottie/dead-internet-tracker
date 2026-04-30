@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -13,8 +14,6 @@ DEFAULT_DATA_PATH = ROOT / "data" / "dashboard_readable.json"
 
 BODY_START = "  <!-- DASHBOARD_READABLE_SUMMARY_START -->"
 BODY_END = "  <!-- DASHBOARD_READABLE_SUMMARY_END -->"
-KEY_START = "  <!-- DASHBOARD_KEY_METRICS_START -->"
-KEY_END = "  <!-- DASHBOARD_KEY_METRICS_END -->"
 HEAD_START = "  <!-- DASHBOARD_READABLE_DATA_START -->"
 HEAD_END = "  <!-- DASHBOARD_READABLE_DATA_END -->"
 
@@ -73,69 +72,88 @@ def format_number(value: Any) -> str:
     return f"{numeric:.2f}".rstrip("0").rstrip(".")
 
 
-def value_with_period(point: dict[str, Any] | None, suffix: str = "") -> str:
-    if not point:
-        return "not available"
-    value = point.get("value")
-    period = point.get("period") or point.get("year")
-    return f"{format_number(value)}{suffix} in {period}"
+def percent0(value: Any) -> str:
+    return f"{round(float(value))}%"
 
 
-def key_metrics_sentence(chart: dict[str, Any]) -> str:
-    key = chart.get("chartKey")
-    if key == "ai-content-meta-review":
-        average_series = next((series for series in chart.get("series") or [] if series.get("name") == "Annual average"), {})
-        latest_average = None
-        for point in reversed(average_series.get("values") or []):
-            if isinstance(point, dict) and point.get("value") not in {None, ""}:
-                latest_average = point
-                break
-        return f"Published AI-content estimates: latest included estimates average about {value_with_period(latest_average, '%')}, but sources vary across content types."
-
-    if key == "web-sample-classifications":
-        strong = value_with_period(latest_point(chart, "Strong AI signal"), "%")
-        partial = value_with_period(latest_point(chart, "Partial AI signal"), "%")
-        return f"Web sample: strong AI signal is {strong}; partial AI signal is {partial} across sampled article-style Common Crawl pages."
-
-    if key == "traffic-bot-human":
-        point = latest_point(chart, "AI bots")
-        if point:
-            return f"AI bot traffic: Cloudflare's latest monthly snapshot puts AI bots at {format_number(point.get('value'))}% of total observed traffic in {point.get('period')}."
-        return "AI bot traffic: latest Cloudflare AI bot traffic value is not available."
-
-    if key == "imperva-traffic":
-        automated = value_with_period(latest_point(chart, "Automated traffic"), "%")
-        return f"High-value site traffic: automated traffic reached {automated} on security-focused sites such as banking."
-
-    if key == "wikipedia":
-        all_point = latest_point(chart, "All editors (1+)")
-        active_point = latest_point(chart, "Active editors (5+)")
-        if all_point and active_point:
-            return f"Wikipedia activity: English Wikipedia had {format_number(all_point.get('value'))} editors in {all_point.get('period')}, including {format_number(active_point.get('value'))} active editors."
-        return "Wikipedia activity: latest editor values are not available."
-
-    if key == "stack-overflow":
-        point = latest_point(chart, "Total new questions asked")
-        if point:
-            return f"Stack Overflow activity: Stack Overflow had {format_number(point.get('value'))} new questions in {point.get('period')}, down sharply from 2020 levels."
-        return "Stack Overflow activity: latest question count is not available."
-
-    return f"{chart.get('title', 'Chart')}: {latest_values_text(chart)}."
+def percent1(value: Any) -> str:
+    return f"{float(value):.1f}%"
 
 
-def build_key_metrics_block(data: dict[str, Any]) -> str:
-    lines = [
-        KEY_START,
-        '  <section class="ai-key-metrics" id="ai-key-metrics" aria-labelledby="ai-key-metrics-title">',
-        '    <h2 id="ai-key-metrics-title">Key metrics</h2>',
-        "    <p>This machine-readable summary is included in the HTML for search engines and AI readers. It is visually hidden because the public page is designed as a curated visual dashboard for human readers, while automated readers benefit from a short plain-text summary and simple HTML tables. The hidden text does not add claims beyond the visible dashboard; it restates the same chart data in a simpler format.</p>",
-        "    <p>Current snapshot of the Dead Internet Tracker. These values are generated from the same local snapshots as the charts and are placed near the top of the HTML for search engines and AI readers.</p>",
-        "    <ul>",
+def latest_series_point(chart: dict[str, Any], series_name: str) -> dict[str, Any] | None:
+    point = latest_point(chart, series_name)
+    if point:
+        return point
+    series = next((item for item in chart.get("series") or [] if item.get("name") == series_name), {})
+    for row in reversed(series.get("values") or []):
+        if isinstance(row, dict) and row.get("value") not in {None, ""}:
+            return row
+    return None
+
+
+def chart_by_key(data: dict[str, Any], key: str) -> dict[str, Any]:
+    return next((chart for chart in data.get("charts") or [] if chart.get("chartKey") == key), {})
+
+
+def dynamic_values(data: dict[str, Any]) -> dict[str, str]:
+    values: dict[str, str] = {}
+
+    ai_content = chart_by_key(data, "ai-content-meta-review")
+    annual_average = next((series for series in ai_content.get("series") or [] if series.get("name") == "Annual average"), {})
+    latest_2026_average = next(
+        (
+            point.get("value")
+            for point in annual_average.get("values") or []
+            if isinstance(point, dict) and str(point.get("year")) == "2026" and point.get("value") not in {None, ""}
+        ),
+        None,
+    )
+    if latest_2026_average is not None:
+        values["ai-content-2026-average"] = percent0(latest_2026_average)
+
+    web_sample = chart_by_key(data, "web-sample-classifications")
+    strong = latest_series_point(web_sample, "Strong AI signal")
+    partial = latest_series_point(web_sample, "Partial AI signal")
+    if strong:
+        values["web-sample-latest-strong-share"] = percent1(strong.get("value"))
+    if partial:
+        values["web-sample-latest-partial-share"] = percent1(partial.get("value"))
+
+    cloudflare = chart_by_key(data, "traffic-bot-human")
+    ai_bots = latest_series_point(cloudflare, "AI bots")
+    if ai_bots:
+        values["cloudflare-latest-ai-bot-share"] = percent0(ai_bots.get("value"))
+
+    imperva = chart_by_key(data, "imperva-traffic")
+    automated = latest_series_point(imperva, "Automated traffic")
+    if automated:
+        values["imperva-latest-automated-share"] = percent0(automated.get("value"))
+
+    wikipedia = chart_by_key(data, "wikipedia")
+    all_editors = next((series for series in wikipedia.get("series") or [] if series.get("name") == "All editors (1+)"), {})
+    editor_values = [
+        point for point in all_editors.get("values") or []
+        if isinstance(point, dict) and point.get("value") not in {None, ""}
     ]
-    for chart in data.get("charts") or []:
-        lines.append(f"      <li>{esc(key_metrics_sentence(chart))}</li>")
-    lines.extend(["    </ul>", "  </section>", KEY_END])
-    return "\n".join(lines)
+    peak_2020 = max((float(point["value"]) for point in editor_values if str(point.get("period")).startswith("2020-")), default=None)
+    latest_editor_value = float(editor_values[-1]["value"]) if editor_values else None
+    if peak_2020 and latest_editor_value is not None:
+        values["wikipedia-editor-decline"] = percent0(((peak_2020 - latest_editor_value) / peak_2020) * 100)
+
+    stack_overflow = chart_by_key(data, "stack-overflow")
+    questions = latest_series_point(stack_overflow, "Total new questions asked")
+    if questions:
+        values["stackoverflow-latest-questions"] = format_number(questions.get("value"))
+
+    return values
+
+
+def fill_dynamic_spans(html_text: str, data: dict[str, Any]) -> str:
+    values = dynamic_values(data)
+    for key, value in values.items():
+        pattern = re.compile(rf'(<span data-dynamic="{re.escape(key)}">)(.*?)(</span>)', re.DOTALL)
+        html_text = pattern.sub(rf"\g<1>{esc(value)}\g<3>", html_text)
+    return html_text
 
 
 def chart_table(chart: dict[str, Any]) -> str:
@@ -233,19 +251,12 @@ def insert_body_block(html_text: str, block: str) -> str:
     return html_text.replace(marker, block + "\n" + marker, 1)
 
 
-def insert_key_metrics_block(html_text: str, block: str) -> str:
-    html_text = remove_generated_block(html_text, KEY_START, KEY_END)
-    marker = "<body>"
-    if marker not in html_text:
-        raise SystemExit(f"Cannot insert key metrics because {marker} was not found.")
-    return html_text.replace(marker, marker + "\n" + block, 1)
-
-
 def embed(index_path: Path, data_path: Path) -> None:
     data = json.loads(data_path.read_text(encoding="utf-8"))
     html_text = index_path.read_text(encoding="utf-8")
     html_text = remove_generated_block(html_text, HEAD_START, HEAD_END)
-    html_text = insert_key_metrics_block(html_text, build_key_metrics_block(data))
+    html_text = remove_generated_block(html_text, "  <!-- DASHBOARD_KEY_METRICS_START -->", "  <!-- DASHBOARD_KEY_METRICS_END -->")
+    html_text = fill_dynamic_spans(html_text, data)
     html_text = insert_body_block(html_text, build_body_block(data))
     index_path.write_text(html_text, encoding="utf-8")
 
