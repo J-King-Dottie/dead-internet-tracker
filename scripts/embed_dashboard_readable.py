@@ -128,6 +128,7 @@ def build_key_metrics_block(data: dict[str, Any]) -> str:
         KEY_START,
         '  <section class="ai-key-metrics" id="ai-key-metrics" aria-labelledby="ai-key-metrics-title">',
         '    <h2 id="ai-key-metrics-title">Key metrics</h2>',
+        "    <p>This machine-readable summary is included in the HTML for search engines and AI readers. It is visually hidden because the public page is designed as a curated visual dashboard for human readers, while automated readers benefit from a short plain-text summary and simple HTML tables. The hidden text does not add claims beyond the visible dashboard; it restates the same chart data in a simpler format.</p>",
         "    <p>Current snapshot of the Dead Internet Tracker. These values are generated from the same local snapshots as the charts and are placed near the top of the HTML for search engines and AI readers.</p>",
         "    <ul>",
     ]
