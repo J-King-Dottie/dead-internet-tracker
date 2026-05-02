@@ -3,7 +3,7 @@ window.__WIKIPEDIA_SNAPSHOT__ = {
   "title": "Wikipedia activity",
   "description": "This tracks monthly human editors on English Wikipedia content pages. It matters because it shows whether people are still doing sustained public knowledge work.",
   "source": "Wikimedia editor analytics for en.wikipedia.org content pages",
-  "lastRefreshed": "2026-04-21",
+  "lastRefreshed": "2026-05-02",
   "method": "Active editors are users making 5 or more edits in a month. The chart shows observed monthly counts only.",
   "caveats": "This is English Wikipedia only, not all Wikipedias. It measures editor participation, not article quality or total knowledge output.",
   "xValues": [

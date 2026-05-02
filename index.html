@@ -1672,7 +1672,7 @@
   <div class="card-section card-section--takeaway">
     <div class="card-header">
       <div class="card-title-wrap">
-        <h3>Some parts of the internet are already dead. Stack Overflow had <span data-dynamic="stackoverflow-latest-questions">3,380</span> new questions in the latest month.</h3>
+        <h3>Some parts of the internet are already dead. Stack Overflow had <span data-dynamic="stackoverflow-latest-questions">3,066</span> new questions in the latest month.</h3>
       </div>
       <div class="info">
         <button type="button" aria-label="About Stack Overflow activity">i</button>
@@ -1709,6 +1709,7 @@
 
 
 
+
   <!-- DASHBOARD_READABLE_SUMMARY_START -->
   <section class="agent-readable-data" id="underlying-data" aria-labelledby="underlying-data-title">
     <h2 id="underlying-data-title">Underlying chart data</h2>
@@ -1716,10 +1717,10 @@
     <ul>
       <li><strong>AI content share meta review</strong>: Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line. Latest values: Published estimates: 33.3 in 2026; Annual average: 23.8667 in 2026. Source: Curated AI deep research using a guided source-review process..</li>
       <li><strong>Monthly AI share in the web sample</strong>: Trailing 6-month moving averages of sampled article-style web pages classified as strong AI signal or partial AI signal. The two lines are exclusive. Latest values: Strong AI signal: 7.88 in 2026-02; Partial AI signal: 9.45 in 2026-02. Source: Common Crawl monthly samples classified under a research-guided rubric.</li>
-      <li><strong>Estimated AI bot share of total traffic</strong>: This estimates how much of total web traffic is AI bots. It matters because it gets closer to the machine share of web traversal than general bot traffic does. Latest values: AI bots: 8.38 in 2026-03. Source: Cloudflare Radar bot share and bot category time series.</li>
+      <li><strong>Estimated AI bot share of total traffic</strong>: This estimates how much of total web traffic is AI bots. It matters because it gets closer to the machine share of web traversal than general bot traffic does. Latest values: AI bots: 8.48 in 2026-04. Source: Cloudflare Radar bot share and bot category time series.</li>
       <li><strong>Imperva traffic profile</strong>: This tracks Imperva&#x27;s published traffic split over time. For this chart, automated traffic means good bot plus bad bot. It matters because it shows automation overtaking humans in a large observed slice of the web. Latest values: Automated traffic: 51.0 in 2024; Human: 49.0 in 2024. Source: Imperva Bad Bot Report 2024 and 2025.</li>
       <li><strong>Wikipedia activity</strong>: This tracks monthly human editors on English Wikipedia content pages. It matters because it shows whether people are still doing sustained public knowledge work. Latest values: All editors (1+): 95470 in 2026-03; Active editors (5+): 32202 in 2026-03. Source: Wikimedia editor analytics for en.wikipedia.org content pages.</li>
-      <li><strong>Stack Overflow activity</strong>: This tracks monthly new questions on Stack Overflow. It matters because it shows whether people are still asking other people for help in public. Latest values: Total new questions asked: 3380 in 2026-03. Source: Stack Exchange API monthly question counts for Stack Overflow.</li>
+      <li><strong>Stack Overflow activity</strong>: This tracks monthly new questions on Stack Overflow. It matters because it shows whether people are still asking other people for help in public. Latest values: Total new questions asked: 3066 in 2026-04. Source: Stack Exchange API monthly question counts for Stack Overflow.</li>
     </ul>
     <div class="agent-data-charts">
       <section class="agent-data-chart">
@@ -1983,7 +1984,7 @@
         <p>This estimates how much of total web traffic is AI bots. It matters because it gets closer to the machine share of web traversal than general bot traffic does.</p>
         <p><strong>Source:</strong> Cloudflare Radar bot share and bot category time series</p>
         <p><strong>Source snapshot:</strong> data/cloudflare/cloudflare.json</p>
-        <p><strong>Last refreshed:</strong> 2026-04-21</p>
+        <p><strong>Last refreshed:</strong> 2026-05-02</p>
         <p><strong>Method:</strong> We estimate AI bot share by combining Cloudflare&#x27;s bot share of total traffic with its AI bot categories. The chart shows observed monthly values only.</p>
         <p><strong>Caveats:</strong> Crawlers learn from the internet. Search bots use it. Cloudflare sees a large but incomplete slice of the web, with weaker coverage in places like China. This tracks AI bot traffic, not all AI activity. AI search only appears separately from June 2025, so the measure gets better over time.</p>
       <div class="agent-data-table-wrap">
@@ -2011,6 +2012,7 @@
           <tr><td>AI bots</td><td>2026-01</td><td>6.58</td><td>percent1</td><td></td></tr>
           <tr><td>AI bots</td><td>2026-02</td><td>7.93</td><td>percent1</td><td></td></tr>
           <tr><td>AI bots</td><td>2026-03</td><td>8.38</td><td>percent1</td><td></td></tr>
+          <tr><td>AI bots</td><td>2026-04</td><td>8.48</td><td>percent1</td><td></td></tr>
           </tbody>
         </table>
       </div>
@@ -2048,7 +2050,7 @@
         <p>This tracks monthly human editors on English Wikipedia content pages. It matters because it shows whether people are still doing sustained public knowledge work.</p>
         <p><strong>Source:</strong> Wikimedia editor analytics for en.wikipedia.org content pages</p>
         <p><strong>Source snapshot:</strong> data/wikipedia/wikipedia.json</p>
-        <p><strong>Last refreshed:</strong> 2026-04-21</p>
+        <p><strong>Last refreshed:</strong> 2026-05-02</p>
         <p><strong>Method:</strong> Active editors are users making 5 or more edits in a month. The chart shows observed monthly counts only.</p>
         <p><strong>Caveats:</strong> This is English Wikipedia only, not all Wikipedias. It measures editor participation, not article quality or total knowledge output.</p>
       <div class="agent-data-table-wrap">
@@ -2216,7 +2218,7 @@
         <p>This tracks monthly new questions on Stack Overflow. It matters because it shows whether people are still asking other people for help in public.</p>
         <p><strong>Source:</strong> Stack Exchange API monthly question counts for Stack Overflow</p>
         <p><strong>Source snapshot:</strong> data/stackoverflow/stackoverflow.json</p>
-        <p><strong>Last refreshed:</strong> 2026-04-24</p>
+        <p><strong>Last refreshed:</strong> 2026-05-02</p>
         <p><strong>Method:</strong> Monthly question counts are pulled from the official Stack Exchange API using each month&#x27;s creation-date window. The chart shows observed monthly counts only.</p>
         <p><strong>Caveats:</strong> This is a public web proxy, not a measure of all problem-solving. This monthly feed currently covers questions asked, not answered-question counts.</p>
       <div class="agent-data-table-wrap">
@@ -2225,81 +2227,82 @@
             <tr><th>Series</th><th>Period</th><th>Value</th><th>Unit</th><th>Notes</th></tr>
           </thead>
           <tbody>
-          <tr><td>Total new questions asked</td><td>2020-01</td><td>146662</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2020-02</td><td>145112</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2020-03</td><td>155966</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2020-04</td><td>182915</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2020-05</td><td>186469</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2020-06</td><td>171911</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2020-07</td><td>166047</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2020-08</td><td>148359</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2020-09</td><td>141789</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2020-10</td><td>141820</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2020-11</td><td>134951</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2020-12</td><td>133922</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2021-01</td><td>139891</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2021-02</td><td>131700</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2021-03</td><td>148783</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2021-04</td><td>135899</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2021-05</td><td>133830</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2021-06</td><td>129017</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2021-07</td><td>124017</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2021-08</td><td>122115</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2021-09</td><td>119801</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2021-10</td><td>118924</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2021-11</td><td>119168</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2021-12</td><td>112190</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2022-01</td><td>119348</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2022-02</td><td>114024</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2022-03</td><td>123494</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2022-04</td><td>114256</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2022-05</td><td>116221</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2022-06</td><td>111527</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2022-07</td><td>110930</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2022-08</td><td>112948</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2022-09</td><td>103843</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2022-10</td><td>106220</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2022-11</td><td>109579</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2022-12</td><td>96620</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2023-01</td><td>97019</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2023-02</td><td>85866</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2023-03</td><td>87369</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2023-04</td><td>68631</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2023-05</td><td>66612</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2023-06</td><td>63731</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2023-07</td><td>62853</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2023-08</td><td>60190</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2023-09</td><td>52837</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2023-10</td><td>52428</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2023-11</td><td>50366</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2023-12</td><td>42416</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2024-01</td><td>47700</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2024-02</td><td>46057</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2024-03</td><td>44802</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2024-04</td><td>42472</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2024-05</td><td>40157</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2024-06</td><td>32014</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2024-07</td><td>31500</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2024-08</td><td>27863</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2024-09</td><td>24793</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2024-10</td><td>23219</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2024-11</td><td>20846</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2024-12</td><td>17971</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2025-01</td><td>18238</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2025-02</td><td>15565</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2025-03</td><td>15129</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2025-04</td><td>12349</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2025-05</td><td>11549</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2025-06</td><td>9195</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2025-07</td><td>7751</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2025-08</td><td>5837</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2025-09</td><td>6061</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2025-10</td><td>5370</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2025-11</td><td>5434</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2025-12</td><td>4247</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2026-01</td><td>3773</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2026-02</td><td>3217</td><td>compact</td><td></td></tr>
-          <tr><td>Total new questions asked</td><td>2026-03</td><td>3380</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2020-01</td><td>146655</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2020-02</td><td>145106</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2020-03</td><td>155956</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2020-04</td><td>182901</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2020-05</td><td>186463</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2020-06</td><td>171905</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2020-07</td><td>166041</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2020-08</td><td>148351</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2020-09</td><td>141781</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2020-10</td><td>141809</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2020-11</td><td>134948</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2020-12</td><td>133909</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2021-01</td><td>139880</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2021-02</td><td>131691</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2021-03</td><td>148775</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2021-04</td><td>135893</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2021-05</td><td>133822</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2021-06</td><td>129010</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2021-07</td><td>124004</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2021-08</td><td>122107</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2021-09</td><td>119796</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2021-10</td><td>118913</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2021-11</td><td>119157</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2021-12</td><td>112153</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2022-01</td><td>119335</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2022-02</td><td>113898</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2022-03</td><td>123411</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2022-04</td><td>114157</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2022-05</td><td>116217</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2022-06</td><td>111458</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2022-07</td><td>110881</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2022-08</td><td>112942</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2022-09</td><td>103840</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2022-10</td><td>106204</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2022-11</td><td>109572</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2022-12</td><td>96531</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2023-01</td><td>97018</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2023-02</td><td>85856</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2023-03</td><td>87361</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2023-04</td><td>68622</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2023-05</td><td>66607</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2023-06</td><td>63722</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2023-07</td><td>62847</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2023-08</td><td>60182</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2023-09</td><td>52825</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2023-10</td><td>52423</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2023-11</td><td>50358</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2023-12</td><td>42409</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2024-01</td><td>47697</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2024-02</td><td>46050</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2024-03</td><td>44794</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2024-04</td><td>42467</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2024-05</td><td>40150</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2024-06</td><td>32011</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2024-07</td><td>31493</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2024-08</td><td>27862</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2024-09</td><td>24789</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2024-10</td><td>23213</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2024-11</td><td>20841</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2024-12</td><td>17964</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2025-01</td><td>18232</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2025-02</td><td>15561</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2025-03</td><td>15126</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2025-04</td><td>11450</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2025-05</td><td>11487</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2025-06</td><td>9186</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2025-07</td><td>7746</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2025-08</td><td>5834</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2025-09</td><td>6056</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2025-10</td><td>5367</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2025-11</td><td>5431</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2025-12</td><td>4244</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2026-01</td><td>3767</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2026-02</td><td>3212</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2026-03</td><td>3286</td><td>compact</td><td></td></tr>
+          <tr><td>Total new questions asked</td><td>2026-04</td><td>3066</td><td>compact</td><td></td></tr>
           </tbody>
         </table>
       </div>

@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-04-30",
+  "generatedAt": "2026-05-02",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -2474,7 +2474,7 @@
       "description": "This estimates how much of total web traffic is AI bots. It matters because it gets closer to the machine share of web traversal than general bot traffic does.",
       "source": "Cloudflare Radar bot share and bot category time series",
       "sourceSnapshot": "data/cloudflare/cloudflare.json",
-      "lastRefreshed": "2026-04-21",
+      "lastRefreshed": "2026-05-02",
       "method": "We estimate AI bot share by combining Cloudflare's bot share of total traffic with its AI bot categories. The chart shows observed monthly values only.",
       "caveats": "Crawlers learn from the internet. Search bots use it. Cloudflare sees a large but incomplete slice of the web, with weaker coverage in places like China. This tracks AI bot traffic, not all AI activity. AI search only appears separately from June 2025, so the measure gets better over time.",
       "xValues": [
@@ -2496,7 +2496,8 @@
         "2025-12",
         "2026-01",
         "2026-02",
-        "2026-03"
+        "2026-03",
+        "2026-04"
       ],
       "series": [
         {
@@ -2578,6 +2579,10 @@
             {
               "period": "2026-03",
               "value": 8.38
+            },
+            {
+              "period": "2026-04",
+              "value": 8.48
             }
           ],
           "color": "#ff79c6"
@@ -2585,8 +2590,8 @@
       ],
       "latestValues": {
         "AI bots": {
-          "period": "2026-03",
-          "value": 8.38
+          "period": "2026-04",
+          "value": 8.48
         }
       }
     },
@@ -2677,7 +2682,7 @@
       "description": "This tracks monthly human editors on English Wikipedia content pages. It matters because it shows whether people are still doing sustained public knowledge work.",
       "source": "Wikimedia editor analytics for en.wikipedia.org content pages",
       "sourceSnapshot": "data/wikipedia/wikipedia.json",
-      "lastRefreshed": "2026-04-21",
+      "lastRefreshed": "2026-05-02",
       "method": "Active editors are users making 5 or more edits in a month. The chart shows observed monthly counts only.",
       "caveats": "This is English Wikipedia only, not all Wikipedias. It measures editor participation, not article quality or total knowledge output.",
       "xValues": [
@@ -3390,7 +3395,7 @@
       "description": "This tracks monthly new questions on Stack Overflow. It matters because it shows whether people are still asking other people for help in public.",
       "source": "Stack Exchange API monthly question counts for Stack Overflow",
       "sourceSnapshot": "data/stackoverflow/stackoverflow.json",
-      "lastRefreshed": "2026-04-24",
+      "lastRefreshed": "2026-05-02",
       "method": "Monthly question counts are pulled from the official Stack Exchange API using each month's creation-date window. The chart shows observed monthly counts only.",
       "caveats": "This is a public web proxy, not a measure of all problem-solving. This monthly feed currently covers questions asked, not answered-question counts.",
       "xValues": [
@@ -3468,7 +3473,8 @@
         "2025-12",
         "2026-01",
         "2026-02",
-        "2026-03"
+        "2026-03",
+        "2026-04"
       ],
       "series": [
         {
@@ -3477,303 +3483,307 @@
           "values": [
             {
               "period": "2020-01",
-              "value": 146662
+              "value": 146655
             },
             {
               "period": "2020-02",
-              "value": 145112
+              "value": 145106
             },
             {
               "period": "2020-03",
-              "value": 155966
+              "value": 155956
             },
             {
               "period": "2020-04",
-              "value": 182915
+              "value": 182901
             },
             {
               "period": "2020-05",
-              "value": 186469
+              "value": 186463
             },
             {
               "period": "2020-06",
-              "value": 171911
+              "value": 171905
             },
             {
               "period": "2020-07",
-              "value": 166047
+              "value": 166041
             },
             {
               "period": "2020-08",
-              "value": 148359
+              "value": 148351
             },
             {
               "period": "2020-09",
-              "value": 141789
+              "value": 141781
             },
             {
               "period": "2020-10",
-              "value": 141820
+              "value": 141809
             },
             {
               "period": "2020-11",
-              "value": 134951
+              "value": 134948
             },
             {
               "period": "2020-12",
-              "value": 133922
+              "value": 133909
             },
             {
               "period": "2021-01",
-              "value": 139891
+              "value": 139880
             },
             {
               "period": "2021-02",
-              "value": 131700
+              "value": 131691
             },
             {
               "period": "2021-03",
-              "value": 148783
+              "value": 148775
             },
             {
               "period": "2021-04",
-              "value": 135899
+              "value": 135893
             },
             {
               "period": "2021-05",
-              "value": 133830
+              "value": 133822
             },
             {
               "period": "2021-06",
-              "value": 129017
+              "value": 129010
             },
             {
               "period": "2021-07",
-              "value": 124017
+              "value": 124004
             },
             {
               "period": "2021-08",
-              "value": 122115
+              "value": 122107
             },
             {
               "period": "2021-09",
-              "value": 119801
+              "value": 119796
             },
             {
               "period": "2021-10",
-              "value": 118924
+              "value": 118913
             },
             {
               "period": "2021-11",
-              "value": 119168
+              "value": 119157
             },
             {
               "period": "2021-12",
-              "value": 112190
+              "value": 112153
             },
             {
               "period": "2022-01",
-              "value": 119348
+              "value": 119335
             },
             {
               "period": "2022-02",
-              "value": 114024
+              "value": 113898
             },
             {
               "period": "2022-03",
-              "value": 123494
+              "value": 123411
             },
             {
               "period": "2022-04",
-              "value": 114256
+              "value": 114157
             },
             {
               "period": "2022-05",
-              "value": 116221
+              "value": 116217
             },
             {
               "period": "2022-06",
-              "value": 111527
+              "value": 111458
             },
             {
               "period": "2022-07",
-              "value": 110930
+              "value": 110881
             },
             {
               "period": "2022-08",
-              "value": 112948
+              "value": 112942
             },
             {
               "period": "2022-09",
-              "value": 103843
+              "value": 103840
             },
             {
               "period": "2022-10",
-              "value": 106220
+              "value": 106204
             },
             {
               "period": "2022-11",
-              "value": 109579
+              "value": 109572
             },
             {
               "period": "2022-12",
-              "value": 96620
+              "value": 96531
             },
             {
               "period": "2023-01",
-              "value": 97019
+              "value": 97018
             },
             {
               "period": "2023-02",
-              "value": 85866
+              "value": 85856
             },
             {
               "period": "2023-03",
-              "value": 87369
+              "value": 87361
             },
             {
               "period": "2023-04",
-              "value": 68631
+              "value": 68622
             },
             {
               "period": "2023-05",
-              "value": 66612
+              "value": 66607
             },
             {
               "period": "2023-06",
-              "value": 63731
+              "value": 63722
             },
             {
               "period": "2023-07",
-              "value": 62853
+              "value": 62847
             },
             {
               "period": "2023-08",
-              "value": 60190
+              "value": 60182
             },
             {
               "period": "2023-09",
-              "value": 52837
+              "value": 52825
             },
             {
               "period": "2023-10",
-              "value": 52428
+              "value": 52423
             },
             {
               "period": "2023-11",
-              "value": 50366
+              "value": 50358
             },
             {
               "period": "2023-12",
-              "value": 42416
+              "value": 42409
             },
             {
               "period": "2024-01",
-              "value": 47700
+              "value": 47697
             },
             {
               "period": "2024-02",
-              "value": 46057
+              "value": 46050
             },
             {
               "period": "2024-03",
-              "value": 44802
+              "value": 44794
             },
             {
               "period": "2024-04",
-              "value": 42472
+              "value": 42467
             },
             {
               "period": "2024-05",
-              "value": 40157
+              "value": 40150
             },
             {
               "period": "2024-06",
-              "value": 32014
+              "value": 32011
             },
             {
               "period": "2024-07",
-              "value": 31500
+              "value": 31493
             },
             {
               "period": "2024-08",
-              "value": 27863
+              "value": 27862
             },
             {
               "period": "2024-09",
-              "value": 24793
+              "value": 24789
             },
             {
               "period": "2024-10",
-              "value": 23219
+              "value": 23213
             },
             {
               "period": "2024-11",
-              "value": 20846
+              "value": 20841
             },
             {
               "period": "2024-12",
-              "value": 17971
+              "value": 17964
             },
             {
               "period": "2025-01",
-              "value": 18238
+              "value": 18232
             },
             {
               "period": "2025-02",
-              "value": 15565
+              "value": 15561
             },
             {
               "period": "2025-03",
-              "value": 15129
+              "value": 15126
             },
             {
               "period": "2025-04",
-              "value": 12349
+              "value": 11450
             },
             {
               "period": "2025-05",
-              "value": 11549
+              "value": 11487
             },
             {
               "period": "2025-06",
-              "value": 9195
+              "value": 9186
             },
             {
               "period": "2025-07",
-              "value": 7751
+              "value": 7746
             },
             {
               "period": "2025-08",
-              "value": 5837
+              "value": 5834
             },
             {
               "period": "2025-09",
-              "value": 6061
+              "value": 6056
             },
             {
               "period": "2025-10",
-              "value": 5370
+              "value": 5367
             },
             {
               "period": "2025-11",
-              "value": 5434
+              "value": 5431
             },
             {
               "period": "2025-12",
-              "value": 4247
+              "value": 4244
             },
             {
               "period": "2026-01",
-              "value": 3773
+              "value": 3767
             },
             {
               "period": "2026-02",
-              "value": 3217
+              "value": 3212
             },
             {
               "period": "2026-03",
-              "value": 3380
+              "value": 3286
+            },
+            {
+              "period": "2026-04",
+              "value": 3066
             }
           ],
           "color": "#7af59d"
@@ -3781,8 +3791,8 @@
       ],
       "latestValues": {
         "Total new questions asked": {
-          "period": "2026-03",
-          "value": 3380
+          "period": "2026-04",
+          "value": 3066
         }
       }
     }

@@ -3,7 +3,7 @@ window.__CLOUDFLARE_SNAPSHOT__ = {
   "title": "Estimated AI bot share of total traffic",
   "description": "This estimates how much of total web traffic is AI bots. It matters because it gets closer to the machine share of web traversal than general bot traffic does.",
   "source": "Cloudflare Radar bot share and bot category time series",
-  "lastRefreshed": "2026-04-21",
+  "lastRefreshed": "2026-05-02",
   "method": "We estimate AI bot share by combining Cloudflare's bot share of total traffic with its AI bot categories. The chart shows observed monthly values only.",
   "caveats": "Crawlers learn from the internet. Search bots use it. Cloudflare sees a large but incomplete slice of the web, with weaker coverage in places like China. This tracks AI bot traffic, not all AI activity. AI search only appears separately from June 2025, so the measure gets better over time.",
   "xValues": [
@@ -81,7 +81,8 @@ window.__CLOUDFLARE_SNAPSHOT__ = {
     "2025-12",
     "2026-01",
     "2026-02",
-    "2026-03"
+    "2026-03",
+    "2026-04"
   ],
   "axisValueFormat": "percent1",
   "tooltipValueFormat": "percent2",
@@ -164,11 +165,12 @@ window.__CLOUDFLARE_SNAPSHOT__ = {
         6.02,
         6.58,
         7.93,
-        8.38
+        8.38,
+        8.48
       ]
     }
   ],
-  "latestObservedMonth": "2026-03",
+  "latestObservedMonth": "2026-04",
   "monthly": [
     {
       "month": "2024-09",
@@ -340,6 +342,15 @@ window.__CLOUDFLARE_SNAPSHOT__ = {
       "ai_search_share_of_bot_traffic": 4.405445571428571,
       "ai_search_share_total_traffic": 1.3417037124355502,
       "ai_bot_share_total_traffic": 8.378325247098626
+    },
+    {
+      "month": "2026-04",
+      "bot_share_total_traffic": 32.04642625,
+      "ai_crawler_share_of_bot_traffic": 19.819075642857143,
+      "ai_crawler_share_total_traffic": 6.351305459319929,
+      "ai_search_share_of_bot_traffic": 6.640004714285714,
+      "ai_search_share_total_traffic": 2.127884213760095,
+      "ai_bot_share_total_traffic": 8.479189673080024
     }
   ]
 };
