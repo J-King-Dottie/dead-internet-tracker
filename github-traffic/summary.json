@@ -1,0 +1,92 @@
+{
+  "repo": "J-King-Dottie/dead-internet-tracker",
+  "collected_at": "2026-05-09T23:12:44Z",
+  "metrics": {
+    "clones": {
+      "days": 14,
+      "known_total_count": 398,
+      "known_sum_daily_uniques": 194,
+      "latest_github_rolling_count": 398,
+      "latest_github_rolling_uniques": 164,
+      "first_timestamp": "2026-04-25T00:00:00Z",
+      "last_timestamp": "2026-05-08T00:00:00Z"
+    },
+    "views": {
+      "days": 14,
+      "known_total_count": 24,
+      "known_sum_daily_uniques": 5,
+      "latest_github_rolling_count": 24,
+      "latest_github_rolling_uniques": 1,
+      "first_timestamp": "2026-04-25T00:00:00Z",
+      "last_timestamp": "2026-05-08T00:00:00Z"
+    }
+  },
+  "popular": {
+    "paths": {
+      "snapshots_rows": 7,
+      "latest": [
+        {
+          "rank": 1,
+          "label": "/J-King-Dottie/dead-internet-tracker",
+          "title": "Overview",
+          "count": 13,
+          "uniques": 1
+        },
+        {
+          "rank": 2,
+          "label": "/J-King-Dottie/dead-internet-tracker/actions",
+          "title": "/actions",
+          "count": 3,
+          "uniques": 1
+        },
+        {
+          "rank": 3,
+          "label": "/J-King-Dottie/dead-internet-tracker/actions/runs/24992159495",
+          "title": "/actions/runs/24992159495",
+          "count": 1,
+          "uniques": 1
+        },
+        {
+          "rank": 4,
+          "label": "/J-King-Dottie/dead-internet-tracker/actions/runs/24992159495/job/73180114199",
+          "title": "/actions/runs/24992159495/job/73180114199",
+          "count": 1,
+          "uniques": 1
+        },
+        {
+          "rank": 5,
+          "label": "/J-King-Dottie/dead-internet-tracker/actions/runs/25250535683",
+          "title": "/actions/runs/25250535683",
+          "count": 1,
+          "uniques": 1
+        },
+        {
+          "rank": 6,
+          "label": "/J-King-Dottie/dead-internet-tracker/actions/runs/25445118321",
+          "title": "/actions/runs/25445118321",
+          "count": 1,
+          "uniques": 1
+        },
+        {
+          "rank": 7,
+          "label": "/J-King-Dottie/dead-internet-tracker/actions/workflows/refresh-data.yml",
+          "title": "/actions/workflows/refresh-data.yml",
+          "count": 1,
+          "uniques": 1
+        }
+      ]
+    },
+    "referrers": {
+      "snapshots_rows": 1,
+      "latest": [
+        {
+          "rank": 1,
+          "label": "github.com",
+          "title": "",
+          "count": 20,
+          "uniques": 1
+        }
+      ]
+    }
+  }
+}
