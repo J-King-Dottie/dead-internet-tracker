@@ -4,6 +4,8 @@
 
 Dead Internet Tracker tracks public signals on AI-generated content, AI bot traffic, bot automation, and human activity on the open web. It compares narrow, checkable signals rather than claiming one precise score for how much of the internet is "dead." The page is static at runtime. Browser code reads local snapshot files only; there are no live browser API calls.
 
+Produced by Dottie AI Studio: https://dottieaistudio.com.au/
+
 Canonical URL: https://dead-internet-tracker.onrender.com/
 
 ## What This Site Measures

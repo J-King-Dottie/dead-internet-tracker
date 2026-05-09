@@ -2,6 +2,8 @@
 
 A one-page static research dashboard tracking public signals related to the dead internet theory: AI-generated content, AI bot traffic, bot automation, and measurable human activity on the open web.
 
+Produced by [Dottie AI Studio](https://dottieaistudio.com.au/).
+
 The project is deliberately cautious. It does not claim to measure the whole internet or produce one fake-precise score. It lines up recurring public signals and shows whether they point in the same direction.
 
 Live site: [https://dead-internet-tracker.onrender.com/](https://dead-internet-tracker.onrender.com/)
