@@ -51,7 +51,6 @@ static dashboard -> local snapshot data -> transparent public proxies
 - `scripts/`: refresh scripts for rebuilding snapshots.
 - `research/`: source notes and supporting research artifacts.
 - `.github/workflows/refresh-data.yml`: scheduled snapshot refresh workflow.
-- `.github/workflows/collect-github-traffic.yml`: repository traffic tracking.
 - `render.yaml`: Render static-site blueprint.
 
 ## Snapshot Data
@@ -85,19 +84,6 @@ python3 scripts/embed_dashboard_readable.py
 ```
 
 Some research pipelines write large intermediate files locally. Those are intentionally gitignored. The repo keeps the published snapshots and methodology, not every working artifact.
-
-## GitHub Traffic Tracking
-
-The repo includes `.github/workflows/collect-github-traffic.yml` and `scripts/collect_github_traffic.py`.
-
-It saves:
-
-- daily clone counts and unique cloners
-- daily view counts and unique visitors
-- daily snapshots of popular paths
-- daily snapshots of popular referrers
-
-The workflow needs a `TRAFFIC_TOKEN` repository secret with access to GitHub traffic APIs.
 
 ## Discovery Keywords
 
