@@ -1,8 +1,0 @@
-collected_at,rank,kind,label,title,count,uniques
-2026-05-09T23:12:44Z,1,paths,/J-King-Dottie/dead-internet-tracker,Overview,13,1
-2026-05-09T23:12:44Z,2,paths,/J-King-Dottie/dead-internet-tracker/actions,/actions,3,1
-2026-05-09T23:12:44Z,3,paths,/J-King-Dottie/dead-internet-tracker/actions/runs/24992159495,/actions/runs/24992159495,1,1
-2026-05-09T23:12:44Z,4,paths,/J-King-Dottie/dead-internet-tracker/actions/runs/24992159495/job/73180114199,/actions/runs/24992159495/job/73180114199,1,1
-2026-05-09T23:12:44Z,5,paths,/J-King-Dottie/dead-internet-tracker/actions/runs/25250535683,/actions/runs/25250535683,1,1
-2026-05-09T23:12:44Z,6,paths,/J-King-Dottie/dead-internet-tracker/actions/runs/25445118321,/actions/runs/25445118321,1,1
-2026-05-09T23:12:44Z,7,paths,/J-King-Dottie/dead-internet-tracker/actions/workflows/refresh-data.yml,/actions/workflows/refresh-data.yml,1,1
