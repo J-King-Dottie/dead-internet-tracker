@@ -3,7 +3,7 @@ window.__CLOUDFLARE_SNAPSHOT__ = {
   "title": "Estimated AI bot share of total traffic",
   "description": "This estimates how much of total web traffic is AI bots. It matters because it gets closer to the machine share of web traversal than general bot traffic does.",
   "source": "Cloudflare Radar bot share and bot category time series",
-  "lastRefreshed": "2026-05-02",
+  "lastRefreshed": "2026-05-11",
   "method": "We estimate AI bot share by combining Cloudflare's bot share of total traffic with its AI bot categories. The chart shows observed monthly values only.",
   "caveats": "Crawlers learn from the internet. Search bots use it. Cloudflare sees a large but incomplete slice of the web, with weaker coverage in places like China. This tracks AI bot traffic, not all AI activity. AI search only appears separately from June 2025, so the measure gets better over time.",
   "xValues": [
