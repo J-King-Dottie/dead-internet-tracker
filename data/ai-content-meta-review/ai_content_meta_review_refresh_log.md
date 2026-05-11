@@ -209,3 +209,22 @@ For the actual sweep standard and what context to store per estimate, use:
   - direct `2021` social-platform prevalence estimates outside review or forum ecosystems
   - broader Facebook and Instagram prevalence rows that are not event-bound, misinformation-only, or dependent on a secondary writeup
   - broader `2026` X or Instagram text-prevalence estimates with a clear denominator
+
+
+## 2026-05-11 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint
+  - industry/platform
+  - institutional/report
+  - media/analyst
+  - platform-specific social/video
+  - scholarly publishing/medical literature
+  - finance/news publishing
+- added:
+  - Bradshaw et al. / Seeking Alpha articles (2023)
+  - Kapwing / new-user YouTube Shorts feed (2025)
+  - Jones et al. / biomedical science educational videos (2025)
+  - Saner et al. / PubMed medical manuscripts (2024)
