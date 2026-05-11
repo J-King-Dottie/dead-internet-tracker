@@ -5,7 +5,6 @@ import csv
 import json
 import os
 import re
-import time
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
@@ -20,12 +19,9 @@ CSV_PATH = DATA_DIR / "ai_content_meta_review.csv"
 PROTOCOL_PATH = DATA_DIR / "ai_content_meta_review_research_protocol.md"
 LOG_PATH = DATA_DIR / "ai_content_meta_review_refresh_log.md"
 OPENAI_RESPONSES_URL = "https://api.openai.com/v1/responses"
-DEFAULT_MODEL = "o4-mini-deep-research"
+DEFAULT_MODEL = "gpt-5"
 DEFAULT_LOOKBACK_DAYS = 7
 MIN_QUERY_ITERATIONS = 50
-DEEP_RESEARCH_MAX_TOOL_CALLS = 80
-DEEP_RESEARCH_TIMEOUT_SECONDS = 6300
-DEEP_RESEARCH_POLL_SECONDS = 30
 
 
 def canonical_url(url: str) -> str:
@@ -168,36 +164,6 @@ def extract_response_text(payload: dict) -> str:
     return "\n".join(chunks).strip()
 
 
-def is_deep_research_model(model: str) -> bool:
-    return model.endswith("-deep-research")
-
-
-def fetch_openai_response(response_id: str, api_key: str) -> dict:
-    request = Request(
-        f"{OPENAI_RESPONSES_URL}/{response_id}",
-        headers={"Authorization": f"Bearer {api_key}"},
-        method="GET",
-    )
-    with urlopen(request, timeout=120) as response:
-        return json.load(response)
-
-
-def wait_for_openai_response(response_id: str, api_key: str) -> dict:
-    deadline = time.monotonic() + DEEP_RESEARCH_TIMEOUT_SECONDS
-    while True:
-        payload = fetch_openai_response(response_id, api_key)
-        status = payload.get("status")
-        if status == "completed":
-            return payload
-        if status in {"failed", "cancelled", "incomplete"}:
-            raise RuntimeError(f"OpenAI research response ended with status {status}: {payload}")
-        if time.monotonic() >= deadline:
-            raise TimeoutError(f"Timed out waiting for OpenAI research response {response_id}")
-
-        print(f"OpenAI research response {response_id} is {status}; polling again in {DEEP_RESEARCH_POLL_SECONDS}s")
-        time.sleep(DEEP_RESEARCH_POLL_SECONDS)
-
-
 def recent_research_schema() -> dict:
     candidate_schema = {
         "type": "object",
@@ -310,10 +276,9 @@ Return JSON only. For every kept candidate, notes must be exactly three short se
 
 
 def call_openai_research(prompt: str, model: str, api_key: str) -> dict:
-    deep_research = is_deep_research_model(model)
     request_body = {
         "model": model,
-        "tools": [{"type": "web_search_preview" if deep_research else "web_search"}],
+        "tools": [{"type": "web_search"}],
         "input": [
             {
                 "role": "system",
@@ -333,9 +298,6 @@ def call_openai_research(prompt: str, model: str, api_key: str) -> dict:
             }
         },
     }
-    if deep_research:
-        request_body["background"] = True
-        request_body["max_tool_calls"] = DEEP_RESEARCH_MAX_TOOL_CALLS
 
     request = Request(
         OPENAI_RESPONSES_URL,
@@ -348,11 +310,6 @@ def call_openai_research(prompt: str, model: str, api_key: str) -> dict:
     )
     with urlopen(request, timeout=900) as response:
         payload = json.load(response)
-    if deep_research and payload.get("status") != "completed":
-        response_id = payload.get("id")
-        if not response_id:
-            raise RuntimeError(f"OpenAI deep research response did not include an id: {payload}")
-        payload = wait_for_openai_response(response_id, api_key)
     text = extract_response_text(payload)
     if not text:
         raise RuntimeError("OpenAI response did not include output text")
