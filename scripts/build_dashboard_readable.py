@@ -11,6 +11,23 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 OUTPUT_PATH = DATA_DIR / "dashboard_readable.json"
 
+CHART_INTENTS = {
+    "ai-content-meta-review": "There is no single authoritative measure of AI-generated content online. This chart gives a bird's-eye view of the published estimates and whether they point in the same direction.",
+    "web-sample-classifications": "Published estimates often do not make clear what \"AI-written\" means. This chart fills that gap by separating pages that look mostly AI-written from pages that show partial AI influence.",
+    "traffic-bot-human": "The dead internet theory is not just about AI writing the web. It is also about AI systems increasingly reading, crawling, and traversing it.",
+    "imperva-traffic": "Machine traffic is not spread evenly across the internet. This chart shows how automated traffic can dominate in high-value, abuse-sensitive parts of the web.",
+    "wikipedia": "Wikipedia is a useful slow-decline signal for public human contribution. It shows whether people are still doing sustained knowledge work together in the open.",
+    "stack-overflow": "Stack Overflow is a sharper example of public human exchange falling away. It shows what happens when people stop asking other people for help in public and shift to AI instead.",
+}
+
+
+def with_chart_info(chart: dict[str, Any]) -> dict[str, Any]:
+    chart_key = chart.get("chartKey", "")
+    return {
+        **chart,
+        "intent": CHART_INTENTS.get(chart_key, chart.get("intent", "")),
+    }
+
 
 def load_json(path: str) -> dict[str, Any]:
     return json.loads((ROOT / path).read_text(encoding="utf-8"))
@@ -197,6 +214,8 @@ def ai_content_meta_review() -> dict[str, Any]:
         "source": "Curated AI research of published sources.",
         "sourceSnapshot": snapshot_path,
         "lastRefreshed": snapshot.get("lastRefreshed", ""),
+        "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
+        "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
         "unit": "percent",
         "xValues": [str(year) for year in years],
         "series": [
@@ -303,16 +322,18 @@ def imperva_traffic() -> dict[str, Any]:
 def main() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     charts = [
-        ai_content_meta_review(),
-        web_sample_classifications(),
-        line_chart("data/cloudflare/cloudflare.json", "traffic-bot-human", {"AI bot share": "AI bots"}),
-        imperva_traffic(),
-        line_chart(
-            "data/wikipedia/wikipedia.json",
-            "wikipedia",
-            {"All editors": "All editors (1+)", "Active editors": "Active editors (5+)"},
+        with_chart_info(ai_content_meta_review()),
+        with_chart_info(web_sample_classifications()),
+        with_chart_info(line_chart("data/cloudflare/cloudflare.json", "traffic-bot-human", {"AI bot share": "AI bots"})),
+        with_chart_info(imperva_traffic()),
+        with_chart_info(
+            line_chart(
+                "data/wikipedia/wikipedia.json",
+                "wikipedia",
+                {"All editors": "All editors (1+)", "Active editors": "Active editors (5+)"},
+            )
         ),
-        line_chart("data/stackoverflow/stackoverflow.json", "stack-overflow", {"Questions asked": "Total new questions asked"}),
+        with_chart_info(line_chart("data/stackoverflow/stackoverflow.json", "stack-overflow", {"Questions asked": "Total new questions asked"})),
     ]
     payload = {
         "title": "Dead Internet Tracker machine-readable chart data",

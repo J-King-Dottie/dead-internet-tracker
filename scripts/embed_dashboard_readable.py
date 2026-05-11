@@ -163,6 +163,20 @@ def fill_dynamic_spans(html_text: str, data: dict[str, Any]) -> str:
     return html_text
 
 
+def fill_chart_sources(html_text: str, data: dict[str, Any]) -> str:
+    for chart in data.get("charts") or []:
+        chart_key = chart.get("chartKey", "")
+        source = chart.get("source", "")
+        if not chart_key:
+            continue
+        pattern = re.compile(
+            rf'(<p class="card-source" data-chart-source="{re.escape(chart_key)}">)(.*?)(</p>)',
+            re.DOTALL,
+        )
+        html_text = pattern.sub(rf"\g<1>Source: {esc(source)}\g<3>", html_text)
+    return html_text
+
+
 def chart_table(chart: dict[str, Any]) -> str:
     rows = []
     for series in chart.get("series") or []:
@@ -208,7 +222,7 @@ def build_body_block(data: dict[str, Any]) -> str:
         BODY_START,
         '  <section class="agent-readable-data" id="underlying-data" aria-labelledby="underlying-data-title">',
         '    <h2 id="underlying-data-title">Underlying chart data</h2>',
-        "    <p>This section is generated from the same local snapshots as the dashboard above. It is ordinary HTML so search engines and AI readers can read the chart values from this page without running JavaScript.</p>",
+        "    <p>This section is generated from the same central dashboard data as the charts above. It is ordinary HTML so search engines and AI readers can read the chart values from this page without running JavaScript.</p>",
         "    <ul>",
     ]
 
@@ -258,13 +272,33 @@ def insert_body_block(html_text: str, block: str) -> str:
     return html_text.replace(marker, block + "\n" + marker, 1)
 
 
+def insert_head_block(html_text: str, data: dict[str, Any]) -> str:
+    block = (
+        "\n"
+        + HEAD_START
+        + "\n"
+        + "  <script>\n"
+        + "    window.__DASHBOARD_READABLE_DATA__ = "
+        + json.dumps(data, ensure_ascii=False)
+        + ";\n"
+        + "  </script>\n"
+        + HEAD_END
+    )
+    marker = "</head>"
+    if marker not in html_text:
+        raise SystemExit(f"Cannot insert generated dashboard data because {marker} was not found.")
+    return html_text.replace(marker, block + "\n" + marker, 1)
+
+
 def embed(index_path: Path, data_path: Path) -> None:
     data = json.loads(data_path.read_text(encoding="utf-8"))
     html_text = index_path.read_text(encoding="utf-8")
     html_text = remove_generated_block(html_text, HEAD_START, HEAD_END)
     html_text = remove_generated_block(html_text, "  <!-- DASHBOARD_KEY_METRICS_START -->", "  <!-- DASHBOARD_KEY_METRICS_END -->")
     html_text = fill_dynamic_spans(html_text, data)
+    html_text = fill_chart_sources(html_text, data)
     html_text = insert_body_block(html_text, build_body_block(data))
+    html_text = insert_head_block(html_text, data)
     index_path.write_text(html_text, encoding="utf-8")
 
 

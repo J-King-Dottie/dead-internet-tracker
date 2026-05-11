@@ -11,6 +11,8 @@
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
       "lastRefreshed": "2026-05-11",
+      "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
+      "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
       "xValues": [
         "2020",
@@ -688,7 +690,8 @@
             }
           ]
         }
-      ]
+      ],
+      "intent": "There is no single authoritative measure of AI-generated content online. This chart gives a bird's-eye view of the published estimates and whether they point in the same direction."
     },
     {
       "chartKey": "web-sample-classifications",
@@ -2526,7 +2529,8 @@
           "period": "2026-03",
           "value": 9.6
         }
-      }
+      },
+      "intent": "Published estimates often do not make clear what \"AI-written\" means. This chart fills that gap by separating pages that look mostly AI-written from pages that show partial AI influence."
     },
     {
       "chartKey": "traffic-bot-human",
@@ -2653,7 +2657,8 @@
           "period": "2026-04",
           "value": 8.48
         }
-      }
+      },
+      "intent": "The dead internet theory is not just about AI writing the web. It is also about AI systems increasingly reading, crawling, and traversing it."
     },
     {
       "chartKey": "imperva-traffic",
@@ -2734,7 +2739,8 @@
           "period": "2024",
           "value": 49.0
         }
-      }
+      },
+      "intent": "Machine traffic is not spread evenly across the internet. This chart shows how automated traffic can dominate in high-value, abuse-sensitive parts of the web."
     },
     {
       "chartKey": "wikipedia",
@@ -3456,7 +3462,8 @@
           "period": "2026-04",
           "value": 31121
         }
-      }
+      },
+      "intent": "Wikipedia is a useful slow-decline signal for public human contribution. It shows whether people are still doing sustained knowledge work together in the open."
     },
     {
       "chartKey": "stack-overflow",
@@ -3863,7 +3870,8 @@
           "period": "2026-04",
           "value": 2835
         }
-      }
+      },
+      "intent": "Stack Overflow is a sharper example of public human exchange falling away. It shows what happens when people stop asking other people for help in public and shift to AI instead."
     }
   ]
 }
