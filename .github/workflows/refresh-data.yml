@@ -19,9 +19,10 @@ on:
     # 2nd gives the prior completed month time to settle without adding much lag.
     # GitHub Actions cron runs in UTC.
     - cron: "15 10 2 * *"
-    # AI auto-refreshes are paused for now. The manual workflow_dispatch targets
-    # still exist for one-off runs:
-    # - ai-content-meta-review was "30 9 * * 1"
+    # Weekly recent-source sweep for chart 1: AI content meta-review.
+    - cron: "30 9 * * 1"
+    # Web-sample auto-refresh is paused for now. The manual workflow_dispatch
+    # target still exists for one-off runs:
     # - web-sample-lite was "15 13 * * 3"
 
 permissions:
@@ -86,6 +87,7 @@ jobs:
   refresh-ai-content-meta-review:
     if: github.event.schedule == '30 9 * * 1' || (github.event_name == 'workflow_dispatch' && (github.event.inputs.target == 'ai-content-meta-review' || github.event.inputs.target == 'all'))
     runs-on: ubuntu-latest
+    timeout-minutes: 90
 
     steps:
       - name: Check out repo
@@ -99,6 +101,7 @@ jobs:
           python-version: "3.12"
 
       - name: Run recent-source research sweep
+        timeout-minutes: 75
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_RESEARCH_MODEL: ${{ vars.OPENAI_RESEARCH_MODEL || 'gpt-5' }}
