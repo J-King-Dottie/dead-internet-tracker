@@ -87,7 +87,7 @@ jobs:
   refresh-ai-content-meta-review:
     if: github.event.schedule == '30 9 * * 1' || (github.event_name == 'workflow_dispatch' && (github.event.inputs.target == 'ai-content-meta-review' || github.event.inputs.target == 'all'))
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 135
 
     steps:
       - name: Check out repo
@@ -101,11 +101,11 @@ jobs:
           python-version: "3.12"
 
       - name: Run recent-source research sweep
-        timeout-minutes: 75
+        timeout-minutes: 120
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_RESEARCH_MODEL: ${{ vars.OPENAI_RESEARCH_MODEL || 'gpt-5' }}
-          RESEARCH_LOOKBACK_DAYS: ${{ vars.RESEARCH_LOOKBACK_DAYS || '35' }}
+          OPENAI_RESEARCH_MODEL: ${{ vars.OPENAI_RESEARCH_MODEL || 'o4-mini-deep-research' }}
+          RESEARCH_LOOKBACK_DAYS: ${{ vars.RESEARCH_LOOKBACK_DAYS || '7' }}
         run: |
           python scripts/refresh_ai_content_meta_review.py
           python scripts/build_dashboard_readable.py
