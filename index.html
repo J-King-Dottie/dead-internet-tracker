@@ -1549,7 +1549,7 @@
           <div class="chart-wrap" data-chart="ai-content-meta-review"></div>
         </div>
         <div class="card-section card-section--source">
-          <p class="card-source">Source: Curated AI research.</p>
+          <p class="card-source">Source: Curated AI research of published sources.</p>
         </div>
       </article>
 
@@ -1714,12 +1714,14 @@
 
 
 
+
+
   <!-- DASHBOARD_READABLE_SUMMARY_START -->
   <section class="agent-readable-data" id="underlying-data" aria-labelledby="underlying-data-title">
     <h2 id="underlying-data-title">Underlying chart data</h2>
     <p>This section is generated from the same local snapshots as the dashboard above. It is ordinary HTML so search engines and AI readers can read the chart values from this page without running JavaScript.</p>
     <ul>
-      <li><strong>AI content share meta review</strong>: Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line. Latest values: Published estimates: 33.3 in 2026; Annual average: 23.8667 in 2026. Source: Curated AI research..</li>
+      <li><strong>AI content share meta review</strong>: Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line. Latest values: Published estimates: 33.3 in 2026; Annual average: 23.8667 in 2026. Source: Curated AI research of published sources.</li>
       <li><strong>Monthly AI share in the web sample</strong>: Trailing 6-month moving averages of sampled article-style web pages classified as strong AI signal or partial AI signal. The two lines are exclusive. Latest values: Strong AI signal: 7.88 in 2026-02; Partial AI signal: 9.45 in 2026-02. Source: Common Crawl monthly samples classified under a research-guided rubric.</li>
       <li><strong>Estimated AI bot share of total traffic</strong>: This estimates how much of total web traffic is AI bots. It matters because it gets closer to the machine share of web traversal than general bot traffic does. Latest values: AI bots: 8.48 in 2026-04. Source: Cloudflare Radar bot share and bot category time series.</li>
       <li><strong>Imperva traffic profile</strong>: This tracks Imperva&#x27;s published traffic split over time. For this chart, automated traffic means good bot plus bad bot. It matters because it shows automation overtaking humans in a large observed slice of the web. Latest values: Automated traffic: 51.0 in 2024; Human: 49.0 in 2024. Source: Imperva Bad Bot Report 2024 and 2025.</li>
@@ -1730,7 +1732,7 @@
       <section class="agent-data-chart">
         <h3>AI content share meta review</h3>
         <p>Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.</p>
-        <p><strong>Source:</strong> Curated AI research.</p>
+        <p><strong>Source:</strong> Curated AI research of published sources.</p>
         <p><strong>Source snapshot:</strong> data/ai-content-meta-review/ai_content_meta_review.json</p>
         <p><strong>Last refreshed:</strong> 2026-04-30</p>
         <p><strong>Method:</strong> </p>
@@ -2388,7 +2390,7 @@
 
     const chartTooltipCopy = {
       "ai-content-meta-review": {
-        source: "Curated AI research.",
+        source: "Curated AI research of published sources.",
         intent: "There is no single authoritative measure of AI-generated content online. This chart gives a bird's-eye view of the published estimates and whether they point in the same direction.",
         method: "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
         caveats: "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate."

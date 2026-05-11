@@ -24,6 +24,13 @@ def esc(value: Any) -> str:
     return html.escape(str(value), quote=True)
 
 
+def sentence(value: str) -> str:
+    value = value.strip()
+    if not value:
+        return ""
+    return value if value[-1] in ".!?" else value + "."
+
+
 def point_period(point: dict[str, Any]) -> str:
     return esc(point.get("period") or point.get("year") or "")
 
@@ -210,7 +217,7 @@ def build_body_block(data: dict[str, Any]) -> str:
         description = esc(chart.get("description", ""))
         source = esc(chart.get("source", ""))
         latest = esc(latest_values_text(chart))
-        lines.append(f"      <li><strong>{title}</strong>: {description} Latest values: {latest}. Source: {source}.</li>")
+        lines.append(f"      <li><strong>{title}</strong>: {description} Latest values: {latest}. Source: {sentence(source)}</li>")
 
     lines.extend(["    </ul>", '    <div class="agent-data-charts">'])
 

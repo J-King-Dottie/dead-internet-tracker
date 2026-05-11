@@ -194,7 +194,7 @@ def ai_content_meta_review() -> dict[str, Any]:
         "chartKey": "ai-content-meta-review",
         "title": "AI content share meta review",
         "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
-        "source": "Curated AI research.",
+        "source": "Curated AI research of published sources.",
         "sourceSnapshot": snapshot_path,
         "lastRefreshed": snapshot.get("lastRefreshed", ""),
         "unit": "percent",

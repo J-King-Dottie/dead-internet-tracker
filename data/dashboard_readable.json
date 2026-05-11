@@ -8,7 +8,7 @@
       "chartKey": "ai-content-meta-review",
       "title": "AI content share meta review",
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
-      "source": "Curated AI research.",
+      "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
       "lastRefreshed": "2026-04-30",
       "unit": "percent",
