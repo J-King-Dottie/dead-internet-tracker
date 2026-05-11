@@ -4,6 +4,7 @@ import argparse
 import calendar
 import json
 import subprocess
+import sys
 from dataclasses import dataclass, asdict
 from datetime import date, datetime
 from pathlib import Path
@@ -11,6 +12,11 @@ from urllib.request import Request, urlopen
 
 
 COLLINFO_URL = "https://index.commoncrawl.org/collinfo.json"
+COLLINFO_HEADERS = {
+    "User-Agent": "DeadInternetTracker/1.0",
+    "Cache-Control": "no-cache",
+    "Pragma": "no-cache",
+}
 
 
 @dataclass
@@ -21,7 +27,7 @@ class CrawlWindow:
 
 
 def fetch_crawl_windows() -> list[CrawlWindow]:
-    request = Request(COLLINFO_URL, headers={"User-Agent": "DeadInternetTracker/1.0"})
+    request = Request(COLLINFO_URL, headers=COLLINFO_HEADERS)
     with urlopen(request) as response:
         payload = json.load(response)
     rows = [
@@ -76,7 +82,7 @@ def render_query(root: Path, period: str, crawl: str, limit: int) -> None:
     run_command(
         root,
         [
-            "python",
+            sys.executable,
             str(root / "scripts" / "render_web_sample_athena_query.py"),
             "--period",
             period,
@@ -90,7 +96,7 @@ def render_query(root: Path, period: str, crawl: str, limit: int) -> None:
 
 def run_query(root: Path, period: str, append: bool) -> None:
     args = [
-        "python",
+        sys.executable,
         str(root / "scripts" / "run_web_sample_athena_query.py"),
         "--period",
         period,
@@ -112,7 +118,7 @@ def prepare_requests(
     workers: int,
 ) -> dict:
     args = [
-        "python",
+        sys.executable,
         str(root / "scripts" / "build_web_sample_requests.py"),
         "--input",
         str(candidate_csv),

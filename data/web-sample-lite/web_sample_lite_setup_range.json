@@ -5,11 +5,11 @@
   "model": "gpt-5-mini",
   "periods": [
     {
-      "period": "2026-02",
-      "parentPrepared": "/home/projects/dead-internet-theory/data/web-sample/web_sample_prepared_2026-02.json",
-      "preparedPath": "/home/projects/dead-internet-theory/data/web-sample-lite/web_sample_lite_prepared_2026-02.json",
-      "requestsPath": "/home/projects/dead-internet-theory/data/web-sample-lite/web_sample_lite_requests_2026-02.jsonl",
-      "sampleSeed": "13607471465359663862",
+      "period": "2026-03",
+      "parentPrepared": "/home/projects/dead-internet-theory/data/web-sample/web_sample_prepared_2026-03.json",
+      "preparedPath": "/home/projects/dead-internet-theory/data/web-sample-lite/web_sample_lite_prepared_2026-03.json",
+      "requestsPath": "/home/projects/dead-internet-theory/data/web-sample-lite/web_sample_lite_requests_2026-03.jsonl",
+      "sampleSeed": "4354244242706637528",
       "sampleSizePrepared": 1000,
       "requestCount": 50,
       "model": "gpt-5-mini"

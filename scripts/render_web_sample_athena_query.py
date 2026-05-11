@@ -9,6 +9,11 @@ from urllib.request import Request, urlopen
 
 
 COLLINFO_URL = "https://index.commoncrawl.org/collinfo.json"
+COLLINFO_HEADERS = {
+    "User-Agent": "DeadInternetTracker/1.0",
+    "Cache-Control": "no-cache",
+    "Pragma": "no-cache",
+}
 
 SQL_TEMPLATE = """-- Common Crawl monthly sample for the Dead Internet Tracker
 -- Run this in AWS Athena after registering the Common Crawl columnar index table:
@@ -74,7 +79,7 @@ LIMIT 5000;
 
 
 def fetch_latest_crawl() -> tuple[str, str]:
-    request = Request(COLLINFO_URL, headers={"User-Agent": "DeadInternetTracker/1.0"})
+    request = Request(COLLINFO_URL, headers=COLLINFO_HEADERS)
     with urlopen(request) as response:
         payload = json.load(response)
 
@@ -86,7 +91,7 @@ def fetch_latest_crawl() -> tuple[str, str]:
 
 
 def fetch_monthly_crawls(start_period: str) -> list[tuple[str, str]]:
-    request = Request(COLLINFO_URL, headers={"User-Agent": "DeadInternetTracker/1.0"})
+    request = Request(COLLINFO_URL, headers=COLLINFO_HEADERS)
     with urlopen(request) as response:
         payload = json.load(response)
 
@@ -102,20 +107,8 @@ def fetch_monthly_crawls(start_period: str) -> list[tuple[str, str]]:
     return [(crawl, period) for period, crawl in sorted(selected.items())]
 
 
-def load_month_map(root: Path) -> dict[str, dict]:
-    path = root / "data" / "web-sample" / "commoncrawl_month_map.json"
-    if not path.exists():
-        return {}
-    payload = json.loads(path.read_text(encoding="utf-8"))
-    return {row["period"]: row for row in payload.get("rows", [])}
-
-
 def resolve_crawl_for_period(root: Path, period: str) -> str:
-    month_map = load_month_map(root)
-    if period in month_map:
-        return month_map[period]["crawl"]
-
-    request = Request(COLLINFO_URL, headers={"User-Agent": "DeadInternetTracker/1.0"})
+    request = Request(COLLINFO_URL, headers=COLLINFO_HEADERS)
     with urlopen(request) as response:
         payload = json.load(response)
 

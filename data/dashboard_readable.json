@@ -696,7 +696,7 @@
       "description": "Trailing 6-month moving averages of sampled article-style web pages classified as strong AI signal or partial AI signal. The two lines are exclusive.",
       "source": "Common Crawl monthly samples classified under a research-guided rubric",
       "sourceSnapshot": "data/web-sample-lite/web_sample_lite_summary.json",
-      "lastRefreshed": "2026-04-24",
+      "lastRefreshed": "2026-05-11",
       "method": "Each month samples 1,000 article-style Common Crawl pages and classifies excerpts with an LLM rubric. The plotted values are trailing 6-month moving averages.",
       "caveats": "This is a stable sample of article-style open-web pages, not the whole internet. The lite series is cheaper and faster than the full 5,000-page run, but noisier month to month.",
       "xValues": [
@@ -773,7 +773,8 @@
         "2025-11",
         "2025-12",
         "2026-01",
-        "2026-02"
+        "2026-02",
+        "2026-03"
       ],
       "series": [
         {
@@ -1075,6 +1076,10 @@
             {
               "period": "2026-02",
               "value": 7.88
+            },
+            {
+              "period": "2026-03",
+              "value": 7.5
             }
           ]
         },
@@ -1377,6 +1382,10 @@
             {
               "period": "2026-02",
               "value": 9.45
+            },
+            {
+              "period": "2026-03",
+              "value": 9.6
             }
           ]
         }
@@ -2491,16 +2500,31 @@
           "rubric_version": "research-guided-rubric-v3",
           "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4",
           "mixed_share": 9.7
+        },
+        {
+          "period": "2026-03",
+          "sample_size": 1000,
+          "ai_count": 54,
+          "mixed_count": 109,
+          "human_count": 837,
+          "ai_share": 5.4,
+          "mixed_share": 10.9,
+          "ai_influenced_share": 16.3,
+          "sample_source": "CC-MAIN-2026-17",
+          "sample_seed": "4354244242706637528",
+          "parent_sample_size_prepared": 5000,
+          "rubric_version": "research-guided-rubric-v3",
+          "prompt_hash": "0832c9752f0ace3b3e9bbbd44d88064dfb1dc0b4"
         }
       ],
       "latestValues": {
         "Strong AI signal": {
-          "period": "2026-02",
-          "value": 7.88
+          "period": "2026-03",
+          "value": 7.5
         },
         "Partial AI signal": {
-          "period": "2026-02",
-          "value": 9.45
+          "period": "2026-03",
+          "value": 9.6
         }
       }
     },

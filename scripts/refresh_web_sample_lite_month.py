@@ -5,6 +5,7 @@ import calendar
 import json
 import os
 import subprocess
+import sys
 from datetime import date, datetime
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -13,6 +14,11 @@ from apply_web_sample_results import load_labels
 
 
 COLLINFO_URL = "https://index.commoncrawl.org/collinfo.json"
+COLLINFO_HEADERS = {
+    "User-Agent": "DeadInternetTracker/1.0",
+    "Cache-Control": "no-cache",
+    "Pragma": "no-cache",
+}
 
 
 def run_command(root: Path, args: list[str]) -> None:
@@ -40,25 +46,35 @@ def load_next_period(root: Path) -> str:
     return month_after(periods[-1])
 
 
-def first_available_crawl_after_month(period: str) -> str | None:
-    request = Request(COLLINFO_URL, headers={"User-Agent": "DeadInternetTracker/1.0"})
+def fetch_commoncrawl_collections() -> list[dict]:
+    request = Request(COLLINFO_URL, headers=COLLINFO_HEADERS)
     with urlopen(request) as response:
-        payload = json.load(response)
+        return json.load(response)
 
-    year, month = map(int, period.split("-"))
-    month_end = date(year, month, calendar.monthrange(year, month)[1])
+
+def sorted_commoncrawl_crawls() -> list[tuple[date, str]]:
     crawls = [
         (
             datetime.fromisoformat(item["from"]).date(),
             item["id"],
         )
-        for item in payload
+        for item in fetch_commoncrawl_collections()
     ]
-    crawls.sort()
-    for crawl_start, crawl_id in crawls:
+    return sorted(crawls)
+
+
+def first_available_crawl_after_month(period: str) -> str | None:
+    year, month = map(int, period.split("-"))
+    month_end = date(year, month, calendar.monthrange(year, month)[1])
+    for crawl_start, crawl_id in sorted_commoncrawl_crawls():
         if crawl_start > month_end:
             return crawl_id
     return None
+
+
+def latest_commoncrawl_crawl() -> tuple[date, str] | None:
+    crawls = sorted_commoncrawl_crawls()
+    return crawls[-1] if crawls else None
 
 
 def ensure_all_labels(prepared_path: Path, output_path: Path) -> None:
@@ -104,7 +120,7 @@ def refresh_period(
     run_command(
         root,
         [
-            "python",
+            sys.executable,
             "scripts/run_web_sample_prep_range.py",
             "--start-period",
             period,
@@ -117,7 +133,7 @@ def refresh_period(
     run_command(
         root,
         [
-            "python",
+            sys.executable,
             "scripts/setup_web_sample_lite_range.py",
             "--period",
             period,
@@ -133,7 +149,7 @@ def refresh_period(
     run_command(
         root,
         [
-            "python",
+            sys.executable,
             "scripts/run_web_sample_live.py",
             "--input",
             str(requests_path),
@@ -159,7 +175,7 @@ def refresh_period(
     run_command(
         root,
         [
-            "python",
+            sys.executable,
             "scripts/apply_web_sample_lite_results.py",
             "--prepared",
             str(prepared_path),
@@ -169,7 +185,7 @@ def refresh_period(
             model,
         ],
     )
-    run_command(root, ["python", "scripts/build_dashboard_readable.py"])
+    run_command(root, [sys.executable, "scripts/build_dashboard_readable.py"])
 
 
 def main() -> None:
@@ -193,7 +209,11 @@ def main() -> None:
 
     if args.check_only:
         crawl = first_available_crawl_after_month(period)
+        latest = latest_commoncrawl_crawl()
         available = "true" if crawl else "false"
+        if latest:
+            latest_start, latest_id = latest
+            print(f"Latest live Common Crawl collection: {latest_id} starting {latest_start.isoformat()}")
         if crawl:
             print(f"Eligible Common Crawl collection found for {period}: {crawl}")
         else:
