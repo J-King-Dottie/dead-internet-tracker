@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-05-02",
+  "generatedAt": "2026-05-11",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -2682,7 +2682,7 @@
       "description": "This tracks monthly human editors on English Wikipedia content pages. It matters because it shows whether people are still doing sustained public knowledge work.",
       "source": "Wikimedia editor analytics for en.wikipedia.org content pages",
       "sourceSnapshot": "data/wikipedia/wikipedia.json",
-      "lastRefreshed": "2026-05-02",
+      "lastRefreshed": "2026-05-11",
       "method": "Active editors are users making 5 or more edits in a month. The chart shows observed monthly counts only.",
       "caveats": "This is English Wikipedia only, not all Wikipedias. It measures editor participation, not article quality or total knowledge output.",
       "xValues": [
@@ -2760,7 +2760,8 @@
         "2025-12",
         "2026-01",
         "2026-02",
-        "2026-03"
+        "2026-03",
+        "2026-04"
       ],
       "series": [
         {
@@ -2769,303 +2770,307 @@
           "values": [
             {
               "period": "2020-01",
-              "value": 113500
+              "value": 113491
             },
             {
               "period": "2020-02",
-              "value": 108892
+              "value": 108882
             },
             {
               "period": "2020-03",
-              "value": 111042
+              "value": 111031
             },
             {
               "period": "2020-04",
-              "value": 116865
+              "value": 116854
             },
             {
               "period": "2020-05",
-              "value": 121375
+              "value": 121362
             },
             {
               "period": "2020-06",
-              "value": 113648
+              "value": 113637
             },
             {
               "period": "2020-07",
-              "value": 107159
+              "value": 107144
             },
             {
               "period": "2020-08",
-              "value": 105534
+              "value": 105525
             },
             {
               "period": "2020-09",
-              "value": 105732
+              "value": 105721
             },
             {
               "period": "2020-10",
-              "value": 106777
+              "value": 106764
             },
             {
               "period": "2020-11",
-              "value": 105275
+              "value": 105266
             },
             {
               "period": "2020-12",
-              "value": 107010
+              "value": 106999
             },
             {
               "period": "2021-01",
-              "value": 118076
+              "value": 118065
             },
             {
               "period": "2021-02",
-              "value": 110741
+              "value": 110735
             },
             {
               "period": "2021-03",
-              "value": 118684
+              "value": 118678
             },
             {
               "period": "2021-04",
-              "value": 113543
+              "value": 113533
             },
             {
               "period": "2021-05",
-              "value": 113188
+              "value": 113183
             },
             {
               "period": "2021-06",
-              "value": 104986
+              "value": 104975
             },
             {
               "period": "2021-07",
-              "value": 102529
+              "value": 102522
             },
             {
               "period": "2021-08",
-              "value": 102554
+              "value": 102547
             },
             {
               "period": "2021-09",
-              "value": 101782
+              "value": 101759
             },
             {
               "period": "2021-10",
-              "value": 103128
+              "value": 103117
             },
             {
               "period": "2021-11",
-              "value": 102385
+              "value": 102379
             },
             {
               "period": "2021-12",
-              "value": 100095
+              "value": 100087
             },
             {
               "period": "2022-01",
-              "value": 107387
+              "value": 107378
             },
             {
               "period": "2022-02",
-              "value": 101612
+              "value": 101603
             },
             {
               "period": "2022-03",
-              "value": 107622
+              "value": 107616
             },
             {
               "period": "2022-04",
-              "value": 104117
+              "value": 104104
             },
             {
               "period": "2022-05",
-              "value": 104016
+              "value": 104007
             },
             {
               "period": "2022-06",
-              "value": 98978
+              "value": 98969
             },
             {
               "period": "2022-07",
-              "value": 98631
+              "value": 98625
             },
             {
               "period": "2022-08",
-              "value": 99470
+              "value": 99462
             },
             {
               "period": "2022-09",
-              "value": 99286
+              "value": 99272
             },
             {
               "period": "2022-10",
-              "value": 103795
+              "value": 103782
             },
             {
               "period": "2022-11",
-              "value": 101866
+              "value": 101860
             },
             {
               "period": "2022-12",
-              "value": 100820
+              "value": 100810
             },
             {
               "period": "2023-01",
-              "value": 108343
+              "value": 108336
             },
             {
               "period": "2023-02",
-              "value": 101219
+              "value": 101213
             },
             {
               "period": "2023-03",
-              "value": 109681
+              "value": 109669
             },
             {
               "period": "2023-04",
-              "value": 105273
+              "value": 105262
             },
             {
               "period": "2023-05",
-              "value": 104907
+              "value": 104895
             },
             {
               "period": "2023-06",
-              "value": 98609
+              "value": 98599
             },
             {
               "period": "2023-07",
-              "value": 100286
+              "value": 100277
             },
             {
               "period": "2023-08",
-              "value": 102431
+              "value": 102424
             },
             {
               "period": "2023-09",
-              "value": 100036
+              "value": 100029
             },
             {
               "period": "2023-10",
-              "value": 103047
+              "value": 103042
             },
             {
               "period": "2023-11",
-              "value": 102664
+              "value": 102654
             },
             {
               "period": "2023-12",
-              "value": 100599
+              "value": 100589
             },
             {
               "period": "2024-01",
-              "value": 107541
+              "value": 107535
             },
             {
               "period": "2024-02",
-              "value": 101777
+              "value": 101768
             },
             {
               "period": "2024-03",
-              "value": 105686
+              "value": 105674
             },
             {
               "period": "2024-04",
-              "value": 103867
+              "value": 103858
             },
             {
               "period": "2024-05",
-              "value": 103412
+              "value": 103405
             },
             {
               "period": "2024-06",
-              "value": 97662
+              "value": 97651
             },
             {
               "period": "2024-07",
-              "value": 99532
+              "value": 99529
             },
             {
               "period": "2024-08",
-              "value": 98495
+              "value": 98487
             },
             {
               "period": "2024-09",
-              "value": 97382
+              "value": 97371
             },
             {
               "period": "2024-10",
-              "value": 101517
+              "value": 101506
             },
             {
               "period": "2024-11",
-              "value": 100738
+              "value": 100728
             },
             {
               "period": "2024-12",
-              "value": 99843
+              "value": 99825
             },
             {
               "period": "2025-01",
-              "value": 105521
+              "value": 105517
             },
             {
               "period": "2025-02",
-              "value": 99047
+              "value": 99035
             },
             {
               "period": "2025-03",
-              "value": 103860
+              "value": 103847
             },
             {
               "period": "2025-04",
-              "value": 97864
+              "value": 97861
             },
             {
               "period": "2025-05",
-              "value": 99281
+              "value": 99287
             },
             {
               "period": "2025-06",
-              "value": 90603
+              "value": 90608
             },
             {
               "period": "2025-07",
-              "value": 91691
+              "value": 91694
             },
             {
               "period": "2025-08",
-              "value": 90041
+              "value": 90037
             },
             {
               "period": "2025-09",
-              "value": 91058
+              "value": 91064
             },
             {
               "period": "2025-10",
-              "value": 95428
+              "value": 95435
             },
             {
               "period": "2025-11",
-              "value": 94977
+              "value": 94986
             },
             {
               "period": "2025-12",
-              "value": 92546
+              "value": 92543
             },
             {
               "period": "2026-01",
-              "value": 95253
+              "value": 95279
             },
             {
               "period": "2026-02",
-              "value": 89952
+              "value": 90001
             },
             {
               "period": "2026-03",
-              "value": 95470
+              "value": 95517
+            },
+            {
+              "period": "2026-04",
+              "value": 92563
             }
           ],
           "color": "#58e6ff"
@@ -3076,79 +3081,79 @@
           "values": [
             {
               "period": "2020-01",
-              "value": 31646
+              "value": 31643
             },
             {
               "period": "2020-02",
-              "value": 30589
+              "value": 30587
             },
             {
               "period": "2020-03",
-              "value": 31883
+              "value": 31879
             },
             {
               "period": "2020-04",
-              "value": 33791
+              "value": 33788
             },
             {
               "period": "2020-05",
-              "value": 35396
+              "value": 35390
             },
             {
               "period": "2020-06",
-              "value": 32933
+              "value": 32928
             },
             {
               "period": "2020-07",
-              "value": 31977
+              "value": 31974
             },
             {
               "period": "2020-08",
-              "value": 31945
+              "value": 31942
             },
             {
               "period": "2020-09",
-              "value": 31403
+              "value": 31400
             },
             {
               "period": "2020-10",
-              "value": 31367
+              "value": 31363
             },
             {
               "period": "2020-11",
-              "value": 31870
+              "value": 31866
             },
             {
               "period": "2020-12",
-              "value": 32347
+              "value": 32346
             },
             {
               "period": "2021-01",
-              "value": 33947
+              "value": 33942
             },
             {
               "period": "2021-02",
-              "value": 32841
+              "value": 32840
             },
             {
               "period": "2021-03",
-              "value": 35392
+              "value": 35388
             },
             {
               "period": "2021-04",
-              "value": 34423
+              "value": 34421
             },
             {
               "period": "2021-05",
-              "value": 34358
+              "value": 34356
             },
             {
               "period": "2021-06",
-              "value": 31977
+              "value": 31974
             },
             {
               "period": "2021-07",
-              "value": 31884
+              "value": 31880
             },
             {
               "period": "2021-08",
@@ -3156,71 +3161,71 @@
             },
             {
               "period": "2021-09",
-              "value": 31159
+              "value": 31154
             },
             {
               "period": "2021-10",
-              "value": 31276
+              "value": 31271
             },
             {
               "period": "2021-11",
-              "value": 31262
+              "value": 31261
             },
             {
               "period": "2021-12",
-              "value": 31107
+              "value": 31105
             },
             {
               "period": "2022-01",
-              "value": 32570
+              "value": 32567
             },
             {
               "period": "2022-02",
-              "value": 30416
+              "value": 30415
             },
             {
               "period": "2022-03",
-              "value": 32706
+              "value": 32705
             },
             {
               "period": "2022-04",
-              "value": 31737
+              "value": 31733
             },
             {
               "period": "2022-05",
-              "value": 32322
+              "value": 32320
             },
             {
               "period": "2022-06",
-              "value": 30496
+              "value": 30495
             },
             {
               "period": "2022-07",
-              "value": 31313
+              "value": 31311
             },
             {
               "period": "2022-08",
-              "value": 30887
+              "value": 30882
             },
             {
               "period": "2022-09",
-              "value": 30237
+              "value": 30233
             },
             {
               "period": "2022-10",
-              "value": 31608
+              "value": 31604
             },
             {
               "period": "2022-11",
-              "value": 30977
+              "value": 30974
             },
             {
               "period": "2022-12",
-              "value": 30812
+              "value": 30809
             },
             {
               "period": "2023-01",
-              "value": 32529
+              "value": 32528
             },
             {
               "period": "2023-02",
@@ -3228,91 +3233,91 @@
             },
             {
               "period": "2023-03",
-              "value": 32425
+              "value": 32420
             },
             {
               "period": "2023-04",
-              "value": 31965
+              "value": 31957
             },
             {
               "period": "2023-05",
-              "value": 31614
+              "value": 31611
             },
             {
               "period": "2023-06",
-              "value": 30095
+              "value": 30091
             },
             {
               "period": "2023-07",
-              "value": 30992
+              "value": 30989
             },
             {
               "period": "2023-08",
-              "value": 31201
+              "value": 31199
             },
             {
               "period": "2023-09",
-              "value": 30203
+              "value": 30202
             },
             {
               "period": "2023-10",
-              "value": 30961
+              "value": 30957
             },
             {
               "period": "2023-11",
-              "value": 31137
+              "value": 31133
             },
             {
               "period": "2023-12",
-              "value": 30984
+              "value": 30978
             },
             {
               "period": "2024-01",
-              "value": 32573
+              "value": 32570
             },
             {
               "period": "2024-02",
-              "value": 31064
+              "value": 31060
             },
             {
               "period": "2024-03",
-              "value": 32521
+              "value": 32520
             },
             {
               "period": "2024-04",
-              "value": 32092
+              "value": 32091
             },
             {
               "period": "2024-05",
-              "value": 31761
+              "value": 31755
             },
             {
               "period": "2024-06",
-              "value": 30586
+              "value": 30584
             },
             {
               "period": "2024-07",
-              "value": 31540
+              "value": 31542
             },
             {
               "period": "2024-08",
-              "value": 30810
+              "value": 30809
             },
             {
               "period": "2024-09",
-              "value": 29705
+              "value": 29703
             },
             {
               "period": "2024-10",
-              "value": 31061
+              "value": 31058
             },
             {
               "period": "2024-11",
-              "value": 31074
+              "value": 31076
             },
             {
               "period": "2024-12",
-              "value": 31579
+              "value": 31578
             },
             {
               "period": "2025-01",
@@ -3320,59 +3325,63 @@
             },
             {
               "period": "2025-02",
-              "value": 30701
+              "value": 30696
             },
             {
               "period": "2025-03",
-              "value": 32488
+              "value": 32486
             },
             {
               "period": "2025-04",
-              "value": 31120
+              "value": 31126
             },
             {
               "period": "2025-05",
-              "value": 31719
+              "value": 31725
             },
             {
               "period": "2025-06",
-              "value": 29696
+              "value": 29698
             },
             {
               "period": "2025-07",
-              "value": 30185
+              "value": 30191
             },
             {
               "period": "2025-08",
-              "value": 29546
+              "value": 29548
             },
             {
               "period": "2025-09",
-              "value": 29863
+              "value": 29864
             },
             {
               "period": "2025-10",
-              "value": 30902
+              "value": 30907
             },
             {
               "period": "2025-11",
-              "value": 31655
+              "value": 31653
             },
             {
               "period": "2025-12",
-              "value": 31105
+              "value": 31101
             },
             {
               "period": "2026-01",
-              "value": 31657
+              "value": 31682
             },
             {
               "period": "2026-02",
-              "value": 29761
+              "value": 29796
             },
             {
               "period": "2026-03",
-              "value": 32202
+              "value": 32222
+            },
+            {
+              "period": "2026-04",
+              "value": 31121
             }
           ],
           "color": "#ff9a62"
@@ -3380,12 +3389,12 @@
       ],
       "latestValues": {
         "All editors (1+)": {
-          "period": "2026-03",
-          "value": 95470
+          "period": "2026-04",
+          "value": 92563
         },
         "Active editors (5+)": {
-          "period": "2026-03",
-          "value": 32202
+          "period": "2026-04",
+          "value": 31121
         }
       }
     },

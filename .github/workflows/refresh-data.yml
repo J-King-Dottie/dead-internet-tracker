@@ -35,6 +35,7 @@ jobs:
   refresh-monthly-api-snapshots:
     if: github.event.schedule == '15 10 2 * *' || (github.event_name == 'workflow_dispatch' && (github.event.inputs.target == 'monthly-api' || github.event.inputs.target == 'all'))
     runs-on: ubuntu-latest
+    timeout-minutes: 45
 
     steps:
       - name: Check out repo
@@ -60,6 +61,7 @@ jobs:
           EOF
 
       - name: Refresh monthly snapshots
+        timeout-minutes: 30
         run: |
           python scripts/refresh_stackoverflow.py
           python scripts/refresh_wikipedia.py

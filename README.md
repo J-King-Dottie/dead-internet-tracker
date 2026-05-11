@@ -8,13 +8,23 @@ The project is deliberately cautious. It does not claim to measure the whole int
 
 Live site: [https://dead-internet-tracker.onrender.com/](https://dead-internet-tracker.onrender.com/)
 
+## Project Goal
+
+Build a static HTML dashboard that tracks signals related to the Dead Internet Theory across time.
+
+The dashboard has two broad areas:
+
+- Internet traffic and navigation.
+- Internet content generation.
+
+The core product goal is signal comparison, not a single score. Each metric should make the smallest honest claim its source supports.
+
 ## For AI Agents
 
 Start with these files:
 
 - [AGENTS.md](AGENTS.md): coding-agent guidance, data rules, caveats, and chart standards.
 - [llms.txt](llms.txt): machine-readable summary for AI/search agents.
-- [PROJECT_GOALS.md](PROJECT_GOALS.md): project intent and product constraints.
 - [WEB_SAMPLE_AI_CLASSIFICATION_TEMPLATE.md](WEB_SAMPLE_AI_CLASSIFICATION_TEMPLATE.md): Common Crawl AI-content classification rubric.
 - [data/dashboard_readable.json](data/dashboard_readable.json): normalized chart data and latest plotted values.
 - [index.html](index.html): static public page.
@@ -34,6 +44,18 @@ static dashboard -> local snapshot data -> transparent public proxies
 - Wikipedia editor activity as a proxy for sustained human contribution to open knowledge.
 - Stack Overflow question volume as a proxy for public human-to-human software help.
 - Imperva bot reports as narrower security-focused automation signals.
+
+## Metric Roadmap
+
+Confirmed or planned metric ideas:
+
+- Cloudflare Radar bot and AI bot traffic.
+- Search, social, and AI chatbot referrals, if a recurring public source can be maintained.
+- Wikimedia / Wikipedia edits or editor activity over time.
+- Stack Overflow / Stack Exchange activity over time, especially question volume after 2022.
+- Common Crawl publication-month samples with a fixed classifier pipeline, so trend movement is meaningful even if individual classifications are imperfect.
+- A recurring AI-content research review that normalizes published estimates into a time-series dataset.
+- A signal consensus view that reports how many tracked signals point toward a stronger dead internet trend under fixed rules.
 
 ## Important Caveats
 
