@@ -1,13 +1,18 @@
 from __future__ import annotations
 
 import json
+import time
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 
 API_BASE = "https://wikimedia.org/api/rest_v1/metrics/editors/aggregate/en.wikipedia.org/user/content"
 USER_AGENT = "DeadInternetTracker/1.0 (local dashboard research)"
+REQUEST_TIMEOUT_SECONDS = 60
+MAX_REQUEST_ATTEMPTS = 4
+RETRYABLE_HTTP_STATUS = {429, 500, 502, 503, 504}
 DISPLAY_START = "2020-01"
 ACTIVITY_LEVELS = {
     "all_editors": "all-activity-levels",
@@ -20,9 +25,26 @@ ACTIVITY_LEVELS = {
 def fetch_monthly_series(activity_level: str) -> list[dict]:
     url = f"{API_BASE}/{activity_level}/monthly/20010101/20261231"
     req = Request(url, headers={"User-Agent": USER_AGENT})
-    with urlopen(req) as response:
-        payload = json.load(response)
-    return payload["items"][0]["results"]
+    for attempt in range(1, MAX_REQUEST_ATTEMPTS + 1):
+        try:
+            with urlopen(req, timeout=REQUEST_TIMEOUT_SECONDS) as response:
+                payload = json.load(response)
+            return payload["items"][0]["results"]
+        except HTTPError as error:
+            if error.code not in RETRYABLE_HTTP_STATUS or attempt == MAX_REQUEST_ATTEMPTS:
+                raise
+        except URLError:
+            if attempt == MAX_REQUEST_ATTEMPTS:
+                raise
+
+        sleep_seconds = min(2 ** attempt, 30)
+        print(
+            f"Wikimedia request for {activity_level} failed; "
+            f"retrying in {sleep_seconds}s ({attempt}/{MAX_REQUEST_ATTEMPTS})"
+        )
+        time.sleep(sleep_seconds)
+
+    raise RuntimeError(f"Failed to fetch Wikimedia series for {activity_level}")
 
 
 def rows_to_map(rows: list[dict]) -> dict[str, int]:
