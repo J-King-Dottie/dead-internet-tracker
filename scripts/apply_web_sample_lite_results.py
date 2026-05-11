@@ -33,8 +33,10 @@ def build_snapshot(period_rows: list[dict], summary_rows: list[dict], model_name
             "5,000-page article-style Common Crawl sample and classifies those pages as Human, Mixed, or AI."
         ),
         "caveats": (
-            "This is a stable sample of article-style open-web pages, not the whole internet. "
-            "The lite series is cheaper and faster than the full 5,000-page run, but noisier month to month."
+            "Read this as a consistent trend measure, not a precise census: the same URL-month sampling "
+            "and classification method is used each month, so movement over time is more meaningful than "
+            "the absolute level. It covers article-style open-web pages from Common Crawl, not the whole "
+            "internet, and the 1,000-page lite sample is noisier than a full 5,000-page run."
         ),
         "xValues": periods,
         "axisValueFormat": "percent1",

@@ -698,7 +698,7 @@
       "sourceSnapshot": "data/web-sample-lite/web_sample_lite_summary.json",
       "lastRefreshed": "2026-05-11",
       "method": "Each month samples 1,000 article-style Common Crawl pages and classifies excerpts with an LLM rubric. The plotted values are trailing 6-month moving averages.",
-      "caveats": "This is a stable sample of article-style open-web pages, not the whole internet. The lite series is cheaper and faster than the full 5,000-page run, but noisier month to month.",
+      "caveats": "Read this as a consistent trend measure, not a precise census: the same URL-month sampling and classification method is used each month, so movement over time is more meaningful than the absolute level. It covers article-style open-web pages from Common Crawl, not the whole internet, and the 1,000-page lite sample is noisier than a full 5,000-page run.",
       "xValues": [
         "2020-01",
         "2020-02",
