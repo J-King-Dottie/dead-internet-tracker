@@ -30,6 +30,13 @@ RETRYABLE_HTTP_STATUS = {408, 409, 429, 500, 502, 503, 504}
 OPENAI_POLL_SECONDS = 5
 
 
+def should_log_poll_lines() -> bool:
+    configured = os.environ.get("OPENAI_POLL_LOG", "").strip().lower()
+    if configured:
+        return configured in {"1", "true", "yes", "on"}
+    return not os.environ.get("GITHUB_ACTIONS")
+
+
 def canonical_url(url: str) -> str:
     url = (url or "").strip()
     if not url:
@@ -89,6 +96,10 @@ def parse_percent(value: str) -> float | None:
     return parsed
 
 
+def is_clean_percent(value: str) -> bool:
+    return bool(re.fullmatch(r"\d+(?:\.\d+)?%", (value or "").strip()))
+
+
 def parse_iso_date(value: str) -> date | None:
     try:
         return date.fromisoformat(value)
@@ -144,8 +155,8 @@ def validate_candidate(candidate: dict, today: date) -> str | None:
         return "publication_date is not YYYY-MM-DD"
     if publication_date > today + timedelta(days=1):
         return "publication_date is in the future"
-    if parse_percent(str(candidate["value"])) is None:
-        return "value is not a valid percentage"
+    if not is_clean_percent(str(candidate["value"])) or parse_percent(str(candidate["value"])) is None:
+        return "value must be an exact percentage string like 12.3%"
     if not canonical_url(str(candidate["source"])):
         return "source URL is invalid"
     notes = normalize_notes(str(candidate["notes"]))
@@ -217,10 +228,12 @@ def fetch_openai_response(response_id: str, api_key: str) -> dict:
 
 def wait_for_openai_response(response_id: str, api_key: str, timeout_seconds: int) -> dict:
     deadline = time.monotonic() + timeout_seconds
+    log_poll_lines = should_log_poll_lines()
     while True:
         payload = fetch_openai_response(response_id, api_key)
         status = payload.get("status")
-        print(f"poll response_id={response_id} status={status}", flush=True)
+        if log_poll_lines:
+            print(f"poll response_id={response_id} status={status}", flush=True)
         if status == "completed":
             return payload
         if status in {"failed", "cancelled", "incomplete"}:
@@ -302,6 +315,19 @@ def repair_schema() -> dict:
     }
 
 
+def protocol_for_weekly_prompt(protocol: str) -> str:
+    omitted_sections = {"Search Standard", "Refresh Output Standard"}
+    kept: list[str] = []
+    skip = False
+    for line in protocol.splitlines():
+        section_match = re.match(r"^##\s+(.+?)\s*$", line)
+        if section_match:
+            skip = section_match.group(1) in omitted_sections
+        if not skip and "reason included or reason rejected" not in line.lower():
+            kept.append(line)
+    return "\n".join(kept).strip()
+
+
 def build_prompt(
     snapshot: dict,
     protocol: str,
@@ -309,6 +335,7 @@ def build_prompt(
     today: date,
 ) -> str:
     existing_rows = snapshot.get("rows", [])
+    weekly_protocol = protocol_for_weekly_prompt(protocol)
     existing_sources = sorted({canonical_url(row.get("source", "")) for row in existing_rows if row.get("source")})
     existing_series = sorted({f"{row.get('series')} ({row.get('year')})" for row in existing_rows})
     return f"""
@@ -317,9 +344,9 @@ You are refreshing the Dead Internet Tracker AI content meta-review chart.
 Today is {today.isoformat()}.
 Goal: find missing published estimates for the share of online content that is AI-generated or materially LLM-assisted.
 
-Use this protocol for inclusion standards, source quality, dedupe judgment, and note format.
-For this scheduled refresh, the scope below overrides any full historical-refresh or year-by-year sweep instructions in the protocol.
-{protocol}
+Use this protocol excerpt for inclusion standards, source quality, dedupe judgment, and note format.
+It intentionally omits the full-refresh search-volume and refresh-log sections because this is a weekly incremental run.
+{weekly_protocol}
 
 Existing source URLs to dedupe against:
 {json.dumps(existing_sources, indent=2)}
@@ -349,6 +376,7 @@ Return JSON only. For every kept candidate, notes must be exactly three short se
 1. claim with estimate and scope
 2. method
 3. caveat
+Use an exact percentage string in value, such as "12.3%".
 """.strip()
 
 
@@ -407,7 +435,7 @@ Drop candidates when the source does not actually contain a content-share estima
 Validation rules:
 - year must be an integer from 2020 through {today.year}
 - publication_date must be YYYY-MM-DD and not in the future
-- value must be a percentage from 0 to 100
+- value must be an exact percentage string from 0% to 100%, such as 12.3%
 - source must be a valid URL
 - notes must be exactly three short sentences: claim with estimate and scope; method; caveat
 

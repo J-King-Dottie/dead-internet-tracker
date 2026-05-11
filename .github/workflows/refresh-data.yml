@@ -107,7 +107,7 @@ jobs:
           OPENAI_RESEARCH_MODEL: ${{ vars.OPENAI_RESEARCH_MODEL || 'gpt-5.4' }}
           RESEARCH_LOOKBACK_DAYS: ${{ vars.RESEARCH_LOOKBACK_DAYS || '7' }}
         run: |
-          python -u scripts/refresh_ai_content_meta_review.py
+          python scripts/refresh_ai_content_meta_review.py
           python scripts/build_dashboard_readable.py
           python scripts/embed_dashboard_readable.py
 
