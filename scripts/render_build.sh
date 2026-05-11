@@ -3,8 +3,6 @@ set -euo pipefail
 
 public_dir="public"
 
-python3 scripts/embed_dashboard_readable.py
-
 files=(
   "index.html"
   "robots.txt"

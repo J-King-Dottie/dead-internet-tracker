@@ -114,3 +114,5 @@ Some research pipelines write large intermediate files locally. Those are intent
 ## Deploying to Render
 
 This repo includes a root `render.yaml` for a static-site deploy. Connect the GitHub repo in Render and deploy it as a Blueprint or Static Site.
+
+Render does not refresh data or install Python dependencies during deploy. GitHub Actions prepares the static files; Render runs `scripts/render_build.sh` to copy the committed site assets into `public`.

@@ -48,9 +48,6 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
       - name: Write local env file for refresh scripts
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -188,7 +185,9 @@ jobs:
 
       - name: Build static output
         if: steps.web_sample_check.outputs.available == 'true'
-        run: bash scripts/render_build.sh
+        run: |
+          python scripts/embed_dashboard_readable.py
+          bash scripts/render_build.sh
 
       - name: Commit and push if web sample changed
         if: steps.web_sample_check.outputs.available == 'true'
