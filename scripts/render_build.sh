@@ -14,7 +14,6 @@ files=(
   "social-preview.png"
   "README.md"
   "WEB_SAMPLE_AI_CLASSIFICATION_TEMPLATE.md"
-  "LICENSE"
   "data/dashboard_readable.json"
   "data/cloudflare/cloudflare.json"
   "data/cloudflare/cloudflare.js"
