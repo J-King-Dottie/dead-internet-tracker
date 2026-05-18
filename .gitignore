@@ -9,3 +9,6 @@ __pycache__/
 .pytest_cache/
 research/
 tmp_*
+archive/common-crawl-chart/
+data/web-sample/
+data/web-sample-lite/

@@ -118,14 +118,6 @@ def dynamic_values(data: dict[str, Any]) -> dict[str, str]:
     if latest_2026_average is not None:
         values["ai-content-2026-average"] = percent0(latest_2026_average)
 
-    web_sample = chart_by_key(data, "web-sample-classifications")
-    strong = latest_series_point(web_sample, "Strong AI signal")
-    partial = latest_series_point(web_sample, "Partial AI signal")
-    if strong:
-        values["web-sample-latest-strong-share"] = percent1(strong.get("value"))
-    if partial:
-        values["web-sample-latest-partial-share"] = percent1(partial.get("value"))
-
     cloudflare = chart_by_key(data, "traffic-bot-human")
     ai_bots = latest_series_point(cloudflare, "AI bots")
     if ai_bots:

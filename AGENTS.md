@@ -46,34 +46,13 @@ Direct / stronger:
 Still placeholder or future work:
 
 - referrals / search-social-AI displacement
-- common crawl publication-month sampling and classification
 - reported estimates / research meta-analysis
 
 ## Web Sample Metric
 
-The web-sample metric is now a locked recurring process:
+The Common Crawl / web-sample chart and supporting pipeline are archived locally under `archive/common-crawl-chart/`.
 
-- Common Crawl columnar index through Athena
-- publication-month approximation from URL year+month patterns
-- first Common Crawl snapshot whose crawl window starts after the target month ends, with same-crawl top-ups before later crawls
-- one URL per registered domain
-- `10,000` initial candidates, then `2,000` same-crawl top-ups if needed
-- `5,000` usable pages after main-text extraction
-- `400–1000` token excerpt window
-- `gpt-5-mini` classifier
-- direct live Responses API calls
-- `20` excerpts per request
-- `10` concurrent requests
-
-Classifier labels:
-
-- `Human`
-- `Mixed`
-- `AI`
-
-Prompting uses a short rubric with source-backed cues and lightweight supporting metrics. The methodology details live in:
-
-- `WEB_SAMPLE_AI_CLASSIFICATION_TEMPLATE.md`
+That archive is gitignored. Do not restore it into the active dashboard unless explicitly asked.
 
 ## Chart Rules
 

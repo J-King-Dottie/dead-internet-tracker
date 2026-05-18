@@ -25,7 +25,6 @@ Start with these files:
 
 - [AGENTS.md](AGENTS.md): coding-agent guidance, data rules, caveats, and chart standards.
 - [llms.txt](llms.txt): machine-readable summary for AI/search agents.
-- [WEB_SAMPLE_AI_CLASSIFICATION_TEMPLATE.md](WEB_SAMPLE_AI_CLASSIFICATION_TEMPLATE.md): Common Crawl AI-content classification rubric.
 - [data/dashboard_readable.json](data/dashboard_readable.json): normalized chart data and latest plotted values.
 - [index.html](index.html): static public page.
 
@@ -39,7 +38,6 @@ static dashboard -> local snapshot data -> transparent public proxies
 ## What This Site Measures
 
 - AI-generated or AI-influenced content estimates from recurring public reports and curated research.
-- Monthly Common Crawl samples of article-style open-web pages classified for AI writing signals.
 - Cloudflare Radar AI bot traffic as a proxy for AI systems crawling and traversing the public web.
 - Wikipedia editor activity as a proxy for sustained human contribution to open knowledge.
 - Stack Overflow question volume as a proxy for public human-to-human software help.
@@ -53,7 +51,6 @@ Confirmed or planned metric ideas:
 - Search, social, and AI chatbot referrals, if a recurring public source can be maintained.
 - Wikimedia / Wikipedia edits or editor activity over time.
 - Stack Overflow / Stack Exchange activity over time, especially question volume after 2022.
-- Common Crawl publication-month samples with a fixed classifier pipeline, so trend movement is meaningful even if individual classifications are imperfect.
 - A recurring AI-content research review that normalizes published estimates into a time-series dataset.
 - A signal consensus view that reports how many tracked signals point toward a stronger dead internet trend under fixed rules.
 
@@ -62,7 +59,6 @@ Confirmed or planned metric ideas:
 - This page does not measure the whole internet.
 - Cloudflare sees a large but incomplete slice of the public web, not the whole internet.
 - Imperva data is security-focused and is not directly comparable to Cloudflare.
-- Common Crawl samples are article-style open-web pages, not all pages.
 - Published AI-content estimates come from different studies and content sets, so levels are noisy.
 - The dashboard compares signal direction; it is not a universal "dead internet" index.
 
@@ -83,7 +79,6 @@ Confirmed or planned metric ideas:
 - [Stack Overflow activity](https://dead-internet-tracker.onrender.com/data/stackoverflow/stackoverflow.json)
 - [Imperva traffic profile](https://dead-internet-tracker.onrender.com/data/imperva/imperva.json)
 - [AI content meta-review](https://dead-internet-tracker.onrender.com/data/ai-content-meta-review/ai_content_meta_review.json)
-- [Common Crawl lite web sample summary](https://dead-internet-tracker.onrender.com/data/web-sample-lite/web_sample_lite_summary.json)
 
 ## Local Preview
 
@@ -109,7 +104,7 @@ Some research pipelines write large intermediate files locally. Those are intent
 
 ## Discovery Keywords
 
-`dead internet theory`, `AI-generated content`, `AI content estimates`, `AI bot traffic`, `AI crawlers`, `bot automation`, `Cloudflare Radar`, `Imperva bad bot report`, `Common Crawl`, `web sample classification`, `Wikipedia activity`, `Wikipedia editors`, `Stack Overflow questions`, `human web activity`, `synthetic media`, `public web measurement`, `internet automation`.
+`dead internet theory`, `AI-generated content`, `AI content estimates`, `AI bot traffic`, `AI crawlers`, `bot automation`, `Cloudflare Radar`, `Imperva bad bot report`, `Wikipedia activity`, `Wikipedia editors`, `Stack Overflow questions`, `human web activity`, `synthetic media`, `public web measurement`, `internet automation`.
 
 ## Deploying to Render
 

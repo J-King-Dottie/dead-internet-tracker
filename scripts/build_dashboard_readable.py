@@ -13,7 +13,6 @@ OUTPUT_PATH = DATA_DIR / "dashboard_readable.json"
 
 CHART_INTENTS = {
     "ai-content-meta-review": "There is no single authoritative measure of AI-generated content online. This chart gives a bird's-eye view of the published estimates and whether they point in the same direction.",
-    "web-sample-classifications": "Published estimates often do not make clear what \"AI-written\" means. This chart fills that gap by separating pages that look mostly AI-written from pages that show partial AI influence.",
     "traffic-bot-human": "The dead internet theory is not just about AI writing the web. It is also about AI systems increasingly reading, crawling, and traversing it.",
     "imperva-traffic": "Machine traffic is not spread evenly across the internet. This chart shows how automated traffic can dominate in high-value, abuse-sensitive parts of the web.",
     "wikipedia": "Wikipedia is a useful slow-decline signal for public human contribution. It shows whether people are still doing sustained knowledge work together in the open.",
@@ -96,22 +95,6 @@ def normalize_snapshot_range(snapshot: dict[str, Any]) -> dict[str, Any]:
             for series in snapshot.get("series") or []
         ],
     }
-
-
-def trailing_moving_average(values: list[Any], window_size: int) -> list[float | None]:
-    averaged: list[float | None] = []
-    for index in range(len(values)):
-        start = max(0, index - window_size + 1)
-        window_values = [
-            float(value)
-            for value in values[start : index + 1]
-            if isinstance(value, (int, float)) or (isinstance(value, str) and value.strip())
-        ]
-        if not window_values:
-            averaged.append(None)
-        else:
-            averaged.append(round(sum(window_values) / len(window_values), 2))
-    return averaged
 
 
 def parse_estimate_midpoint(value: Any) -> float | None:
@@ -239,56 +222,6 @@ def ai_content_meta_review() -> dict[str, Any]:
     }
 
 
-def web_sample_classifications() -> dict[str, Any]:
-    snapshot_path = "data/web-sample-lite/web_sample_lite_summary.json"
-    snapshot = load_json(snapshot_path)
-    labels = snapshot.get("xValues") or []
-    source_series = snapshot.get("series") or []
-    ai_series = next((series for series in source_series if series.get("name") in {"AI share", "AI"}), source_series[0])
-    mixed_series = next((series for series in source_series if series.get("name") in {"Mixed share", "Mixed"}), None)
-    influenced_series = next((series for series in source_series if series.get("name") == "AI-influenced share"), None)
-    ai_values = ai_series.get("values") or []
-    if mixed_series:
-        mixed_values = mixed_series.get("values") or []
-    else:
-        mixed_values = []
-        for index, influenced in enumerate((influenced_series or {}).get("values") or []):
-            ai = ai_values[index] if index < len(ai_values) else None
-            mixed_values.append(round(max(0, float(influenced) - float(ai)), 2) if influenced is not None and ai is not None else None)
-
-    strong_values = trailing_moving_average(ai_values, 6)
-    partial_values = trailing_moving_average(mixed_values, 6)
-    periods = []
-    for period in snapshot.get("periods") or []:
-        ai_share = period.get("ai_share")
-        influenced_share = period.get("ai_influenced_share")
-        mixed_share = period.get("mixed_share")
-        if mixed_share is None and ai_share is not None and influenced_share is not None:
-            mixed_share = round(max(0, float(influenced_share) - float(ai_share)), 2)
-        periods.append({**period, "mixed_share": mixed_share})
-
-    return {
-        "chartKey": "web-sample-classifications",
-        "title": "Monthly AI share in the web sample",
-        "description": "Trailing 6-month moving averages of sampled article-style web pages classified as strong AI signal or partial AI signal. The two lines are exclusive.",
-        "source": snapshot.get("source", ""),
-        "sourceSnapshot": snapshot_path,
-        "lastRefreshed": snapshot.get("lastRefreshed", ""),
-        "method": "Each month samples 1,000 article-style Common Crawl pages and classifies excerpts with an LLM rubric. The plotted values are trailing 6-month moving averages.",
-        "caveats": snapshot.get("caveats", ""),
-        "xValues": labels,
-        "series": [
-            series_payload("Strong AI signal", labels, strong_values, "percent"),
-            series_payload("Partial AI signal", labels, partial_values, "percent"),
-        ],
-        "underlyingMonthlyCounts": periods,
-        "latestValues": {
-            "Strong AI signal": latest_value({"values": strong_values}, labels),
-            "Partial AI signal": latest_value({"values": partial_values}, labels),
-        },
-    }
-
-
 def imperva_traffic() -> dict[str, Any]:
     snapshot_path = "data/imperva/imperva.json"
     snapshot = normalize_snapshot_range(load_json(snapshot_path))
@@ -323,7 +256,6 @@ def main() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     charts = [
         with_chart_info(ai_content_meta_review()),
-        with_chart_info(web_sample_classifications()),
         with_chart_info(line_chart("data/cloudflare/cloudflare.json", "traffic-bot-human", {"AI bot share": "AI bots"})),
         with_chart_info(imperva_traffic()),
         with_chart_info(

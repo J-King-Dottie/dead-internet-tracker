@@ -13,7 +13,6 @@ files=(
   "social-preview.svg"
   "social-preview.png"
   "README.md"
-  "WEB_SAMPLE_AI_CLASSIFICATION_TEMPLATE.md"
   "data/dashboard_readable.json"
   "data/cloudflare/cloudflare.json"
   "data/cloudflare/cloudflare.js"
@@ -25,8 +24,6 @@ files=(
   "data/stackoverflow/stackoverflow.js"
   "data/ai-content-meta-review/ai_content_meta_review.json"
   "data/ai-content-meta-review/ai_content_meta_review.js"
-  "data/web-sample-lite/web_sample_lite_summary.json"
-  "data/web-sample-lite/web_sample_lite_summary.js"
 )
 
 rm -rf "$public_dir"

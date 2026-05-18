@@ -11,7 +11,6 @@ on:
         options:
           - monthly-api
           - ai-content-meta-review
-          - web-sample-lite
           - all
   schedule:
     # Monthly API-backed charts: Stack Exchange is near real time, Cloudflare
@@ -21,9 +20,6 @@ on:
     - cron: "15 10 2 * *"
     # Weekly recent-source sweep for chart 1: AI content meta-review.
     - cron: "30 9 * * 1"
-    # Web-sample auto-refresh is paused for now. The manual workflow_dispatch
-    # target still exists for one-off runs:
-    # - web-sample-lite was "15 13 * * 3"
 
 permissions:
   contents: write
@@ -122,90 +118,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/ai-content-meta-review data/dashboard_readable.json index.html
           git commit -m "Refresh AI content meta-review"
-          git push
-
-  refresh-web-sample-lite:
-    if: github.event.schedule == '15 13 * * 3' || (github.event_name == 'workflow_dispatch' && (github.event.inputs.target == 'web-sample-lite' || github.event.inputs.target == 'all'))
-    runs-on: ubuntu-latest
-    timeout-minutes: 360
-
-    steps:
-      - name: Check out repo
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Check Common Crawl availability
-        id: web_sample_check
-        run: python scripts/refresh_web_sample_lite_month.py --check-only
-
-      - name: Install AWS dependencies
-        if: steps.web_sample_check.outputs.available == 'true'
-        run: pip install -r requirements-aws.txt
-
-      - name: Write local env file for refresh scripts
-        if: steps.web_sample_check.outputs.available == 'true'
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          ATHENA_REGION: ${{ secrets.ATHENA_REGION }}
-          ATHENA_RESULTS_S3: ${{ secrets.ATHENA_RESULTS_S3 }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          test -n "$AWS_ACCESS_KEY_ID"
-          test -n "$AWS_SECRET_ACCESS_KEY"
-          test -n "$ATHENA_REGION"
-          test -n "$ATHENA_RESULTS_S3"
-          test -n "$OPENAI_API_KEY"
-          cat > .env <<EOF
-          AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
-          AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
-          ATHENA_REGION=$ATHENA_REGION
-          ATHENA_RESULTS_S3=$ATHENA_RESULTS_S3
-          OPENAI_API_KEY=$OPENAI_API_KEY
-          EOF
-
-      - name: Ensure Common Crawl Athena table exists
-        if: steps.web_sample_check.outputs.available == 'true'
-        run: python scripts/setup_commoncrawl_athena.py
-
-      - name: Refresh web sample lite month
-        if: steps.web_sample_check.outputs.available == 'true'
-        env:
-          WEB_SAMPLE_CLASSIFIER_MODEL: ${{ vars.WEB_SAMPLE_CLASSIFIER_MODEL || 'gpt-5-mini' }}
-        run: |
-          python scripts/refresh_web_sample_lite_month.py \
-            --model "$WEB_SAMPLE_CLASSIFIER_MODEL"
-
-      - name: Remove local env file
-        if: always()
-        run: rm -f .env
-
-      - name: Build static output
-        if: steps.web_sample_check.outputs.available == 'true'
-        run: |
-          python scripts/embed_dashboard_readable.py
-          bash scripts/render_build.sh
-
-      - name: Commit and push if web sample changed
-        if: steps.web_sample_check.outputs.available == 'true'
-        run: |
-          if git diff --quiet -- data/web-sample-lite data/dashboard_readable.json index.html; then
-            echo "No web sample changes."
-            exit 0
-          fi
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/web-sample-lite/web_sample_lite_summary.json \
-            data/web-sample-lite/web_sample_lite_summary.js \
-            data/web-sample-lite/web_sample_lite_setup_range.json \
-            data/dashboard_readable.json \
-            index.html
-          git commit -m "Refresh web sample lite"
           git push
