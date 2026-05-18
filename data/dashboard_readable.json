@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-05-11",
+  "generatedAt": "2026-05-18",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-05-11",
+      "lastRefreshed": "2026-05-18",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -146,6 +146,24 @@
             },
             {
               "year": 2023,
+              "value": 12.0,
+              "rawValue": "12.0%",
+              "series": "Originality / Forbes Business Council posts",
+              "source": "https://originality.ai/blog/ai-forbes-business-council-study",
+              "notes": "The study found that 12.0% of Forbes Business Council posts published in 2023 were likely AI-generated. It scanned 3,906 2023 posts with Originality.ai’s detector and counted 469 as likely AI. The estimate is specific to one paid contributor platform and depends on detector thresholds.",
+              "publicationDate": "2025-12-02"
+            },
+            {
+              "year": 2023,
+              "value": 10.86,
+              "rawValue": "10.86%",
+              "series": "Originality / Fortune 500 blog articles",
+              "source": "https://originality.ai/blog/ai-generated-content-dominates-on-some-fortune-500-sites",
+              "notes": "The study found that 10.86% of 3,900 articles from official Fortune 500 company blogs were likely AI-generated in a November 2023 snapshot. It ran Originality.ai’s detector on blog articles from 246 Fortune 500 blogs and compared article length with AI flags. The estimate is a one-month, company-blog snapshot rather than a broader web benchmark.",
+              "publicationDate": "2025-11-10"
+            },
+            {
+              "year": 2023,
               "value": 12.21,
               "rawValue": "12.21%",
               "series": "Originality / Google reviews",
@@ -263,12 +281,48 @@
             },
             {
               "year": 2024,
+              "value": 2.65,
+              "rawValue": "2.65%",
+              "series": "Originality / eBay reviews",
+              "source": "https://originality.ai/blog/ai-ebay-lazada-reviews",
+              "notes": "The study found that 2.65% of eBay reviews in 2024 were likely AI-generated. It analyzed yearly review data from 2018 to 2024 and applied detector-based classification to estimate prevalence. The estimate is platform-specific and the source notes it is near some detector false-positive ranges.",
+              "publicationDate": "2025-10-17"
+            },
+            {
+              "year": 2024,
               "value": 41.18,
               "rawValue": "41.18%",
               "series": "Originality / Facebook long-form posts",
               "source": "https://www.stanventures.com/news/facebook-flooded-with-ai-over-40-of-posts-are-machine-generated-1847/",
               "notes": "A secondary writeup reported that 41.18% of long-form Facebook posts as of November 2024 were likely AI-generated. It summarized an Originality.AI study of 8,885 Facebook posts published from November 2018 to November 2024 and classified as long-form by detector-based rules. This is a useful platform-specific text estimate, but it comes through a secondary article because the original study URL now redirects.",
               "publicationDate": "2025-01-30"
+            },
+            {
+              "year": 2024,
+              "value": 19.83,
+              "rawValue": "19.83%",
+              "series": "Originality / Flipkart reviews",
+              "source": "https://originality.ai/blog/ai-flipkart-reviews",
+              "notes": "The study found that 19.83% of Flipkart reviews in 2024 were likely AI-generated. It scanned publicly available Flipkart reviews of at least 50 words through the Originality.ai API and aggregated yearly AI classifications. The estimate is platform-specific and depends on a proprietary detector plus a length filter.",
+              "publicationDate": "2025-10-18"
+            },
+            {
+              "year": 2024,
+              "value": 14.9,
+              "rawValue": "14.9%",
+              "series": "Originality / Forbes Business Council posts",
+              "source": "https://originality.ai/blog/ai-forbes-business-council-study",
+              "notes": "The study found that 14.9% of Forbes Business Council posts published in 2024 were likely AI-generated. It scanned 3,952 2024 posts with Originality.ai’s detector and counted 587 as likely AI. The estimate is narrow to one contributor network and reflects detector-based classification rather than confirmed disclosure.",
+              "publicationDate": "2025-12-02"
+            },
+            {
+              "year": 2024,
+              "value": 19.0,
+              "rawValue": "19.0%",
+              "series": "Originality / Google reviews",
+              "source": "https://originality.ai/blog/ai-google-reviews-study",
+              "notes": "The study found that 19.0% of Google reviews were likely AI-generated by the end of 2024. It applied Originality.ai detection to a review dataset spanning 2019 to 2024 and aggregated yearly rates. This is a detector-based platform estimate and the existing chart already appears to contain only the 2023 point from this source family.",
+              "publicationDate": "2025-10-15"
             },
             {
               "year": 2024,
@@ -281,12 +335,39 @@
             },
             {
               "year": 2024,
+              "value": 5.98,
+              "rawValue": "5.98%",
+              "series": "Originality / Myntra reviews",
+              "source": "https://originality.ai/blog/ai-myntra-reviews-study",
+              "notes": "The study found that 5.98% of Myntra reviews in 2024 were likely AI-generated. It analyzed Myntra review text with at least 50 words using the Originality.ai API and aggregated the results by year. The estimate is narrow to one shopping app and sits close to some detector false-positive ranges noted by the source.",
+              "publicationDate": "2025-10-24"
+            },
+            {
+              "year": 2024,
               "value": 10.94,
               "rawValue": "10.94%",
               "series": "Originality / Quora answers",
               "source": "https://originality.ai/blog/ai-quora-answers-study",
               "notes": "Originality.AI estimated that 10.94% of English-language Quora answers in 2024 were likely AI-generated. It scraped public Quora answers across multiple topics, kept answers of at least 50 words, and ran them through its detector. This is a direct platform-specific answer estimate, but it depends on scraper coverage and detector performance.",
               "publicationDate": "2025-10-23"
+            },
+            {
+              "year": 2024,
+              "value": 9.93,
+              "rawValue": "9.93%",
+              "series": "Originality / Shein reviews",
+              "source": "https://originality.ai/blog/ai-shein-reviews",
+              "notes": "The study found that 9.93% of Shein reviews in 2024 were likely AI-generated. It collected Shein review data in CSV form and ran a detector-based workflow to estimate prevalence. The estimate is specific to one shopping app and relies on proprietary AI scoring.",
+              "publicationDate": "2025-10-16"
+            },
+            {
+              "year": 2024,
+              "value": 10.7,
+              "rawValue": "10.7%",
+              "series": "Originality / TripAdvisor reviews",
+              "source": "https://originality.ai/blog/ai-tripadvisor-reviews-study",
+              "notes": "The study found that 10.7% of TripAdvisor hotel reviews in 2024 were likely AI-generated. It used Originality.ai to score TripAdvisor reviews from 2019 to 2024 and reported yearly prevalence. The estimate is limited to one travel-review platform and inherits detector uncertainty.",
+              "publicationDate": "2025-12-16"
             },
             {
               "year": 2024,
@@ -670,13 +751,13 @@
             },
             {
               "year": 2023,
-              "value": 12.5965,
-              "estimateCount": 8
+              "value": 12.3632,
+              "estimateCount": 10
             },
             {
               "year": 2024,
-              "value": 19.0269,
-              "estimateCount": 16
+              "value": 16.8443,
+              "estimateCount": 23
             },
             {
               "year": 2025,

@@ -228,3 +228,28 @@ For the actual sweep standard and what context to store per estimate, use:
   - Kapwing / new-user YouTube Shorts feed (2025)
   - Jones et al. / biomedical science educational videos (2025)
   - Saner et al. / PubMed medical manuscripts (2024)
+
+
+## 2026-05-18 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint
+  - industry/platform
+  - institutional/report
+  - media/analyst
+  - platform-specific social
+  - reviews/e-commerce
+  - music/audio
+  - web publishing
+- added:
+  - Originality / Fortune 500 blog articles (2023)
+  - Originality / Forbes Business Council posts (2023)
+  - Originality / Forbes Business Council posts (2024)
+  - Originality / Google reviews (2024)
+  - Originality / Flipkart reviews (2024)
+  - Originality / TripAdvisor reviews (2024)
+  - Originality / Shein reviews (2024)
+  - Originality / Myntra reviews (2024)
+  - Originality / eBay reviews (2024)
