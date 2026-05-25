@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-05-18",
+  "generatedAt": "2026-05-25",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-05-18",
+      "lastRefreshed": "2026-05-25",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -80,6 +80,15 @@
               "source": "https://arxiv.org/abs/2412.18148",
               "notes": "The study-year median across Medium, Quora, and Reddit put AI-generated social-media posts at 1.77% in 2022. The paper trained and selected an AIGT detector, then applied it to a 2.4 million post corpus spanning January 2022 to October 2024. This gives one value for a major social-content dataset, but it remains platform-bound and detector-dependent.",
               "publicationDate": "2024-12-24"
+            },
+            {
+              "year": 2022,
+              "value": 4.95,
+              "rawValue": "4.95%",
+              "series": "Balas et al. / ophthalmology manuscripts",
+              "source": "https://pubmed.ncbi.nlm.nih.gov/41016415/",
+              "notes": "This study estimated a mean AI publication score of 4.95% for ophthalmology manuscripts in 2022. It used a retrospective bibliographic analysis of ophthalmology manuscripts and computed an AI-derived prevalence score across the corpus. This is a detector-like proxy in one medical specialty and is narrower than general scientific publishing or the web.",
+              "publicationDate": "2025-10-10"
             },
             {
               "year": 2022,
@@ -233,6 +242,15 @@
               "source": "https://arxiv.org/abs/2404.01268",
               "notes": "The paper reported that 17.5% of arXiv computer science abstracts by February 2024 were LLM-modified. It used a population-level statistical framework across 950,965 papers from arXiv, bioRxiv, and Nature journals published between January 2020 and February 2024. This is a strong direct estimate within a clearly defined scholarly corpus, though it reflects one venue and field rather than the whole internet.",
               "publicationDate": "2024-04-01"
+            },
+            {
+              "year": 2024,
+              "value": 11.2,
+              "rawValue": "11.2%",
+              "series": "Balas et al. / ophthalmology manuscripts",
+              "source": "https://pubmed.ncbi.nlm.nih.gov/41016415/",
+              "notes": "This study estimated a mean AI publication score of 11.2% for ophthalmology manuscripts by mid-2024. It used a retrospective bibliographic analysis of ophthalmology manuscripts and computed an AI-derived prevalence score across the corpus. This is a detector-like proxy in one medical specialty and the 2024 point is mid-year rather than a full-year measure.",
+              "publicationDate": "2025-10-10"
             },
             {
               "year": 2024,
@@ -704,6 +722,15 @@
             },
             {
               "year": 2026,
+              "value": 49.94,
+              "rawValue": "49.94%",
+              "series": "Graphite / Common Crawl new web articles",
+              "source": "https://graphite.io/five-percent/ai-now-writes-as-many-online-articles-as-humans-do",
+              "notes": "Graphite estimated that 49.94% of English-language online articles and listicles published in 2026-Q1 were primarily AI-generated in its Common Crawl sample. It randomly sampled 55.4k English URLs with article schema from 2020 to March 2026 and averaged three detector-based quarterly estimates from Pangram, Copyleaks, and GPTZero. This is detector-based and limited to English article-style web pages rather than the full internet.",
+              "publicationDate": "2026-05-15"
+            },
+            {
+              "year": 2026,
               "value": 8.0,
               "rawValue": "8%",
               "series": "Originality / Pinterest hiking guides",
@@ -746,8 +773,8 @@
             },
             {
               "year": 2022,
-              "value": 5.2017,
-              "estimateCount": 6
+              "value": 5.1657,
+              "estimateCount": 7
             },
             {
               "year": 2023,
@@ -756,8 +783,8 @@
             },
             {
               "year": 2024,
-              "value": 16.8443,
-              "estimateCount": 23
+              "value": 16.6092,
+              "estimateCount": 24
             },
             {
               "year": 2025,
@@ -766,8 +793,8 @@
             },
             {
               "year": 2026,
-              "value": 23.8667,
-              "estimateCount": 6
+              "value": 27.5914,
+              "estimateCount": 7
             }
           ]
         }

@@ -253,3 +253,24 @@ For the actual sweep standard and what context to store per estimate, use:
   - Originality / Shein reviews (2024)
   - Originality / Myntra reviews (2024)
   - Originality / eBay reviews (2024)
+
+
+## 2026-05-25 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 12
+- lanes searched:
+  - broad web/news discovery
+  - primary academic/preprint search
+  - industry/platform newsroom search
+  - social-platform prevalence search
+  - web publishing prevalence search
+  - scholarly publishing/peer-review search
+  - reviews/listings/app-reviews search
+  - music/audio platform search
+  - code/software repository search
+  - medical/scientific literature search
+- added:
+  - Graphite / Common Crawl new web articles (2026)
+  - Balas et al. / ophthalmology manuscripts (2022)
+  - Balas et al. / ophthalmology manuscripts (2024)

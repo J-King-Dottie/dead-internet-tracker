@@ -1,6 +1,6 @@
 window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-05-18",
+    "lastRefreshed": "2026-05-25",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -49,6 +49,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://arxiv.org/abs/2412.18148",
             "notes": "The study-year median across Medium, Quora, and Reddit put AI-generated social-media posts at 1.77% in 2022. The paper trained and selected an AIGT detector, then applied it to a 2.4 million post corpus spanning January 2022 to October 2024. This gives one value for a major social-content dataset, but it remains platform-bound and detector-dependent.",
             "publication_date": "2024-12-24"
+        },
+        {
+            "series": "Balas et al. / ophthalmology manuscripts",
+            "year": 2022,
+            "value": "4.95%",
+            "source": "https://pubmed.ncbi.nlm.nih.gov/41016415/",
+            "notes": "This study estimated a mean AI publication score of 4.95% for ophthalmology manuscripts in 2022. It used a retrospective bibliographic analysis of ophthalmology manuscripts and computed an AI-derived prevalence score across the corpus. This is a detector-like proxy in one medical specialty and is narrower than general scientific publishing or the web.",
+            "publication_date": "2025-10-10"
         },
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -185,6 +193,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://arxiv.org/abs/2404.01268",
             "notes": "The paper reported that 17.5% of arXiv computer science abstracts by February 2024 were LLM-modified. It used a population-level statistical framework across 950,965 papers from arXiv, bioRxiv, and Nature journals published between January 2020 and February 2024. This is a strong direct estimate within a clearly defined scholarly corpus, though it reflects one venue and field rather than the whole internet.",
             "publication_date": "2024-04-01"
+        },
+        {
+            "series": "Balas et al. / ophthalmology manuscripts",
+            "year": 2024,
+            "value": "11.2%",
+            "source": "https://pubmed.ncbi.nlm.nih.gov/41016415/",
+            "notes": "This study estimated a mean AI publication score of 11.2% for ophthalmology manuscripts by mid-2024. It used a retrospective bibliographic analysis of ophthalmology manuscripts and computed an AI-derived prevalence score across the corpus. This is a detector-like proxy in one medical specialty and the 2024 point is mid-year rather than a full-year measure.",
+            "publication_date": "2025-10-10"
         },
         {
             "series": "Biomedical abstracts / excess vocabulary",
@@ -601,6 +617,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://newsroom-deezer.com/2026/04/ai-generated-tracks-represent-44-of-new-uploaded-music/",
             "notes": "Deezer reported that 44% of all daily music uploads to its platform in April 2026 were fully AI-generated tracks. It said its in-house AI-music detection system was identifying nearly 75,000 fully AI-generated uploads per day by the April 2026 update. This is a direct platform-level prevalence estimate, but it is narrowly about one music-streaming service and fully synthetic tracks rather than the web at large.",
             "publication_date": "2026-04-21"
+        },
+        {
+            "series": "Graphite / Common Crawl new web articles",
+            "year": 2026,
+            "value": "49.94%",
+            "source": "https://graphite.io/five-percent/ai-now-writes-as-many-online-articles-as-humans-do",
+            "notes": "Graphite estimated that 49.94% of English-language online articles and listicles published in 2026-Q1 were primarily AI-generated in its Common Crawl sample. It randomly sampled 55.4k English URLs with article schema from 2020 to March 2026 and averaged three detector-based quarterly estimates from Pangram, Copyleaks, and GPTZero. This is detector-based and limited to English article-style web pages rather than the full internet.",
+            "publication_date": "2026-05-15"
         },
         {
             "series": "Originality / Pinterest hiking guides",
