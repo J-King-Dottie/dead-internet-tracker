@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-05-25",
+  "generatedAt": "2026-06-01",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-05-25",
+      "lastRefreshed": "2026-06-01",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -38,12 +38,39 @@
             },
             {
               "year": 2020,
+              "value": 5.1,
+              "rawValue": "5.10%",
+              "series": "Originality / climate change paper abstracts",
+              "source": "https://originality.ai/blog/ai-climate-change-paper-abstracts",
+              "notes": "This study found 5.10% likely AI-generated climate change paper abstracts in 2020. It pulled up to 500 OpenAlex abstracts per year matching 'climate change' and scored 50+ word abstracts with the Originality.ai API. It is keyword-based, limited to sampled abstracts, and relies on a vendor detector rather than disclosure data.",
+              "publicationDate": "2025-10-11"
+            },
+            {
+              "year": 2020,
+              "value": 0.0,
+              "rawValue": "0%",
+              "series": "Originality / lawyer office reviews",
+              "source": "https://originality.ai/blog/ai-lawyer-office-reviews",
+              "notes": "The study estimates 0% AI-generated lawyer office reviews in the United States for 2020 among 100-plus-word reviews. It scraped Google Places data for 49 city-state pairs and flagged reviews over a 0.5 Originality.ai score. It covers one review corpus only and depends on a vendor detection model.",
+              "publicationDate": "2025-11-01"
+            },
+            {
+              "year": 2020,
               "value": 3.06,
               "rawValue": "3.06%",
               "series": "Originality / Quora answers",
               "source": "https://originality.ai/blog/ai-quora-answers-study",
               "notes": "Originality.AI estimated that 3.06% of English-language Quora answers in 2020 were likely AI-generated. It scraped public Quora answers across multiple topics, kept answers of at least 50 words, and ran them through its detector. This is a direct platform-specific answer estimate, but it depends on scraper coverage and detector performance.",
               "publicationDate": "2025-10-23"
+            },
+            {
+              "year": 2020,
+              "value": 0.79,
+              "rawValue": "0.79%",
+              "series": "Originality / US bank reviews",
+              "source": "https://originality.ai/blog/ai-us-bank-reviews",
+              "notes": "The study estimates 0.79% AI-generated customer reviews for United States banks in 2020. It analyzed over 19000 reviews from 47 banks and classified them with Originality.ai. It covers one banking corpus only and uses a vendor detector with very low estimated rates.",
+              "publicationDate": "2025-10-19"
             },
             {
               "year": 2020,
@@ -62,6 +89,33 @@
               "source": "https://docs.google.com/spreadsheets/d/1WamFyVahPDtAPFtvly30BG2QjyA-L1KYkO2UEYGKKcg/edit?gid=0",
               "notes": "Graphite estimated that 3.06% of newly published English web articles in 2021 were AI-generated. It filtered Common Crawl pages by article markup, English language, and publish date, then classified them with Surfer's AI detector using a greater-than-50% threshold. This is one of the closest direct measures in the table, but it only covers newly published English articles and depends on detector performance.",
               "publicationDate": "2024-05-07"
+            },
+            {
+              "year": 2021,
+              "value": 16.0,
+              "rawValue": "16.00%",
+              "series": "Originality / climate change paper abstracts",
+              "source": "https://originality.ai/blog/ai-climate-change-paper-abstracts",
+              "notes": "This study found 16.00% likely AI-generated climate change paper abstracts in 2021. It pulled up to 500 OpenAlex abstracts per year matching 'climate change' and scored 50+ word abstracts with the Originality.ai API. It is keyword-based, limited to sampled abstracts, and relies on a vendor detector rather than disclosure data.",
+              "publicationDate": "2025-10-11"
+            },
+            {
+              "year": 2021,
+              "value": 0.0,
+              "rawValue": "0%",
+              "series": "Originality / lawyer office reviews",
+              "source": "https://originality.ai/blog/ai-lawyer-office-reviews",
+              "notes": "The study estimates 0% AI-generated lawyer office reviews in the United States for 2021 among 100-plus-word reviews. It scraped Google Places data for 49 city-state pairs and flagged reviews over a 0.5 Originality.ai score. It covers one review corpus only and depends on a vendor detection model.",
+              "publicationDate": "2025-11-01"
+            },
+            {
+              "year": 2021,
+              "value": 1.37,
+              "rawValue": "1.37%",
+              "series": "Originality / US bank reviews",
+              "source": "https://originality.ai/blog/ai-us-bank-reviews",
+              "notes": "The study estimates 1.37% AI-generated customer reviews for United States banks in 2021. It analyzed over 19000 reviews from 47 banks and classified them with Originality.ai. It covers one banking corpus only and uses a vendor detector with very low estimated rates.",
+              "publicationDate": "2025-10-19"
             },
             {
               "year": 2021,
@@ -110,12 +164,48 @@
             },
             {
               "year": 2022,
+              "value": 13.0,
+              "rawValue": "13.00%",
+              "series": "Originality / climate change paper abstracts",
+              "source": "https://originality.ai/blog/ai-climate-change-paper-abstracts",
+              "notes": "This study found 13.00% likely AI-generated climate change paper abstracts in 2022. It pulled up to 500 OpenAlex abstracts per year matching 'climate change' and scored 50+ word abstracts with the Originality.ai API. It is keyword-based, limited to sampled abstracts, and relies on a vendor detector rather than disclosure data.",
+              "publicationDate": "2025-10-11"
+            },
+            {
+              "year": 2022,
+              "value": 6.18,
+              "rawValue": "6.18%",
+              "series": "Originality / Glassdoor reviews",
+              "source": "https://originality.ai/blog/ai-glassdoor-reviews",
+              "notes": "This study found 6.18% likely AI-written Glassdoor review 'Pros' text for S&P 500 companies in 2022. It aggregated S&P 500 company reviews and ran Originality.ai on Pros fields longer than 50 words. It measures only one section of employee reviews and depends on a vendor detector.",
+              "publicationDate": "2025-10-19"
+            },
+            {
+              "year": 2022,
+              "value": 2.04,
+              "rawValue": "2.04%",
+              "series": "Originality / lawyer office reviews",
+              "source": "https://originality.ai/blog/ai-lawyer-office-reviews",
+              "notes": "The study estimates 2.04% AI-generated lawyer office reviews in the United States for 2022 among 100-plus-word reviews. It scraped Google Places data for 49 city-state pairs and flagged reviews over a 0.5 Originality.ai score. It covers one review corpus only and depends on a vendor detection model.",
+              "publicationDate": "2025-11-01"
+            },
+            {
+              "year": 2022,
               "value": 6.93,
               "rawValue": "6.93%",
               "series": "Originality / Quora answers",
               "source": "https://originality.ai/blog/ai-quora-answers-study",
               "notes": "Originality.AI estimated that 6.93% of English-language Quora answers in 2022 were likely AI-generated. It scraped public Quora answers across multiple topics, kept answers of at least 50 words, and ran them through its detector. This is a direct platform-specific answer estimate, but it depends on scraper coverage and detector performance.",
               "publicationDate": "2025-10-23"
+            },
+            {
+              "year": 2022,
+              "value": 1.85,
+              "rawValue": "1.85%",
+              "series": "Originality / US bank reviews",
+              "source": "https://originality.ai/blog/ai-us-bank-reviews",
+              "notes": "The study estimates 1.85% AI-generated customer reviews for United States banks in 2022. It analyzed over 19000 reviews from 47 banks and classified them with Originality.ai. It covers one banking corpus only and uses a vendor detector with very low estimated rates.",
+              "publicationDate": "2025-10-19"
             },
             {
               "year": 2022,
@@ -155,6 +245,15 @@
             },
             {
               "year": 2023,
+              "value": 17.2,
+              "rawValue": "17.20%",
+              "series": "Originality / climate change paper abstracts",
+              "source": "https://originality.ai/blog/ai-climate-change-paper-abstracts",
+              "notes": "This study found 17.20% likely AI-generated climate change paper abstracts in 2023. It pulled up to 500 OpenAlex abstracts per year matching 'climate change' and scored 50+ word abstracts with the Originality.ai API. It is keyword-based, limited to sampled abstracts, and relies on a vendor detector rather than disclosure data.",
+              "publicationDate": "2025-10-11"
+            },
+            {
+              "year": 2023,
               "value": 12.0,
               "rawValue": "12.0%",
               "series": "Originality / Forbes Business Council posts",
@@ -173,6 +272,15 @@
             },
             {
               "year": 2023,
+              "value": 16.93,
+              "rawValue": "16.93%",
+              "series": "Originality / Glassdoor reviews",
+              "source": "https://originality.ai/blog/ai-glassdoor-reviews",
+              "notes": "This study found 16.93% likely AI-written Glassdoor review 'Pros' text for S&P 500 companies in 2023. It aggregated S&P 500 company reviews and ran Originality.ai on Pros fields longer than 50 words. It measures only one section of employee reviews and depends on a vendor detector.",
+              "publicationDate": "2025-10-19"
+            },
+            {
+              "year": 2023,
               "value": 12.21,
               "rawValue": "12.21%",
               "series": "Originality / Google reviews",
@@ -182,12 +290,30 @@
             },
             {
               "year": 2023,
+              "value": 13.6,
+              "rawValue": "13.6%",
+              "series": "Originality / lawyer office reviews",
+              "source": "https://originality.ai/blog/ai-lawyer-office-reviews",
+              "notes": "The study estimates 13.6% AI-generated lawyer office reviews in the United States for 2023 among 100-plus-word reviews. It scraped Google Places data for 49 city-state pairs and flagged reviews over a 0.5 Originality.ai score. It covers one review corpus only and depends on a vendor detection model.",
+              "publicationDate": "2025-11-01"
+            },
+            {
+              "year": 2023,
               "value": 11.86,
               "rawValue": "11.86%",
               "series": "Originality / Quora answers",
               "source": "https://originality.ai/blog/ai-quora-answers-study",
               "notes": "Originality.AI estimated that 11.86% of English-language Quora answers in 2023 were likely AI-generated. It scraped public Quora answers across multiple topics, kept answers of at least 50 words, and ran them through its detector. This is a direct platform-specific answer estimate, but it depends on scraper coverage and detector performance.",
               "publicationDate": "2025-10-23"
+            },
+            {
+              "year": 2023,
+              "value": 3.08,
+              "rawValue": "3.08%",
+              "series": "Originality / US bank reviews",
+              "source": "https://originality.ai/blog/ai-us-bank-reviews",
+              "notes": "The study estimates 3.08% AI-generated customer reviews for United States banks in 2023. It analyzed over 19000 reviews from 47 banks and classified them with Originality.ai. It covers one banking corpus only and uses a vendor detector with very low estimated rates.",
+              "publicationDate": "2025-10-19"
             },
             {
               "year": 2023,
@@ -299,6 +425,15 @@
             },
             {
               "year": 2024,
+              "value": 43.16,
+              "rawValue": "43.16%",
+              "series": "Originality / climate change paper abstracts",
+              "source": "https://originality.ai/blog/ai-climate-change-paper-abstracts",
+              "notes": "This study found 43.16% likely AI-generated climate change paper abstracts in 2024. It pulled up to 500 OpenAlex abstracts per year matching 'climate change' and scored 50+ word abstracts with the Originality.ai API. It is keyword-based, limited to sampled abstracts, and relies on a vendor detector rather than disclosure data.",
+              "publicationDate": "2025-10-11"
+            },
+            {
+              "year": 2024,
               "value": 2.65,
               "rawValue": "2.65%",
               "series": "Originality / eBay reviews",
@@ -335,12 +470,30 @@
             },
             {
               "year": 2024,
+              "value": 29.45,
+              "rawValue": "29.45%",
+              "series": "Originality / Glassdoor reviews",
+              "source": "https://originality.ai/blog/ai-glassdoor-reviews",
+              "notes": "This study found 29.45% likely AI-written Glassdoor review 'Pros' text for S&P 500 companies in 2024. It aggregated S&P 500 company reviews and ran Originality.ai on Pros fields longer than 50 words. It measures only one section of employee reviews and depends on a vendor detector.",
+              "publicationDate": "2025-10-19"
+            },
+            {
+              "year": 2024,
               "value": 19.0,
               "rawValue": "19.0%",
               "series": "Originality / Google reviews",
               "source": "https://originality.ai/blog/ai-google-reviews-study",
               "notes": "The study found that 19.0% of Google reviews were likely AI-generated by the end of 2024. It applied Originality.ai detection to a review dataset spanning 2019 to 2024 and aggregated yearly rates. This is a detector-based platform estimate and the existing chart already appears to contain only the 2023 point from this source family.",
               "publicationDate": "2025-10-15"
+            },
+            {
+              "year": 2024,
+              "value": 26.4,
+              "rawValue": "26.4%",
+              "series": "Originality / lawyer office reviews",
+              "source": "https://originality.ai/blog/ai-lawyer-office-reviews",
+              "notes": "The study estimates 26.4% AI-generated lawyer office reviews in the United States for 2024 among 100-plus-word reviews. It scraped Google Places data for 49 city-state pairs and flagged reviews over a 0.5 Originality.ai score. It covers one review corpus only and depends on a vendor detection model.",
+              "publicationDate": "2025-11-01"
             },
             {
               "year": 2024,
@@ -386,6 +539,15 @@
               "source": "https://originality.ai/blog/ai-tripadvisor-reviews-study",
               "notes": "The study found that 10.7% of TripAdvisor hotel reviews in 2024 were likely AI-generated. It used Originality.ai to score TripAdvisor reviews from 2019 to 2024 and reported yearly prevalence. The estimate is limited to one travel-review platform and inherits detector uncertainty.",
               "publicationDate": "2025-12-16"
+            },
+            {
+              "year": 2024,
+              "value": 5.1,
+              "rawValue": "5.1%",
+              "series": "Originality / US bank reviews",
+              "source": "https://originality.ai/blog/ai-us-bank-reviews",
+              "notes": "The study estimates 5.1% AI-generated customer reviews for United States banks in 2024. It analyzed over 19000 reviews from 47 banks and classified them with Originality.ai. It covers one banking corpus only and uses a vendor detector with very low estimated rates.",
+              "publicationDate": "2025-10-19"
             },
             {
               "year": 2024,
@@ -524,6 +686,15 @@
             },
             {
               "year": 2025,
+              "value": 73.0,
+              "rawValue": "73%",
+              "series": "Originality / AI-related journal abstracts",
+              "source": "https://originality.ai/blog/ai-generated-abstracts-in-ai-journals",
+              "notes": "This study found 73% likely AI-generated abstracts in AI-related journals in 2025. It pulled up to 500 OpenAlex abstracts per year matching 'artificial intelligence' and classified 50+ word abstracts with the Originality.ai API. It is a keyword-based sample of abstracts from AI-related publications and relies on a vendor detector.",
+              "publicationDate": "2025-10-10"
+            },
+            {
+              "year": 2025,
               "value": 66.8,
               "rawValue": "66.8%",
               "series": "Originality / Amazon pet-loss books",
@@ -548,6 +719,15 @@
               "source": "https://originality.ai/blog/ai-car-dealership-reviews",
               "notes": "Originality.AI estimated that 28.6% of Canadian car dealership reviews in 2025 were likely AI-written. The study used a Google Maps-based business data API, sampled 100 dealerships across 10 Canadian cities, retained 2,000+ reviews of at least 100 words, and classified them with the Originality.AI API. This is a review-platform estimate for one retail category, not a general web-content measure.",
               "publicationDate": "2025-12-11"
+            },
+            {
+              "year": 2025,
+              "value": 45.83,
+              "rawValue": "45.83%",
+              "series": "Originality / climate change paper abstracts",
+              "source": "https://originality.ai/blog/ai-climate-change-paper-abstracts",
+              "notes": "This study found 45.83% likely AI-generated climate change paper abstracts in 2025. It pulled up to 500 OpenAlex abstracts per year matching 'climate change' and scored 50+ word abstracts with the Originality.ai API. It is keyword-based, limited to sampled abstracts, and relies on a vendor detector rather than disclosure data.",
+              "publicationDate": "2025-10-11"
             },
             {
               "year": 2025,
@@ -593,6 +773,15 @@
               "source": "https://originality.ai/blog/ai-lawn-care-landscaping-reviews",
               "notes": "Originality.AI estimated that 16.4% of US lawn-care and landscaping reviews in 2025 were likely AI-generated. It sampled 100 businesses across 10 major US cities, kept 700+ reviews of at least 100 words, and classified reviews with the Originality.AI API. This is a narrow local-services review slice, and the article notes that earlier years in the dataset had fewer available reviews.",
               "publicationDate": "2025-12-11"
+            },
+            {
+              "year": 2025,
+              "value": 34.4,
+              "rawValue": "34.4%",
+              "series": "Originality / lawyer office reviews",
+              "source": "https://originality.ai/blog/ai-lawyer-office-reviews",
+              "notes": "The study estimates 34.4% AI-generated lawyer office reviews in the United States for 2025 among 100-plus-word reviews. It scraped Google Places data for 49 city-state pairs and flagged reviews over a 0.5 Originality.ai score. It covers one review corpus only and depends on a vendor detection model.",
+              "publicationDate": "2025-11-01"
             },
             {
               "year": 2025,
@@ -763,33 +952,33 @@
           "values": [
             {
               "year": 2020,
-              "value": 3.3633,
-              "estimateCount": 3
+              "value": 2.6633,
+              "estimateCount": 6
             },
             {
               "year": 2021,
-              "value": 4.125,
-              "estimateCount": 2
+              "value": 5.124,
+              "estimateCount": 5
             },
             {
               "year": 2022,
-              "value": 5.1657,
-              "estimateCount": 7
+              "value": 5.3845,
+              "estimateCount": 11
             },
             {
               "year": 2023,
-              "value": 12.3632,
-              "estimateCount": 10
+              "value": 12.4601,
+              "estimateCount": 14
             },
             {
               "year": 2024,
-              "value": 16.6092,
-              "estimateCount": 24
+              "value": 17.9546,
+              "estimateCount": 28
             },
             {
               "year": 2025,
-              "value": 26.6925,
-              "estimateCount": 28
+              "value": 29.0523,
+              "estimateCount": 31
             },
             {
               "year": 2026,

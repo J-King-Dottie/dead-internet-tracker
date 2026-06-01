@@ -274,3 +274,38 @@ For the actual sweep standard and what context to store per estimate, use:
   - Graphite / Common Crawl new web articles (2026)
   - Balas et al. / ophthalmology manuscripts (2022)
   - Balas et al. / ophthalmology manuscripts (2024)
+
+
+## 2026-06-01 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint
+  - industry/platform
+  - institutional/report
+  - media/analyst
+  - platform-specific reviews
+  - scholarly abstracts
+- added:
+  - Originality / Glassdoor reviews (2022)
+  - Originality / Glassdoor reviews (2023)
+  - Originality / Glassdoor reviews (2024)
+  - Originality / climate change paper abstracts (2020)
+  - Originality / climate change paper abstracts (2021)
+  - Originality / climate change paper abstracts (2022)
+  - Originality / climate change paper abstracts (2023)
+  - Originality / climate change paper abstracts (2024)
+  - Originality / climate change paper abstracts (2025)
+  - Originality / AI-related journal abstracts (2025)
+  - Originality / lawyer office reviews (2020)
+  - Originality / lawyer office reviews (2021)
+  - Originality / lawyer office reviews (2022)
+  - Originality / lawyer office reviews (2023)
+  - Originality / lawyer office reviews (2024)
+  - Originality / lawyer office reviews (2025)
+  - Originality / US bank reviews (2020)
+  - Originality / US bank reviews (2021)
+  - Originality / US bank reviews (2022)
+  - Originality / US bank reviews (2023)
+  - Originality / US bank reviews (2024)
