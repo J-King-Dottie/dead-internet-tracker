@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">Dead Internet Tracker</title>
-  <desc id="desc">Public signals on AI-generated content, AI bot traffic, bot automation, and human activity.</desc>
+  <desc id="desc">The dead internet theory says the internet is being taken over by AI.</desc>
   <rect width="1200" height="630" fill="#08111f"/>
   <g stroke="#13223a" stroke-width="1">
     <path d="M80 94H1120"/>
@@ -19,8 +19,8 @@
   <path d="M80 548H1120" stroke="#00e5b0" stroke-width="3" opacity=".55"/>
   <text x="82" y="160" fill="#8ea1bd" font-family="IBM Plex Mono, Consolas, monospace" font-size="24" font-weight="600" letter-spacing="2">PUBLIC RESEARCH PAGE</text>
   <text x="80" y="275" fill="#f7fbff" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="86" font-weight="800">Dead Internet Tracker</text>
-  <text x="82" y="356" fill="#d7e1ef" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="34" font-weight="600">AI-generated content, AI bot traffic, and human activity</text>
-  <text x="82" y="428" fill="#9baac0" font-family="IBM Plex Mono, Consolas, monospace" font-size="27" font-style="italic">No single score. Just the best available signals.</text>
+  <text x="82" y="352" fill="#d7e1ef" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="31" font-weight="600">The dead internet theory says the internet is being taken over by AI.</text>
+  <text x="82" y="424" fill="#9baac0" font-family="IBM Plex Mono, Consolas, monospace" font-size="26" font-style="italic">AI is writing it. AI is reading it. We decided to track it.</text>
   <g font-family="IBM Plex Mono, Consolas, monospace" font-size="22" font-weight="600">
     <text x="82" y="526" fill="#00e5b0">dead-internet-tracker.onrender.com</text>
   </g>

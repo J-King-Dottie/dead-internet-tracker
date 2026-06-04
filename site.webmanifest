@@ -1,7 +1,7 @@
 {
   "name": "Dead Internet Tracker",
   "short_name": "Dead Internet Tracker",
-  "description": "A one-page static research project tracking public signals on AI-generated content, AI bot traffic, bot automation, and human activity on the open web.",
+  "description": "The dead internet theory says the internet is being taken over by AI. AI is writing it. AI is reading it. We decided to track it.",
   "start_url": "/",
   "scope": "/",
   "display": "browser",
