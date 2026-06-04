@@ -162,6 +162,8 @@ def line_chart(snapshot_path: str, chart_key: str, displayed_series_names: dict[
         "lastRefreshed": snapshot.get("lastRefreshed", ""),
         "method": snapshot.get("method", ""),
         "caveats": snapshot.get("caveats", ""),
+        "axisValueFormat": snapshot.get("axisValueFormat", ""),
+        "tooltipValueFormat": snapshot.get("tooltipValueFormat", ""),
         "xValues": labels,
         "series": series,
         "latestValues": latest_values,

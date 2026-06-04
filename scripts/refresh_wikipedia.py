@@ -87,7 +87,7 @@ def build_snapshot() -> dict:
             "It measures editor participation, not article quality or total knowledge output."
         ),
         "xValues": months,
-        "axisValueFormat": "compact",
+        "axisValueFormat": "integer",
         "tooltipValueFormat": "integer",
         "series": [
             {

@@ -143,6 +143,15 @@ def dynamic_values(data: dict[str, Any]) -> dict[str, str]:
     questions = latest_series_point(stack_overflow, "Total new questions asked")
     if questions:
         values["stackoverflow-latest-questions"] = format_number(questions.get("value"))
+    question_series = next((series for series in stack_overflow.get("series") or [] if series.get("name") == "Total new questions asked"), {})
+    question_values = [
+        point for point in question_series.get("values") or []
+        if isinstance(point, dict) and point.get("value") not in {None, ""}
+    ]
+    peak_2020_questions = max((float(point["value"]) for point in question_values if str(point.get("period")).startswith("2020-")), default=None)
+    latest_question_value = float(question_values[-1]["value"]) if question_values else None
+    if peak_2020_questions and latest_question_value is not None:
+        values["stackoverflow-question-decline"] = percent0(((peak_2020_questions - latest_question_value) / peak_2020_questions) * 100)
 
     return values
 

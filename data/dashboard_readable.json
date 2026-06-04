@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-06-02",
+  "generatedAt": "2026-06-04",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -999,6 +999,8 @@
       "lastRefreshed": "2026-06-02",
       "method": "We estimate AI bot share by combining Cloudflare's bot share of total traffic with its AI bot categories. The chart shows observed monthly values only.",
       "caveats": "Crawlers learn from the internet. Search bots use it. Cloudflare sees a large but incomplete slice of the web, with weaker coverage in places like China. This tracks AI bot traffic, not all AI activity. AI search only appears separately from June 2025, so the measure gets better over time.",
+      "axisValueFormat": "percent1",
+      "tooltipValueFormat": "percent2",
       "xValues": [
         "2024-09",
         "2024-10",
@@ -1214,6 +1216,8 @@
       "lastRefreshed": "2026-06-02",
       "method": "Active editors are users making 5 or more edits in a month. The chart shows observed monthly counts only.",
       "caveats": "This is English Wikipedia only, not all Wikipedias. It measures editor participation, not article quality or total knowledge output.",
+      "axisValueFormat": "integer",
+      "tooltipValueFormat": "integer",
       "xValues": [
         "2020-01",
         "2020-02",
@@ -1295,7 +1299,7 @@
       "series": [
         {
           "name": "All editors (1+)",
-          "unit": "compact",
+          "unit": "integer",
           "values": [
             {
               "period": "2020-01",
@@ -1606,7 +1610,7 @@
         },
         {
           "name": "Active editors (5+)",
-          "unit": "compact",
+          "unit": "integer",
           "values": [
             {
               "period": "2020-01",
@@ -1937,6 +1941,8 @@
       "lastRefreshed": "2026-06-02",
       "method": "Monthly question counts are pulled from the official Stack Exchange API using each month's creation-date window. The chart shows observed monthly counts only.",
       "caveats": "This is a public web proxy, not a measure of all problem-solving. This monthly feed currently covers questions asked, not answered-question counts.",
+      "axisValueFormat": "integer",
+      "tooltipValueFormat": "integer",
       "xValues": [
         "2020-01",
         "2020-02",
@@ -2019,7 +2025,7 @@
       "series": [
         {
           "name": "Total new questions asked",
-          "unit": "compact",
+          "unit": "integer",
           "values": [
             {
               "period": "2020-01",

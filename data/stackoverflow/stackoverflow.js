@@ -85,7 +85,7 @@ window.__STACKOVERFLOW_SNAPSHOT__ = {
     "2026-04",
     "2026-05"
   ],
-  "axisValueFormat": "compact",
+  "axisValueFormat": "integer",
   "tooltipValueFormat": "integer",
   "series": [
     {

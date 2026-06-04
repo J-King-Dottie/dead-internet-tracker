@@ -88,7 +88,7 @@ def build_snapshot() -> dict:
             "This monthly feed currently covers questions asked, not answered-question counts."
         ),
         "xValues": [row["month"] for row in month_rows],
-        "axisValueFormat": "compact",
+        "axisValueFormat": "integer",
         "tooltipValueFormat": "integer",
         "series": [
             {

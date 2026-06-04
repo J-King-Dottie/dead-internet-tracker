@@ -84,7 +84,7 @@ window.__WIKIPEDIA_SNAPSHOT__ = {
     "2026-03",
     "2026-04"
   ],
-  "axisValueFormat": "compact",
+  "axisValueFormat": "integer",
   "tooltipValueFormat": "integer",
   "series": [
     {
