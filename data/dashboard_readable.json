@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-06-04",
+  "generatedAt": "2026-06-08",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-06-01",
+      "lastRefreshed": "2026-06-08",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -551,6 +551,15 @@
             },
             {
               "year": 2024,
+              "value": 6.96,
+              "rawValue": "6.96%",
+              "series": "Pangram / global online news articles",
+              "source": "https://www.pangram.com/blog/one-day-of-ai-news",
+              "notes": "Pangram found 6.96% of 857,434 news articles published worldwide on July 1, 2024 were AI-generated. It pulled one day of articles from NewsCatcher and ran Pangram Text on cleaned article text. This is a detector-based one-day snapshot of online news rather than all web content.",
+              "publicationDate": "2024-08-05"
+            },
+            {
+              "year": 2024,
               "value": 16.2,
               "rawValue": "16.2%",
               "series": "Pixiv artworks",
@@ -883,6 +892,15 @@
               "publicationDate": "2025-03-29"
             },
             {
+              "year": 2025,
+              "value": 20.0,
+              "rawValue": "20.0%",
+              "series": "Totally Human Media / Steam games with disclosed GenAI use",
+              "source": "https://www.totallyhuman.io/blog/the-surprising-new-number-of-genai-games-on-steam",
+              "notes": "Totally Human Media reported that a little under 20% of games released on Steam in 2025 disclosed generative AI use. It used Steam API data and Steam's disclosure field to count titles that self-reported GenAI usage. This is a lower bound on disclosed AI use in games on one storefront, not a direct detection-based measure of all game content.",
+              "publicationDate": "2025-07-13"
+            },
+            {
               "year": 2026,
               "value": 23.0,
               "rawValue": "23%",
@@ -938,6 +956,15 @@
             },
             {
               "year": 2026,
+              "value": 3.0,
+              "rawValue": "3.0%",
+              "series": "Pangram / Amazon front-page product reviews",
+              "source": "https://www.pangram.com/blog/ai-amazon-reviews",
+              "notes": "Pangram found 3.0% of 30,000 front-page reviews across 500 Amazon best-selling products were AI-generated. It scraped first-page reviews and scored them with Pangram's detector while recording star ratings and Verified Purchase status. This is a detector-based sample of prominent reviews on Amazon best-sellers, not all Amazon reviews.",
+              "publicationDate": "2026-05-04"
+            },
+            {
+              "year": 2026,
               "value": 2.5,
               "rawValue": "2.5%",
               "series": "Turkish online news articles",
@@ -972,18 +999,18 @@
             },
             {
               "year": 2024,
-              "value": 17.9546,
-              "estimateCount": 28
+              "value": 17.5755,
+              "estimateCount": 29
             },
             {
               "year": 2025,
-              "value": 29.0523,
-              "estimateCount": 31
+              "value": 28.7694,
+              "estimateCount": 32
             },
             {
               "year": 2026,
-              "value": 27.5914,
-              "estimateCount": 7
+              "value": 24.5175,
+              "estimateCount": 8
             }
           ]
         }

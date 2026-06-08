@@ -1,6 +1,6 @@
 window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-06-01",
+    "lastRefreshed": "2026-06-08",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -467,6 +467,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "publication_date": "2025-10-19"
         },
         {
+            "series": "Pangram / global online news articles",
+            "year": 2024,
+            "value": "6.96%",
+            "source": "https://www.pangram.com/blog/one-day-of-ai-news",
+            "notes": "Pangram found 6.96% of 857,434 news articles published worldwide on July 1, 2024 were AI-generated. It pulled one day of articles from NewsCatcher and ran Pangram Text on cleaned article text. This is a detector-based one-day snapshot of online news rather than all web content.",
+            "publication_date": "2024-08-05"
+        },
+        {
             "series": "Pixiv artworks",
             "year": 2024,
             "value": "16.2%",
@@ -763,6 +771,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "publication_date": "2025-03-29"
         },
         {
+            "series": "Totally Human Media / Steam games with disclosed GenAI use",
+            "year": 2025,
+            "value": "20.0%",
+            "source": "https://www.totallyhuman.io/blog/the-surprising-new-number-of-genai-games-on-steam",
+            "notes": "Totally Human Media reported that a little under 20% of games released on Steam in 2025 disclosed generative AI use. It used Steam API data and Steam's disclosure field to count titles that self-reported GenAI usage. This is a lower bound on disclosed AI use in games on one storefront, not a direct detection-based measure of all game content.",
+            "publication_date": "2025-07-13"
+        },
+        {
             "series": "AntiSlop / category-balanced web pages",
             "year": 2026,
             "value": "23%",
@@ -809,6 +825,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://originality.ai/blog/likely-ai-medical-diet-recipes-on-pinterest",
             "notes": "Originality.AI estimated that 32.4% of Pinterest medical-diet recipe URLs in its April 2026 sample were likely AI-generated. It collected 1,109 recipe URLs across five medically sensitive diet-search lanes and scored them with its detector. This is a narrow but important platform estimate for health-related recipe content, not for Pinterest overall.",
             "publication_date": "2026-04-19"
+        },
+        {
+            "series": "Pangram / Amazon front-page product reviews",
+            "year": 2026,
+            "value": "3.0%",
+            "source": "https://www.pangram.com/blog/ai-amazon-reviews",
+            "notes": "Pangram found 3.0% of 30,000 front-page reviews across 500 Amazon best-selling products were AI-generated. It scraped first-page reviews and scored them with Pangram's detector while recording star ratings and Verified Purchase status. This is a detector-based sample of prominent reviews on Amazon best-sellers, not all Amazon reviews.",
+            "publication_date": "2026-05-04"
         },
         {
             "series": "Turkish online news articles",

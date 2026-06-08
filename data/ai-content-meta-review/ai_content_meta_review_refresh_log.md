@@ -309,3 +309,22 @@ For the actual sweep standard and what context to store per estimate, use:
   - Originality / US bank reviews (2022)
   - Originality / US bank reviews (2023)
   - Originality / US bank reviews (2024)
+
+
+## 2026-06-08 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint
+  - industry/platform disclosures
+  - analyst/blog case studies
+  - news/secondary-source tracing
+  - platform-specific social/video
+  - reviews/e-commerce
+  - music/audio
+  - games/storefront disclosures
+- added:
+  - Pangram / global online news articles (2024)
+  - Pangram / Amazon front-page product reviews (2026)
+  - Totally Human Media / Steam games with disclosed GenAI use (2025)
