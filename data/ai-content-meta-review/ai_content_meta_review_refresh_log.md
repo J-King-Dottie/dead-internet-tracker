@@ -328,3 +328,22 @@ For the actual sweep standard and what context to store per estimate, use:
   - Pangram / global online news articles (2024)
   - Pangram / Amazon front-page product reviews (2026)
   - Totally Human Media / Steam games with disclosed GenAI use (2025)
+
+
+## 2026-06-15 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint
+  - industry/platform
+  - institutional/report
+  - media/analyst
+  - social/platform-specific
+  - reviews and commerce
+  - news and publishing
+  - video/music/games
+  - code/software
+  - reference chasing
+- added:
+  - Pangram / ICLR peer reviews (2026)

@@ -1,6 +1,6 @@
 {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-06-08",
+    "lastRefreshed": "2026-06-15",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -833,6 +833,14 @@
             "source": "https://www.pangram.com/blog/ai-amazon-reviews",
             "notes": "Pangram found 3.0% of 30,000 front-page reviews across 500 Amazon best-selling products were AI-generated. It scraped first-page reviews and scored them with Pangram's detector while recording star ratings and Verified Purchase status. This is a detector-based sample of prominent reviews on Amazon best-sellers, not all Amazon reviews.",
             "publication_date": "2026-05-04"
+        },
+        {
+            "series": "Pangram / ICLR peer reviews",
+            "year": 2026,
+            "value": "21%",
+            "source": "https://www.pangram.com/blog/pangram-predicts-21-of-iclr-reviews-are-ai-generated",
+            "notes": "Pangram found that 21% of ICLR 2026 peer reviews, or 15,899 reviews, were fully AI-generated. It ran its detector on all roughly 70,000 public ICLR reviews and reported a 2022 negative-control error check with no fully-AI versus fully-human confusions. This is a conference-review corpus rather than the open web, and the estimate depends on a proprietary detector.",
+            "publication_date": "2025-11-18"
         },
         {
             "series": "Turkish online news articles",

@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-06-08",
+  "generatedAt": "2026-06-15",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-06-08",
+      "lastRefreshed": "2026-06-15",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -965,6 +965,15 @@
             },
             {
               "year": 2026,
+              "value": 21.0,
+              "rawValue": "21%",
+              "series": "Pangram / ICLR peer reviews",
+              "source": "https://www.pangram.com/blog/pangram-predicts-21-of-iclr-reviews-are-ai-generated",
+              "notes": "Pangram found that 21% of ICLR 2026 peer reviews, or 15,899 reviews, were fully AI-generated. It ran its detector on all roughly 70,000 public ICLR reviews and reported a 2022 negative-control error check with no fully-AI versus fully-human confusions. This is a conference-review corpus rather than the open web, and the estimate depends on a proprietary detector.",
+              "publicationDate": "2025-11-18"
+            },
+            {
+              "year": 2026,
               "value": 2.5,
               "rawValue": "2.5%",
               "series": "Turkish online news articles",
@@ -1009,8 +1018,8 @@
             },
             {
               "year": 2026,
-              "value": 24.5175,
-              "estimateCount": 8
+              "value": 24.1267,
+              "estimateCount": 9
             }
           ]
         }
