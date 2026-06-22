@@ -347,3 +347,19 @@ For the actual sweep standard and what context to store per estimate, use:
   - reference chasing
 - added:
   - Pangram / ICLR peer reviews (2026)
+
+
+## 2026-06-22 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint
+  - industry/platform reports
+  - news/analyst discovery
+  - social-platform-specific sweeps
+  - software/code repositories
+- added:
+  - Kapwing / TikTok new-user feed (2026) (2026)
+  - Robbes et al. / GitHub projects with coding-agent adoption (2025) (2025)
+  - Robbes et al. / new GitHub projects with coding-agent adoption (2026) (2026)

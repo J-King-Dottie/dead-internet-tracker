@@ -1,6 +1,6 @@
 window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-06-15",
+    "lastRefreshed": "2026-06-22",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -739,6 +739,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "notes": "A 2026 Plastic and Reconstructive Surgery study reported that 29% of 2025 articles in 10 major plastic-surgery journals exceeded its threshold for substantial AI involvement. The authors reviewed 1,627 manuscripts published from January 2024 through May 2025 and used ZeroGPT, with the substantial-involvement threshold calibrated on 300 pre-ChatGPT manuscripts. This is a specialized academic-literature estimate, and detector thresholds may capture AI-assisted editing as well as fuller AI drafting."
         },
         {
+            "series": "Robbes et al. / GitHub projects with coding-agent adoption (2025)",
+            "year": 2025,
+            "value": "19.2%",
+            "source": "https://arxiv.org/abs/2601.18341",
+            "notes": "Robbes and coauthors estimated that 15.85% to 22.60% of sampled GitHub projects in the first half of 2025 showed coding-agent adoption, which converts to a 19.2% midpoint row value. They analyzed 129,134 GitHub projects and identified adoption through explicit repository traces such as agent-authored commits, pull requests, and agent configuration files. The figure is a conservative project-level range for coding agents rather than a direct measure of all code lines or all GitHub content.",
+            "publication_date": "2026-01-26"
+        },
+        {
             "series": "SIMODS / Facebook AI-generated mis/disinformation",
             "year": 2025,
             "value": "7%",
@@ -811,6 +819,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "publication_date": "2026-05-15"
         },
         {
+            "series": "Kapwing / TikTok new-user feed (2026)",
+            "year": 2026,
+            "value": "59.0%",
+            "source": "https://www.kapwing.com/resources/the-tiktok-ai-slop-report/",
+            "notes": "Kapwing found that 59.0% of the first 500 videos shown to a brand-new TikTok account were AI slop on the For You feed in May 2026. The study manually reviewed the first 500 feed videos and separately hand-coded 10,742 videos across 20 TikTok categories using visible AI-generated visual, script, and voiceover cues. The estimate is platform-specific and uses Kapwing’s manual slop definition rather than a validated platform-wide detector.",
+            "publication_date": "2026-06-09"
+        },
+        {
             "series": "Originality / Pinterest hiking guides",
             "year": 2026,
             "value": "8%",
@@ -841,6 +857,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://www.pangram.com/blog/pangram-predicts-21-of-iclr-reviews-are-ai-generated",
             "notes": "Pangram found that 21% of ICLR 2026 peer reviews, or 15,899 reviews, were fully AI-generated. It ran its detector on all roughly 70,000 public ICLR reviews and reported a 2022 negative-control error check with no fully-AI versus fully-human confusions. This is a conference-review corpus rather than the open web, and the estimate depends on a proprietary detector.",
             "publication_date": "2025-11-18"
+        },
+        {
+            "series": "Robbes et al. / new GitHub projects with coding-agent adoption (2026)",
+            "year": 2026,
+            "value": "71.83%",
+            "source": "https://www.themoonlight.io/es/review/agentic-very-much-adoption-of-coding-agent-in-new-github-projects",
+            "notes": "A detailed secondary summary of Robbes and coauthors’ June 2026 preprint reports that 71.83% of sampled new GitHub projects showed detectable coding-agent adoption. The summary describes a conservative repository-level estimate built from GitHub API sampling plus file-, pull-request-, and commit-based heuristics on projects created after late August 2025. This row currently relies on a secondary route because the public arXiv abstract confirms the study but does not expose the exact percentage in the accessible abstract text.",
+            "publication_date": "2026-06-05"
         },
         {
             "series": "Turkish online news articles",

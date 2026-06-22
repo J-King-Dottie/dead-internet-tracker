@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-06-15",
+  "generatedAt": "2026-06-22",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-06-15",
+      "lastRefreshed": "2026-06-22",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -857,6 +857,15 @@
             },
             {
               "year": 2025,
+              "value": 19.2,
+              "rawValue": "19.2%",
+              "series": "Robbes et al. / GitHub projects with coding-agent adoption (2025)",
+              "source": "https://arxiv.org/abs/2601.18341",
+              "notes": "Robbes and coauthors estimated that 15.85% to 22.60% of sampled GitHub projects in the first half of 2025 showed coding-agent adoption, which converts to a 19.2% midpoint row value. They analyzed 129,134 GitHub projects and identified adoption through explicit repository traces such as agent-authored commits, pull requests, and agent configuration files. The figure is a conservative project-level range for coding agents rather than a direct measure of all code lines or all GitHub content.",
+              "publicationDate": "2026-01-26"
+            },
+            {
+              "year": 2025,
               "value": 7.0,
               "rawValue": "7%",
               "series": "SIMODS / Facebook AI-generated mis/disinformation",
@@ -938,6 +947,15 @@
             },
             {
               "year": 2026,
+              "value": 59.0,
+              "rawValue": "59.0%",
+              "series": "Kapwing / TikTok new-user feed (2026)",
+              "source": "https://www.kapwing.com/resources/the-tiktok-ai-slop-report/",
+              "notes": "Kapwing found that 59.0% of the first 500 videos shown to a brand-new TikTok account were AI slop on the For You feed in May 2026. The study manually reviewed the first 500 feed videos and separately hand-coded 10,742 videos across 20 TikTok categories using visible AI-generated visual, script, and voiceover cues. The estimate is platform-specific and uses Kapwing’s manual slop definition rather than a validated platform-wide detector.",
+              "publicationDate": "2026-06-09"
+            },
+            {
+              "year": 2026,
               "value": 8.0,
               "rawValue": "8%",
               "series": "Originality / Pinterest hiking guides",
@@ -971,6 +989,15 @@
               "source": "https://www.pangram.com/blog/pangram-predicts-21-of-iclr-reviews-are-ai-generated",
               "notes": "Pangram found that 21% of ICLR 2026 peer reviews, or 15,899 reviews, were fully AI-generated. It ran its detector on all roughly 70,000 public ICLR reviews and reported a 2022 negative-control error check with no fully-AI versus fully-human confusions. This is a conference-review corpus rather than the open web, and the estimate depends on a proprietary detector.",
               "publicationDate": "2025-11-18"
+            },
+            {
+              "year": 2026,
+              "value": 71.83,
+              "rawValue": "71.83%",
+              "series": "Robbes et al. / new GitHub projects with coding-agent adoption (2026)",
+              "source": "https://www.themoonlight.io/es/review/agentic-very-much-adoption-of-coding-agent-in-new-github-projects",
+              "notes": "A detailed secondary summary of Robbes and coauthors’ June 2026 preprint reports that 71.83% of sampled new GitHub projects showed detectable coding-agent adoption. The summary describes a conservative repository-level estimate built from GitHub API sampling plus file-, pull-request-, and commit-based heuristics on projects created after late August 2025. This row currently relies on a secondary route because the public arXiv abstract confirms the study but does not expose the exact percentage in the accessible abstract text.",
+              "publicationDate": "2026-06-05"
             },
             {
               "year": 2026,
@@ -1013,13 +1040,13 @@
             },
             {
               "year": 2025,
-              "value": 28.7694,
-              "estimateCount": 32
+              "value": 28.4794,
+              "estimateCount": 33
             },
             {
               "year": 2026,
-              "value": 24.1267,
-              "estimateCount": 9
+              "value": 31.6336,
+              "estimateCount": 11
             }
           ]
         }
