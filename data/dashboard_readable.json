@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-06-22",
+  "generatedAt": "2026-06-29",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-06-22",
+      "lastRefreshed": "2026-06-29",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -226,6 +226,15 @@
               "publicationDate": "2023-09-29"
             },
             {
+              "year": 2022,
+              "value": 0.1,
+              "rawValue": "0.10%",
+              "series": "Shen & Wang / ICLR peer reviews",
+              "source": "https://arxiv.org/abs/2602.00319",
+              "notes": "The paper estimated that 0.10% of ICLR 2022 peer reviews were AI-generated. It trained a detector on real and synthetic 2021 ICLR reviews and applied it to 1,937 2022 reviews. The estimate is detector-based and likely misses lighter AI editing.",
+              "publicationDate": "2026-01-30"
+            },
+            {
               "year": 2023,
               "value": 13.4,
               "rawValue": "13.4%",
@@ -323,6 +332,15 @@
               "source": "https://pubmed.ncbi.nlm.nih.gov/37776949/",
               "notes": "The mean AI-generation score was 15.64% for OTSR orthopedics articles published after November 2022. The study ran ZeroGPT on the body plus abstract of 425 articles published from February 2022 to September 2023. This is a direct estimate within a defined journal corpus, though detector choice and single-journal scope are clear limitations.",
               "publicationDate": "2023-09-29"
+            },
+            {
+              "year": 2023,
+              "value": 0.0,
+              "rawValue": "0.00%",
+              "series": "Shen & Wang / ICLR peer reviews",
+              "source": "https://arxiv.org/abs/2602.00319",
+              "notes": "The paper estimated that 0.00% of ICLR 2023 peer reviews were AI-generated. It trained a detector on real and synthetic 2021 ICLR reviews and applied it to 1,887 2023 reviews. The estimate is detector-based and likely misses lighter AI editing.",
+              "publicationDate": "2026-01-30"
             },
             {
               "year": 2023,
@@ -584,6 +602,15 @@
               "source": "https://pubmed.ncbi.nlm.nih.gov/41710616/",
               "notes": "The study estimated that at least 0.09% of PubMed medical manuscripts in its study window were ChatGPT-generated. It counted papers whose title or abstract contained the marker term 'delve' across 2,193,871 PubMed manuscripts published from December 1, 2022 to May 14, 2024. The estimate is a conservative lower bound and depends on a single lexical marker rather than a full-content attribution model.",
               "publicationDate": "2026-01-02"
+            },
+            {
+              "year": 2024,
+              "value": 7.32,
+              "rawValue": "7.32%",
+              "series": "Shen & Wang / ICLR peer reviews",
+              "source": "https://arxiv.org/abs/2602.00319",
+              "notes": "The paper estimated that 7.32% of ICLR 2024 peer reviews were AI-generated. It trained a detector on real and synthetic 2021 ICLR reviews and applied it to 1,818 2024 reviews. The estimate is detector-based and narrower than sentence-level AI-assistance measures.",
+              "publicationDate": "2026-01-30"
             },
             {
               "year": 2024,
@@ -947,6 +974,15 @@
             },
             {
               "year": 2026,
+              "value": 12.0,
+              "rawValue": "12.0%",
+              "series": "Graphite / Google organic search results",
+              "source": "https://graphite.io/five-percent/ai-content-and-search",
+              "notes": "Graphite found that 12.0% of article-like pages in the top 20 Google organic results had more than 50% AI content, while 3.0% were purely AI-generated. It sampled 2,200 keywords, kept 20,280 filtered article or listicle URLs from the top 20 results, and applied paragraph-level Originality.ai thresholds. The estimate excludes many page types and relies on one detector and Graphite’s filtering choices.",
+              "publicationDate": "2026-04-16"
+            },
+            {
+              "year": 2026,
               "value": 59.0,
               "rawValue": "59.0%",
               "series": "Kapwing / TikTok new-user feed (2026)",
@@ -1025,18 +1061,18 @@
             },
             {
               "year": 2022,
-              "value": 5.3845,
-              "estimateCount": 11
+              "value": 4.9442,
+              "estimateCount": 12
             },
             {
               "year": 2023,
-              "value": 12.4601,
-              "estimateCount": 14
+              "value": 11.6295,
+              "estimateCount": 15
             },
             {
               "year": 2024,
-              "value": 17.5755,
-              "estimateCount": 29
+              "value": 17.2337,
+              "estimateCount": 30
             },
             {
               "year": 2025,
@@ -1045,8 +1081,8 @@
             },
             {
               "year": 2026,
-              "value": 31.6336,
-              "estimateCount": 11
+              "value": 29.9975,
+              "estimateCount": 12
             }
           ]
         }

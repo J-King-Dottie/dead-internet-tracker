@@ -1,6 +1,6 @@
 {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-06-22",
+    "lastRefreshed": "2026-06-29",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -179,6 +179,14 @@
             "publication_date": "2023-09-29"
         },
         {
+            "series": "Shen & Wang / ICLR peer reviews",
+            "year": 2022,
+            "value": "0.10%",
+            "source": "https://arxiv.org/abs/2602.00319",
+            "notes": "The paper estimated that 0.10% of ICLR 2022 peer reviews were AI-generated. It trained a detector on real and synthetic 2021 ICLR reviews and applied it to 1,937 2022 reviews. The estimate is detector-based and likely misses lighter AI editing.",
+            "publication_date": "2026-01-30"
+        },
+        {
             "series": "Bradshaw et al. / Seeking Alpha articles",
             "year": 2023,
             "value": "13.4%",
@@ -265,6 +273,14 @@
             "source": "https://pubmed.ncbi.nlm.nih.gov/37776949/",
             "notes": "The mean AI-generation score was 15.64% for OTSR orthopedics articles published after November 2022. The study ran ZeroGPT on the body plus abstract of 425 articles published from February 2022 to September 2023. This is a direct estimate within a defined journal corpus, though detector choice and single-journal scope are clear limitations.",
             "publication_date": "2023-09-29"
+        },
+        {
+            "series": "Shen & Wang / ICLR peer reviews",
+            "year": 2023,
+            "value": "0.00%",
+            "source": "https://arxiv.org/abs/2602.00319",
+            "notes": "The paper estimated that 0.00% of ICLR 2023 peer reviews were AI-generated. It trained a detector on real and synthetic 2021 ICLR reviews and applied it to 1,887 2023 reviews. The estimate is detector-based and likely misses lighter AI editing.",
+            "publication_date": "2026-01-30"
         },
         {
             "series": "Stanford / LLM-assisted writing across society",
@@ -497,6 +513,14 @@
             "source": "https://pubmed.ncbi.nlm.nih.gov/41710616/",
             "notes": "The study estimated that at least 0.09% of PubMed medical manuscripts in its study window were ChatGPT-generated. It counted papers whose title or abstract contained the marker term 'delve' across 2,193,871 PubMed manuscripts published from December 1, 2022 to May 14, 2024. The estimate is a conservative lower bound and depends on a single lexical marker rather than a full-content attribution model.",
             "publication_date": "2026-01-02"
+        },
+        {
+            "series": "Shen & Wang / ICLR peer reviews",
+            "year": 2024,
+            "value": "7.32%",
+            "source": "https://arxiv.org/abs/2602.00319",
+            "notes": "The paper estimated that 7.32% of ICLR 2024 peer reviews were AI-generated. It trained a detector on real and synthetic 2021 ICLR reviews and applied it to 1,818 2024 reviews. The estimate is detector-based and narrower than sentence-level AI-assistance measures.",
+            "publication_date": "2026-01-30"
         },
         {
             "series": "Stanford / LLM-assisted writing across society",
@@ -817,6 +841,14 @@
             "source": "https://graphite.io/five-percent/ai-now-writes-as-many-online-articles-as-humans-do",
             "notes": "Graphite estimated that 49.94% of English-language online articles and listicles published in 2026-Q1 were primarily AI-generated in its Common Crawl sample. It randomly sampled 55.4k English URLs with article schema from 2020 to March 2026 and averaged three detector-based quarterly estimates from Pangram, Copyleaks, and GPTZero. This is detector-based and limited to English article-style web pages rather than the full internet.",
             "publication_date": "2026-05-15"
+        },
+        {
+            "series": "Graphite / Google organic search results",
+            "year": 2026,
+            "value": "12.0%",
+            "source": "https://graphite.io/five-percent/ai-content-and-search",
+            "notes": "Graphite found that 12.0% of article-like pages in the top 20 Google organic results had more than 50% AI content, while 3.0% were purely AI-generated. It sampled 2,200 keywords, kept 20,280 filtered article or listicle URLs from the top 20 results, and applied paragraph-level Originality.ai thresholds. The estimate excludes many page types and relies on one detector and Graphite’s filtering choices.",
+            "publication_date": "2026-04-16"
         },
         {
             "series": "Kapwing / TikTok new-user feed (2026)",

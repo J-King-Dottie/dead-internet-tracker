@@ -363,3 +363,24 @@ For the actual sweep standard and what context to store per estimate, use:
   - Kapwing / TikTok new-user feed (2026) (2026)
   - Robbes et al. / GitHub projects with coding-agent adoption (2025) (2025)
   - Robbes et al. / new GitHub projects with coding-agent adoption (2026) (2026)
+
+
+## 2026-06-29 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint
+  - industry/platform newsroom
+  - analyst/blog with methods
+  - media discovery for underlying sources
+  - social-platform prevalence
+  - reviews/e-commerce
+  - search-result corpora
+  - music uploads
+  - peer review / academic writing
+- added:
+  - Shen & Wang / ICLR peer reviews (2022)
+  - Shen & Wang / ICLR peer reviews (2023)
+  - Shen & Wang / ICLR peer reviews (2024)
+  - Graphite / Google organic search results (2026)
