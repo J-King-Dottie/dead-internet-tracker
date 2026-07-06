@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-07-02",
+  "generatedAt": "2026-07-06",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-06-29",
+      "lastRefreshed": "2026-07-06",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -965,6 +965,15 @@
             },
             {
               "year": 2026,
+              "value": 42.7,
+              "rawValue": "42.7%",
+              "series": "Graphite / ChatGPT cited reference URLs",
+              "source": "https://graphite.io/five-percent/ai-search-collapse",
+              "notes": "Graphite reports that 42.7% of unique URLs cited by ChatGPT for its prompt set in early June 2026 were predicted to be AI-generated. It collected reference URLs for 1,019 information-seeking prompts and classified unique cited URLs with GPTZero, also reporting 38.9% for the January 2026 collection. This is a detector-based estimate for ChatGPT-cited references rather than for the whole web or for all search results.",
+              "publicationDate": "2026-06-11"
+            },
+            {
+              "year": 2026,
               "value": 49.94,
               "rawValue": "49.94%",
               "series": "Graphite / Common Crawl new web articles",
@@ -1081,8 +1090,8 @@
             },
             {
               "year": 2026,
-              "value": 29.9975,
-              "estimateCount": 12
+              "value": 30.9746,
+              "estimateCount": 13
             }
           ]
         }

@@ -1,6 +1,6 @@
 window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-06-29",
+    "lastRefreshed": "2026-07-06",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -833,6 +833,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://newsroom-deezer.com/2026/04/ai-generated-tracks-represent-44-of-new-uploaded-music/",
             "notes": "Deezer reported that 44% of all daily music uploads to its platform in April 2026 were fully AI-generated tracks. It said its in-house AI-music detection system was identifying nearly 75,000 fully AI-generated uploads per day by the April 2026 update. This is a direct platform-level prevalence estimate, but it is narrowly about one music-streaming service and fully synthetic tracks rather than the web at large.",
             "publication_date": "2026-04-21"
+        },
+        {
+            "series": "Graphite / ChatGPT cited reference URLs",
+            "year": 2026,
+            "value": "42.7%",
+            "source": "https://graphite.io/five-percent/ai-search-collapse",
+            "notes": "Graphite reports that 42.7% of unique URLs cited by ChatGPT for its prompt set in early June 2026 were predicted to be AI-generated. It collected reference URLs for 1,019 information-seeking prompts and classified unique cited URLs with GPTZero, also reporting 38.9% for the January 2026 collection. This is a detector-based estimate for ChatGPT-cited references rather than for the whole web or for all search results.",
+            "publication_date": "2026-06-11"
         },
         {
             "series": "Graphite / Common Crawl new web articles",

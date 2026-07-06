@@ -384,3 +384,23 @@ For the actual sweep standard and what context to store per estimate, use:
   - Shen & Wang / ICLR peer reviews (2023)
   - Shen & Wang / ICLR peer reviews (2024)
   - Graphite / Google organic search results (2026)
+
+
+## 2026-07-06 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint
+  - industry/platform
+  - institutional summary
+  - media/analyst
+  - social platforms
+  - web publishing
+  - reviews
+  - news
+  - video
+  - music
+  - code
+- added:
+  - Graphite / ChatGPT cited reference URLs (2026)
