@@ -1,6 +1,6 @@
 window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-07-06",
+    "lastRefreshed": "2026-07-13",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -771,6 +771,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "publication_date": "2026-01-26"
         },
         {
+            "series": "Scale over Preference / Chinese video-sharing Local Life channel",
+            "year": 2025,
+            "value": "30%",
+            "source": "arXiv preprint 'Scale over Preference: The Impact of AI-Generated Content on Online Content Ecology'",
+            "notes": "The study reports that AI-generated videos made up about 30% of total uploads in the Local Life channel of a leading Chinese video-sharing platform by mid-2025. It analyzes platform data from June 2024 to May 2025 and describes AIGC prevalence using platform-side records of creators' use of the platform's proprietary AIGC tool. The estimate covers one named channel on one unnamed platform, so it is a strong but narrow platform-specific video row rather than a general web estimate.",
+            "publication_date": "2026-04-02"
+        },
+        {
             "series": "SIMODS / Facebook AI-generated mis/disinformation",
             "year": 2025,
             "value": "7%",
@@ -784,6 +792,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "value": "2.6%",
             "source": "https://science.feedback.org/second-measurement-mis-disinformation-major-platforms-europe/",
             "notes": "Science Feedback estimated that 2.6% of Instagram mis/disinformation posts in its October 2025 SIMODS sample contained AI-generated images or video. It used exposure-weighted samples of public-interest mis/disinformation posts collected across four EU countries in the second SIMODS measurement. This is a narrow platform-specific estimate for misleading content rather than Instagram content overall.",
+            "publication_date": "2026-03-19"
+        },
+        {
+            "series": "SIMODS / TikTok AI-generated mis/disinformation",
+            "year": 2025,
+            "value": "24%",
+            "source": "Science Feedback / SIMODS second measurement",
+            "notes": "SIMODS found that 24% of TikTok mis/disinformation posts in its October 2025 European platform sample contained AI-generated elements. It used exposure-weighted samples of public-interest content annotated by professional fact-checkers and added a new wave-two indicator for AI-generated images or video. The figure is event- and topic-bounded because the denominator is only mis/disinformation posts in the sampled public-interest corpus, not all TikTok content.",
             "publication_date": "2026-03-19"
         },
         {
@@ -897,6 +913,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://www.pangram.com/blog/pangram-predicts-21-of-iclr-reviews-are-ai-generated",
             "notes": "Pangram found that 21% of ICLR 2026 peer reviews, or 15,899 reviews, were fully AI-generated. It ran its detector on all roughly 70,000 public ICLR reviews and reported a 2022 negative-control error check with no fully-AI versus fully-human confusions. This is a conference-review corpus rather than the open web, and the estimate depends on a proprietary detector.",
             "publication_date": "2025-11-18"
+        },
+        {
+            "series": "Pangram / scanned social-feed posts",
+            "year": 2026,
+            "value": "13.8%",
+            "source": "Pangram Labs blog post 'AI in Your Feed'",
+            "notes": "Pangram found that 13.8% of scanned social-feed posts over 50 words were AI-generated across LinkedIn, Medium, Substack, X, and Reddit in spring 2026. It used opt-in Chrome-extension browsing data covering 1,002,627 posts and classified each post with Pangram 3.3. The sample reflects what extension users saw in-feed rather than a platform-representative universe of all posts.",
+            "publication_date": "2026-07-09"
         },
         {
             "series": "Robbes et al. / new GitHub projects with coding-agent adoption (2026)",

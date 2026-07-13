@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-07-06",
+  "generatedAt": "2026-07-13",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-07-06",
+      "lastRefreshed": "2026-07-13",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -893,6 +893,15 @@
             },
             {
               "year": 2025,
+              "value": 30.0,
+              "rawValue": "30%",
+              "series": "Scale over Preference / Chinese video-sharing Local Life channel",
+              "source": "arXiv preprint 'Scale over Preference: The Impact of AI-Generated Content on Online Content Ecology'",
+              "notes": "The study reports that AI-generated videos made up about 30% of total uploads in the Local Life channel of a leading Chinese video-sharing platform by mid-2025. It analyzes platform data from June 2024 to May 2025 and describes AIGC prevalence using platform-side records of creators' use of the platform's proprietary AIGC tool. The estimate covers one named channel on one unnamed platform, so it is a strong but narrow platform-specific video row rather than a general web estimate.",
+              "publicationDate": "2026-04-02"
+            },
+            {
+              "year": 2025,
               "value": 7.0,
               "rawValue": "7%",
               "series": "SIMODS / Facebook AI-generated mis/disinformation",
@@ -907,6 +916,15 @@
               "series": "SIMODS / Instagram AI-generated mis/disinformation",
               "source": "https://science.feedback.org/second-measurement-mis-disinformation-major-platforms-europe/",
               "notes": "Science Feedback estimated that 2.6% of Instagram mis/disinformation posts in its October 2025 SIMODS sample contained AI-generated images or video. It used exposure-weighted samples of public-interest mis/disinformation posts collected across four EU countries in the second SIMODS measurement. This is a narrow platform-specific estimate for misleading content rather than Instagram content overall.",
+              "publicationDate": "2026-03-19"
+            },
+            {
+              "year": 2025,
+              "value": 24.0,
+              "rawValue": "24%",
+              "series": "SIMODS / TikTok AI-generated mis/disinformation",
+              "source": "Science Feedback / SIMODS second measurement",
+              "notes": "SIMODS found that 24% of TikTok mis/disinformation posts in its October 2025 European platform sample contained AI-generated elements. It used exposure-weighted samples of public-interest content annotated by professional fact-checkers and added a new wave-two indicator for AI-generated images or video. The figure is event- and topic-bounded because the denominator is only mis/disinformation posts in the sampled public-interest corpus, not all TikTok content.",
               "publicationDate": "2026-03-19"
             },
             {
@@ -1037,6 +1055,15 @@
             },
             {
               "year": 2026,
+              "value": 13.8,
+              "rawValue": "13.8%",
+              "series": "Pangram / scanned social-feed posts",
+              "source": "Pangram Labs blog post 'AI in Your Feed'",
+              "notes": "Pangram found that 13.8% of scanned social-feed posts over 50 words were AI-generated across LinkedIn, Medium, Substack, X, and Reddit in spring 2026. It used opt-in Chrome-extension browsing data covering 1,002,627 posts and classified each post with Pangram 3.3. The sample reflects what extension users saw in-feed rather than a platform-representative universe of all posts.",
+              "publicationDate": "2026-07-09"
+            },
+            {
+              "year": 2026,
               "value": 71.83,
               "rawValue": "71.83%",
               "series": "Robbes et al. / new GitHub projects with coding-agent adoption (2026)",
@@ -1085,13 +1112,13 @@
             },
             {
               "year": 2025,
-              "value": 28.4794,
-              "estimateCount": 33
+              "value": 28.3949,
+              "estimateCount": 35
             },
             {
               "year": 2026,
-              "value": 30.9746,
-              "estimateCount": 13
+              "value": 29.7479,
+              "estimateCount": 14
             }
           ]
         }
