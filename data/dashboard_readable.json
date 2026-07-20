@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-07-13",
+  "generatedAt": "2026-07-20",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-07-13",
+      "lastRefreshed": "2026-07-20",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -341,6 +341,15 @@
               "source": "https://arxiv.org/abs/2602.00319",
               "notes": "The paper estimated that 0.00% of ICLR 2023 peer reviews were AI-generated. It trained a detector on real and synthetic 2021 ICLR reviews and applied it to 1,887 2023 reviews. The estimate is detector-based and likely misses lighter AI editing.",
               "publicationDate": "2026-01-30"
+            },
+            {
+              "year": 2023,
+              "value": 12.0,
+              "rawValue": "12.0%",
+              "series": "Siler / published academic articles",
+              "source": "https://pubmed.ncbi.nlm.nih.gov/42213755/",
+              "notes": "Estimated 12.0% of published articles in 2023 across Elsevier, Frontiers, MDPI, and PLoS exhibited evidence of LLM influence. The study scored 7.3 million full-text journal articles from 2020-2025 using 228 focal words with post-2022 frequency spikes consistent with LLM output. The estimate is a corpus-level lexical inference rather than paper-level ground-truth attribution.",
+              "publicationDate": "2026-06-02"
             },
             {
               "year": 2023,
@@ -902,6 +911,15 @@
             },
             {
               "year": 2025,
+              "value": 57.0,
+              "rawValue": "57.0%",
+              "series": "Siler / published academic articles",
+              "source": "https://pubmed.ncbi.nlm.nih.gov/42213755/",
+              "notes": "Estimated 57.0% of published articles in 2025 across Elsevier, Frontiers, MDPI, and PLoS exhibited evidence of LLM influence. The study scored 7.3 million full-text journal articles from 2020-2025 using 228 focal words with post-2022 frequency spikes consistent with LLM output. The estimate is a corpus-level lexical inference rather than paper-level ground-truth attribution.",
+              "publicationDate": "2026-06-02"
+            },
+            {
+              "year": 2025,
               "value": 7.0,
               "rawValue": "7%",
               "series": "SIMODS / Facebook AI-generated mis/disinformation",
@@ -1102,8 +1120,8 @@
             },
             {
               "year": 2023,
-              "value": 11.6295,
-              "estimateCount": 15
+              "value": 11.6526,
+              "estimateCount": 16
             },
             {
               "year": 2024,
@@ -1112,8 +1130,8 @@
             },
             {
               "year": 2025,
-              "value": 28.3949,
-              "estimateCount": 35
+              "value": 29.1894,
+              "estimateCount": 36
             },
             {
               "year": 2026,

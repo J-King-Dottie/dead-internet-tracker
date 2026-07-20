@@ -423,3 +423,17 @@ For the actual sweep standard and what context to store per estimate, use:
   - Pangram / scanned social-feed posts (2026)
   - SIMODS / TikTok AI-generated mis/disinformation (2025)
   - Scale over Preference / Chinese video-sharing Local Life channel (2025)
+
+
+## 2026-07-20 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint
+  - industry/platform
+  - institutional/report
+  - media/analyst
+- added:
+  - Siler / published academic articles (2023)
+  - Siler / published academic articles (2025)

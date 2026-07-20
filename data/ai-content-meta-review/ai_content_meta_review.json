@@ -1,6 +1,6 @@
 {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-07-13",
+    "lastRefreshed": "2026-07-20",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -281,6 +281,14 @@
             "source": "https://arxiv.org/abs/2602.00319",
             "notes": "The paper estimated that 0.00% of ICLR 2023 peer reviews were AI-generated. It trained a detector on real and synthetic 2021 ICLR reviews and applied it to 1,887 2023 reviews. The estimate is detector-based and likely misses lighter AI editing.",
             "publication_date": "2026-01-30"
+        },
+        {
+            "series": "Siler / published academic articles",
+            "year": 2023,
+            "value": "12.0%",
+            "source": "https://pubmed.ncbi.nlm.nih.gov/42213755/",
+            "notes": "Estimated 12.0% of published articles in 2023 across Elsevier, Frontiers, MDPI, and PLoS exhibited evidence of LLM influence. The study scored 7.3 million full-text journal articles from 2020-2025 using 228 focal words with post-2022 frequency spikes consistent with LLM output. The estimate is a corpus-level lexical inference rather than paper-level ground-truth attribution.",
+            "publication_date": "2026-06-02"
         },
         {
             "series": "Stanford / LLM-assisted writing across society",
@@ -777,6 +785,14 @@
             "source": "arXiv preprint 'Scale over Preference: The Impact of AI-Generated Content on Online Content Ecology'",
             "notes": "The study reports that AI-generated videos made up about 30% of total uploads in the Local Life channel of a leading Chinese video-sharing platform by mid-2025. It analyzes platform data from June 2024 to May 2025 and describes AIGC prevalence using platform-side records of creators' use of the platform's proprietary AIGC tool. The estimate covers one named channel on one unnamed platform, so it is a strong but narrow platform-specific video row rather than a general web estimate.",
             "publication_date": "2026-04-02"
+        },
+        {
+            "series": "Siler / published academic articles",
+            "year": 2025,
+            "value": "57.0%",
+            "source": "https://pubmed.ncbi.nlm.nih.gov/42213755/",
+            "notes": "Estimated 57.0% of published articles in 2025 across Elsevier, Frontiers, MDPI, and PLoS exhibited evidence of LLM influence. The study scored 7.3 million full-text journal articles from 2020-2025 using 228 focal words with post-2022 frequency spikes consistent with LLM output. The estimate is a corpus-level lexical inference rather than paper-level ground-truth attribution.",
+            "publication_date": "2026-06-02"
         },
         {
             "series": "SIMODS / Facebook AI-generated mis/disinformation",
