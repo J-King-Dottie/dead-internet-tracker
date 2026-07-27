@@ -1,6 +1,6 @@
 window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-07-20",
+    "lastRefreshed": "2026-07-27",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -203,6 +203,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "publication_date": "2024-05-07"
         },
         {
+            "series": "McCreery & Naser / engineering abstracts",
+            "year": 2023,
+            "value": "10.0%",
+            "source": "LLM-Assisted writing in engineering is associated with higher citations as evidenced from 1.17 million papers",
+            "notes": "The study estimates that 10.0% of engineering abstracts published in 2023 exceeded a pre-LLM 95th-percentile marker threshold across five engineering fields plus computer science benchmark data. It sampled 1.17 million abstracts from 2019 to 2025 and inferred LLM assistance from shifts in a 228-marker lexicon rather than article-level detector labels. This is a statistical proxy for likely LLM assistance in abstracts, not a direct classification of whole papers.",
+            "publication_date": "2026-07-24"
+        },
+        {
             "series": "Originality / climate change paper abstracts",
             "year": 2023,
             "value": "17.20%",
@@ -377,6 +385,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://arxiv.org/abs/2405.02150",
             "notes": "The paper estimated that at least 15.8% of ICLR 2024 peer reviews were AI-assisted. It used GPTZero as a lower-bound detector in a quasi-experimental study of the ICLR review set. This is a direct estimate within a defined scholarly content set, but it is framed as a lower bound and depends on detector performance.",
             "publication_date": "2024-05-03"
+        },
+        {
+            "series": "McCreery & Naser / engineering abstracts",
+            "year": 2024,
+            "value": "21.0%",
+            "source": "LLM-Assisted writing in engineering is associated with higher citations as evidenced from 1.17 million papers",
+            "notes": "The study estimates that 21.0% of engineering abstracts published in 2024 exceeded a pre-LLM 95th-percentile marker threshold across five engineering fields plus computer science benchmark data. It sampled 1.17 million abstracts from 2019 to 2025 and inferred LLM assistance from shifts in a 228-marker lexicon rather than article-level detector labels. This is a statistical proxy for likely LLM assistance in abstracts, not a direct classification of whole papers.",
+            "publication_date": "2026-07-24"
         },
         {
             "series": "Originality / climate change paper abstracts",
@@ -625,6 +641,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://www.kapwing.com/blog/ai-slop-report-the-global-rise-of-low-quality-ai-videos/",
             "notes": "Kapwing found that 21.0% of the first 500 Shorts shown to a brand-new YouTube account were AI-generated slop. The report manually classified AI slop and brainrot while cycling through the first 500 videos on a fresh YouTube Shorts feed. The estimate is a platform-specific new-user feed sample rather than all YouTube content.",
             "publication_date": "2025-11-28"
+        },
+        {
+            "series": "McCreery & Naser / engineering abstracts",
+            "year": 2025,
+            "value": "26.6%",
+            "source": "LLM-Assisted writing in engineering is associated with higher citations as evidenced from 1.17 million papers",
+            "notes": "The study estimates that 26.6% of engineering abstracts in the first half of 2025 exceeded a pre-LLM 95th-percentile marker threshold across five engineering fields plus computer science benchmark data. It sampled 1.17 million abstracts from 2019 to 2025 and inferred LLM assistance from shifts in a 228-marker lexicon rather than article-level detector labels. This is a statistical proxy for likely LLM assistance in abstracts, not a direct classification of whole papers.",
+            "publication_date": "2026-07-24"
         },
         {
             "series": "Originality / AI-related journal abstracts",

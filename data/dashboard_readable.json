@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-07-20",
+  "generatedAt": "2026-07-27",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-07-20",
+      "lastRefreshed": "2026-07-27",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -254,6 +254,15 @@
             },
             {
               "year": 2023,
+              "value": 10.0,
+              "rawValue": "10.0%",
+              "series": "McCreery & Naser / engineering abstracts",
+              "source": "LLM-Assisted writing in engineering is associated with higher citations as evidenced from 1.17 million papers",
+              "notes": "The study estimates that 10.0% of engineering abstracts published in 2023 exceeded a pre-LLM 95th-percentile marker threshold across five engineering fields plus computer science benchmark data. It sampled 1.17 million abstracts from 2019 to 2025 and inferred LLM assistance from shifts in a 228-marker lexicon rather than article-level detector labels. This is a statistical proxy for likely LLM assistance in abstracts, not a direct classification of whole papers.",
+              "publicationDate": "2026-07-24"
+            },
+            {
+              "year": 2023,
               "value": 17.2,
               "rawValue": "17.20%",
               "series": "Originality / climate change paper abstracts",
@@ -449,6 +458,15 @@
               "source": "https://arxiv.org/abs/2405.02150",
               "notes": "The paper estimated that at least 15.8% of ICLR 2024 peer reviews were AI-assisted. It used GPTZero as a lower-bound detector in a quasi-experimental study of the ICLR review set. This is a direct estimate within a defined scholarly content set, but it is framed as a lower bound and depends on detector performance.",
               "publicationDate": "2024-05-03"
+            },
+            {
+              "year": 2024,
+              "value": 21.0,
+              "rawValue": "21.0%",
+              "series": "McCreery & Naser / engineering abstracts",
+              "source": "LLM-Assisted writing in engineering is associated with higher citations as evidenced from 1.17 million papers",
+              "notes": "The study estimates that 21.0% of engineering abstracts published in 2024 exceeded a pre-LLM 95th-percentile marker threshold across five engineering fields plus computer science benchmark data. It sampled 1.17 million abstracts from 2019 to 2025 and inferred LLM assistance from shifts in a 228-marker lexicon rather than article-level detector labels. This is a statistical proxy for likely LLM assistance in abstracts, not a direct classification of whole papers.",
+              "publicationDate": "2026-07-24"
             },
             {
               "year": 2024,
@@ -728,6 +746,15 @@
               "source": "https://www.kapwing.com/blog/ai-slop-report-the-global-rise-of-low-quality-ai-videos/",
               "notes": "Kapwing found that 21.0% of the first 500 Shorts shown to a brand-new YouTube account were AI-generated slop. The report manually classified AI slop and brainrot while cycling through the first 500 videos on a fresh YouTube Shorts feed. The estimate is a platform-specific new-user feed sample rather than all YouTube content.",
               "publicationDate": "2025-11-28"
+            },
+            {
+              "year": 2025,
+              "value": 26.6,
+              "rawValue": "26.6%",
+              "series": "McCreery & Naser / engineering abstracts",
+              "source": "LLM-Assisted writing in engineering is associated with higher citations as evidenced from 1.17 million papers",
+              "notes": "The study estimates that 26.6% of engineering abstracts in the first half of 2025 exceeded a pre-LLM 95th-percentile marker threshold across five engineering fields plus computer science benchmark data. It sampled 1.17 million abstracts from 2019 to 2025 and inferred LLM assistance from shifts in a 228-marker lexicon rather than article-level detector labels. This is a statistical proxy for likely LLM assistance in abstracts, not a direct classification of whole papers.",
+              "publicationDate": "2026-07-24"
             },
             {
               "year": 2025,
@@ -1120,18 +1147,18 @@
             },
             {
               "year": 2023,
-              "value": 11.6526,
-              "estimateCount": 16
+              "value": 11.5554,
+              "estimateCount": 17
             },
             {
               "year": 2024,
-              "value": 17.2337,
-              "estimateCount": 30
+              "value": 17.3552,
+              "estimateCount": 31
             },
             {
               "year": 2025,
-              "value": 29.1894,
-              "estimateCount": 36
+              "value": 29.1195,
+              "estimateCount": 37
             },
             {
               "year": 2026,

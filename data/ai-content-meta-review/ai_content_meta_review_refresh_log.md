@@ -437,3 +437,21 @@ For the actual sweep standard and what context to store per estimate, use:
 - added:
   - Siler / published academic articles (2023)
   - Siler / published academic articles (2025)
+
+
+## 2026-07-27 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint
+  - journal-indexed scholarly publishing
+  - industry/platform studies
+  - news/analyst discovery
+  - social-platform prevalence
+  - reviews/e-commerce
+  - video/music/platform-specific corpora
+- added:
+  - McCreery & Naser / engineering abstracts (2023)
+  - McCreery & Naser / engineering abstracts (2024)
+  - McCreery & Naser / engineering abstracts (2025)
