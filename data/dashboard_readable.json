@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-07-27",
+  "generatedAt": "2026-08-02",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -1176,7 +1176,7 @@
       "description": "This estimates how much of total web traffic is AI bots. It matters because it gets closer to the machine share of web traversal than general bot traffic does.",
       "source": "Cloudflare Radar bot share and bot category time series",
       "sourceSnapshot": "data/cloudflare/cloudflare.json",
-      "lastRefreshed": "2026-07-02",
+      "lastRefreshed": "2026-08-02",
       "method": "We estimate AI bot share by combining Cloudflare's bot share of total traffic with its AI bot categories. The chart shows observed monthly values only.",
       "caveats": "Crawlers learn from the internet. Search bots use it. Cloudflare sees a large but incomplete slice of the web, with weaker coverage in places like China. This tracks AI bot traffic, not all AI activity. AI search only appears separately from June 2025, so the measure gets better over time.",
       "axisValueFormat": "percent1",
@@ -1203,7 +1203,8 @@
         "2026-03",
         "2026-04",
         "2026-05",
-        "2026-06"
+        "2026-06",
+        "2026-07"
       ],
       "series": [
         {
@@ -1297,6 +1298,10 @@
             {
               "period": "2026-06",
               "value": 8.21
+            },
+            {
+              "period": "2026-07",
+              "value": 8.64
             }
           ],
           "color": "#ff79c6"
@@ -1304,8 +1309,8 @@
       ],
       "latestValues": {
         "AI bots": {
-          "period": "2026-06",
-          "value": 8.21
+          "period": "2026-07",
+          "value": 8.64
         }
       },
       "intent": "The dead internet theory is not just about AI writing the web. It is also about AI systems increasingly reading, crawling, and traversing it."
@@ -1398,743 +1403,9 @@
       "description": "This tracks monthly human editors on English Wikipedia content pages. It matters because it shows whether people are still doing sustained public knowledge work.",
       "source": "Wikimedia editor analytics for en.wikipedia.org content pages",
       "sourceSnapshot": "data/wikipedia/wikipedia.json",
-      "lastRefreshed": "2026-07-02",
+      "lastRefreshed": "2026-08-02",
       "method": "Active editors are users making 5 or more edits in a month. The chart shows observed monthly counts only.",
       "caveats": "This is English Wikipedia only, not all Wikipedias. It measures editor participation, not article quality or total knowledge output.",
-      "axisValueFormat": "integer",
-      "tooltipValueFormat": "integer",
-      "xValues": [
-        "2020-01",
-        "2020-02",
-        "2020-03",
-        "2020-04",
-        "2020-05",
-        "2020-06",
-        "2020-07",
-        "2020-08",
-        "2020-09",
-        "2020-10",
-        "2020-11",
-        "2020-12",
-        "2021-01",
-        "2021-02",
-        "2021-03",
-        "2021-04",
-        "2021-05",
-        "2021-06",
-        "2021-07",
-        "2021-08",
-        "2021-09",
-        "2021-10",
-        "2021-11",
-        "2021-12",
-        "2022-01",
-        "2022-02",
-        "2022-03",
-        "2022-04",
-        "2022-05",
-        "2022-06",
-        "2022-07",
-        "2022-08",
-        "2022-09",
-        "2022-10",
-        "2022-11",
-        "2022-12",
-        "2023-01",
-        "2023-02",
-        "2023-03",
-        "2023-04",
-        "2023-05",
-        "2023-06",
-        "2023-07",
-        "2023-08",
-        "2023-09",
-        "2023-10",
-        "2023-11",
-        "2023-12",
-        "2024-01",
-        "2024-02",
-        "2024-03",
-        "2024-04",
-        "2024-05",
-        "2024-06",
-        "2024-07",
-        "2024-08",
-        "2024-09",
-        "2024-10",
-        "2024-11",
-        "2024-12",
-        "2025-01",
-        "2025-02",
-        "2025-03",
-        "2025-04",
-        "2025-05",
-        "2025-06",
-        "2025-07",
-        "2025-08",
-        "2025-09",
-        "2025-10",
-        "2025-11",
-        "2025-12",
-        "2026-01",
-        "2026-02",
-        "2026-03",
-        "2026-04",
-        "2026-05"
-      ],
-      "series": [
-        {
-          "name": "All editors (1+)",
-          "unit": "integer",
-          "values": [
-            {
-              "period": "2020-01",
-              "value": 113473
-            },
-            {
-              "period": "2020-02",
-              "value": 108868
-            },
-            {
-              "period": "2020-03",
-              "value": 111017
-            },
-            {
-              "period": "2020-04",
-              "value": 116835
-            },
-            {
-              "period": "2020-05",
-              "value": 121350
-            },
-            {
-              "period": "2020-06",
-              "value": 113618
-            },
-            {
-              "period": "2020-07",
-              "value": 107126
-            },
-            {
-              "period": "2020-08",
-              "value": 105502
-            },
-            {
-              "period": "2020-09",
-              "value": 105703
-            },
-            {
-              "period": "2020-10",
-              "value": 106738
-            },
-            {
-              "period": "2020-11",
-              "value": 105248
-            },
-            {
-              "period": "2020-12",
-              "value": 106982
-            },
-            {
-              "period": "2021-01",
-              "value": 118048
-            },
-            {
-              "period": "2021-02",
-              "value": 110720
-            },
-            {
-              "period": "2021-03",
-              "value": 118666
-            },
-            {
-              "period": "2021-04",
-              "value": 113520
-            },
-            {
-              "period": "2021-05",
-              "value": 113171
-            },
-            {
-              "period": "2021-06",
-              "value": 104959
-            },
-            {
-              "period": "2021-07",
-              "value": 102505
-            },
-            {
-              "period": "2021-08",
-              "value": 102527
-            },
-            {
-              "period": "2021-09",
-              "value": 101745
-            },
-            {
-              "period": "2021-10",
-              "value": 103105
-            },
-            {
-              "period": "2021-11",
-              "value": 102363
-            },
-            {
-              "period": "2021-12",
-              "value": 100076
-            },
-            {
-              "period": "2022-01",
-              "value": 107362
-            },
-            {
-              "period": "2022-02",
-              "value": 101591
-            },
-            {
-              "period": "2022-03",
-              "value": 107597
-            },
-            {
-              "period": "2022-04",
-              "value": 104094
-            },
-            {
-              "period": "2022-05",
-              "value": 103995
-            },
-            {
-              "period": "2022-06",
-              "value": 98953
-            },
-            {
-              "period": "2022-07",
-              "value": 98617
-            },
-            {
-              "period": "2022-08",
-              "value": 99450
-            },
-            {
-              "period": "2022-09",
-              "value": 99257
-            },
-            {
-              "period": "2022-10",
-              "value": 103763
-            },
-            {
-              "period": "2022-11",
-              "value": 101847
-            },
-            {
-              "period": "2022-12",
-              "value": 100795
-            },
-            {
-              "period": "2023-01",
-              "value": 108319
-            },
-            {
-              "period": "2023-02",
-              "value": 101199
-            },
-            {
-              "period": "2023-03",
-              "value": 109655
-            },
-            {
-              "period": "2023-04",
-              "value": 105245
-            },
-            {
-              "period": "2023-05",
-              "value": 104884
-            },
-            {
-              "period": "2023-06",
-              "value": 98588
-            },
-            {
-              "period": "2023-07",
-              "value": 100261
-            },
-            {
-              "period": "2023-08",
-              "value": 102412
-            },
-            {
-              "period": "2023-09",
-              "value": 100016
-            },
-            {
-              "period": "2023-10",
-              "value": 103033
-            },
-            {
-              "period": "2023-11",
-              "value": 102638
-            },
-            {
-              "period": "2023-12",
-              "value": 100575
-            },
-            {
-              "period": "2024-01",
-              "value": 107522
-            },
-            {
-              "period": "2024-02",
-              "value": 101760
-            },
-            {
-              "period": "2024-03",
-              "value": 105655
-            },
-            {
-              "period": "2024-04",
-              "value": 103845
-            },
-            {
-              "period": "2024-05",
-              "value": 103379
-            },
-            {
-              "period": "2024-06",
-              "value": 97630
-            },
-            {
-              "period": "2024-07",
-              "value": 99513
-            },
-            {
-              "period": "2024-08",
-              "value": 98475
-            },
-            {
-              "period": "2024-09",
-              "value": 97361
-            },
-            {
-              "period": "2024-10",
-              "value": 101494
-            },
-            {
-              "period": "2024-11",
-              "value": 100719
-            },
-            {
-              "period": "2024-12",
-              "value": 99807
-            },
-            {
-              "period": "2025-01",
-              "value": 105508
-            },
-            {
-              "period": "2025-02",
-              "value": 99030
-            },
-            {
-              "period": "2025-03",
-              "value": 103831
-            },
-            {
-              "period": "2025-04",
-              "value": 97848
-            },
-            {
-              "period": "2025-05",
-              "value": 99282
-            },
-            {
-              "period": "2025-06",
-              "value": 90595
-            },
-            {
-              "period": "2025-07",
-              "value": 91681
-            },
-            {
-              "period": "2025-08",
-              "value": 90033
-            },
-            {
-              "period": "2025-09",
-              "value": 91055
-            },
-            {
-              "period": "2025-10",
-              "value": 95430
-            },
-            {
-              "period": "2025-11",
-              "value": 94983
-            },
-            {
-              "period": "2025-12",
-              "value": 92556
-            },
-            {
-              "period": "2026-01",
-              "value": 95285
-            },
-            {
-              "period": "2026-02",
-              "value": 90081
-            },
-            {
-              "period": "2026-03",
-              "value": 95623
-            },
-            {
-              "period": "2026-04",
-              "value": 92658
-            },
-            {
-              "period": "2026-05",
-              "value": 94080
-            }
-          ],
-          "color": "#58e6ff"
-        },
-        {
-          "name": "Active editors (5+)",
-          "unit": "integer",
-          "values": [
-            {
-              "period": "2020-01",
-              "value": 31641
-            },
-            {
-              "period": "2020-02",
-              "value": 30586
-            },
-            {
-              "period": "2020-03",
-              "value": 31875
-            },
-            {
-              "period": "2020-04",
-              "value": 33779
-            },
-            {
-              "period": "2020-05",
-              "value": 35387
-            },
-            {
-              "period": "2020-06",
-              "value": 32922
-            },
-            {
-              "period": "2020-07",
-              "value": 31971
-            },
-            {
-              "period": "2020-08",
-              "value": 31938
-            },
-            {
-              "period": "2020-09",
-              "value": 31395
-            },
-            {
-              "period": "2020-10",
-              "value": 31357
-            },
-            {
-              "period": "2020-11",
-              "value": 31863
-            },
-            {
-              "period": "2020-12",
-              "value": 32342
-            },
-            {
-              "period": "2021-01",
-              "value": 33936
-            },
-            {
-              "period": "2021-02",
-              "value": 32835
-            },
-            {
-              "period": "2021-03",
-              "value": 35387
-            },
-            {
-              "period": "2021-04",
-              "value": 34417
-            },
-            {
-              "period": "2021-05",
-              "value": 34349
-            },
-            {
-              "period": "2021-06",
-              "value": 31970
-            },
-            {
-              "period": "2021-07",
-              "value": 31876
-            },
-            {
-              "period": "2021-08",
-              "value": 31812
-            },
-            {
-              "period": "2021-09",
-              "value": 31151
-            },
-            {
-              "period": "2021-10",
-              "value": 31268
-            },
-            {
-              "period": "2021-11",
-              "value": 31259
-            },
-            {
-              "period": "2021-12",
-              "value": 31100
-            },
-            {
-              "period": "2022-01",
-              "value": 32563
-            },
-            {
-              "period": "2022-02",
-              "value": 30412
-            },
-            {
-              "period": "2022-03",
-              "value": 32703
-            },
-            {
-              "period": "2022-04",
-              "value": 31731
-            },
-            {
-              "period": "2022-05",
-              "value": 32317
-            },
-            {
-              "period": "2022-06",
-              "value": 30494
-            },
-            {
-              "period": "2022-07",
-              "value": 31306
-            },
-            {
-              "period": "2022-08",
-              "value": 30878
-            },
-            {
-              "period": "2022-09",
-              "value": 30230
-            },
-            {
-              "period": "2022-10",
-              "value": 31602
-            },
-            {
-              "period": "2022-11",
-              "value": 30971
-            },
-            {
-              "period": "2022-12",
-              "value": 30807
-            },
-            {
-              "period": "2023-01",
-              "value": 32524
-            },
-            {
-              "period": "2023-02",
-              "value": 29798
-            },
-            {
-              "period": "2023-03",
-              "value": 32419
-            },
-            {
-              "period": "2023-04",
-              "value": 31952
-            },
-            {
-              "period": "2023-05",
-              "value": 31609
-            },
-            {
-              "period": "2023-06",
-              "value": 30086
-            },
-            {
-              "period": "2023-07",
-              "value": 30987
-            },
-            {
-              "period": "2023-08",
-              "value": 31198
-            },
-            {
-              "period": "2023-09",
-              "value": 30197
-            },
-            {
-              "period": "2023-10",
-              "value": 30955
-            },
-            {
-              "period": "2023-11",
-              "value": 31131
-            },
-            {
-              "period": "2023-12",
-              "value": 30976
-            },
-            {
-              "period": "2024-01",
-              "value": 32565
-            },
-            {
-              "period": "2024-02",
-              "value": 31057
-            },
-            {
-              "period": "2024-03",
-              "value": 32515
-            },
-            {
-              "period": "2024-04",
-              "value": 32091
-            },
-            {
-              "period": "2024-05",
-              "value": 31751
-            },
-            {
-              "period": "2024-06",
-              "value": 30580
-            },
-            {
-              "period": "2024-07",
-              "value": 31534
-            },
-            {
-              "period": "2024-08",
-              "value": 30806
-            },
-            {
-              "period": "2024-09",
-              "value": 29704
-            },
-            {
-              "period": "2024-10",
-              "value": 31056
-            },
-            {
-              "period": "2024-11",
-              "value": 31072
-            },
-            {
-              "period": "2024-12",
-              "value": 31574
-            },
-            {
-              "period": "2025-01",
-              "value": 32555
-            },
-            {
-              "period": "2025-02",
-              "value": 30696
-            },
-            {
-              "period": "2025-03",
-              "value": 32481
-            },
-            {
-              "period": "2025-04",
-              "value": 31120
-            },
-            {
-              "period": "2025-05",
-              "value": 31725
-            },
-            {
-              "period": "2025-06",
-              "value": 29694
-            },
-            {
-              "period": "2025-07",
-              "value": 30185
-            },
-            {
-              "period": "2025-08",
-              "value": 29542
-            },
-            {
-              "period": "2025-09",
-              "value": 29861
-            },
-            {
-              "period": "2025-10",
-              "value": 30906
-            },
-            {
-              "period": "2025-11",
-              "value": 31658
-            },
-            {
-              "period": "2025-12",
-              "value": 31104
-            },
-            {
-              "period": "2026-01",
-              "value": 31678
-            },
-            {
-              "period": "2026-02",
-              "value": 29854
-            },
-            {
-              "period": "2026-03",
-              "value": 32263
-            },
-            {
-              "period": "2026-04",
-              "value": 31157
-            },
-            {
-              "period": "2026-05",
-              "value": 31591
-            }
-          ],
-          "color": "#ff9a62"
-        }
-      ],
-      "latestValues": {
-        "All editors (1+)": {
-          "period": "2026-05",
-          "value": 94080
-        },
-        "Active editors (5+)": {
-          "period": "2026-05",
-          "value": 31591
-        }
-      },
-      "intent": "Wikipedia is a useful slow-decline signal for public human contribution. It shows whether people are still doing sustained knowledge work together in the open."
-    },
-    {
-      "chartKey": "stack-overflow",
-      "title": "Stack Overflow activity",
-      "description": "This tracks monthly new questions on Stack Overflow. It matters because it shows whether people are still asking other people for help in public.",
-      "source": "Stack Exchange API monthly question counts for Stack Overflow",
-      "sourceSnapshot": "data/stackoverflow/stackoverflow.json",
-      "lastRefreshed": "2026-07-02",
-      "method": "Monthly question counts are pulled from the official Stack Exchange API using each month's creation-date window. The chart shows observed monthly counts only.",
-      "caveats": "This is a public web proxy, not a measure of all problem-solving. This monthly feed currently covers questions asked, not answered-question counts.",
       "axisValueFormat": "integer",
       "tooltipValueFormat": "integer",
       "xValues": [
@@ -2219,320 +1490,1068 @@
       ],
       "series": [
         {
+          "name": "All editors (1+)",
+          "unit": "integer",
+          "values": [
+            {
+              "period": "2020-01",
+              "value": 113464
+            },
+            {
+              "period": "2020-02",
+              "value": 108858
+            },
+            {
+              "period": "2020-03",
+              "value": 111006
+            },
+            {
+              "period": "2020-04",
+              "value": 116827
+            },
+            {
+              "period": "2020-05",
+              "value": 121337
+            },
+            {
+              "period": "2020-06",
+              "value": 113611
+            },
+            {
+              "period": "2020-07",
+              "value": 107121
+            },
+            {
+              "period": "2020-08",
+              "value": 105491
+            },
+            {
+              "period": "2020-09",
+              "value": 105693
+            },
+            {
+              "period": "2020-10",
+              "value": 106733
+            },
+            {
+              "period": "2020-11",
+              "value": 105240
+            },
+            {
+              "period": "2020-12",
+              "value": 106977
+            },
+            {
+              "period": "2021-01",
+              "value": 118038
+            },
+            {
+              "period": "2021-02",
+              "value": 110710
+            },
+            {
+              "period": "2021-03",
+              "value": 118652
+            },
+            {
+              "period": "2021-04",
+              "value": 113508
+            },
+            {
+              "period": "2021-05",
+              "value": 113154
+            },
+            {
+              "period": "2021-06",
+              "value": 104948
+            },
+            {
+              "period": "2021-07",
+              "value": 102494
+            },
+            {
+              "period": "2021-08",
+              "value": 102523
+            },
+            {
+              "period": "2021-09",
+              "value": 101739
+            },
+            {
+              "period": "2021-10",
+              "value": 103093
+            },
+            {
+              "period": "2021-11",
+              "value": 102360
+            },
+            {
+              "period": "2021-12",
+              "value": 100068
+            },
+            {
+              "period": "2022-01",
+              "value": 107352
+            },
+            {
+              "period": "2022-02",
+              "value": 101587
+            },
+            {
+              "period": "2022-03",
+              "value": 107585
+            },
+            {
+              "period": "2022-04",
+              "value": 104088
+            },
+            {
+              "period": "2022-05",
+              "value": 103985
+            },
+            {
+              "period": "2022-06",
+              "value": 98941
+            },
+            {
+              "period": "2022-07",
+              "value": 98606
+            },
+            {
+              "period": "2022-08",
+              "value": 99437
+            },
+            {
+              "period": "2022-09",
+              "value": 99250
+            },
+            {
+              "period": "2022-10",
+              "value": 103754
+            },
+            {
+              "period": "2022-11",
+              "value": 101840
+            },
+            {
+              "period": "2022-12",
+              "value": 100788
+            },
+            {
+              "period": "2023-01",
+              "value": 108312
+            },
+            {
+              "period": "2023-02",
+              "value": 101190
+            },
+            {
+              "period": "2023-03",
+              "value": 109639
+            },
+            {
+              "period": "2023-04",
+              "value": 105230
+            },
+            {
+              "period": "2023-05",
+              "value": 104878
+            },
+            {
+              "period": "2023-06",
+              "value": 98576
+            },
+            {
+              "period": "2023-07",
+              "value": 100252
+            },
+            {
+              "period": "2023-08",
+              "value": 102401
+            },
+            {
+              "period": "2023-09",
+              "value": 100013
+            },
+            {
+              "period": "2023-10",
+              "value": 103025
+            },
+            {
+              "period": "2023-11",
+              "value": 102625
+            },
+            {
+              "period": "2023-12",
+              "value": 100567
+            },
+            {
+              "period": "2024-01",
+              "value": 107518
+            },
+            {
+              "period": "2024-02",
+              "value": 101751
+            },
+            {
+              "period": "2024-03",
+              "value": 105642
+            },
+            {
+              "period": "2024-04",
+              "value": 103840
+            },
+            {
+              "period": "2024-05",
+              "value": 103370
+            },
+            {
+              "period": "2024-06",
+              "value": 97620
+            },
+            {
+              "period": "2024-07",
+              "value": 99508
+            },
+            {
+              "period": "2024-08",
+              "value": 98470
+            },
+            {
+              "period": "2024-09",
+              "value": 97357
+            },
+            {
+              "period": "2024-10",
+              "value": 101488
+            },
+            {
+              "period": "2024-11",
+              "value": 100712
+            },
+            {
+              "period": "2024-12",
+              "value": 99801
+            },
+            {
+              "period": "2025-01",
+              "value": 105492
+            },
+            {
+              "period": "2025-02",
+              "value": 99021
+            },
+            {
+              "period": "2025-03",
+              "value": 103812
+            },
+            {
+              "period": "2025-04",
+              "value": 97826
+            },
+            {
+              "period": "2025-05",
+              "value": 99265
+            },
+            {
+              "period": "2025-06",
+              "value": 90588
+            },
+            {
+              "period": "2025-07",
+              "value": 91667
+            },
+            {
+              "period": "2025-08",
+              "value": 90013
+            },
+            {
+              "period": "2025-09",
+              "value": 91046
+            },
+            {
+              "period": "2025-10",
+              "value": 95426
+            },
+            {
+              "period": "2025-11",
+              "value": 94972
+            },
+            {
+              "period": "2025-12",
+              "value": 92553
+            },
+            {
+              "period": "2026-01",
+              "value": 95287
+            },
+            {
+              "period": "2026-02",
+              "value": 90076
+            },
+            {
+              "period": "2026-03",
+              "value": 95701
+            },
+            {
+              "period": "2026-04",
+              "value": 92672
+            },
+            {
+              "period": "2026-05",
+              "value": 94078
+            },
+            {
+              "period": "2026-06",
+              "value": 89326
+            }
+          ],
+          "color": "#58e6ff"
+        },
+        {
+          "name": "Active editors (5+)",
+          "unit": "integer",
+          "values": [
+            {
+              "period": "2020-01",
+              "value": 31638
+            },
+            {
+              "period": "2020-02",
+              "value": 30583
+            },
+            {
+              "period": "2020-03",
+              "value": 31871
+            },
+            {
+              "period": "2020-04",
+              "value": 33777
+            },
+            {
+              "period": "2020-05",
+              "value": 35384
+            },
+            {
+              "period": "2020-06",
+              "value": 32917
+            },
+            {
+              "period": "2020-07",
+              "value": 31970
+            },
+            {
+              "period": "2020-08",
+              "value": 31936
+            },
+            {
+              "period": "2020-09",
+              "value": 31394
+            },
+            {
+              "period": "2020-10",
+              "value": 31354
+            },
+            {
+              "period": "2020-11",
+              "value": 31860
+            },
+            {
+              "period": "2020-12",
+              "value": 32339
+            },
+            {
+              "period": "2021-01",
+              "value": 33934
+            },
+            {
+              "period": "2021-02",
+              "value": 32831
+            },
+            {
+              "period": "2021-03",
+              "value": 35380
+            },
+            {
+              "period": "2021-04",
+              "value": 34418
+            },
+            {
+              "period": "2021-05",
+              "value": 34345
+            },
+            {
+              "period": "2021-06",
+              "value": 31966
+            },
+            {
+              "period": "2021-07",
+              "value": 31874
+            },
+            {
+              "period": "2021-08",
+              "value": 31810
+            },
+            {
+              "period": "2021-09",
+              "value": 31150
+            },
+            {
+              "period": "2021-10",
+              "value": 31266
+            },
+            {
+              "period": "2021-11",
+              "value": 31256
+            },
+            {
+              "period": "2021-12",
+              "value": 31096
+            },
+            {
+              "period": "2022-01",
+              "value": 32560
+            },
+            {
+              "period": "2022-02",
+              "value": 30409
+            },
+            {
+              "period": "2022-03",
+              "value": 32698
+            },
+            {
+              "period": "2022-04",
+              "value": 31724
+            },
+            {
+              "period": "2022-05",
+              "value": 32313
+            },
+            {
+              "period": "2022-06",
+              "value": 30490
+            },
+            {
+              "period": "2022-07",
+              "value": 31307
+            },
+            {
+              "period": "2022-08",
+              "value": 30875
+            },
+            {
+              "period": "2022-09",
+              "value": 30224
+            },
+            {
+              "period": "2022-10",
+              "value": 31602
+            },
+            {
+              "period": "2022-11",
+              "value": 30967
+            },
+            {
+              "period": "2022-12",
+              "value": 30807
+            },
+            {
+              "period": "2023-01",
+              "value": 32523
+            },
+            {
+              "period": "2023-02",
+              "value": 29797
+            },
+            {
+              "period": "2023-03",
+              "value": 32417
+            },
+            {
+              "period": "2023-04",
+              "value": 31948
+            },
+            {
+              "period": "2023-05",
+              "value": 31609
+            },
+            {
+              "period": "2023-06",
+              "value": 30081
+            },
+            {
+              "period": "2023-07",
+              "value": 30985
+            },
+            {
+              "period": "2023-08",
+              "value": 31195
+            },
+            {
+              "period": "2023-09",
+              "value": 30195
+            },
+            {
+              "period": "2023-10",
+              "value": 30952
+            },
+            {
+              "period": "2023-11",
+              "value": 31124
+            },
+            {
+              "period": "2023-12",
+              "value": 30972
+            },
+            {
+              "period": "2024-01",
+              "value": 32557
+            },
+            {
+              "period": "2024-02",
+              "value": 31056
+            },
+            {
+              "period": "2024-03",
+              "value": 32509
+            },
+            {
+              "period": "2024-04",
+              "value": 32090
+            },
+            {
+              "period": "2024-05",
+              "value": 31752
+            },
+            {
+              "period": "2024-06",
+              "value": 30578
+            },
+            {
+              "period": "2024-07",
+              "value": 31533
+            },
+            {
+              "period": "2024-08",
+              "value": 30803
+            },
+            {
+              "period": "2024-09",
+              "value": 29700
+            },
+            {
+              "period": "2024-10",
+              "value": 31052
+            },
+            {
+              "period": "2024-11",
+              "value": 31068
+            },
+            {
+              "period": "2024-12",
+              "value": 31571
+            },
+            {
+              "period": "2025-01",
+              "value": 32551
+            },
+            {
+              "period": "2025-02",
+              "value": 30696
+            },
+            {
+              "period": "2025-03",
+              "value": 32472
+            },
+            {
+              "period": "2025-04",
+              "value": 31112
+            },
+            {
+              "period": "2025-05",
+              "value": 31723
+            },
+            {
+              "period": "2025-06",
+              "value": 29692
+            },
+            {
+              "period": "2025-07",
+              "value": 30180
+            },
+            {
+              "period": "2025-08",
+              "value": 29539
+            },
+            {
+              "period": "2025-09",
+              "value": 29859
+            },
+            {
+              "period": "2025-10",
+              "value": 30908
+            },
+            {
+              "period": "2025-11",
+              "value": 31650
+            },
+            {
+              "period": "2025-12",
+              "value": 31106
+            },
+            {
+              "period": "2026-01",
+              "value": 31690
+            },
+            {
+              "period": "2026-02",
+              "value": 29864
+            },
+            {
+              "period": "2026-03",
+              "value": 32303
+            },
+            {
+              "period": "2026-04",
+              "value": 31166
+            },
+            {
+              "period": "2026-05",
+              "value": 31622
+            },
+            {
+              "period": "2026-06",
+              "value": 29676
+            }
+          ],
+          "color": "#ff9a62"
+        }
+      ],
+      "latestValues": {
+        "All editors (1+)": {
+          "period": "2026-06",
+          "value": 89326
+        },
+        "Active editors (5+)": {
+          "period": "2026-06",
+          "value": 29676
+        }
+      },
+      "intent": "Wikipedia is a useful slow-decline signal for public human contribution. It shows whether people are still doing sustained knowledge work together in the open."
+    },
+    {
+      "chartKey": "stack-overflow",
+      "title": "Stack Overflow activity",
+      "description": "This tracks monthly new questions on Stack Overflow. It matters because it shows whether people are still asking other people for help in public.",
+      "source": "Stack Exchange API monthly question counts for Stack Overflow",
+      "sourceSnapshot": "data/stackoverflow/stackoverflow.json",
+      "lastRefreshed": "2026-08-02",
+      "method": "Monthly question counts are pulled from the official Stack Exchange API using each month's creation-date window. The chart shows observed monthly counts only.",
+      "caveats": "This is a public web proxy, not a measure of all problem-solving. This monthly feed currently covers questions asked, not answered-question counts.",
+      "axisValueFormat": "integer",
+      "tooltipValueFormat": "integer",
+      "xValues": [
+        "2020-01",
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06",
+        "2020-07",
+        "2020-08",
+        "2020-09",
+        "2020-10",
+        "2020-11",
+        "2020-12",
+        "2021-01",
+        "2021-02",
+        "2021-03",
+        "2021-04",
+        "2021-05",
+        "2021-06",
+        "2021-07",
+        "2021-08",
+        "2021-09",
+        "2021-10",
+        "2021-11",
+        "2021-12",
+        "2022-01",
+        "2022-02",
+        "2022-03",
+        "2022-04",
+        "2022-05",
+        "2022-06",
+        "2022-07",
+        "2022-08",
+        "2022-09",
+        "2022-10",
+        "2022-11",
+        "2022-12",
+        "2023-01",
+        "2023-02",
+        "2023-03",
+        "2023-04",
+        "2023-05",
+        "2023-06",
+        "2023-07",
+        "2023-08",
+        "2023-09",
+        "2023-10",
+        "2023-11",
+        "2023-12",
+        "2024-01",
+        "2024-02",
+        "2024-03",
+        "2024-04",
+        "2024-05",
+        "2024-06",
+        "2024-07",
+        "2024-08",
+        "2024-09",
+        "2024-10",
+        "2024-11",
+        "2024-12",
+        "2025-01",
+        "2025-02",
+        "2025-03",
+        "2025-04",
+        "2025-05",
+        "2025-06",
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07"
+      ],
+      "series": [
+        {
           "name": "Total new questions asked",
           "unit": "integer",
           "values": [
             {
               "period": "2020-01",
-              "value": 146628
+              "value": 146610
             },
             {
               "period": "2020-02",
-              "value": 145049
+              "value": 145034
             },
             {
               "period": "2020-03",
-              "value": 155932
+              "value": 155917
             },
             {
               "period": "2020-04",
-              "value": 182866
+              "value": 182854
             },
             {
               "period": "2020-05",
-              "value": 186430
+              "value": 186411
             },
             {
               "period": "2020-06",
-              "value": 171863
+              "value": 171850
             },
             {
               "period": "2020-07",
-              "value": 166009
+              "value": 166001
             },
             {
               "period": "2020-08",
-              "value": 148293
+              "value": 148282
             },
             {
               "period": "2020-09",
-              "value": 141750
+              "value": 141744
             },
             {
               "period": "2020-10",
-              "value": 141779
+              "value": 141770
             },
             {
               "period": "2020-11",
-              "value": 134917
+              "value": 134911
             },
             {
               "period": "2020-12",
-              "value": 133883
+              "value": 133875
             },
             {
               "period": "2021-01",
-              "value": 139850
+              "value": 139839
             },
             {
               "period": "2021-02",
-              "value": 131655
+              "value": 131643
             },
             {
               "period": "2021-03",
-              "value": 148739
+              "value": 148721
             },
             {
               "period": "2021-04",
-              "value": 135861
+              "value": 135844
             },
             {
               "period": "2021-05",
-              "value": 133772
+              "value": 133755
             },
             {
               "period": "2021-06",
-              "value": 128972
+              "value": 128943
             },
             {
               "period": "2021-07",
-              "value": 123967
+              "value": 123950
             },
             {
               "period": "2021-08",
-              "value": 122067
+              "value": 122051
             },
             {
               "period": "2021-09",
-              "value": 119760
+              "value": 119751
             },
             {
               "period": "2021-10",
-              "value": 118844
+              "value": 118833
             },
             {
               "period": "2021-11",
-              "value": 119078
+              "value": 119064
             },
             {
               "period": "2021-12",
-              "value": 112102
+              "value": 112091
             },
             {
               "period": "2022-01",
-              "value": 119273
+              "value": 119258
             },
             {
               "period": "2022-02",
-              "value": 113776
+              "value": 113763
             },
             {
               "period": "2022-03",
-              "value": 123385
+              "value": 123366
             },
             {
               "period": "2022-04",
-              "value": 114118
+              "value": 114078
             },
             {
               "period": "2022-05",
-              "value": 116049
+              "value": 115959
             },
             {
               "period": "2022-06",
-              "value": 111367
+              "value": 111306
             },
             {
               "period": "2022-07",
-              "value": 110816
+              "value": 110778
             },
             {
               "period": "2022-08",
-              "value": 112838
+              "value": 112666
             },
             {
               "period": "2022-09",
-              "value": 103687
+              "value": 103581
             },
             {
               "period": "2022-10",
-              "value": 106034
+              "value": 105934
             },
             {
               "period": "2022-11",
-              "value": 109469
+              "value": 109301
             },
             {
               "period": "2022-12",
-              "value": 96431
+              "value": 96275
             },
             {
               "period": "2023-01",
-              "value": 96829
+              "value": 96725
             },
             {
               "period": "2023-02",
-              "value": 85661
+              "value": 85596
             },
             {
               "period": "2023-03",
-              "value": 87254
+              "value": 87182
             },
             {
               "period": "2023-04",
-              "value": 68551
+              "value": 68540
             },
             {
               "period": "2023-05",
-              "value": 66502
+              "value": 66410
             },
             {
               "period": "2023-06",
-              "value": 63671
+              "value": 63610
             },
             {
               "period": "2023-07",
-              "value": 62801
+              "value": 62725
             },
             {
               "period": "2023-08",
-              "value": 60047
+              "value": 59993
             },
             {
               "period": "2023-09",
-              "value": 52756
+              "value": 52718
             },
             {
               "period": "2023-10",
-              "value": 52367
+              "value": 52356
             },
             {
               "period": "2023-11",
-              "value": 50328
+              "value": 50319
             },
             {
               "period": "2023-12",
-              "value": 42386
+              "value": 42336
             },
             {
               "period": "2024-01",
-              "value": 47659
+              "value": 47604
             },
             {
               "period": "2024-02",
-              "value": 46027
+              "value": 45952
             },
             {
               "period": "2024-03",
-              "value": 44748
+              "value": 44730
             },
             {
               "period": "2024-04",
-              "value": 42433
+              "value": 42416
             },
             {
               "period": "2024-05",
-              "value": 40046
+              "value": 40037
             },
             {
               "period": "2024-06",
-              "value": 31983
+              "value": 31961
             },
             {
               "period": "2024-07",
-              "value": 31466
+              "value": 31457
             },
             {
               "period": "2024-08",
-              "value": 27834
+              "value": 27800
             },
             {
               "period": "2024-09",
-              "value": 24774
+              "value": 24749
             },
             {
               "period": "2024-10",
-              "value": 23192
+              "value": 23178
             },
             {
               "period": "2024-11",
-              "value": 20827
+              "value": 20823
             },
             {
               "period": "2024-12",
-              "value": 17952
+              "value": 17938
             },
             {
               "period": "2025-01",
-              "value": 18209
+              "value": 18198
             },
             {
               "period": "2025-02",
-              "value": 15547
+              "value": 15517
             },
             {
               "period": "2025-03",
-              "value": 15102
+              "value": 15093
             },
             {
               "period": "2025-04",
-              "value": 11414
+              "value": 11405
             },
             {
               "period": "2025-05",
-              "value": 9668
+              "value": 9662
             },
             {
               "period": "2025-06",
-              "value": 8264
+              "value": 7759
             },
             {
               "period": "2025-07",
-              "value": 7731
+              "value": 6628
             },
             {
               "period": "2025-08",
-              "value": 5821
+              "value": 5814
             },
             {
               "period": "2025-09",
-              "value": 6043
+              "value": 6040
             },
             {
               "period": "2025-10",
-              "value": 5346
+              "value": 5342
             },
             {
               "period": "2025-11",
-              "value": 5418
+              "value": 5415
             },
             {
               "period": "2025-12",
-              "value": 4225
+              "value": 4219
             },
             {
               "period": "2026-01",
-              "value": 3732
+              "value": 3715
             },
             {
               "period": "2026-02",
-              "value": 3181
+              "value": 3168
             },
             {
               "period": "2026-03",
-              "value": 3248
+              "value": 3239
             },
             {
               "period": "2026-04",
-              "value": 2643
+              "value": 2633
             },
             {
               "period": "2026-05",
-              "value": 2319
+              "value": 2260
             },
             {
               "period": "2026-06",
-              "value": 2344
+              "value": 2023
+            },
+            {
+              "period": "2026-07",
+              "value": 1626
             }
           ],
           "color": "#7af59d"
@@ -2540,8 +2559,8 @@
       ],
       "latestValues": {
         "Total new questions asked": {
-          "period": "2026-06",
-          "value": 2344
+          "period": "2026-07",
+          "value": 1626
         }
       },
       "intent": "Stack Overflow is a sharper example of public human exchange falling away. It shows what happens when people stop asking other people for help in public and shift to AI instead."
