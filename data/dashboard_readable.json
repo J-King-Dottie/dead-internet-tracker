@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-08-02",
+  "generatedAt": "2026-08-03",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-07-27",
+      "lastRefreshed": "2026-08-03",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -344,6 +344,15 @@
             },
             {
               "year": 2023,
+              "value": 30.0,
+              "rawValue": "30%",
+              "series": "Reimers & Waldfogel / Amazon ebook new releases",
+              "source": "https://officechai.com/ai/half-the-ebooks-published-on-amazon-are-now-written-by-ai/",
+              "notes": "A secondary summary of the NBER books paper reports that AI-detected titles made up 30% of Amazon ebook releases in 2023. It says the researchers ran AI detection on more than 50,000 randomly sampled titles from Amazon new-release data. The exact annual share is coming through a secondary route because the underlying NBER paper was found but not directly accessible here.",
+              "publicationDate": "2026-06-18"
+            },
+            {
+              "year": 2023,
               "value": 0.0,
               "rawValue": "0.00%",
               "series": "Shen & Wang / ICLR peer reviews",
@@ -620,6 +629,15 @@
               "source": "https://arxiv.org/abs/2410.08044",
               "notes": "The study estimated that up to 5% of new English Wikipedia pages in August 2024 contained significant AI-generated content. It used GPTZero and Binoculars, calibrated to a 1% false positive rate on pre-GPT-3.5 articles, on a set of 2,909 new pages. This is a direct estimate within one important public knowledge platform, but it is platform-specific and focused on newly created pages.",
               "publicationDate": "2024-10-10"
+            },
+            {
+              "year": 2024,
+              "value": 45.0,
+              "rawValue": "45%",
+              "series": "Reimers & Waldfogel / Amazon ebook new releases",
+              "source": "https://officechai.com/ai/half-the-ebooks-published-on-amazon-are-now-written-by-ai/",
+              "notes": "A secondary summary of the NBER books paper reports that AI-detected titles made up 45% of Amazon ebook releases in 2024. It says the researchers ran AI detection on more than 50,000 randomly sampled titles from Amazon new-release data. The exact annual share is coming through a secondary route because the underlying NBER paper was found but not directly accessible here.",
+              "publicationDate": "2026-06-18"
             },
             {
               "year": 2024,
@@ -1019,6 +1037,15 @@
             },
             {
               "year": 2026,
+              "value": 20.0,
+              "rawValue": "20.0%",
+              "series": "Chakrabarty et al. / Amazon self-published genre-fiction ebooks",
+              "source": "https://arxiv.org/abs/2607.20349",
+              "notes": "The paper finds that books with substantial AI text made up 20.0% of a 14,419-title sample of self-published Amazon genre-fiction ebooks released from 2023 to March 2026. The authors applied full-text Pangram detection to complete books and grouped titles by whether more than 25% of detected windows were AI-written. The corpus is an active-selling Amazon genre-fiction sample rather than all books or the wider internet.",
+              "publicationDate": "2026-07-22"
+            },
+            {
+              "year": 2026,
               "value": 44.0,
               "rawValue": "44%",
               "series": "Deezer / new music uploads",
@@ -1147,13 +1174,13 @@
             },
             {
               "year": 2023,
-              "value": 11.5554,
-              "estimateCount": 17
+              "value": 12.5801,
+              "estimateCount": 18
             },
             {
               "year": 2024,
-              "value": 17.3552,
-              "estimateCount": 31
+              "value": 18.2191,
+              "estimateCount": 32
             },
             {
               "year": 2025,
@@ -1162,8 +1189,8 @@
             },
             {
               "year": 2026,
-              "value": 29.7479,
-              "estimateCount": 14
+              "value": 29.098,
+              "estimateCount": 15
             }
           ]
         }

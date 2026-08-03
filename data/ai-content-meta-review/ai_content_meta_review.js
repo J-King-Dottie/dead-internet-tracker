@@ -1,6 +1,6 @@
 window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-07-27",
+    "lastRefreshed": "2026-08-03",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -283,6 +283,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "publication_date": "2023-09-29"
         },
         {
+            "series": "Reimers & Waldfogel / Amazon ebook new releases",
+            "year": 2023,
+            "value": "30%",
+            "source": "https://officechai.com/ai/half-the-ebooks-published-on-amazon-are-now-written-by-ai/",
+            "notes": "A secondary summary of the NBER books paper reports that AI-detected titles made up 30% of Amazon ebook releases in 2023. It says the researchers ran AI detection on more than 50,000 randomly sampled titles from Amazon new-release data. The exact annual share is coming through a secondary route because the underlying NBER paper was found but not directly accessible here.",
+            "publication_date": "2026-06-18"
+        },
+        {
             "series": "Shen & Wang / ICLR peer reviews",
             "year": 2023,
             "value": "0.00%",
@@ -529,6 +537,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://arxiv.org/abs/2410.08044",
             "notes": "The study estimated that up to 5% of new English Wikipedia pages in August 2024 contained significant AI-generated content. It used GPTZero and Binoculars, calibrated to a 1% false positive rate on pre-GPT-3.5 articles, on a set of 2,909 new pages. This is a direct estimate within one important public knowledge platform, but it is platform-specific and focused on newly created pages.",
             "publication_date": "2024-10-10"
+        },
+        {
+            "series": "Reimers & Waldfogel / Amazon ebook new releases",
+            "year": 2024,
+            "value": "45%",
+            "source": "https://officechai.com/ai/half-the-ebooks-published-on-amazon-are-now-written-by-ai/",
+            "notes": "A secondary summary of the NBER books paper reports that AI-detected titles made up 45% of Amazon ebook releases in 2024. It says the researchers ran AI detection on more than 50,000 randomly sampled titles from Amazon new-release data. The exact annual share is coming through a secondary route because the underlying NBER paper was found but not directly accessible here.",
+            "publication_date": "2026-06-18"
         },
         {
             "series": "Saner et al. / PubMed medical manuscripts",
@@ -881,6 +897,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "value": "33.3%",
             "source": "https://www.techradar.com/audio/apple-music/every-label-in-the-world-is-delivering-ai-apple-music-executive-says-over-a-third-of-uploads-are-100-percent-ai-as-it-clamps-down-on-ai-fraud",
             "notes": "Apple Music's VP Oliver Schusser said more than a third of tracks delivered to the platform today are 100% AI. This row uses 33.3% as a conservative floor for that 2026 upload-intake claim, based on trade-press reporting of a Billboard interview rather than a public audited dataset. It is a platform-specific music-upload signal, and it does not mean one-third of listening or the whole Apple Music catalog is AI."
+        },
+        {
+            "series": "Chakrabarty et al. / Amazon self-published genre-fiction ebooks",
+            "year": 2026,
+            "value": "20.0%",
+            "source": "https://arxiv.org/abs/2607.20349",
+            "notes": "The paper finds that books with substantial AI text made up 20.0% of a 14,419-title sample of self-published Amazon genre-fiction ebooks released from 2023 to March 2026. The authors applied full-text Pangram detection to complete books and grouped titles by whether more than 25% of detected windows were AI-written. The corpus is an active-selling Amazon genre-fiction sample rather than all books or the wider internet.",
+            "publication_date": "2026-07-22"
         },
         {
             "series": "Deezer / new music uploads",

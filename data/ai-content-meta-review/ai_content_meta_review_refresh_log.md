@@ -455,3 +455,24 @@ For the actual sweep standard and what context to store per estimate, use:
   - McCreery & Naser / engineering abstracts (2023)
   - McCreery & Naser / engineering abstracts (2024)
   - McCreery & Naser / engineering abstracts (2025)
+
+
+## 2026-08-03 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 31
+- lanes searched:
+  - broad web/news discovery
+  - academic/preprint discovery
+  - ACL/ArXiv lane
+  - PubMed/medical lane
+  - industry/blog/report lane
+  - platform-specific social-media lane
+  - books/publishing lane
+  - reviews/e-commerce lane
+  - music/video lane
+  - secondary-summary backfill for inaccessible primaries
+- added:
+  - Reimers & Waldfogel / Amazon ebook new releases (2023)
+  - Reimers & Waldfogel / Amazon ebook new releases (2024)
+  - Chakrabarty et al. / Amazon self-published genre-fiction ebooks (2026)
