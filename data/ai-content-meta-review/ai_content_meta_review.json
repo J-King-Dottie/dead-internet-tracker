@@ -1,6 +1,6 @@
 {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-08-03",
+    "lastRefreshed": "2026-08-10",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -523,6 +523,14 @@
             "publication_date": "2024-08-05"
         },
         {
+            "series": "Pangram / Medium recent posts",
+            "year": 2024,
+            "value": "47%",
+            "source": "https://www.wired.com/story/ai-generated-medium-posts-content-moderation/",
+            "notes": "WIRED reported that Pangram estimated over 47% of 274,466 recent Medium posts sampled across six weeks were likely AI-generated. Pangram ran detector-based analysis on recent posts, and WIRED also cited a smaller Originality spot check that landed above 40%. This is a secondary route and reflects raw posted content rather than what Medium users were actually shown.",
+            "publication_date": "2024-10-28"
+        },
+        {
             "series": "Pixiv artworks",
             "year": 2024,
             "value": "16.2%",
@@ -993,6 +1001,14 @@
             "source": "https://www.themoonlight.io/es/review/agentic-very-much-adoption-of-coding-agent-in-new-github-projects",
             "notes": "A detailed secondary summary of Robbes and coauthors’ June 2026 preprint reports that 71.83% of sampled new GitHub projects showed detectable coding-agent adoption. The summary describes a conservative repository-level estimate built from GitHub API sampling plus file-, pull-request-, and commit-based heuristics on projects created after late August 2025. This row currently relies on a secondary route because the public arXiv abstract confirms the study but does not expose the exact percentage in the accessible abstract text.",
             "publication_date": "2026-06-05"
+        },
+        {
+            "series": "Totally Human Media / Steam game library with GenAI disclosures",
+            "year": 2026,
+            "value": "7%",
+            "source": "https://www.totallyhuman.io/blog/the-surprising-new-number-of-genai-games-on-steam",
+            "notes": "The post found that 7% of the total Steam library in July 2026 disclosed GenAI usage, or 7,818 of 114,126 titles. It used Steam API data and counted store-page disclosures required by Valve. This is a disclosed lower bound for AI-assisted games, not a detector-based estimate of undisclosed use.",
+            "publication_date": "2026-07-13"
         },
         {
             "series": "Turkish online news articles",

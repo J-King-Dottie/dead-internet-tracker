@@ -476,3 +476,21 @@ For the actual sweep standard and what context to store per estimate, use:
   - Reimers & Waldfogel / Amazon ebook new releases (2023)
   - Reimers & Waldfogel / Amazon ebook new releases (2024)
   - Chakrabarty et al. / Amazon self-published genre-fiction ebooks (2026)
+
+
+## 2026-08-10 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint
+  - industry/platform newsroom
+  - institutional/report
+  - media/analyst
+  - social-platform corpora
+  - reviews and marketplaces
+  - publishing/news
+  - music and games
+- added:
+  - Pangram / Medium recent posts (2024)
+  - Totally Human Media / Steam game library with GenAI disclosures (2026)

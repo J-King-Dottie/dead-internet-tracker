@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-08-03",
+  "generatedAt": "2026-08-10",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-08-03",
+      "lastRefreshed": "2026-08-10",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -614,6 +614,15 @@
             },
             {
               "year": 2024,
+              "value": 47.0,
+              "rawValue": "47%",
+              "series": "Pangram / Medium recent posts",
+              "source": "https://www.wired.com/story/ai-generated-medium-posts-content-moderation/",
+              "notes": "WIRED reported that Pangram estimated over 47% of 274,466 recent Medium posts sampled across six weeks were likely AI-generated. Pangram ran detector-based analysis on recent posts, and WIRED also cited a smaller Originality spot check that landed above 40%. This is a secondary route and reflects raw posted content rather than what Medium users were actually shown.",
+              "publicationDate": "2024-10-28"
+            },
+            {
+              "year": 2024,
               "value": 16.2,
               "rawValue": "16.2%",
               "series": "Pixiv artworks",
@@ -1145,6 +1154,15 @@
             },
             {
               "year": 2026,
+              "value": 7.0,
+              "rawValue": "7%",
+              "series": "Totally Human Media / Steam game library with GenAI disclosures",
+              "source": "https://www.totallyhuman.io/blog/the-surprising-new-number-of-genai-games-on-steam",
+              "notes": "The post found that 7% of the total Steam library in July 2026 disclosed GenAI usage, or 7,818 of 114,126 titles. It used Steam API data and counted store-page disclosures required by Valve. This is a disclosed lower bound for AI-assisted games, not a detector-based estimate of undisclosed use.",
+              "publicationDate": "2026-07-13"
+            },
+            {
+              "year": 2026,
               "value": 2.5,
               "rawValue": "2.5%",
               "series": "Turkish online news articles",
@@ -1179,8 +1197,8 @@
             },
             {
               "year": 2024,
-              "value": 18.2191,
-              "estimateCount": 32
+              "value": 19.0912,
+              "estimateCount": 33
             },
             {
               "year": 2025,
@@ -1189,8 +1207,8 @@
             },
             {
               "year": 2026,
-              "value": 29.098,
-              "estimateCount": 15
+              "value": 27.7169,
+              "estimateCount": 16
             }
           ]
         }
