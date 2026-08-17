@@ -494,3 +494,21 @@ For the actual sweep standard and what context to store per estimate, use:
 - added:
   - Pangram / Medium recent posts (2024)
   - Totally Human Media / Steam game library with GenAI disclosures (2026)
+
+
+## 2026-08-17 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint
+  - peer-reviewed biomedical and scholarly publishing
+  - industry/platform studies
+  - social-platform prevalence
+  - reviews and local-platform UGC
+  - software/code repositories
+  - news/analyst discovery for inaccessible primaries
+- added:
+  - Holzwarth et al. / PubMed Central open-access biomedical papers (2025)
+  - Steel et al. / TikTok complete-slice daily posts (2024)
+  - Fortenbach et al. / ophthalmology research articles (2025)

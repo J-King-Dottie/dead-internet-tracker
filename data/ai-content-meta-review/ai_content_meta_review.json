@@ -1,6 +1,6 @@
 {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-08-10",
+    "lastRefreshed": "2026-08-17",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -579,6 +579,14 @@
             "publication_date": "2025-02-13"
         },
         {
+            "series": "Steel et al. / TikTok complete-slice daily posts",
+            "year": 2024,
+            "value": "0.5%",
+            "source": "Just Another Hour on TikTok: ID sampling to obtain a complete slice of TikTok",
+            "notes": "The paper reports that at least 0.5% of TikTok posts in its 24-hour slice were marked as AI-generated. It builds a near-complete sample of posts from a day-scale TikTok slice and reads TikTok metadata indicating whether media was tagged by the user or platform as AI-generated. This is a lower bound based on TikTok labeling signals rather than independent detection of unlabeled AI content.",
+            "publication_date": "2026-01-01"
+        },
+        {
             "series": "Turnitin / student papers with >=20% AI writing",
             "year": 2024,
             "value": "11%",
@@ -627,12 +635,28 @@
             "publication_date": "2025-11-12"
         },
         {
+            "series": "Fortenbach et al. / ophthalmology research articles",
+            "year": 2025,
+            "value": "25.7%",
+            "source": "Large Language Model Authorship in Ophthalmic Publications",
+            "notes": "The study reports that 25.7% of sampled ophthalmology research articles in 2025 contained likely AI-generated text. It validated several commercial detectors, selected GPTZero, and then screened full articles and section-level scores against a pre-ChatGPT baseline. This is a specialty-journal sample with detector-based inference, so it is narrower than general medical or scholarly publishing.",
+            "publication_date": "2026-06-03"
+        },
+        {
             "series": "Graphite / Common Crawl new web articles",
             "year": 2025,
             "value": "51.38%",
             "source": "https://docs.google.com/spreadsheets/d/1WamFyVahPDtAPFtvly30BG2QjyA-L1KYkO2UEYGKKcg/edit?gid=0",
             "notes": "Graphite estimated that 51.38% of newly published English web articles through May 2025 were AI-generated. It filtered Common Crawl pages by article markup, English language, and publish date, then classified them with Surfer's AI detector using a greater-than-50% threshold. This is one of the closest direct measures in the table, but it only covers newly published English articles and depends on detector performance.",
             "publication_date": "2024-05-07"
+        },
+        {
+            "series": "Holzwarth et al. / PubMed Central open-access biomedical papers",
+            "year": 2025,
+            "value": "89%",
+            "source": "Most biomedical publications show signs of LLM-assisted writing",
+            "notes": "The paper estimates that 89% of open-access biomedical papers in PubMed Central showed signs of LLM-assisted writing by the end of 2025. It uses a validated excess-vocabulary method on full texts to infer LLM usage without relying on a commercial detector. This is a biomedical full-text corpus rather than all scholarly publishing, and the estimate captures signs of assistance rather than fully AI-written papers.",
+            "publication_date": "2026-08-11"
         },
         {
             "series": "Internet Archive / newly published websites",
