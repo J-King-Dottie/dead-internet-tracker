@@ -512,3 +512,24 @@ For the actual sweep standard and what context to store per estimate, use:
   - Holzwarth et al. / PubMed Central open-access biomedical papers (2025)
   - Steel et al. / TikTok complete-slice daily posts (2024)
   - Fortenbach et al. / ophthalmology research articles (2025)
+
+
+## 2026-08-24 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 13
+- lanes searched:
+  - academic/preprint
+  - peer-reviewed medical and scientometrics
+  - industry/platform studies
+  - institutional reports
+  - media/secondary discovery for inaccessible primaries
+  - social-platform prevalence
+  - web-page prevalence
+  - academic-writing prevalence
+  - code prevalence
+  - reviews and marketplace sweeps
+- added:
+  - Pew Research Center / How Much of the Internet Is Written With AI? (2026)
+  - Originality / LinkedIn AI Content Study (2026)
+  - Larsen et al. / Does scientific writing converge to U.S. English? (2024)

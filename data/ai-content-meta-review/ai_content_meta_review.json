@@ -1,6 +1,6 @@
 {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-08-17",
+    "lastRefreshed": "2026-08-24",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -393,6 +393,14 @@
             "source": "https://arxiv.org/abs/2405.02150",
             "notes": "The paper estimated that at least 15.8% of ICLR 2024 peer reviews were AI-assisted. It used GPTZero as a lower-bound detector in a quasi-experimental study of the ICLR review set. This is a direct estimate within a defined scholarly content set, but it is framed as a lower bound and depends on detector performance.",
             "publication_date": "2024-05-03"
+        },
+        {
+            "series": "Larsen et al. / Does scientific writing converge to U.S. English?",
+            "year": 2024,
+            "value": "12%",
+            "source": "https://link.springer.com/article/10.1007/s11192-026-05774-z",
+            "notes": "Larsen and coauthors reported that 12% of sampled 2024 Scopus publications from non-English-speaking countries were classified as GenAI-assisted in their titles or abstracts. They flagged publications using field-specific lexical markers whose relative frequency rose sharply after ChatGPT, applying an any-field rule across assigned subject areas. The estimate is a proxy for detectable GenAI traces in titles and abstracts only, not a full-paper prevalence measure.",
+            "publication_date": "2026-08-22"
         },
         {
             "series": "McCreery & Naser / engineering abstracts",
@@ -979,6 +987,14 @@
             "publication_date": "2026-06-09"
         },
         {
+            "series": "Originality / LinkedIn AI Content Study",
+            "year": 2026,
+            "value": "81.2%",
+            "source": "https://originality.ai/blog/ai-content-published-linkedin",
+            "notes": "Originality.ai found that 81.2% of 5,000 sampled public LinkedIn posts of at least 100 words in July 2026 were likely AI-written. It reused the firm’s continuing nine-topic search design and classified posts with its detector using a 15% AI allowance threshold. The sample covers searchable long-form public posts rather than all LinkedIn content or users’ feeds, so it is a narrow platform-specific estimate.",
+            "publication_date": "2026-07-30"
+        },
+        {
             "series": "Originality / Pinterest hiking guides",
             "year": 2026,
             "value": "8%",
@@ -1017,6 +1033,14 @@
             "source": "Pangram Labs blog post 'AI in Your Feed'",
             "notes": "Pangram found that 13.8% of scanned social-feed posts over 50 words were AI-generated across LinkedIn, Medium, Substack, X, and Reddit in spring 2026. It used opt-in Chrome-extension browsing data covering 1,002,627 posts and classified each post with Pangram 3.3. The sample reflects what extension users saw in-feed rather than a platform-representative universe of all posts.",
             "publication_date": "2026-07-09"
+        },
+        {
+            "series": "Pew Research Center / How Much of the Internet Is Written With AI?",
+            "year": 2026,
+            "value": "10%",
+            "source": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/",
+            "notes": "Pew found that 10% of English-language webpages in a July 2026 snapshot showed significant signs of AI authorship, with the share rising to 35% among pages published after ChatGPT’s November 30, 2022 launch. It sampled nearly 490,000 Common Crawl pages from 2021-2026 and scored page text with Open Pangram for likely AI writing or substantial AI editing. The estimate is detector-based and the broader 10% snapshot mixes old and new pages, so it is not a clean measure of only newly created content.",
+            "publication_date": "2026-08-20"
         },
         {
             "series": "Robbes et al. / new GitHub projects with coding-agent adoption (2026)",
