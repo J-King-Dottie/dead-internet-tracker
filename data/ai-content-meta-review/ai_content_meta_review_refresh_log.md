@@ -533,3 +533,23 @@ For the actual sweep standard and what context to store per estimate, use:
   - Pew Research Center / How Much of the Internet Is Written With AI? (2026)
   - Originality / LinkedIn AI Content Study (2026)
   - Larsen et al. / Does scientific writing converge to U.S. English? (2024)
+
+
+## 2026-08-31 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint discovery
+  - peer-reviewed medical publishing
+  - industry/platform newsroom posts
+  - blog/analyst platform sweeps
+  - social-platform prevalence studies
+  - web-page prevalence studies
+  - code-repository prevalence studies
+  - music-upload prevalence studies
+  - news coverage for secondary discovery
+  - targeted site searches across arXiv, PubMed, ACL, Pangram, Kapwing, Originality, Graphite, Pew, and platform domains
+- added:
+  - First Page Sage / social media content by platform (2026)
+  - Evaluating the Prevalence of Artificial Intelligence-Generated Writing in Plastic Surgery Literature (2024)

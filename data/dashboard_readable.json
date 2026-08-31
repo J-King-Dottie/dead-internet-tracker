@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-08-24",
+  "generatedAt": "2026-08-31",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-08-24",
+      "lastRefreshed": "2026-08-31",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -449,6 +449,15 @@
               "source": "https://copyleaks.com/about-us/media/copyleaks-study-finds-explosive-growth-of-ai-content-on-the-web",
               "notes": "Copyleaks estimated that 1.57% of sampled Common Crawl web pages in 2024 were AI-generated. It said its study analyzed one million pages from the Common Crawl dataset with the company's own detector. This is a genuine web-wide prevalence estimate with a clear sample frame, but it is still detector-based and company-published.",
               "publicationDate": "2024-04-30"
+            },
+            {
+              "year": 2024,
+              "value": 17.0,
+              "rawValue": "17%",
+              "series": "Evaluating the Prevalence of Artificial Intelligence-Generated Writing in Plastic Surgery Literature",
+              "source": "https://pubmed.ncbi.nlm.nih.gov/41954399/",
+              "notes": "A 2026 plastic-surgery literature study found that 17% of 2024 articles in 10 major journals crossed its threshold for substantial AI involvement. The authors ran ZeroGPT on 1,627 manuscripts from 2024-2025 and set a 22.5% threshold using 300 pre-ChatGPT papers from 2010-2011. The estimate depends on one commercial detector and covers a narrow medical specialty.",
+              "publicationDate": "2026-04-09"
             },
             {
               "year": 2024,
@@ -1100,6 +1109,15 @@
             },
             {
               "year": 2026,
+              "value": 38.0,
+              "rawValue": "38%",
+              "series": "First Page Sage / social media content by platform",
+              "source": "https://firstpagesage.com/seo-blog/ai-content-creation-statistics-report/",
+              "notes": "First Page Sage estimated that 38% of sampled Facebook public posts in 2026 were at least partially AI-generated. The report says it sampled roughly 1.2 million public social posts in January-June 2026 and classified content where a model wrote the first draft or a substantial share of the wording. The writeup is an in-house analyst report with limited technical detail and cross-platform normalization, so it should be treated as a narrow platform estimate.",
+              "publicationDate": "2026-08-05"
+            },
+            {
+              "year": 2026,
               "value": 42.7,
               "rawValue": "42.7%",
               "series": "Graphite / ChatGPT cited reference URLs",
@@ -1251,8 +1269,8 @@
             },
             {
               "year": 2024,
-              "value": 18.3574,
-              "estimateCount": 35
+              "value": 18.3197,
+              "estimateCount": 36
             },
             {
               "year": 2025,
@@ -1261,8 +1279,8 @@
             },
             {
               "year": 2026,
-              "value": 29.7039,
-              "estimateCount": 18
+              "value": 30.1405,
+              "estimateCount": 19
             }
           ]
         }

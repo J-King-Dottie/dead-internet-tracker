@@ -1,6 +1,6 @@
 window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-08-24",
+    "lastRefreshed": "2026-08-31",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -377,6 +377,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://copyleaks.com/about-us/media/copyleaks-study-finds-explosive-growth-of-ai-content-on-the-web",
             "notes": "Copyleaks estimated that 1.57% of sampled Common Crawl web pages in 2024 were AI-generated. It said its study analyzed one million pages from the Common Crawl dataset with the company's own detector. This is a genuine web-wide prevalence estimate with a clear sample frame, but it is still detector-based and company-published.",
             "publication_date": "2024-04-30"
+        },
+        {
+            "series": "Evaluating the Prevalence of Artificial Intelligence-Generated Writing in Plastic Surgery Literature",
+            "year": 2024,
+            "value": "17%",
+            "source": "https://pubmed.ncbi.nlm.nih.gov/41954399/",
+            "notes": "A 2026 plastic-surgery literature study found that 17% of 2024 articles in 10 major journals crossed its threshold for substantial AI involvement. The authors ran ZeroGPT on 1,627 manuscripts from 2024-2025 and set a 22.5% threshold using 300 pre-ChatGPT papers from 2010-2011. The estimate depends on one commercial detector and covers a narrow medical specialty.",
+            "publication_date": "2026-04-09"
         },
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -953,6 +961,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://newsroom-deezer.com/2026/04/ai-generated-tracks-represent-44-of-new-uploaded-music/",
             "notes": "Deezer reported that 44% of all daily music uploads to its platform in April 2026 were fully AI-generated tracks. It said its in-house AI-music detection system was identifying nearly 75,000 fully AI-generated uploads per day by the April 2026 update. This is a direct platform-level prevalence estimate, but it is narrowly about one music-streaming service and fully synthetic tracks rather than the web at large.",
             "publication_date": "2026-04-21"
+        },
+        {
+            "series": "First Page Sage / social media content by platform",
+            "year": 2026,
+            "value": "38%",
+            "source": "https://firstpagesage.com/seo-blog/ai-content-creation-statistics-report/",
+            "notes": "First Page Sage estimated that 38% of sampled Facebook public posts in 2026 were at least partially AI-generated. The report says it sampled roughly 1.2 million public social posts in January-June 2026 and classified content where a model wrote the first draft or a substantial share of the wording. The writeup is an in-house analyst report with limited technical detail and cross-platform normalization, so it should be treated as a narrow platform estimate.",
+            "publication_date": "2026-08-05"
         },
         {
             "series": "Graphite / ChatGPT cited reference URLs",
