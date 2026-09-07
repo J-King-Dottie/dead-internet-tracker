@@ -553,3 +553,28 @@ For the actual sweep standard and what context to store per estimate, use:
 - added:
   - First Page Sage / social media content by platform (2026)
   - Evaluating the Prevalence of Artificial Intelligence-Generated Writing in Plastic Surgery Literature (2024)
+
+
+## 2026-09-07 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - recent broad web/news sweep since 2026-08-31
+  - arXiv and ACL academic/preprint discovery
+  - PubMed scholarly prevalence studies
+  - SSRN working-paper discovery
+  - platform and company newsroom/blog posts
+  - industry detector/vendor case studies
+  - social-platform prevalence sweeps
+  - press-release and corporate-communications corpora
+  - music/video/platform upload prevalence lanes
+  - older-source backfill for missing 2020+ yearly points
+- added:
+  - Pangram / PR Newswire press releases (2024)
+  - Pangram / PR Newswire press releases (2025)
+  - Pangram / PR Newswire press releases (2026)
+  - Russell et al. / American newspapers (2025)
+  - Brooks et al. / UN country-team press releases (2022)
+  - Brooks et al. / UN country-team press releases (2023)
+  - Brooks et al. / UN country-team press releases (2024)

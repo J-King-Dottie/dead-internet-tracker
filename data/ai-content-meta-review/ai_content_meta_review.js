@@ -1,6 +1,6 @@
 window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-08-31",
+    "lastRefreshed": "2026-09-07",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -107,6 +107,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "publication_date": "2025-10-10"
         },
         {
+            "series": "Brooks et al. / UN country-team press releases",
+            "year": 2022,
+            "value": "1.6%",
+            "source": "https://aclanthology.org/2024.wikinlp-1.12/",
+            "notes": "It found 1.6% of UN country-team press releases published in 2022 were flagged as AI-generated. The study collected 8,326 press releases across 60 country teams and scored them with GPTZero at a 0.5 threshold. This is a detector-based lower-bound estimate and translations may inflate flags.",
+            "publication_date": "2024-11-05"
+        },
+        {
             "series": "Graphite / Common Crawl new web articles",
             "year": 2022,
             "value": "6.81%",
@@ -193,6 +201,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://papers.ssrn.com/sol3/Delivery.cfm/5226562.pdf?abstractid=5226562&mirid=1",
             "notes": "The paper reports that AI-generated articles rose to 13.4% of all Seeking Alpha articles after ChatGPT’s launch. It tracks firm-specific financial-analysis articles on Seeking Alpha and estimates AI use over time in a platform-specific corpus. The estimate is narrow to one investing platform and the abstract does not fully expose the identification procedure.",
             "publication_date": "2025-05-06"
+        },
+        {
+            "series": "Brooks et al. / UN country-team press releases",
+            "year": 2023,
+            "value": "12.5%",
+            "source": "https://aclanthology.org/2024.wikinlp-1.12/",
+            "notes": "It found 12.5% of UN country-team press releases published in 2023 were flagged as AI-generated. The study collected 8,326 press releases across 60 country teams and scored them with GPTZero at a 0.5 threshold. This is a detector-based lower-bound estimate and translations may inflate flags.",
+            "publication_date": "2024-11-05"
         },
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -361,6 +377,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://arxiv.org/abs/2406.07016",
             "notes": "The paper's lower-bound estimate put LLM-assisted writing at 13.5% of PubMed biomedical abstracts in 2024. It tracked excess use of LLM-associated style words across more than 15 million abstracts from 2010 to 2024 and attributed the post-ChatGPT jump to AI assistance. This is still more indirect than page-level AI-share estimates and focuses on scholarly abstracts rather than the wider web.",
             "publication_date": "2024-06-11"
+        },
+        {
+            "series": "Brooks et al. / UN country-team press releases",
+            "year": 2024,
+            "value": "20.0%",
+            "source": "https://aclanthology.org/2024.wikinlp-1.12/",
+            "notes": "It found 20.0% of UN country-team press releases published in 2024 were flagged as AI-generated. The study collected 8,326 press releases across 60 country teams and scored them with GPTZero at a 0.5 threshold. This is a detector-based lower-bound estimate and translations may inflate flags.",
+            "publication_date": "2024-11-05"
         },
         {
             "series": "Chinese master?s theses",
@@ -545,6 +569,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://www.wired.com/story/ai-generated-medium-posts-content-moderation/",
             "notes": "WIRED reported that Pangram estimated over 47% of 274,466 recent Medium posts sampled across six weeks were likely AI-generated. Pangram ran detector-based analysis on recent posts, and WIRED also cited a smaller Originality spot check that landed above 40%. This is a secondary route and reflects raw posted content rather than what Medium users were actually shown.",
             "publication_date": "2024-10-28"
+        },
+        {
+            "series": "Pangram / PR Newswire press releases",
+            "year": 2024,
+            "value": "9.0%",
+            "source": "https://www.pangram.com/blog/ai-press-releases",
+            "notes": "It estimated 9.0% of PR Newswire press releases contained AI-generated or mixed AI text by August 2024. Pangram rescanned a public PR Newswire corpus with Pangram 4 and stitched it to its newer wire scans. This is a detector-based platform slice rather than a broad web estimate.",
+            "publication_date": "2026-09-01"
         },
         {
             "series": "Pixiv artworks",
@@ -851,6 +883,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "publication_date": "2025-10-21"
         },
         {
+            "series": "Pangram / PR Newswire press releases",
+            "year": 2025,
+            "value": "22.0%",
+            "source": "https://www.pangram.com/blog/ai-press-releases",
+            "notes": "It estimated 22.0% of PR Newswire press releases contained AI-generated or mixed AI text by July 2025. Pangram rescanned a public PR Newswire corpus with Pangram 4 and stitched it to its newer wire scans. This is a detector-based platform slice rather than a broad web estimate.",
+            "publication_date": "2026-09-01"
+        },
+        {
             "series": "Plastic surgery literature",
             "year": 2025,
             "publication_date": "2026-04-09",
@@ -865,6 +905,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://arxiv.org/abs/2601.18341",
             "notes": "Robbes and coauthors estimated that 15.85% to 22.60% of sampled GitHub projects in the first half of 2025 showed coding-agent adoption, which converts to a 19.2% midpoint row value. They analyzed 129,134 GitHub projects and identified adoption through explicit repository traces such as agent-authored commits, pull requests, and agent configuration files. The figure is a conservative project-level range for coding agents rather than a direct measure of all code lines or all GitHub content.",
             "publication_date": "2026-01-26"
+        },
+        {
+            "series": "Russell et al. / American newspapers",
+            "year": 2025,
+            "value": "9.0%",
+            "source": "https://aclanthology.org/2026.acl-long.663/",
+            "notes": "It found 9.0% of 186,000 newly published American newspaper articles in summer 2025 were partially or fully AI-generated. The authors audited the corpus with Pangram and reported a platform-wide prevalence estimate. This is US newspaper text only and covers a bounded 2025 sampling window.",
+            "publication_date": "2026-07-01"
         },
         {
             "series": "Scale over Preference / Chinese video-sharing Local Life channel",
@@ -1041,6 +1089,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://www.pangram.com/blog/pangram-predicts-21-of-iclr-reviews-are-ai-generated",
             "notes": "Pangram found that 21% of ICLR 2026 peer reviews, or 15,899 reviews, were fully AI-generated. It ran its detector on all roughly 70,000 public ICLR reviews and reported a 2022 negative-control error check with no fully-AI versus fully-human confusions. This is a conference-review corpus rather than the open web, and the estimate depends on a proprietary detector.",
             "publication_date": "2025-11-18"
+        },
+        {
+            "series": "Pangram / PR Newswire press releases",
+            "year": 2026,
+            "value": "44.0%",
+            "source": "https://www.pangram.com/blog/ai-press-releases",
+            "notes": "It estimated 44.0% of PR Newswire press releases contained AI-generated or mixed AI text by July 2026. Pangram scanned 178,672 English PR Newswire releases and classified them with Pangram 4. This is a detector-based platform slice and the source also reports a nearby June 2026 peak of 48%.",
+            "publication_date": "2026-09-01"
         },
         {
             "series": "Pangram / scanned social-feed posts",
