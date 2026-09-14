@@ -578,3 +578,17 @@ For the actual sweep standard and what context to store per estimate, use:
   - Brooks et al. / UN country-team press releases (2022)
   - Brooks et al. / UN country-team press releases (2023)
   - Brooks et al. / UN country-team press releases (2024)
+
+
+## 2026-09-14 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint discovery (arXiv, ACL Anthology, SSRN)
+  - biomedical/indexed literature discovery (PubMed, journal landing pages)
+  - industry/platform studies (Pangram, Graphite, Copyleaks, Deezer, Amazon-adjacent sources)
+  - institutional/news/analyst summaries used only when primary access was incomplete but the estimate remained traceable
+- added:
+  - Siler / published academic articles (2024)
+  - Large Language Model Authorship in Ophthalmic Publications (2024)

@@ -1,6 +1,6 @@
 window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-09-07",
+    "lastRefreshed": "2026-09-14",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -427,6 +427,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "publication_date": "2024-05-03"
         },
         {
+            "series": "Large Language Model Authorship in Ophthalmic Publications",
+            "year": 2024,
+            "value": "14.0%",
+            "source": "Large Language Model Authorship in Ophthalmic Publications",
+            "notes": "The study reports that 14.0% of screened ophthalmology research articles in 2024 showed likely AI authorship. It used GPTZero outlier thresholds calibrated against a pre-ChatGPT baseline and screened article sections plus supporting word-frequency shifts across a 2020-2025 corpus. The estimate is specialty-specific and detector-dependent rather than a broad web measure.",
+            "publication_date": "2026-06-03"
+        },
+        {
             "series": "Larsen et al. / Does scientific writing converge to U.S. English?",
             "year": 2024,
             "value": "12%",
@@ -617,6 +625,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://arxiv.org/abs/2602.00319",
             "notes": "The paper estimated that 7.32% of ICLR 2024 peer reviews were AI-generated. It trained a detector on real and synthetic 2021 ICLR reviews and applied it to 1,818 2024 reviews. The estimate is detector-based and narrower than sentence-level AI-assistance measures.",
             "publication_date": "2026-01-30"
+        },
+        {
+            "series": "Siler / published academic articles",
+            "year": 2024,
+            "value": "36.0%",
+            "source": "Kyle Siler LinkedIn summary of PNAS article 'The diffusion of large language models in published academic articles'",
+            "notes": "The PNAS study’s 2024 point implies 36.0% of published articles in its four-publisher corpus showed evidence of LLM influence. The estimate comes via the author’s public summary of a word-frequency time-series analysis that scored articles using 228 focal terms that rose sharply after late 2022. This is a secondary route to one annual point from the underlying study, and it measures lexical evidence of influence rather than fully AI-written papers.",
+            "publication_date": "2026-05-29"
         },
         {
             "series": "Stanford / LLM-assisted writing across society",
