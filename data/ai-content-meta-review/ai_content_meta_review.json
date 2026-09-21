@@ -1,6 +1,6 @@
 {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-09-14",
+    "lastRefreshed": "2026-09-21",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -219,12 +219,28 @@
             "publication_date": "2024-05-07"
         },
         {
+            "series": "LLM-assisted writing and citation advantage: evidence from scientific publications before and after ChatGPT release",
+            "year": 2023,
+            "value": "2.2%",
+            "source": "https://link.springer.com/article/10.1007/s11192-026-05805-9",
+            "notes": "The study estimated that 2.2% of papers in a multidisciplinary arXiv–Crossref corpus showed signs of LLM-assisted writing in 2023. It trained a supervised classifier on pre-LLM human abstracts and AI-generated rewrites, then applied it to 234,073 papers published from 2019 to 2025. The corpus is arXiv-linked and abstract-based, so it is narrower than all scholarly publishing.",
+            "publication_date": "2026-09-11"
+        },
+        {
             "series": "McCreery & Naser / engineering abstracts",
             "year": 2023,
             "value": "10.0%",
             "source": "LLM-Assisted writing in engineering is associated with higher citations as evidenced from 1.17 million papers",
             "notes": "The study estimates that 10.0% of engineering abstracts published in 2023 exceeded a pre-LLM 95th-percentile marker threshold across five engineering fields plus computer science benchmark data. It sampled 1.17 million abstracts from 2019 to 2025 and inferred LLM assistance from shifts in a 228-marker lexicon rather than article-level detector labels. This is a statistical proxy for likely LLM assistance in abstracts, not a direct classification of whole papers.",
             "publication_date": "2026-07-24"
+        },
+        {
+            "series": "Most biomedical publications show signs of LLM-assisted writing",
+            "year": 2023,
+            "value": "19.0%",
+            "source": "https://phys.org/news/2026-08-marker-words-sharp-ai-biomedical.html",
+            "notes": "Phys.org reports that 19.0% of open-access biomedical papers in PubMed Central showed signs of LLM-assisted writing or editing in 2023. The estimate is based on shifts in 379 LLM-associated marker words across a large corpus of full-text papers. It is an indirect corpus-level signal reported by a secondary source rather than direct proof of author workflow.",
+            "publication_date": "2026-08-24"
         },
         {
             "series": "Originality / climate change paper abstracts",
@@ -443,12 +459,28 @@
             "publication_date": "2026-08-22"
         },
         {
+            "series": "LLM-assisted writing and citation advantage: evidence from scientific publications before and after ChatGPT release",
+            "year": 2024,
+            "value": "9.8%",
+            "source": "https://link.springer.com/article/10.1007/s11192-026-05805-9",
+            "notes": "The study estimated that 9.8% of papers in a multidisciplinary arXiv–Crossref corpus showed signs of LLM-assisted writing in 2024. It trained a supervised classifier on pre-LLM human abstracts and AI-generated rewrites, then applied it to 234,073 papers published from 2019 to 2025. The corpus is arXiv-linked and abstract-based, so it is narrower than all scholarly publishing.",
+            "publication_date": "2026-09-11"
+        },
+        {
             "series": "McCreery & Naser / engineering abstracts",
             "year": 2024,
             "value": "21.0%",
             "source": "LLM-Assisted writing in engineering is associated with higher citations as evidenced from 1.17 million papers",
             "notes": "The study estimates that 21.0% of engineering abstracts published in 2024 exceeded a pre-LLM 95th-percentile marker threshold across five engineering fields plus computer science benchmark data. It sampled 1.17 million abstracts from 2019 to 2025 and inferred LLM assistance from shifts in a 228-marker lexicon rather than article-level detector labels. This is a statistical proxy for likely LLM assistance in abstracts, not a direct classification of whole papers.",
             "publication_date": "2026-07-24"
+        },
+        {
+            "series": "Most biomedical publications show signs of LLM-assisted writing",
+            "year": 2024,
+            "value": "52.0%",
+            "source": "https://phys.org/news/2026-08-marker-words-sharp-ai-biomedical.html",
+            "notes": "Phys.org reports that 52.0% of open-access biomedical papers in PubMed Central showed signs of LLM-assisted writing or editing in 2024. The estimate is based on shifts in 379 LLM-associated marker words across a large corpus of full-text papers. It is an indirect corpus-level signal reported by a secondary source rather than direct proof of author workflow.",
+            "publication_date": "2026-08-24"
         },
         {
             "series": "Originality / climate change paper abstracts",
@@ -611,6 +643,14 @@
             "publication_date": "2026-06-18"
         },
         {
+            "series": "Rise of the Machines: The Prevalence and Disclosure of Artificial Intelligence-Generated Text in High-Impact Orthopaedic Journals",
+            "year": 2024,
+            "value": "4.8%",
+            "source": "https://pubmed.ncbi.nlm.nih.gov/38941622/",
+            "notes": "The study found that 4.8% of abstracts published in five high-impact orthopaedic journals in early 2024 contained AI-generated text. It screened 577 abstracts published from 2024-01-01 to 2024-02-19 with an AI detection tool and recorded disclosure status, article type, and origin. The estimate covers abstracts only and a short early-2024 window, so it should be treated as narrow.",
+            "publication_date": "2024-06-27"
+        },
+        {
             "series": "Saner et al. / PubMed medical manuscripts",
             "year": 2024,
             "value": "0.09%",
@@ -753,6 +793,22 @@
             "source": "https://www.kapwing.com/blog/ai-slop-report-the-global-rise-of-low-quality-ai-videos/",
             "notes": "Kapwing found that 21.0% of the first 500 Shorts shown to a brand-new YouTube account were AI-generated slop. The report manually classified AI slop and brainrot while cycling through the first 500 videos on a fresh YouTube Shorts feed. The estimate is a platform-specific new-user feed sample rather than all YouTube content.",
             "publication_date": "2025-11-28"
+        },
+        {
+            "series": "Large Language Model Authorship in Ophthalmic Publications",
+            "year": 2025,
+            "value": "23.7%",
+            "source": "https://www.aaojournal.org/article/S0161-6420(26)00385-4/fulltext",
+            "notes": "The study found a 23.7% 2025 prevalence across sampled ophthalmic publications, based on 25.7% of research articles and 21.6% of commentary articles showing likely AI authorship. It compared section- and sentence-level detector scores against pre- versus post-ChatGPT baselines and treated outliers above 2 standard deviations as likely AI-influenced. The chart value is the median of two publication-type slices, so it is a study-level summary rather than a direct all-item aggregate.",
+            "publication_date": "2026-06-01"
+        },
+        {
+            "series": "LLM-assisted writing and citation advantage: evidence from scientific publications before and after ChatGPT release",
+            "year": 2025,
+            "value": "23.5%",
+            "source": "https://link.springer.com/article/10.1007/s11192-026-05805-9",
+            "notes": "The study estimated that 23.5% of papers in a multidisciplinary arXiv–Crossref corpus showed signs of LLM-assisted writing in 2025. It trained a supervised classifier on pre-LLM human abstracts and AI-generated rewrites, then applied it to 234,073 papers published from 2019 to 2025. The corpus is arXiv-linked and abstract-based, so it is narrower than all scholarly publishing.",
+            "publication_date": "2026-09-11"
         },
         {
             "series": "McCreery & Naser / engineering abstracts",

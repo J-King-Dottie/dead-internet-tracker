@@ -592,3 +592,25 @@ For the actual sweep standard and what context to store per estimate, use:
 - added:
   - Siler / published academic articles (2024)
   - Large Language Model Authorship in Ophthalmic Publications (2024)
+
+
+## 2026-09-21 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint discovery
+  - peer-reviewed journal articles
+  - institutional and conference abstracts
+  - industry/platform blog and newsroom posts
+  - media and analyst summaries used only when they preserved denominator and method detail
+  - platform-specific social/web/news/music discovery
+  - scholarly publishing and biomedical literature discovery
+- added:
+  - LLM-assisted writing and citation advantage: evidence from scientific publications before and after ChatGPT release (2023)
+  - LLM-assisted writing and citation advantage: evidence from scientific publications before and after ChatGPT release (2024)
+  - LLM-assisted writing and citation advantage: evidence from scientific publications before and after ChatGPT release (2025)
+  - Large Language Model Authorship in Ophthalmic Publications (2025)
+  - Rise of the Machines: The Prevalence and Disclosure of Artificial Intelligence-Generated Text in High-Impact Orthopaedic Journals (2024)
+  - Most biomedical publications show signs of LLM-assisted writing (2023)
+  - Most biomedical publications show signs of LLM-assisted writing (2024)

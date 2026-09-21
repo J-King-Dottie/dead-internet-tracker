@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-09-14",
+  "generatedAt": "2026-09-21",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-09-14",
+      "lastRefreshed": "2026-09-21",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -272,12 +272,30 @@
             },
             {
               "year": 2023,
+              "value": 2.2,
+              "rawValue": "2.2%",
+              "series": "LLM-assisted writing and citation advantage: evidence from scientific publications before and after ChatGPT release",
+              "source": "https://link.springer.com/article/10.1007/s11192-026-05805-9",
+              "notes": "The study estimated that 2.2% of papers in a multidisciplinary arXiv–Crossref corpus showed signs of LLM-assisted writing in 2023. It trained a supervised classifier on pre-LLM human abstracts and AI-generated rewrites, then applied it to 234,073 papers published from 2019 to 2025. The corpus is arXiv-linked and abstract-based, so it is narrower than all scholarly publishing.",
+              "publicationDate": "2026-09-11"
+            },
+            {
+              "year": 2023,
               "value": 10.0,
               "rawValue": "10.0%",
               "series": "McCreery & Naser / engineering abstracts",
               "source": "LLM-Assisted writing in engineering is associated with higher citations as evidenced from 1.17 million papers",
               "notes": "The study estimates that 10.0% of engineering abstracts published in 2023 exceeded a pre-LLM 95th-percentile marker threshold across five engineering fields plus computer science benchmark data. It sampled 1.17 million abstracts from 2019 to 2025 and inferred LLM assistance from shifts in a 228-marker lexicon rather than article-level detector labels. This is a statistical proxy for likely LLM assistance in abstracts, not a direct classification of whole papers.",
               "publicationDate": "2026-07-24"
+            },
+            {
+              "year": 2023,
+              "value": 19.0,
+              "rawValue": "19.0%",
+              "series": "Most biomedical publications show signs of LLM-assisted writing",
+              "source": "https://phys.org/news/2026-08-marker-words-sharp-ai-biomedical.html",
+              "notes": "Phys.org reports that 19.0% of open-access biomedical papers in PubMed Central showed signs of LLM-assisted writing or editing in 2023. The estimate is based on shifts in 379 LLM-associated marker words across a large corpus of full-text papers. It is an indirect corpus-level signal reported by a secondary source rather than direct proof of author workflow.",
+              "publicationDate": "2026-08-24"
             },
             {
               "year": 2023,
@@ -524,12 +542,30 @@
             },
             {
               "year": 2024,
+              "value": 9.8,
+              "rawValue": "9.8%",
+              "series": "LLM-assisted writing and citation advantage: evidence from scientific publications before and after ChatGPT release",
+              "source": "https://link.springer.com/article/10.1007/s11192-026-05805-9",
+              "notes": "The study estimated that 9.8% of papers in a multidisciplinary arXiv–Crossref corpus showed signs of LLM-assisted writing in 2024. It trained a supervised classifier on pre-LLM human abstracts and AI-generated rewrites, then applied it to 234,073 papers published from 2019 to 2025. The corpus is arXiv-linked and abstract-based, so it is narrower than all scholarly publishing.",
+              "publicationDate": "2026-09-11"
+            },
+            {
+              "year": 2024,
               "value": 21.0,
               "rawValue": "21.0%",
               "series": "McCreery & Naser / engineering abstracts",
               "source": "LLM-Assisted writing in engineering is associated with higher citations as evidenced from 1.17 million papers",
               "notes": "The study estimates that 21.0% of engineering abstracts published in 2024 exceeded a pre-LLM 95th-percentile marker threshold across five engineering fields plus computer science benchmark data. It sampled 1.17 million abstracts from 2019 to 2025 and inferred LLM assistance from shifts in a 228-marker lexicon rather than article-level detector labels. This is a statistical proxy for likely LLM assistance in abstracts, not a direct classification of whole papers.",
               "publicationDate": "2026-07-24"
+            },
+            {
+              "year": 2024,
+              "value": 52.0,
+              "rawValue": "52.0%",
+              "series": "Most biomedical publications show signs of LLM-assisted writing",
+              "source": "https://phys.org/news/2026-08-marker-words-sharp-ai-biomedical.html",
+              "notes": "Phys.org reports that 52.0% of open-access biomedical papers in PubMed Central showed signs of LLM-assisted writing or editing in 2024. The estimate is based on shifts in 379 LLM-associated marker words across a large corpus of full-text papers. It is an indirect corpus-level signal reported by a secondary source rather than direct proof of author workflow.",
+              "publicationDate": "2026-08-24"
             },
             {
               "year": 2024,
@@ -713,6 +749,15 @@
             },
             {
               "year": 2024,
+              "value": 4.8,
+              "rawValue": "4.8%",
+              "series": "Rise of the Machines: The Prevalence and Disclosure of Artificial Intelligence-Generated Text in High-Impact Orthopaedic Journals",
+              "source": "https://pubmed.ncbi.nlm.nih.gov/38941622/",
+              "notes": "The study found that 4.8% of abstracts published in five high-impact orthopaedic journals in early 2024 contained AI-generated text. It screened 577 abstracts published from 2024-01-01 to 2024-02-19 with an AI detection tool and recorded disclosure status, article type, and origin. The estimate covers abstracts only and a short early-2024 window, so it should be treated as narrow.",
+              "publicationDate": "2024-06-27"
+            },
+            {
+              "year": 2024,
               "value": 0.09,
               "rawValue": "0.09%",
               "series": "Saner et al. / PubMed medical manuscripts",
@@ -872,6 +917,24 @@
               "source": "https://www.kapwing.com/blog/ai-slop-report-the-global-rise-of-low-quality-ai-videos/",
               "notes": "Kapwing found that 21.0% of the first 500 Shorts shown to a brand-new YouTube account were AI-generated slop. The report manually classified AI slop and brainrot while cycling through the first 500 videos on a fresh YouTube Shorts feed. The estimate is a platform-specific new-user feed sample rather than all YouTube content.",
               "publicationDate": "2025-11-28"
+            },
+            {
+              "year": 2025,
+              "value": 23.7,
+              "rawValue": "23.7%",
+              "series": "Large Language Model Authorship in Ophthalmic Publications",
+              "source": "https://www.aaojournal.org/article/S0161-6420(26)00385-4/fulltext",
+              "notes": "The study found a 23.7% 2025 prevalence across sampled ophthalmic publications, based on 25.7% of research articles and 21.6% of commentary articles showing likely AI authorship. It compared section- and sentence-level detector scores against pre- versus post-ChatGPT baselines and treated outliers above 2 standard deviations as likely AI-influenced. The chart value is the median of two publication-type slices, so it is a study-level summary rather than a direct all-item aggregate.",
+              "publicationDate": "2026-06-01"
+            },
+            {
+              "year": 2025,
+              "value": 23.5,
+              "rawValue": "23.5%",
+              "series": "LLM-assisted writing and citation advantage: evidence from scientific publications before and after ChatGPT release",
+              "source": "https://link.springer.com/article/10.1007/s11192-026-05805-9",
+              "notes": "The study estimated that 23.5% of papers in a multidisciplinary arXiv–Crossref corpus showed signs of LLM-assisted writing in 2025. It trained a supervised classifier on pre-LLM human abstracts and AI-generated rewrites, then applied it to 234,073 papers published from 2019 to 2025. The corpus is arXiv-linked and abstract-based, so it is narrower than all scholarly publishing.",
+              "publicationDate": "2026-09-11"
             },
             {
               "year": 2025,
@@ -1345,18 +1408,18 @@
             },
             {
               "year": 2023,
-              "value": 12.5759,
-              "estimateCount": 19
+              "value": 12.3877,
+              "estimateCount": 21
             },
             {
               "year": 2024,
-              "value": 18.4627,
-              "estimateCount": 40
+              "value": 18.7235,
+              "estimateCount": 43
             },
             {
               "year": 2025,
-              "value": 29.8322,
-              "estimateCount": 41
+              "value": 29.5423,
+              "estimateCount": 43
             },
             {
               "year": 2026,
