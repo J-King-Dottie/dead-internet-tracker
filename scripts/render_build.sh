@@ -40,6 +40,10 @@ done
 
 # Report the last committed page/data change, not the deploy date. Traffic-log
 # updates and infrastructure-only commits should not claim the page changed.
+# Render's shallow checkout otherwise makes every file look newly committed.
+if [[ "$(git rev-parse --is-shallow-repository)" == "true" ]]; then
+  git fetch --unshallow --quiet origin
+fi
 last_modified="$(git log -1 --format=%cs -- index.html data)"
 if [[ "$last_modified" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
   sed -i "s|<lastmod>[^<]*</lastmod>|<lastmod>$last_modified</lastmod>|" "$public_dir/sitemap.xml"
