@@ -38,4 +38,14 @@ for file in "${files[@]}"; do
   cp "$file" "$public_dir/$file"
 done
 
+# Report the last committed page/data change, not the deploy date. Traffic-log
+# updates and infrastructure-only commits should not claim the page changed.
+last_modified="$(git log -1 --format=%cs -- index.html data)"
+if [[ "$last_modified" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+  sed -i "s|<lastmod>[^<]*</lastmod>|<lastmod>$last_modified</lastmod>|" "$public_dir/sitemap.xml"
+else
+  echo "Cannot determine the dashboard modification date from Git history." >&2
+  exit 1
+fi
+
 echo "Static dashboard build prepared in $public_dir."
