@@ -658,25 +658,15 @@
       color: var(--accent-cyan);
     }
 
-    .page-footer-note {
-      width: 100%;
-      margin: 0 auto;
-      padding: 0 0 clamp(18px, 2.4vw, 28px);
-      font-size: 0.72rem;
+    .hero-project-note {
+      margin: 0.25rem 0 0.5rem;
+      max-width: 80ch;
+      font-size: clamp(0.72rem, 0.8vw, 0.8rem);
       line-height: 1.5;
       color: var(--copy-tertiary);
-      text-align: center;
     }
 
-    .page-footer-note p {
-      margin: 0 0 0.28rem;
-    }
-
-    .page-footer-note p:last-child {
-      margin-bottom: 0;
-    }
-
-    .page-footer-note a {
+    .hero-project-note a {
       color: inherit;
       text-decoration: underline;
       text-underline-offset: 0.14em;
@@ -1226,10 +1216,6 @@
         padding-bottom: 0;
       }
 
-      .page-footer-note {
-        width: calc(100% - (var(--content-inset) * 2));
-      }
-
       .grid {
         grid-template-columns: minmax(0, 1fr);
       }
@@ -1451,6 +1437,7 @@
           </div>
           <div class="hero-meta">
             <p class="hero-callout">This page does not present any single metric. It is a collection of what the available evidence is saying.</p>
+            <p class="hero-project-note">An AI-assisted research project by <a href="https://dottieaistudio.com.au/" target="_blank" rel="noreferrer">Dottie AI Studio</a>, kept current with AI and automation for less than A$50 a year.</p>
             <p class="hero-update-timer" id="hero-update-timer">Next update in <strong>calculating...</strong></p>
           </div>
         </div>
@@ -2236,12 +2223,6 @@
     </div>
   </section>
   <!-- DASHBOARD_READABLE_SUMMARY_END -->
-  <footer class="page-footer-note">
-    <p>We built this as a practical demonstration of low-cost, AI-assisted research.</p>
-    <p>AI and automation keep it current for less than A$50 a year.</p>
-    <p>A small AI-assisted project tracking a large AI-assisted internet.</p>
-    <p>Produced by <a href="https://dottieaistudio.com.au/" target="_blank" rel="noreferrer">Dottie AI Studio</a></p>
-  </footer>
 
   <div class="info-float-tooltip" id="info-float-tooltip" aria-hidden="true"></div>
   <div class="info-backdrop" id="info-backdrop" hidden></div>
