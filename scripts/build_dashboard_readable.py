@@ -6,6 +6,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from refresh_sources import SOURCES, STATE_PATH, initial_state
+
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
@@ -20,11 +22,25 @@ CHART_INTENTS = {
 }
 
 
+# Typical age of the completed monthly observations, excluding failed refreshes.
+# Wikimedia's source is monthly; Stack Exchange and Cloudflare are near-live.
+CHART_SOURCE_LAGS = {
+    "imperva-traffic": "Annual figures are published about four months after the year ends.",
+    "stack-overflow": "This chart runs about one month behind because it uses completed monthly totals.",
+    "traffic-bot-human": "This chart runs about one month behind because it uses completed monthly totals.",
+    "wikipedia": "This chart runs about one month behind, with data released early the following month.",
+}
+
 def with_chart_info(chart: dict[str, Any]) -> dict[str, Any]:
     chart_key = chart.get("chartKey", "")
+    state_path = ROOT / STATE_PATH
+    state = json.loads(state_path.read_text()) if state_path.exists() else {}
+    refresh = (state.get(chart_key) or initial_state(ROOT, chart_key, datetime.now(timezone.utc))) if chart_key in SOURCES else {"status": "manual", "nextAttemptAt": None}
     return {
         **chart,
         "intent": CHART_INTENTS.get(chart_key, chart.get("intent", "")),
+        "sourceLag": CHART_SOURCE_LAGS.get(chart_key, ""),
+        "refresh": refresh,
     }
 
 
@@ -232,7 +248,7 @@ def imperva_traffic() -> dict[str, Any]:
     bad = series_by_name.get("Bad bot", {}).get("values") or []
     good = series_by_name.get("Good bot", {}).get("values") or []
     human = series_by_name.get("Human", {}).get("values") or []
-    automated = [round(float((bad[index] if index < len(bad) else 0) or 0) + float((good[index] if index < len(good) else 0) or 0), 2) for index in range(len(labels))]
+    automated = series_by_name.get("Automated traffic", {}).get("values") or [round(float((bad[index] if index < len(bad) else 0) or 0) + float((good[index] if index < len(good) else 0) or 0), 2) for index in range(len(labels))]
     return {
         "chartKey": "imperva-traffic",
         "title": snapshot.get("title", ""),

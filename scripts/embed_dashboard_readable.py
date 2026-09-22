@@ -266,11 +266,14 @@ def remove_generated_block(html_text: str, start: str, end: str) -> str:
 
 
 def insert_body_block(html_text: str, block: str) -> str:
-    html_text = remove_generated_block(html_text, BODY_START, BODY_END)
-    marker = '  <footer class="page-footer-note">'
+    if BODY_START in html_text and BODY_END in html_text:
+        before, rest = html_text.split(BODY_START, 1)
+        _, after = rest.split(BODY_END, 1)
+        return before + block + after
+    marker = "</main>"
     if marker not in html_text:
-        raise SystemExit(f"Cannot insert generated dashboard data because {marker} was not found.")
-    return html_text.replace(marker, block + "\n" + marker, 1)
+        raise SystemExit("Cannot locate the dashboard main element.")
+    return html_text.replace(marker, marker + "\n" + block, 1)
 
 
 def insert_head_block(html_text: str, data: dict[str, Any]) -> str:

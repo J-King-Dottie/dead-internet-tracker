@@ -4,7 +4,9 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlencode
-from urllib.request import Request, urlopen
+from urllib.request import Request
+
+from http_json import request_json
 
 
 API_BASE = "https://api.stackexchange.com/2.3/questions"
@@ -52,8 +54,7 @@ def fetch_monthly_questions(start_month: str, end_month: str) -> list[dict]:
             }
         )
         request = Request(f"{API_BASE}?{params}", headers={"User-Agent": "DeadInternetTracker/1.0"})
-        with urlopen(request) as response:
-            payload = json.load(response)
+        payload = request_json(request)
         rows.append(
             {
                 "month": month,

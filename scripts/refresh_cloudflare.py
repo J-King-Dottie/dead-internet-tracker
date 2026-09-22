@@ -1,12 +1,15 @@
 from __future__ import annotations
 
 import json
+import os
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlencode
-from urllib.request import Request, urlopen
+from urllib.request import Request
+
+from http_json import request_json
 
 
 API_BASE = "https://api.cloudflare.com/client/v4"
@@ -42,8 +45,7 @@ def api_get(token: str, endpoint: str, params: dict[str, str]) -> dict:
             "User-Agent": "DeadInternetTracker/1.0 (local dashboard research)",
         },
     )
-    with urlopen(req) as response:
-        payload = json.load(response)
+    payload = request_json(req)
     if not payload.get("success"):
         raise RuntimeError(f"Cloudflare API error for {endpoint}: {payload.get('errors')}")
     return payload["result"]
@@ -135,8 +137,11 @@ def fetch_month(token: str, month: str) -> MonthValue:
 
 def build_snapshot() -> dict:
     root = Path(__file__).resolve().parent.parent
-    env = load_env(root / ".env")
-    token = env["CLOUDFLARE_API_TOKEN"]
+    token = os.environ.get("CLOUDFLARE_API_TOKEN", "").strip()
+    if not token and (root / ".env").exists():
+        token = load_env(root / ".env").get("CLOUDFLARE_API_TOKEN", "")
+    if not token:
+        raise RuntimeError("CLOUDFLARE_API_TOKEN is required")
     existing_snapshot_path = root / "data" / "cloudflare" / "cloudflare.json"
     now = datetime.now(timezone.utc)
 

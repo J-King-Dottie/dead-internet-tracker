@@ -3,7 +3,7 @@
   "title": "Stack Overflow activity",
   "description": "This tracks monthly new questions on Stack Overflow. It matters because it shows whether people are still asking other people for help in public.",
   "source": "Stack Exchange API monthly question counts for Stack Overflow",
-  "lastRefreshed": "2026-08-02",
+  "lastRefreshed": "2026-09-22",
   "method": "Monthly question counts are pulled from the official Stack Exchange API using each month's creation-date window. The chart shows observed monthly counts only.",
   "caveats": "This is a public web proxy, not a measure of all problem-solving. This monthly feed currently covers questions asked, not answered-question counts.",
   "xValues": [
@@ -85,7 +85,8 @@
     "2026-04",
     "2026-05",
     "2026-06",
-    "2026-07"
+    "2026-07",
+    "2026-08"
   ],
   "axisValueFormat": "integer",
   "tooltipValueFormat": "integer",
@@ -94,405 +95,410 @@
       "name": "Questions asked",
       "color": "#7af59d",
       "values": [
-        146610,
-        145034,
-        155917,
-        182854,
-        186411,
-        171850,
-        166001,
-        148282,
-        141744,
-        141770,
-        134911,
-        133875,
-        139839,
-        131643,
-        148721,
-        135844,
-        133755,
-        128943,
-        123950,
-        122051,
-        119751,
-        118833,
-        119064,
-        112091,
-        119258,
-        113763,
-        123366,
-        114078,
-        115959,
-        111306,
-        110778,
-        112666,
-        103581,
-        105934,
-        109301,
-        96275,
-        96725,
-        85596,
-        87182,
-        68540,
-        66410,
-        63610,
-        62725,
-        59993,
-        52718,
-        52356,
-        50319,
-        42336,
-        47604,
-        45952,
-        44730,
-        42416,
-        40037,
-        31961,
-        31457,
-        27800,
-        24749,
-        23178,
-        20823,
-        17938,
-        18198,
-        15517,
-        15093,
-        11405,
-        9662,
-        7759,
-        6628,
-        5814,
-        6040,
-        5342,
-        5415,
-        4219,
-        3715,
-        3168,
-        3239,
-        2633,
-        2260,
-        2023,
-        1626
+        146591,
+        145015,
+        155873,
+        182833,
+        186391,
+        171836,
+        165986,
+        148261,
+        141733,
+        141752,
+        134900,
+        133867,
+        139827,
+        131627,
+        148706,
+        135825,
+        133745,
+        128926,
+        123935,
+        122044,
+        119734,
+        118814,
+        119021,
+        112078,
+        119214,
+        113746,
+        123276,
+        114000,
+        115938,
+        111220,
+        110626,
+        112634,
+        103508,
+        105798,
+        109150,
+        96194,
+        96638,
+        85580,
+        87146,
+        68388,
+        66343,
+        63527,
+        62598,
+        59953,
+        52687,
+        52341,
+        50285,
+        42289,
+        47577,
+        45936,
+        44720,
+        42369,
+        40026,
+        31938,
+        31441,
+        27785,
+        24738,
+        23167,
+        20812,
+        17924,
+        18183,
+        15505,
+        15075,
+        11393,
+        9648,
+        7752,
+        6623,
+        5022,
+        5668,
+        5331,
+        5365,
+        4195,
+        3675,
+        3125,
+        3174,
+        2543,
+        2059,
+        1729,
+        1185,
+        1125
       ]
     }
   ],
-  "latestObservedMonth": "2026-07",
+  "latestObservedMonth": "2026-08",
   "monthly": [
     {
       "month": "2020-01",
-      "questions": 146610
+      "questions": 146591
     },
     {
       "month": "2020-02",
-      "questions": 145034
+      "questions": 145015
     },
     {
       "month": "2020-03",
-      "questions": 155917
+      "questions": 155873
     },
     {
       "month": "2020-04",
-      "questions": 182854
+      "questions": 182833
     },
     {
       "month": "2020-05",
-      "questions": 186411
+      "questions": 186391
     },
     {
       "month": "2020-06",
-      "questions": 171850
+      "questions": 171836
     },
     {
       "month": "2020-07",
-      "questions": 166001
+      "questions": 165986
     },
     {
       "month": "2020-08",
-      "questions": 148282
+      "questions": 148261
     },
     {
       "month": "2020-09",
-      "questions": 141744
+      "questions": 141733
     },
     {
       "month": "2020-10",
-      "questions": 141770
+      "questions": 141752
     },
     {
       "month": "2020-11",
-      "questions": 134911
+      "questions": 134900
     },
     {
       "month": "2020-12",
-      "questions": 133875
+      "questions": 133867
     },
     {
       "month": "2021-01",
-      "questions": 139839
+      "questions": 139827
     },
     {
       "month": "2021-02",
-      "questions": 131643
+      "questions": 131627
     },
     {
       "month": "2021-03",
-      "questions": 148721
+      "questions": 148706
     },
     {
       "month": "2021-04",
-      "questions": 135844
+      "questions": 135825
     },
     {
       "month": "2021-05",
-      "questions": 133755
+      "questions": 133745
     },
     {
       "month": "2021-06",
-      "questions": 128943
+      "questions": 128926
     },
     {
       "month": "2021-07",
-      "questions": 123950
+      "questions": 123935
     },
     {
       "month": "2021-08",
-      "questions": 122051
+      "questions": 122044
     },
     {
       "month": "2021-09",
-      "questions": 119751
+      "questions": 119734
     },
     {
       "month": "2021-10",
-      "questions": 118833
+      "questions": 118814
     },
     {
       "month": "2021-11",
-      "questions": 119064
+      "questions": 119021
     },
     {
       "month": "2021-12",
-      "questions": 112091
+      "questions": 112078
     },
     {
       "month": "2022-01",
-      "questions": 119258
+      "questions": 119214
     },
     {
       "month": "2022-02",
-      "questions": 113763
+      "questions": 113746
     },
     {
       "month": "2022-03",
-      "questions": 123366
+      "questions": 123276
     },
     {
       "month": "2022-04",
-      "questions": 114078
+      "questions": 114000
     },
     {
       "month": "2022-05",
-      "questions": 115959
+      "questions": 115938
     },
     {
       "month": "2022-06",
-      "questions": 111306
+      "questions": 111220
     },
     {
       "month": "2022-07",
-      "questions": 110778
+      "questions": 110626
     },
     {
       "month": "2022-08",
-      "questions": 112666
+      "questions": 112634
     },
     {
       "month": "2022-09",
-      "questions": 103581
+      "questions": 103508
     },
     {
       "month": "2022-10",
-      "questions": 105934
+      "questions": 105798
     },
     {
       "month": "2022-11",
-      "questions": 109301
+      "questions": 109150
     },
     {
       "month": "2022-12",
-      "questions": 96275
+      "questions": 96194
     },
     {
       "month": "2023-01",
-      "questions": 96725
+      "questions": 96638
     },
     {
       "month": "2023-02",
-      "questions": 85596
+      "questions": 85580
     },
     {
       "month": "2023-03",
-      "questions": 87182
+      "questions": 87146
     },
     {
       "month": "2023-04",
-      "questions": 68540
+      "questions": 68388
     },
     {
       "month": "2023-05",
-      "questions": 66410
+      "questions": 66343
     },
     {
       "month": "2023-06",
-      "questions": 63610
+      "questions": 63527
     },
     {
       "month": "2023-07",
-      "questions": 62725
+      "questions": 62598
     },
     {
       "month": "2023-08",
-      "questions": 59993
+      "questions": 59953
     },
     {
       "month": "2023-09",
-      "questions": 52718
+      "questions": 52687
     },
     {
       "month": "2023-10",
-      "questions": 52356
+      "questions": 52341
     },
     {
       "month": "2023-11",
-      "questions": 50319
+      "questions": 50285
     },
     {
       "month": "2023-12",
-      "questions": 42336
+      "questions": 42289
     },
     {
       "month": "2024-01",
-      "questions": 47604
+      "questions": 47577
     },
     {
       "month": "2024-02",
-      "questions": 45952
+      "questions": 45936
     },
     {
       "month": "2024-03",
-      "questions": 44730
+      "questions": 44720
     },
     {
       "month": "2024-04",
-      "questions": 42416
+      "questions": 42369
     },
     {
       "month": "2024-05",
-      "questions": 40037
+      "questions": 40026
     },
     {
       "month": "2024-06",
-      "questions": 31961
+      "questions": 31938
     },
     {
       "month": "2024-07",
-      "questions": 31457
+      "questions": 31441
     },
     {
       "month": "2024-08",
-      "questions": 27800
+      "questions": 27785
     },
     {
       "month": "2024-09",
-      "questions": 24749
+      "questions": 24738
     },
     {
       "month": "2024-10",
-      "questions": 23178
+      "questions": 23167
     },
     {
       "month": "2024-11",
-      "questions": 20823
+      "questions": 20812
     },
     {
       "month": "2024-12",
-      "questions": 17938
+      "questions": 17924
     },
     {
       "month": "2025-01",
-      "questions": 18198
+      "questions": 18183
     },
     {
       "month": "2025-02",
-      "questions": 15517
+      "questions": 15505
     },
     {
       "month": "2025-03",
-      "questions": 15093
+      "questions": 15075
     },
     {
       "month": "2025-04",
-      "questions": 11405
+      "questions": 11393
     },
     {
       "month": "2025-05",
-      "questions": 9662
+      "questions": 9648
     },
     {
       "month": "2025-06",
-      "questions": 7759
+      "questions": 7752
     },
     {
       "month": "2025-07",
-      "questions": 6628
+      "questions": 6623
     },
     {
       "month": "2025-08",
-      "questions": 5814
+      "questions": 5022
     },
     {
       "month": "2025-09",
-      "questions": 6040
+      "questions": 5668
     },
     {
       "month": "2025-10",
-      "questions": 5342
+      "questions": 5331
     },
     {
       "month": "2025-11",
-      "questions": 5415
+      "questions": 5365
     },
     {
       "month": "2025-12",
-      "questions": 4219
+      "questions": 4195
     },
     {
       "month": "2026-01",
-      "questions": 3715
+      "questions": 3675
     },
     {
       "month": "2026-02",
-      "questions": 3168
+      "questions": 3125
     },
     {
       "month": "2026-03",
-      "questions": 3239
+      "questions": 3174
     },
     {
       "month": "2026-04",
-      "questions": 2633
+      "questions": 2543
     },
     {
       "month": "2026-05",
-      "questions": 2260
+      "questions": 2059
     },
     {
       "month": "2026-06",
-      "questions": 2023
+      "questions": 1729
     },
     {
       "month": "2026-07",
-      "questions": 1626
+      "questions": 1185
+    },
+    {
+      "month": "2026-08",
+      "questions": 1125
     }
   ]
 }

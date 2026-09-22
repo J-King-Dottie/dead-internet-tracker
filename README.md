@@ -93,9 +93,7 @@ Then open `http://localhost:8000`.
 Examples:
 
 ```bash
-python3 scripts/refresh_stackoverflow.py
-python3 scripts/refresh_wikipedia.py
-python3 scripts/refresh_cloudflare.py
+python3 scripts/refresh_sources.py --target monthly-api --force
 python3 scripts/build_dashboard_readable.py
 python3 scripts/embed_dashboard_readable.py
 ```
@@ -111,3 +109,43 @@ Some research pipelines write large intermediate files locally. Those are intent
 This repo includes a root `render.yaml` for a static-site deploy. Connect the GitHub repo in Render and deploy it as a Blueprint or Static Site.
 
 Render does not refresh data or install Python dependencies during deploy. GitHub Actions prepares the static files; Render runs `scripts/render_build.sh` to copy the committed site assets into `public`.
+
+### Refresh scheduling and recovery
+
+`refresh_sources.py` runs each due source separately. Cloudflare and Stack Overflow
+normally refresh on the 2nd at 10:15 UTC; Wikipedia on the 10th at 10:15 UTC;
+AI-content research on Mondays at 09:30 UTC. A lightweight daily workflow checks
+persisted due dates, without querying healthy sources before they are due.
+
+Wikipedia keeps saved history and requests only missing months plus the last two
+saved months to catch recent revisions. A normal update makes four short requests
+(one per editor cohort). First-time backfills use bounded annual chunks. Requests
+end at the first day of the following month so the API includes the final monthly
+bucket. Incomplete cohorts or gaps are rejected instead of filled with zeroes.
+
+Temporary read failures get bounded retries with backoff. If those retries fail,
+or a successful response is still missing the expected month, the source gets
+another attempt at 10:15 UTC two calendar days later. There is no catch-up attempt
+limit. Healthy sources are saved even when another fails. Invalid/incomplete
+snapshots are rolled back before the commit. The workflow still reports failures
+after saving healthy data and the retry schedule.
+
+`data/refresh_status.json` stores the next attempt for each source. These dates
+are embedded in the dashboard and drive both chart countdowns and the earliest
+hero countdown. An overdue date shows "Due" until the page receives a new build;
+a countdown does not certify that an upstream publication or GitHub run succeeded.
+GitHub's cron can start late. A page left open needs reloading to get new static
+snapshots; the browser makes no live API calls.
+
+Natural lag is different from an error delay. Stack Exchange and Cloudflare have
+near-live data, but these charts use completed months (roughly one month behind).
+Wikimedia editor history is published monthly, normally early in the next month;
+the 10th-of-month refresh allows that source time to arrive. Source reference:
+https://wikitech.wikimedia.org/wiki/Data_Platform/Data_Lake/Edits/MediaWiki_history_dumps
+
+Checks:
+
+```bash
+python3 -m unittest discover -s tests -v
+node tests/test_refresh_countdowns.cjs
+```

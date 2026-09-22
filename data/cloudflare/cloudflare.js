@@ -3,7 +3,7 @@ window.__CLOUDFLARE_SNAPSHOT__ = {
   "title": "Estimated AI bot share of total traffic",
   "description": "This estimates how much of total web traffic is AI bots. It matters because it gets closer to the machine share of web traversal than general bot traffic does.",
   "source": "Cloudflare Radar bot share and bot category time series",
-  "lastRefreshed": "2026-08-02",
+  "lastRefreshed": "2026-09-22",
   "method": "We estimate AI bot share by combining Cloudflare's bot share of total traffic with its AI bot categories. The chart shows observed monthly values only.",
   "caveats": "Crawlers learn from the internet. Search bots use it. Cloudflare sees a large but incomplete slice of the web, with weaker coverage in places like China. This tracks AI bot traffic, not all AI activity. AI search only appears separately from June 2025, so the measure gets better over time.",
   "xValues": [
@@ -85,7 +85,8 @@ window.__CLOUDFLARE_SNAPSHOT__ = {
     "2026-04",
     "2026-05",
     "2026-06",
-    "2026-07"
+    "2026-07",
+    "2026-08"
   ],
   "axisValueFormat": "percent1",
   "tooltipValueFormat": "percent2",
@@ -172,11 +173,12 @@ window.__CLOUDFLARE_SNAPSHOT__ = {
         8.48,
         8.74,
         8.21,
-        8.64
+        8.64,
+        11.39
       ]
     }
   ],
-  "latestObservedMonth": "2026-07",
+  "latestObservedMonth": "2026-08",
   "monthly": [
     {
       "month": "2024-09",
@@ -384,6 +386,15 @@ window.__CLOUDFLARE_SNAPSHOT__ = {
       "ai_search_share_of_bot_traffic": 6.760233642857143,
       "ai_search_share_total_traffic": 2.3460988792639808,
       "ai_bot_share_total_traffic": 8.638176784642296
+    },
+    {
+      "month": "2026-08",
+      "bot_share_total_traffic": 35.48810782142857,
+      "ai_crawler_share_of_bot_traffic": 25.43539278571429,
+      "ai_crawler_share_total_traffic": 9.02653961659815,
+      "ai_search_share_of_bot_traffic": 6.650351428571429,
+      "ai_search_share_total_traffic": 2.360083885475344,
+      "ai_bot_share_total_traffic": 11.386623502073494
     }
   ]
 };

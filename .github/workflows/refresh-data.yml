@@ -9,16 +9,16 @@ on:
         default: "monthly-api"
         type: choice
         options:
+          - due
           - monthly-api
           - ai-content-meta-review
           - all
   schedule:
-    # Monthly API-backed charts: Stack Exchange is near real time, Cloudflare
-    # has daily data, and Wikimedia publishes monthly buckets. Running on the
-    # 2nd gives the prior completed month time to settle without adding much lag.
-    # GitHub Actions cron runs in UTC.
-    - cron: "15 10 2 * *"
-    # Weekly recent-source sweep for chart 1: AI content meta-review.
+    # Lightweight daily check; only sources whose persisted attempt is due run.
+    # Stack Overflow/Cloudflare: 2nd. Wikipedia: 10th (after its monthly release).
+    # Failed or not-yet-published sources are tried again two days later.
+    - cron: "15 10 * * *"
+    # Keep the weekly research sweep at Monday 09:30 UTC.
     - cron: "30 9 * * 1"
 
 permissions:
@@ -29,11 +29,10 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  refresh-monthly-api-snapshots:
-    if: github.event.schedule == '15 10 2 * *' || (github.event_name == 'workflow_dispatch' && (github.event.inputs.target == 'monthly-api' || github.event.inputs.target == 'all'))
+  refresh-snapshots:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
-
+    # Leave time to save good snapshots even if every source hits its own timeout.
+    timeout-minutes: 150
     steps:
       - name: Check out repo
         uses: actions/checkout@v4
@@ -45,77 +44,48 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Write local env file for refresh scripts
+      - name: Refresh each due source independently
+        id: refresh
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        run: |
-          test -n "$CLOUDFLARE_API_TOKEN"
-          cat > .env <<EOF
-          CLOUDFLARE_API_TOKEN=$CLOUDFLARE_API_TOKEN
-          EOF
-
-      - name: Refresh monthly snapshots
-        timeout-minutes: 30
-        run: |
-          python scripts/refresh_stackoverflow.py
-          python scripts/refresh_wikipedia.py
-          python scripts/refresh_cloudflare.py
-          python scripts/build_dashboard_readable.py
-          python scripts/embed_dashboard_readable.py
-
-      - name: Remove local env file
-        if: always()
-        run: rm -f .env
-
-      - name: Commit and push if data changed
-        run: |
-          if git diff --quiet -- data/cloudflare data/wikipedia data/stackoverflow data/dashboard_readable.json index.html; then
-            echo "No snapshot changes."
-            exit 0
-          fi
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/cloudflare data/wikipedia data/stackoverflow data/dashboard_readable.json index.html
-          git commit -m "Refresh monthly API snapshots"
-          git push
-
-  refresh-ai-content-meta-review:
-    if: github.event.schedule == '30 9 * * 1' || (github.event_name == 'workflow_dispatch' && (github.event.inputs.target == 'ai-content-meta-review' || github.event.inputs.target == 'all'))
-    runs-on: ubuntu-latest
-    timeout-minutes: 90
-
-    steps:
-      - name: Check out repo
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Run recent-source research sweep
-        timeout-minutes: 75
-        env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_RESEARCH_MODEL: ${{ vars.OPENAI_RESEARCH_MODEL || 'gpt-5.4' }}
           RESEARCH_LOOKBACK_DAYS: ${{ vars.RESEARCH_LOOKBACK_DAYS || '7' }}
+          REFRESH_TARGET: ${{ github.event.inputs.target || 'due' }}
+          REFRESH_EVENT: ${{ github.event_name }}
         run: |
-          python scripts/refresh_ai_content_meta_review.py
+          if [[ "$REFRESH_EVENT" == "workflow_dispatch" && "$REFRESH_TARGET" != "due" ]]; then
+            python scripts/refresh_sources.py --target "$REFRESH_TARGET" --force
+          else
+            python scripts/refresh_sources.py
+          fi
+
+      - name: Rebuild dashboard from successful snapshots
+        if: steps.refresh.outputs.changed == 'true'
+        run: |
           python scripts/build_dashboard_readable.py
           python scripts/embed_dashboard_readable.py
 
-      - name: Commit and push if research changed
+      - name: Save successful data and retry schedule
+        if: steps.refresh.outputs.changed == 'true'
         run: |
-          if git diff --quiet -- data/ai-content-meta-review data/dashboard_readable.json index.html; then
-            echo "No AI content meta-review changes."
+          if git diff --quiet -- data index.html; then
+            echo "No snapshot changes."
             exit 0
           fi
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/ai-content-meta-review data/dashboard_readable.json index.html
-          git commit -m "Refresh AI content meta-review"
-          git push
+          git add data index.html
+          git commit -m "Refresh source snapshots and next attempts"
+          # The independent traffic-log workflow can advance main during a refresh.
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push; then exit 0; fi
+          done
+          exit 1
+
+      - name: Report failed sources after saving healthy ones
+        if: steps.refresh.outputs.failed == 'true'
+        run: |
+          echo "One or more sources failed. Good snapshots were saved; failed sources retry in two days."
+          exit 1
