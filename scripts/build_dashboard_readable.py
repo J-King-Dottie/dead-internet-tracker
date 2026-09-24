@@ -287,7 +287,7 @@ def main() -> None:
     ]
     payload = {
         "title": "Dead Internet Tracker machine-readable chart data",
-        "canonicalUrl": "https://dead-internet-tracker.onrender.com/",
+        "canonicalUrl": "https://dead-internet.onrender.com/",
         "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
         "generatedAt": datetime.now(timezone.utc).date().isoformat(),
         "charts": charts,

@@ -6,7 +6,7 @@ Dead Internet Tracker tracks public signals on AI-generated content, AI bot traf
 
 Produced by Dottie AI Studio: https://dottieaistudio.com.au/
 
-Canonical URL: https://dead-internet-tracker.onrender.com/
+Canonical URL: https://dead-internet.onrender.com/
 
 ## What This Site Measures
 
@@ -26,17 +26,17 @@ Canonical URL: https://dead-internet-tracker.onrender.com/
 
 ## Core Files
 
-- [Main page](https://dead-internet-tracker.onrender.com/)
-- [Project README](https://dead-internet-tracker.onrender.com/README.md)
+- [Main page](https://dead-internet.onrender.com/)
+- [Project README](https://dead-internet.onrender.com/README.md)
 
 ## Snapshot Data
 
-- [Machine-readable normalized chart data](https://dead-internet-tracker.onrender.com/data/dashboard_readable.json)
-- [Cloudflare AI bot traffic](https://dead-internet-tracker.onrender.com/data/cloudflare/cloudflare.json)
-- [Wikipedia activity](https://dead-internet-tracker.onrender.com/data/wikipedia/wikipedia.json)
-- [Stack Overflow activity](https://dead-internet-tracker.onrender.com/data/stackoverflow/stackoverflow.json)
-- [Imperva traffic profile](https://dead-internet-tracker.onrender.com/data/imperva/imperva.json)
-- [AI content meta-review](https://dead-internet-tracker.onrender.com/data/ai-content-meta-review/ai_content_meta_review.json)
+- [Machine-readable normalized chart data](https://dead-internet.onrender.com/data/dashboard_readable.json)
+- [Cloudflare AI bot traffic](https://dead-internet.onrender.com/data/cloudflare/cloudflare.json)
+- [Wikipedia activity](https://dead-internet.onrender.com/data/wikipedia/wikipedia.json)
+- [Stack Overflow activity](https://dead-internet.onrender.com/data/stackoverflow/stackoverflow.json)
+- [Imperva traffic profile](https://dead-internet.onrender.com/data/imperva/imperva.json)
+- [AI content meta-review](https://dead-internet.onrender.com/data/ai-content-meta-review/ai_content_meta_review.json)
 
 ## AI Search Notes
 

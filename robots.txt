@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dead-internet-tracker.onrender.com/sitemap.xml
+Sitemap: https://dead-internet.onrender.com/sitemap.xml

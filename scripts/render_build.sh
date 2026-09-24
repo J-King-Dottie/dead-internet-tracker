@@ -41,14 +41,14 @@ done
 
 # Each Render deployment must advertise its own URL, including in embedded data.
 # Keep source snapshots unchanged so both services can build from the same branch.
-site_url="${RENDER_EXTERNAL_URL:-https://dead-internet-tracker.onrender.com}"
+site_url="${RENDER_EXTERNAL_URL:-https://dead-internet.onrender.com}"
 site_url="${site_url%/}"
 if [[ ! "$site_url" =~ ^https://[a-zA-Z0-9.-]+$ ]]; then
   echo "Expected an HTTPS hostname in RENDER_EXTERNAL_URL." >&2
   exit 1
 fi
 for file in index.html robots.txt sitemap.xml llms.txt README.md data/dashboard_readable.json; do
-  sed -i "s|https://dead-internet-tracker.onrender.com|$site_url|g" "$public_dir/$file"
+  sed -i "s|https://dead-internet.onrender.com|$site_url|g" "$public_dir/$file"
 done
 
 # Report the last committed page/data change, not the deploy date. Traffic-log
