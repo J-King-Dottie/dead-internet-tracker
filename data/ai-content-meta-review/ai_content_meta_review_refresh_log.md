@@ -614,3 +614,28 @@ For the actual sweep standard and what context to store per estimate, use:
   - Rise of the Machines: The Prevalence and Disclosure of Artificial Intelligence-Generated Text in High-Impact Orthopaedic Journals (2024)
   - Most biomedical publications show signs of LLM-assisted writing (2023)
   - Most biomedical publications show signs of LLM-assisted writing (2024)
+
+
+## 2026-09-28 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint
+  - industry/platform official reports
+  - institutional summaries
+  - media/analyst discovery
+  - social-platform specific studies
+  - online review platforms
+  - scholarly writing prevalence
+  - music uploads
+  - code and software repositories
+  - video and image platform studies
+- added:
+  - Yelp / contributed reviews (2025)
+  - Tripadvisor / reviews (2024)
+  - Gray / scholarly literature (2023)
+  - LigoSocial / LinkedIn longer posts (2023)
+  - LigoSocial / LinkedIn longer posts (2024)
+  - LigoSocial / LinkedIn longer posts (2025)
+  - LigoSocial / LinkedIn longer posts (2026)

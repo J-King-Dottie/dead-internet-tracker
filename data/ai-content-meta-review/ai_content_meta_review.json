@@ -1,6 +1,6 @@
 {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-09-21",
+    "lastRefreshed": "2026-09-28",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -217,6 +217,22 @@
             "source": "https://docs.google.com/spreadsheets/d/1WamFyVahPDtAPFtvly30BG2QjyA-L1KYkO2UEYGKKcg/edit?gid=0",
             "notes": "Graphite estimated that 31.61% of newly published English web articles in 2023 were AI-generated. It filtered Common Crawl pages by article markup, English language, and publish date, then classified them with Surfer's AI detector using a greater-than-50% threshold. This is one of the closest direct measures in the table, but it only covers newly published English articles and depends on detector performance.",
             "publication_date": "2024-05-07"
+        },
+        {
+            "series": "Gray / scholarly literature",
+            "year": 2023,
+            "value": "1.0%",
+            "source": "https://arxiv.org/abs/2403.16887",
+            "notes": "Gray estimated that slightly over 1.0% of 2023 scholarly articles were LLM-assisted, or at least 60,000 papers. The study inferred prevalence from disproportionate increases in marker words associated with LLM output across the scholarly literature. It is a lower-bound heuristic estimate rather than a direct detector-based count.",
+            "publication_date": "2024-03-25"
+        },
+        {
+            "series": "LigoSocial / LinkedIn longer posts",
+            "year": 2023,
+            "value": "47.0%",
+            "source": "https://ligosocial.com/research/ai-linkedin-posts",
+            "notes": "LigoSocial found a 47.0% study-year median share of longer LinkedIn posts in its tracked author sample that read as AI in 2023. The report scored 106,964 posts of 300+ characters with a calibrated AI judge and we use the study-year median of the reported 2023 half-year values of 44% and 50%. The sample is not all of LinkedIn because it only covers authors who used an AI assistant at some point and the judge has a 20% pre-ChatGPT false-positive floor.",
+            "publication_date": "2026-09-25"
         },
         {
             "series": "LLM-assisted writing and citation advantage: evidence from scientific publications before and after ChatGPT release",
@@ -459,6 +475,14 @@
             "publication_date": "2026-08-22"
         },
         {
+            "series": "LigoSocial / LinkedIn longer posts",
+            "year": 2024,
+            "value": "54.0%",
+            "source": "https://ligosocial.com/research/ai-linkedin-posts",
+            "notes": "LigoSocial found a 54.0% study-year median share of longer LinkedIn posts in its tracked author sample that read as AI in 2024. The report scored 106,964 posts of 300+ characters with a calibrated AI judge and we use the study-year median of the reported 2024 half-year values of 49% and 59%. The sample is not all of LinkedIn because it only covers authors who used an AI assistant at some point and the judge has a 20% pre-ChatGPT false-positive floor.",
+            "publication_date": "2026-09-25"
+        },
+        {
             "series": "LLM-assisted writing and citation advantage: evidence from scientific publications before and after ChatGPT release",
             "year": 2024,
             "value": "9.8%",
@@ -691,6 +715,14 @@
             "publication_date": "2026-01-01"
         },
         {
+            "series": "Tripadvisor / reviews",
+            "year": 2024,
+            "value": "0.69%",
+            "source": "https://tripadvisor.mediaroom.com/2025-03-18-Tripadvisors-2025-Transparency-Report-reveals-strong-review-submissions-and-improved-fraud-detection",
+            "notes": "Tripadvisor reported that about 0.69% of 2024 reviews were AI-generated reviews flagged and removed, based on 214,000 out of 31.1 million reviews. The estimate is a recoverable platform-level share from Tripadvisor’s 2025 Transparency Report, which combines automated screening and trust-and-safety review. It covers removed reviews only and may understate the total amount of AI-written review text that was submitted or remained live.",
+            "publication_date": "2025-03-18"
+        },
+        {
             "series": "Turnitin / student papers with >=20% AI writing",
             "year": 2024,
             "value": "11%",
@@ -801,6 +833,14 @@
             "source": "https://www.aaojournal.org/article/S0161-6420(26)00385-4/fulltext",
             "notes": "The study found a 23.7% 2025 prevalence across sampled ophthalmic publications, based on 25.7% of research articles and 21.6% of commentary articles showing likely AI authorship. It compared section- and sentence-level detector scores against pre- versus post-ChatGPT baselines and treated outliers above 2 standard deviations as likely AI-influenced. The chart value is the median of two publication-type slices, so it is a study-level summary rather than a direct all-item aggregate.",
             "publication_date": "2026-06-01"
+        },
+        {
+            "series": "LigoSocial / LinkedIn longer posts",
+            "year": 2025,
+            "value": "56.0%",
+            "source": "https://ligosocial.com/research/ai-linkedin-posts",
+            "notes": "LigoSocial found a 56.0% study-year median share of longer LinkedIn posts in its tracked author sample that read as AI in 2025. The report scored 106,964 posts of 300+ characters with a calibrated AI judge and we use the study-year median of the reported 2025 half-year values of 58% and 54%. The sample is not all of LinkedIn because it only covers authors who used an AI assistant at some point and the judge has a 20% pre-ChatGPT false-positive floor.",
+            "publication_date": "2026-09-25"
         },
         {
             "series": "LLM-assisted writing and citation advantage: evidence from scientific publications before and after ChatGPT release",
@@ -1051,6 +1091,14 @@
             "publication_date": "2025-07-13"
         },
         {
+            "series": "Yelp / contributed reviews",
+            "year": 2025,
+            "value": "2.3%",
+            "source": "https://www.yelp-press.com/press-releases/press-release-details/2026/Yelp-Releases-2025-Trust--Safety-Report/default.aspx",
+            "notes": "Yelp said about 2.3% of reviews contributed in 2025 were suspected AI-generated reviews filtered by its systems, based on nearly 500,000 out of about 22 million submissions. The estimate is a recoverable platform-level share from Yelp’s 2025 Trust & Safety Report, which describes automated detection of reviews exhibiting AI-generated characteristics. It is a removed-content measure rather than a direct estimate of all AI-written reviews that remained visible.",
+            "publication_date": "2026-02-25"
+        },
+        {
             "series": "AntiSlop / category-balanced web pages",
             "year": 2026,
             "value": "23%",
@@ -1121,6 +1169,14 @@
             "source": "https://www.kapwing.com/resources/the-tiktok-ai-slop-report/",
             "notes": "Kapwing found that 59.0% of the first 500 videos shown to a brand-new TikTok account were AI slop on the For You feed in May 2026. The study manually reviewed the first 500 feed videos and separately hand-coded 10,742 videos across 20 TikTok categories using visible AI-generated visual, script, and voiceover cues. The estimate is platform-specific and uses Kapwing’s manual slop definition rather than a validated platform-wide detector.",
             "publication_date": "2026-06-09"
+        },
+        {
+            "series": "LigoSocial / LinkedIn longer posts",
+            "year": 2026,
+            "value": "38.0%",
+            "source": "https://ligosocial.com/research/ai-linkedin-posts",
+            "notes": "LigoSocial found a 38.0% study-year median share of longer LinkedIn posts in its tracked author sample that read as AI in 2026. The report scored 106,964 posts of 300+ characters with a calibrated AI judge and we use the study-year median of the reported 2026 half-year values of 45% and 31%. The 2026 estimate is especially tentative because the second half-year value only reflects posts through September 2026 and the sample is not all of LinkedIn.",
+            "publication_date": "2026-09-25"
         },
         {
             "series": "Originality / LinkedIn AI Content Study",
