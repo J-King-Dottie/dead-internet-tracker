@@ -1,21 +1,21 @@
 {
   "stack-overflow": {
     "status": "current",
-    "latestObservedMonth": "2026-08",
-    "nextAttemptAt": "2026-10-02T10:15:00Z",
+    "latestObservedMonth": "2026-09",
+    "nextAttemptAt": "2026-11-02T10:15:00Z",
     "attemptKind": "scheduled",
     "consecutiveFailures": 0,
-    "lastAttemptAt": "2026-09-22T22:56:11Z",
-    "lastSuccessfulFetchAt": "2026-09-22T22:56:11Z"
+    "lastAttemptAt": "2026-10-02T16:16:22Z",
+    "lastSuccessfulFetchAt": "2026-10-02T16:16:22Z"
   },
   "traffic-bot-human": {
     "status": "current",
-    "latestObservedMonth": "2026-08",
-    "nextAttemptAt": "2026-10-02T10:15:00Z",
+    "latestObservedMonth": "2026-09",
+    "nextAttemptAt": "2026-11-02T10:15:00Z",
     "attemptKind": "scheduled",
     "consecutiveFailures": 0,
-    "lastAttemptAt": "2026-09-22T22:56:11Z",
-    "lastSuccessfulFetchAt": "2026-09-22T22:56:11Z"
+    "lastAttemptAt": "2026-10-02T16:16:22Z",
+    "lastSuccessfulFetchAt": "2026-10-02T16:16:22Z"
   },
   "wikipedia": {
     "status": "current",

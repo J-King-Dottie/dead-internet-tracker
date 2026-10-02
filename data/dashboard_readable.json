@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-09-28",
+  "generatedAt": "2026-10-02",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -1510,7 +1510,7 @@
       "description": "This estimates how much of total web traffic is AI bots. It matters because it gets closer to the machine share of web traversal than general bot traffic does.",
       "source": "Cloudflare Radar bot share and bot category time series",
       "sourceSnapshot": "data/cloudflare/cloudflare.json",
-      "lastRefreshed": "2026-09-22",
+      "lastRefreshed": "2026-10-02",
       "method": "We estimate AI bot share by combining Cloudflare's bot share of total traffic with its AI bot categories. The chart shows observed monthly values only.",
       "caveats": "Crawlers learn from the internet. Search bots use it. Cloudflare sees a large but incomplete slice of the web, with weaker coverage in places like China. This tracks AI bot traffic, not all AI activity. AI search only appears separately from June 2025, so the measure gets better over time.",
       "axisValueFormat": "percent1",
@@ -1539,7 +1539,8 @@
         "2026-05",
         "2026-06",
         "2026-07",
-        "2026-08"
+        "2026-08",
+        "2026-09"
       ],
       "series": [
         {
@@ -1641,6 +1642,10 @@
             {
               "period": "2026-08",
               "value": 11.39
+            },
+            {
+              "period": "2026-09",
+              "value": 10.77
             }
           ],
           "color": "#ff79c6"
@@ -1648,20 +1653,20 @@
       ],
       "latestValues": {
         "AI bots": {
-          "period": "2026-08",
-          "value": 11.39
+          "period": "2026-09",
+          "value": 10.77
         }
       },
       "intent": "The dead internet theory is not just about AI writing the web. It is also about AI systems increasingly reading, crawling, and traversing it.",
       "sourceLag": "This chart runs about one month behind because it uses completed monthly totals.",
       "refresh": {
         "status": "current",
-        "latestObservedMonth": "2026-08",
-        "nextAttemptAt": "2026-10-02T10:15:00Z",
+        "latestObservedMonth": "2026-09",
+        "nextAttemptAt": "2026-11-02T10:15:00Z",
         "attemptKind": "scheduled",
         "consecutiveFailures": 0,
-        "lastAttemptAt": "2026-09-22T22:56:11Z",
-        "lastSuccessfulFetchAt": "2026-09-22T22:56:11Z"
+        "lastAttemptAt": "2026-10-02T16:16:22Z",
+        "lastSuccessfulFetchAt": "2026-10-02T16:16:22Z"
       }
     },
     {
@@ -2537,7 +2542,7 @@
       "description": "This tracks monthly new questions on Stack Overflow. It matters because it shows whether people are still asking other people for help in public.",
       "source": "Stack Exchange API monthly question counts for Stack Overflow",
       "sourceSnapshot": "data/stackoverflow/stackoverflow.json",
-      "lastRefreshed": "2026-09-22",
+      "lastRefreshed": "2026-10-02",
       "method": "Monthly question counts are pulled from the official Stack Exchange API using each month's creation-date window. The chart shows observed monthly counts only.",
       "caveats": "This is a public web proxy, not a measure of all problem-solving. This monthly feed currently covers questions asked, not answered-question counts.",
       "axisValueFormat": "integer",
@@ -2622,7 +2627,8 @@
         "2026-05",
         "2026-06",
         "2026-07",
-        "2026-08"
+        "2026-08",
+        "2026-09"
       ],
       "series": [
         {
@@ -2631,223 +2637,223 @@
           "values": [
             {
               "period": "2020-01",
-              "value": 146591
+              "value": 146586
             },
             {
               "period": "2020-02",
-              "value": 145015
+              "value": 145013
             },
             {
               "period": "2020-03",
-              "value": 155873
+              "value": 155871
             },
             {
               "period": "2020-04",
-              "value": 182833
+              "value": 182823
             },
             {
               "period": "2020-05",
-              "value": 186391
+              "value": 186385
             },
             {
               "period": "2020-06",
-              "value": 171836
+              "value": 171828
             },
             {
               "period": "2020-07",
-              "value": 165986
+              "value": 165978
             },
             {
               "period": "2020-08",
-              "value": 148261
+              "value": 148258
             },
             {
               "period": "2020-09",
-              "value": 141733
+              "value": 141731
             },
             {
               "period": "2020-10",
-              "value": 141752
+              "value": 141749
             },
             {
               "period": "2020-11",
-              "value": 134900
+              "value": 134894
             },
             {
               "period": "2020-12",
-              "value": 133867
+              "value": 133863
             },
             {
               "period": "2021-01",
-              "value": 139827
+              "value": 139822
             },
             {
               "period": "2021-02",
-              "value": 131627
+              "value": 131624
             },
             {
               "period": "2021-03",
-              "value": 148706
+              "value": 148700
             },
             {
               "period": "2021-04",
-              "value": 135825
+              "value": 135819
             },
             {
               "period": "2021-05",
-              "value": 133745
+              "value": 133738
             },
             {
               "period": "2021-06",
-              "value": 128926
+              "value": 128923
             },
             {
               "period": "2021-07",
-              "value": 123935
+              "value": 123927
             },
             {
               "period": "2021-08",
-              "value": 122044
+              "value": 122032
             },
             {
               "period": "2021-09",
-              "value": 119734
+              "value": 119733
             },
             {
               "period": "2021-10",
-              "value": 118814
+              "value": 118807
             },
             {
               "period": "2021-11",
-              "value": 119021
+              "value": 119019
             },
             {
               "period": "2021-12",
-              "value": 112078
+              "value": 112073
             },
             {
               "period": "2022-01",
-              "value": 119214
+              "value": 119204
             },
             {
               "period": "2022-02",
-              "value": 113746
+              "value": 113736
             },
             {
               "period": "2022-03",
-              "value": 123276
+              "value": 123272
             },
             {
               "period": "2022-04",
-              "value": 114000
+              "value": 113960
             },
             {
               "period": "2022-05",
-              "value": 115938
+              "value": 115917
             },
             {
               "period": "2022-06",
-              "value": 111220
+              "value": 111178
             },
             {
               "period": "2022-07",
-              "value": 110626
+              "value": 110583
             },
             {
               "period": "2022-08",
-              "value": 112634
+              "value": 112530
             },
             {
               "period": "2022-09",
-              "value": 103508
+              "value": 103418
             },
             {
               "period": "2022-10",
-              "value": 105798
+              "value": 105746
             },
             {
               "period": "2022-11",
-              "value": 109150
+              "value": 109122
             },
             {
               "period": "2022-12",
-              "value": 96194
+              "value": 96169
             },
             {
               "period": "2023-01",
-              "value": 96638
+              "value": 96628
             },
             {
               "period": "2023-02",
-              "value": 85580
+              "value": 85573
             },
             {
               "period": "2023-03",
-              "value": 87146
+              "value": 87129
             },
             {
               "period": "2023-04",
-              "value": 68388
+              "value": 68357
             },
             {
               "period": "2023-05",
-              "value": 66343
+              "value": 66341
             },
             {
               "period": "2023-06",
-              "value": 63527
+              "value": 63497
             },
             {
               "period": "2023-07",
-              "value": 62598
+              "value": 62563
             },
             {
               "period": "2023-08",
-              "value": 59953
+              "value": 59945
             },
             {
               "period": "2023-09",
-              "value": 52687
+              "value": 52685
             },
             {
               "period": "2023-10",
-              "value": 52341
+              "value": 52339
             },
             {
               "period": "2023-11",
-              "value": 50285
+              "value": 50280
             },
             {
               "period": "2023-12",
-              "value": 42289
+              "value": 42287
             },
             {
               "period": "2024-01",
-              "value": 47577
+              "value": 47576
             },
             {
               "period": "2024-02",
-              "value": 45936
+              "value": 45926
             },
             {
               "period": "2024-03",
-              "value": 44720
+              "value": 44714
             },
             {
               "period": "2024-04",
-              "value": 42369
+              "value": 42364
             },
             {
               "period": "2024-05",
-              "value": 40026
+              "value": 40024
             },
             {
               "period": "2024-06",
-              "value": 31938
+              "value": 31935
             },
             {
               "period": "2024-07",
-              "value": 31441
+              "value": 31439
             },
             {
               "period": "2024-08",
@@ -2855,19 +2861,19 @@
             },
             {
               "period": "2024-09",
-              "value": 24738
+              "value": 24735
             },
             {
               "period": "2024-10",
-              "value": 23167
+              "value": 23163
             },
             {
               "period": "2024-11",
-              "value": 20812
+              "value": 20810
             },
             {
               "period": "2024-12",
-              "value": 17924
+              "value": 17919
             },
             {
               "period": "2025-01",
@@ -2875,7 +2881,7 @@
             },
             {
               "period": "2025-02",
-              "value": 15505
+              "value": 15502
             },
             {
               "period": "2025-03",
@@ -2883,15 +2889,15 @@
             },
             {
               "period": "2025-04",
-              "value": 11393
+              "value": 11389
             },
             {
               "period": "2025-05",
-              "value": 9648
+              "value": 9646
             },
             {
               "period": "2025-06",
-              "value": 7752
+              "value": 7749
             },
             {
               "period": "2025-07",
@@ -2899,55 +2905,59 @@
             },
             {
               "period": "2025-08",
-              "value": 5022
+              "value": 5021
             },
             {
               "period": "2025-09",
-              "value": 5668
+              "value": 5204
             },
             {
               "period": "2025-10",
-              "value": 5331
+              "value": 5329
             },
             {
               "period": "2025-11",
-              "value": 5365
+              "value": 5357
             },
             {
               "period": "2025-12",
-              "value": 4195
+              "value": 4190
             },
             {
               "period": "2026-01",
-              "value": 3675
+              "value": 3659
             },
             {
               "period": "2026-02",
-              "value": 3125
+              "value": 3108
             },
             {
               "period": "2026-03",
-              "value": 3174
+              "value": 3124
             },
             {
               "period": "2026-04",
-              "value": 2543
+              "value": 2389
             },
             {
               "period": "2026-05",
-              "value": 2059
+              "value": 1997
             },
             {
               "period": "2026-06",
-              "value": 1729
+              "value": 1713
             },
             {
               "period": "2026-07",
-              "value": 1185
+              "value": 1180
             },
             {
               "period": "2026-08",
-              "value": 1125
+              "value": 1047
+            },
+            {
+              "period": "2026-09",
+              "value": 1113
             }
           ],
           "color": "#7af59d"
@@ -2955,20 +2965,20 @@
       ],
       "latestValues": {
         "Total new questions asked": {
-          "period": "2026-08",
-          "value": 1125
+          "period": "2026-09",
+          "value": 1113
         }
       },
       "intent": "Stack Overflow is a sharper example of public human exchange falling away. It shows what happens when people stop asking other people for help in public and shift to AI instead.",
       "sourceLag": "This chart runs about one month behind because it uses completed monthly totals.",
       "refresh": {
         "status": "current",
-        "latestObservedMonth": "2026-08",
-        "nextAttemptAt": "2026-10-02T10:15:00Z",
+        "latestObservedMonth": "2026-09",
+        "nextAttemptAt": "2026-11-02T10:15:00Z",
         "attemptKind": "scheduled",
         "consecutiveFailures": 0,
-        "lastAttemptAt": "2026-09-22T22:56:11Z",
-        "lastSuccessfulFetchAt": "2026-09-22T22:56:11Z"
+        "lastAttemptAt": "2026-10-02T16:16:22Z",
+        "lastSuccessfulFetchAt": "2026-10-02T16:16:22Z"
       }
     }
   ]
