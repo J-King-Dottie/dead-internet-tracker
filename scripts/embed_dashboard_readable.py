@@ -277,13 +277,16 @@ def insert_body_block(html_text: str, block: str) -> str:
 
 
 def insert_head_block(html_text: str, data: dict[str, Any]) -> str:
+    # HTML parses script end tags before JavaScript strings. Escape '<' so
+    # source text cannot close the element or start an HTML comment inside it.
+    serialized_data = json.dumps(data, ensure_ascii=False).replace("<", "\\u003c")
     block = (
         "\n"
         + HEAD_START
         + "\n"
         + "  <script>\n"
         + "    window.__DASHBOARD_READABLE_DATA__ = "
-        + json.dumps(data, ensure_ascii=False)
+        + serialized_data
         + ";\n"
         + "  </script>\n"
         + HEAD_END
