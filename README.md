@@ -29,5 +29,3 @@ python3 -m http.server 8000
 ```
 
 Open http://localhost:8000. To update a metric, run its `scripts/refresh_*.py` script, then rebuild the readable snapshot with `python3 scripts/build_dashboard_readable.py` and `python3 scripts/embed_dashboard_readable.py`.
-
-Temporary dot connectivity test — 3 October 2026.
