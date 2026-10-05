@@ -639,3 +639,28 @@ For the actual sweep standard and what context to store per estimate, use:
   - LigoSocial / LinkedIn longer posts (2024)
   - LigoSocial / LinkedIn longer posts (2025)
   - LigoSocial / LinkedIn longer posts (2026)
+
+
+## 2026-10-05 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 11
+- lanes searched:
+  - academic/preprint repositories
+  - medical literature indexes
+  - industry detector blogs and research pages
+  - platform newsroom and transparency pages
+  - institutional and policy reports
+  - media and analyst discovery for secondary-source leads
+- added:
+  - Originality / Dead Internet Tracker (2026)
+  - Originality / Social Media AI Tracker / LinkedIn (2026)
+  - Originality / Canadian Parliament Hansard (2020)
+  - Originality / Canadian Parliament Hansard (2021)
+  - Originality / Canadian Parliament Hansard (2022)
+  - Originality / Canadian Parliament Hansard (2023)
+  - Originality / Canadian Parliament Hansard (2024)
+  - Originality / Canadian Parliament Hansard (2025)
+  - Originality / Canadian Parliament Hansard (2026)
+  - Miller et al. / biomedical publishing (2020)
+  - Miller et al. / biomedical publishing (2023)

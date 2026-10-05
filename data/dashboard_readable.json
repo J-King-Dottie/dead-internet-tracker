@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-10-02",
+  "generatedAt": "2026-10-05",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-09-28",
+      "lastRefreshed": "2026-10-05",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -35,6 +35,24 @@
               "source": "https://docs.google.com/spreadsheets/d/1WamFyVahPDtAPFtvly30BG2QjyA-L1KYkO2UEYGKKcg/edit?gid=0",
               "notes": "Graphite estimated that 2.48% of newly published English web articles in 2020 were AI-generated. It filtered Common Crawl pages by article markup, English language, and publish date, then classified them with Surfer's AI detector using a greater-than-50% threshold. This is one of the closest direct measures in the table, but it only covers newly published English articles and depends on detector performance.",
               "publicationDate": "2024-05-07"
+            },
+            {
+              "year": 2020,
+              "value": 21.7,
+              "rawValue": "21.7%",
+              "series": "Miller et al. / biomedical publishing",
+              "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10277011/",
+              "notes": "21.7% of sampled MEDLINE randomized-trial abstracts in the first half of 2020 had a >=90% predicted probability of AI-generated text. The study randomly sampled 30 abstracts per quarter from January 2020 to March 2023 and scored them with Originality.AI after validating the detector on control sets. It only covers biomedical RCT abstracts and relies on a detector threshold rather than direct attribution.",
+              "publicationDate": "2023-05-19"
+            },
+            {
+              "year": 2020,
+              "value": 0.3,
+              "rawValue": "0.3%",
+              "series": "Originality / Canadian Parliament Hansard",
+              "source": "https://originality.ai/blog/likely-ai-parliament-mp-comments",
+              "notes": "0.3% of qualifying English House of Commons turns in 2020 were flagged as likely AI-written. Originality.ai scanned the Hansard record, excluded French turns and sub-100-word turns, and marked texts above a 50% AI-likelihood threshold as Likely AI. This is a detector-based estimate for parliamentary speech records rather than the broader social web.",
+              "publicationDate": "2026-10-05"
             },
             {
               "year": 2020,
@@ -89,6 +107,15 @@
               "source": "https://docs.google.com/spreadsheets/d/1WamFyVahPDtAPFtvly30BG2QjyA-L1KYkO2UEYGKKcg/edit?gid=0",
               "notes": "Graphite estimated that 3.06% of newly published English web articles in 2021 were AI-generated. It filtered Common Crawl pages by article markup, English language, and publish date, then classified them with Surfer's AI detector using a greater-than-50% threshold. This is one of the closest direct measures in the table, but it only covers newly published English articles and depends on detector performance.",
               "publicationDate": "2024-05-07"
+            },
+            {
+              "year": 2021,
+              "value": 0.5,
+              "rawValue": "0.5%",
+              "series": "Originality / Canadian Parliament Hansard",
+              "source": "https://originality.ai/blog/likely-ai-parliament-mp-comments",
+              "notes": "0.5% of qualifying English House of Commons turns in 2021 were flagged as likely AI-written. Originality.ai scanned the Hansard record, excluded French turns and sub-100-word turns, and marked texts above a 50% AI-likelihood threshold as Likely AI. This is a detector-based estimate for parliamentary speech records rather than the broader social web.",
+              "publicationDate": "2026-10-05"
             },
             {
               "year": 2021,
@@ -170,6 +197,15 @@
               "source": "https://arxiv.org/abs/2603.19316",
               "notes": "The January 2022 baseline put significant AI-generated text at 0.0% of JAMA Network Open articles. The study uses Originality.AI on a monthly series covering original investigations, research letters, and invited commentaries from January 2022 through March 2025. This is a narrow but still direct content-share estimate for one medical publishing venue.",
               "publicationDate": "2026-03-15"
+            },
+            {
+              "year": 2022,
+              "value": 0.4,
+              "rawValue": "0.4%",
+              "series": "Originality / Canadian Parliament Hansard",
+              "source": "https://originality.ai/blog/likely-ai-parliament-mp-comments",
+              "notes": "0.4% of qualifying English House of Commons turns in 2022 were flagged as likely AI-written. Originality.ai scanned the Hansard record, excluded French turns and sub-100-word turns, and marked texts above a 50% AI-likelihood threshold as Likely AI. This is a detector-based estimate for parliamentary speech records rather than the broader social web.",
+              "publicationDate": "2026-10-05"
             },
             {
               "year": 2022,
@@ -308,12 +344,30 @@
             },
             {
               "year": 2023,
+              "value": 36.7,
+              "rawValue": "36.7%",
+              "series": "Miller et al. / biomedical publishing",
+              "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10277011/",
+              "notes": "36.7% of sampled MEDLINE randomized-trial abstracts in the first quarter of 2023 had a >=90% predicted probability of AI-generated text. The study randomly sampled 30 abstracts per quarter from January 2020 to March 2023 and scored them with Originality.AI after validating the detector on control sets. It only covers biomedical RCT abstracts and relies on a detector threshold rather than direct attribution.",
+              "publicationDate": "2023-05-19"
+            },
+            {
+              "year": 2023,
               "value": 19.0,
               "rawValue": "19.0%",
               "series": "Most biomedical publications show signs of LLM-assisted writing",
               "source": "https://phys.org/news/2026-08-marker-words-sharp-ai-biomedical.html",
               "notes": "Phys.org reports that 19.0% of open-access biomedical papers in PubMed Central showed signs of LLM-assisted writing or editing in 2023. The estimate is based on shifts in 379 LLM-associated marker words across a large corpus of full-text papers. It is an indirect corpus-level signal reported by a secondary source rather than direct proof of author workflow.",
               "publicationDate": "2026-08-24"
+            },
+            {
+              "year": 2023,
+              "value": 0.8,
+              "rawValue": "0.8%",
+              "series": "Originality / Canadian Parliament Hansard",
+              "source": "https://originality.ai/blog/likely-ai-parliament-mp-comments",
+              "notes": "0.8% of qualifying English House of Commons turns in 2023 were flagged as likely AI-written. Originality.ai scanned the Hansard record, excluded French turns and sub-100-word turns, and marked texts above a 50% AI-likelihood threshold as Likely AI. This is a detector-based estimate for parliamentary speech records rather than the broader social web.",
+              "publicationDate": "2026-10-05"
             },
             {
               "year": 2023,
@@ -593,6 +647,15 @@
               "source": "https://phys.org/news/2026-08-marker-words-sharp-ai-biomedical.html",
               "notes": "Phys.org reports that 52.0% of open-access biomedical papers in PubMed Central showed signs of LLM-assisted writing or editing in 2024. The estimate is based on shifts in 379 LLM-associated marker words across a large corpus of full-text papers. It is an indirect corpus-level signal reported by a secondary source rather than direct proof of author workflow.",
               "publicationDate": "2026-08-24"
+            },
+            {
+              "year": 2024,
+              "value": 1.8,
+              "rawValue": "1.8%",
+              "series": "Originality / Canadian Parliament Hansard",
+              "source": "https://originality.ai/blog/likely-ai-parliament-mp-comments",
+              "notes": "1.8% of qualifying English House of Commons turns in 2024 were flagged as likely AI-written. Originality.ai scanned the Hansard record, excluded French turns and sub-100-word turns, and marked texts above a 50% AI-likelihood threshold as Likely AI. This is a detector-based estimate for parliamentary speech records rather than the broader social web.",
+              "publicationDate": "2026-10-05"
             },
             {
               "year": 2024,
@@ -1028,6 +1091,15 @@
             },
             {
               "year": 2025,
+              "value": 7.4,
+              "rawValue": "7.4%",
+              "series": "Originality / Canadian Parliament Hansard",
+              "source": "https://originality.ai/blog/likely-ai-parliament-mp-comments",
+              "notes": "7.4% of qualifying English House of Commons turns in 2025 were flagged as likely AI-written. Originality.ai scanned the Hansard record, excluded French turns and sub-100-word turns, and marked texts above a 50% AI-likelihood threshold as Likely AI. This is a detector-based estimate for parliamentary speech records rather than the broader social web.",
+              "publicationDate": "2026-10-05"
+            },
+            {
+              "year": 2025,
               "value": 45.83,
               "rawValue": "45.83%",
               "series": "Originality / climate change paper abstracts",
@@ -1352,6 +1424,24 @@
             },
             {
               "year": 2026,
+              "value": 8.6,
+              "rawValue": "8.6%",
+              "series": "Originality / Canadian Parliament Hansard",
+              "source": "https://originality.ai/blog/likely-ai-parliament-mp-comments",
+              "notes": "8.6% of qualifying English House of Commons turns in 2026 through June were flagged as likely AI-written. Originality.ai scanned the Hansard record, excluded French turns and sub-100-word turns, and marked texts above a 50% AI-likelihood threshold as Likely AI. This is a detector-based estimate for parliamentary speech records rather than the broader social web.",
+              "publicationDate": "2026-10-05"
+            },
+            {
+              "year": 2026,
+              "value": 45.6,
+              "rawValue": "45.6%",
+              "series": "Originality / Dead Internet Tracker",
+              "source": "https://originality.ai/blog/dead-internet-tracker-august",
+              "notes": "45.6% of sampled English-language CC-NEWS articles published in August 2026 were likely at least 15% AI-generated. Originality.ai scored 2,000 randomly sampled Common Crawl articles and counted texts above a 50% confidence threshold at its 15% AI-allowance setting. This is a detector-based estimate for English editorial pages only, not all web pages or other modalities.",
+              "publicationDate": "2026-10-01"
+            },
+            {
+              "year": 2026,
               "value": 81.2,
               "rawValue": "81.2%",
               "series": "Originality / LinkedIn AI Content Study",
@@ -1376,6 +1466,15 @@
               "source": "https://originality.ai/blog/likely-ai-medical-diet-recipes-on-pinterest",
               "notes": "Originality.AI estimated that 32.4% of Pinterest medical-diet recipe URLs in its April 2026 sample were likely AI-generated. It collected 1,109 recipe URLs across five medically sensitive diet-search lanes and scored them with its detector. This is a narrow but important platform estimate for health-related recipe content, not for Pinterest overall.",
               "publicationDate": "2026-04-19"
+            },
+            {
+              "year": 2026,
+              "value": 75.6,
+              "rawValue": "75.6%",
+              "series": "Originality / Social Media AI Tracker / LinkedIn",
+              "source": "https://originality.ai/blog/social-media-tracker-august",
+              "notes": "75.6% of sampled long-form English-language LinkedIn posts in August 2026 were likely at least 15% AI-generated. Originality.ai analyzed 119 randomly selected posts and flagged texts as Likely AI at its 15% AI-allowance setting. This is a detector-based sample of visible long-form English posts, not all LinkedIn content.",
+              "publicationDate": "2026-10-01"
             },
             {
               "year": 2026,
@@ -1456,38 +1555,38 @@
           "values": [
             {
               "year": 2020,
-              "value": 2.6633,
-              "estimateCount": 6
+              "value": 4.7475,
+              "estimateCount": 8
             },
             {
               "year": 2021,
-              "value": 5.124,
-              "estimateCount": 5
+              "value": 4.3533,
+              "estimateCount": 6
             },
             {
               "year": 2022,
-              "value": 4.6869,
-              "estimateCount": 13
+              "value": 4.3807,
+              "estimateCount": 14
             },
             {
               "year": 2023,
-              "value": 13.3975,
-              "estimateCount": 23
+              "value": 13.8257,
+              "estimateCount": 25
             },
             {
               "year": 2024,
-              "value": 19.1067,
-              "estimateCount": 45
+              "value": 18.7304,
+              "estimateCount": 46
             },
             {
               "year": 2025,
-              "value": 29.5249,
-              "estimateCount": 45
+              "value": 29.0439,
+              "estimateCount": 46
             },
             {
               "year": 2026,
-              "value": 31.1748,
-              "estimateCount": 21
+              "value": 32.6863,
+              "estimateCount": 24
             }
           ]
         }
@@ -1497,11 +1596,11 @@
       "refresh": {
         "status": "current",
         "latestObservedMonth": null,
-        "nextAttemptAt": "2026-10-05T09:30:00Z",
+        "nextAttemptAt": "2026-10-12T09:30:00Z",
         "attemptKind": "scheduled",
         "consecutiveFailures": 0,
-        "lastAttemptAt": "2026-09-28T17:45:27Z",
-        "lastSuccessfulFetchAt": "2026-09-28T17:45:27Z"
+        "lastAttemptAt": "2026-10-05T18:42:55Z",
+        "lastSuccessfulFetchAt": "2026-10-05T18:42:55Z"
       }
     },
     {

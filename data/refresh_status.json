@@ -29,10 +29,10 @@
   "ai-content-meta-review": {
     "status": "current",
     "latestObservedMonth": null,
-    "nextAttemptAt": "2026-10-05T09:30:00Z",
+    "nextAttemptAt": "2026-10-12T09:30:00Z",
     "attemptKind": "scheduled",
     "consecutiveFailures": 0,
-    "lastAttemptAt": "2026-09-28T17:45:27Z",
-    "lastSuccessfulFetchAt": "2026-09-28T17:45:27Z"
+    "lastAttemptAt": "2026-10-05T18:42:55Z",
+    "lastSuccessfulFetchAt": "2026-10-05T18:42:55Z"
   }
 }
