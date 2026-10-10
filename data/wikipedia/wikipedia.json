@@ -3,7 +3,7 @@
   "title": "Wikipedia activity",
   "description": "This tracks monthly human editors on English Wikipedia content pages. It matters because it shows whether people are still doing sustained public knowledge work.",
   "source": "Wikimedia editor analytics for en.wikipedia.org content pages",
-  "lastRefreshed": "2026-09-22",
+  "lastRefreshed": "2026-10-10",
   "method": "Active editors are users making 5 or more edits in a month. The chart shows observed monthly counts only.",
   "caveats": "This is English Wikipedia only, not all Wikipedias. It measures editor participation, not article quality or total knowledge output.",
   "xValues": [
@@ -86,7 +86,8 @@
     "2026-05",
     "2026-06",
     "2026-07",
-    "2026-08"
+    "2026-08",
+    "2026-09"
   ],
   "axisValueFormat": "integer",
   "tooltipValueFormat": "integer",
@@ -173,8 +174,9 @@
         92672,
         94218,
         89533,
-        89658,
-        89870
+        89626,
+        89826,
+        90585
       ]
     },
     {
@@ -259,10 +261,11 @@
         31166,
         31684,
         29808,
-        29514,
-        29239
+        29493,
+        29204,
+        28773
       ]
     }
   ],
-  "latestObservedMonth": "2026-08"
+  "latestObservedMonth": "2026-09"
 }

@@ -19,12 +19,12 @@
   },
   "wikipedia": {
     "status": "current",
-    "latestObservedMonth": "2026-08",
-    "nextAttemptAt": "2026-10-10T10:15:00Z",
+    "latestObservedMonth": "2026-09",
+    "nextAttemptAt": "2026-11-10T10:15:00Z",
     "attemptKind": "scheduled",
     "consecutiveFailures": 0,
-    "lastAttemptAt": "2026-09-22T23:03:50Z",
-    "lastSuccessfulFetchAt": "2026-09-22T23:03:50Z"
+    "lastAttemptAt": "2026-10-10T15:52:31Z",
+    "lastSuccessfulFetchAt": "2026-10-10T15:52:31Z"
   },
   "ai-content-meta-review": {
     "status": "current",
