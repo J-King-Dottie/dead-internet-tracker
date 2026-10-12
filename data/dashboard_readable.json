@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-10-10",
+  "generatedAt": "2026-10-12",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-10-05",
+      "lastRefreshed": "2026-10-12",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -1109,6 +1109,15 @@
             },
             {
               "year": 2025,
+              "value": 8.4,
+              "rawValue": "8.4%",
+              "series": "Originality / Congressional Record floor turns",
+              "source": "https://originality.ai/blog/likely-ai-language-congressional-record",
+              "notes": "Originality.ai found 8.4% of eligible English House and Senate floor turns in the 2025 Congressional Record were Likely AI. It scored all 13,338 turns over 100 words with its detector at 15% AI Allowance and counted scores of 50% or higher as Likely AI. This is a detector-based estimate for floor turns only, not all congressional text or all government content.",
+              "publicationDate": "2026-10-08"
+            },
+            {
+              "year": 2025,
               "value": 30.41,
               "rawValue": "30.41%",
               "series": "Originality / HEA public comments",
@@ -1424,12 +1433,30 @@
             },
             {
               "year": 2026,
+              "value": 100.0,
+              "rawValue": "100.0%",
+              "series": "Originality / Brown Brothers Media articles",
+              "source": "https://originality.ai/blog/publisher-embraces-ai-case-study",
+              "notes": "Originality.ai found 100.0% of 328 tested September 2026 articles across 18 Brown Brothers Media sites were Likely AI. It recovered article records from BBM properties and ran a September article sample through its detector using 15% AI Allowance settings. This is a very narrow publisher-specific sample from an AI-detection vendor that commissioned and ran the study.",
+              "publicationDate": "2026-10-07"
+            },
+            {
+              "year": 2026,
               "value": 8.6,
               "rawValue": "8.6%",
               "series": "Originality / Canadian Parliament Hansard",
               "source": "https://originality.ai/blog/likely-ai-parliament-mp-comments",
               "notes": "8.6% of qualifying English House of Commons turns in 2026 through June were flagged as likely AI-written. Originality.ai scanned the Hansard record, excluded French turns and sub-100-word turns, and marked texts above a 50% AI-likelihood threshold as Likely AI. This is a detector-based estimate for parliamentary speech records rather than the broader social web.",
               "publicationDate": "2026-10-05"
+            },
+            {
+              "year": 2026,
+              "value": 12.2,
+              "rawValue": "12.2%",
+              "series": "Originality / Congressional Record floor turns",
+              "source": "https://originality.ai/blog/likely-ai-language-congressional-record",
+              "notes": "Originality.ai found 12.2% of eligible English House and Senate floor turns in the 2026 year-to-date Congressional Record were Likely AI. It scored all 8,050 turns over 100 words through August 17, 2026 with its detector at 15% AI Allowance and counted scores of 50% or higher as Likely AI. This is a detector-based partial-year estimate for floor turns only, not a full-year or all-content congressional measure.",
+              "publicationDate": "2026-10-08"
             },
             {
               "year": 2026,
@@ -1580,13 +1607,13 @@
             },
             {
               "year": 2025,
-              "value": 29.0439,
-              "estimateCount": 46
+              "value": 28.6047,
+              "estimateCount": 47
             },
             {
               "year": 2026,
-              "value": 32.6863,
-              "estimateCount": 24
+              "value": 34.4873,
+              "estimateCount": 26
             }
           ]
         }
@@ -1596,11 +1623,11 @@
       "refresh": {
         "status": "current",
         "latestObservedMonth": null,
-        "nextAttemptAt": "2026-10-12T09:30:00Z",
+        "nextAttemptAt": "2026-10-19T09:30:00Z",
         "attemptKind": "scheduled",
         "consecutiveFailures": 0,
-        "lastAttemptAt": "2026-10-05T18:42:55Z",
-        "lastSuccessfulFetchAt": "2026-10-05T18:42:55Z"
+        "lastAttemptAt": "2026-10-12T19:12:35Z",
+        "lastSuccessfulFetchAt": "2026-10-12T19:12:35Z"
       }
     },
     {

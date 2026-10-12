@@ -664,3 +664,23 @@ For the actual sweep standard and what context to store per estimate, use:
   - Originality / Canadian Parliament Hansard (2026)
   - Miller et al. / biomedical publishing (2020)
   - Miller et al. / biomedical publishing (2023)
+
+
+## 2026-10-12 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint
+  - industry/platform
+  - institutional/report
+  - media/analyst discovery
+  - social-platform-specific
+  - web/article prevalence
+  - reviews and product content
+  - music/audio uploads
+  - government and parliamentary text
+- added:
+  - Originality / Congressional Record floor turns (2025)
+  - Originality / Congressional Record floor turns (2026)
+  - Originality / Brown Brothers Media articles (2026)
