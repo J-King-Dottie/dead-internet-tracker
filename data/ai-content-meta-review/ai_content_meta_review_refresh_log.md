@@ -684,3 +684,18 @@ For the actual sweep standard and what context to store per estimate, use:
   - Originality / Congressional Record floor turns (2025)
   - Originality / Congressional Record floor turns (2026)
   - Originality / Brown Brothers Media articles (2026)
+
+
+## 2026-10-19 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint (arXiv, ACL Anthology, PubMed, SSRN)
+  - industry/platform newsroom and transparency reports
+  - analyst/blog prevalence trackers (Originality, Pangram, Graphite, Ahrefs, First Page Sage)
+  - media summaries for discoverability and secondary-source leads
+  - platform-specific social media prevalence searches across Facebook, Threads, X, Reddit, TikTok, Instagram
+  - reviews, news, music, code, and web-page prevalence lanes
+- added:
+  - none

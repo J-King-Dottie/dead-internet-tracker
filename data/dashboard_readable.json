@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-10-12",
+  "generatedAt": "2026-10-19",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -1623,11 +1623,11 @@
       "refresh": {
         "status": "current",
         "latestObservedMonth": null,
-        "nextAttemptAt": "2026-10-19T09:30:00Z",
+        "nextAttemptAt": "2026-10-26T09:30:00Z",
         "attemptKind": "scheduled",
         "consecutiveFailures": 0,
-        "lastAttemptAt": "2026-10-12T19:12:35Z",
-        "lastSuccessfulFetchAt": "2026-10-12T19:12:35Z"
+        "lastAttemptAt": "2026-10-19T16:34:07Z",
+        "lastSuccessfulFetchAt": "2026-10-19T16:34:07Z"
       }
     },
     {
