@@ -1,6 +1,6 @@
 window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-10-12",
+    "lastRefreshed": "2026-10-26",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -499,6 +499,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "publication_date": "2024-05-07"
         },
         {
+            "series": "How Much Is an AI Token Worth? Scaling Laws for Wild AI-Generated Web Text",
+            "year": 2024,
+            "value": "10.1%",
+            "source": "https://arxiv.org/abs/2609.40295",
+            "notes": "The paper estimates that 10.1% of FineWeb-filtered web tokens in June 2024 were AI-generated. It sampled 5,000 Common Crawl documents per month and labeled token share with Pangram after FineWeb filtering. The estimate is token-based and detector-based, so it is not directly comparable to page-level web shares.",
+            "publication_date": "2026-09-30"
+        },
+        {
             "series": "ICLR peer reviews",
             "year": 2024,
             "value": "15.8%",
@@ -849,6 +857,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "Most biomedical publications show signs of LLM-assisted writing",
             "notes": "The paper estimates that 89% of open-access biomedical papers in PubMed Central showed signs of LLM-assisted writing by the end of 2025. It uses a validated excess-vocabulary method on full texts to infer LLM usage without relying on a commercial detector. This is a biomedical full-text corpus rather than all scholarly publishing, and the estimate captures signs of assistance rather than fully AI-written papers.",
             "publication_date": "2026-08-11"
+        },
+        {
+            "series": "How Much Is an AI Token Worth? Scaling Laws for Wild AI-Generated Web Text",
+            "year": 2025,
+            "value": "16.1%",
+            "source": "https://arxiv.org/abs/2609.40295",
+            "notes": "The paper estimates that 16.1% of FineWeb-filtered web tokens in June 2025 were AI-generated. It sampled 5,000 Common Crawl documents per month and labeled token share with Pangram after FineWeb filtering. The estimate is token-based and detector-based, so it should be read as a web-text share rather than a webpage share.",
+            "publication_date": "2026-09-30"
         },
         {
             "series": "Internet Archive / newly published websites",
@@ -1235,6 +1251,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "publication_date": "2026-04-16"
         },
         {
+            "series": "How Much Is an AI Token Worth? Scaling Laws for Wild AI-Generated Web Text",
+            "year": 2026,
+            "value": "27.5%",
+            "source": "https://arxiv.org/abs/2609.40295",
+            "notes": "The paper estimates that 27.5% of FineWeb-filtered web tokens in June 2026 were AI-generated. It sampled 5,000 Common Crawl documents per month and labeled token share with Pangram after FineWeb filtering, with the paper also noting a rise to 31.1% by August 2026. The estimate is token-based and detector-based, and FineWeb filtering may favor some AI-heavy formats.",
+            "publication_date": "2026-09-30"
+        },
+        {
             "series": "Kapwing / TikTok new-user feed (2026)",
             "year": 2026,
             "value": "59.0%",
@@ -1361,6 +1385,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://www.themoonlight.io/es/review/agentic-very-much-adoption-of-coding-agent-in-new-github-projects",
             "notes": "A detailed secondary summary of Robbes and coauthors’ June 2026 preprint reports that 71.83% of sampled new GitHub projects showed detectable coding-agent adoption. The summary describes a conservative repository-level estimate built from GitHub API sampling plus file-, pull-request-, and commit-based heuristics on projects created after late August 2025. This row currently relies on a secondary route because the public arXiv abstract confirms the study but does not expose the exact percentage in the accessible abstract text.",
             "publication_date": "2026-06-05"
+        },
+        {
+            "series": "Social Media AI Tracker Report: July 2026",
+            "year": 2026,
+            "value": "62.8%",
+            "source": "https://originality.ai/blog/social-media-tracker-july",
+            "notes": "Originality.ai reports that 62.8% of sampled long-form English X posts from January to July 2026 were likely at least 15% AI-generated. It analyzed 1,143 posts of 100 words or more with its detector and thresholded posts as Likely AI when confidence exceeded 50%. The sample is limited to long-form English text and relies on a proprietary detector and threshold choice.",
+            "publication_date": "2026-10-01"
         },
         {
             "series": "Totally Human Media / Steam game library with GenAI disclosures",

@@ -699,3 +699,25 @@ For the actual sweep standard and what context to store per estimate, use:
   - reviews, news, music, code, and web-page prevalence lanes
 - added:
   - none
+
+
+## 2026-10-26 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 9
+- lanes searched:
+  - academic/preprint
+  - industry/platform
+  - institutional/report
+  - media/analyst discovery
+  - social-platform prevalence
+  - reviews/marketplaces
+  - news and publishing
+  - music/audio
+  - video/image
+  - code/software
+- added:
+  - How Much Is an AI Token Worth? Scaling Laws for Wild AI-Generated Web Text (2024)
+  - How Much Is an AI Token Worth? Scaling Laws for Wild AI-Generated Web Text (2025)
+  - How Much Is an AI Token Worth? Scaling Laws for Wild AI-Generated Web Text (2026)
+  - Social Media AI Tracker Report: July 2026 (2026)

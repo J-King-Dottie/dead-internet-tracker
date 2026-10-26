@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-10-19",
+  "generatedAt": "2026-10-26",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-10-12",
+      "lastRefreshed": "2026-10-26",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -587,6 +587,15 @@
             },
             {
               "year": 2024,
+              "value": 10.1,
+              "rawValue": "10.1%",
+              "series": "How Much Is an AI Token Worth? Scaling Laws for Wild AI-Generated Web Text",
+              "source": "https://arxiv.org/abs/2609.40295",
+              "notes": "The paper estimates that 10.1% of FineWeb-filtered web tokens in June 2024 were AI-generated. It sampled 5,000 Common Crawl documents per month and labeled token share with Pangram after FineWeb filtering. The estimate is token-based and detector-based, so it is not directly comparable to page-level web shares.",
+              "publicationDate": "2026-09-30"
+            },
+            {
+              "year": 2024,
               "value": 15.8,
               "rawValue": "15.8%",
               "series": "ICLR peer reviews",
@@ -980,6 +989,15 @@
               "source": "Most biomedical publications show signs of LLM-assisted writing",
               "notes": "The paper estimates that 89% of open-access biomedical papers in PubMed Central showed signs of LLM-assisted writing by the end of 2025. It uses a validated excess-vocabulary method on full texts to infer LLM usage without relying on a commercial detector. This is a biomedical full-text corpus rather than all scholarly publishing, and the estimate captures signs of assistance rather than fully AI-written papers.",
               "publicationDate": "2026-08-11"
+            },
+            {
+              "year": 2025,
+              "value": 16.1,
+              "rawValue": "16.1%",
+              "series": "How Much Is an AI Token Worth? Scaling Laws for Wild AI-Generated Web Text",
+              "source": "https://arxiv.org/abs/2609.40295",
+              "notes": "The paper estimates that 16.1% of FineWeb-filtered web tokens in June 2025 were AI-generated. It sampled 5,000 Common Crawl documents per month and labeled token share with Pangram after FineWeb filtering. The estimate is token-based and detector-based, so it should be read as a web-text share rather than a webpage share.",
+              "publicationDate": "2026-09-30"
             },
             {
               "year": 2025,
@@ -1415,6 +1433,15 @@
             },
             {
               "year": 2026,
+              "value": 27.5,
+              "rawValue": "27.5%",
+              "series": "How Much Is an AI Token Worth? Scaling Laws for Wild AI-Generated Web Text",
+              "source": "https://arxiv.org/abs/2609.40295",
+              "notes": "The paper estimates that 27.5% of FineWeb-filtered web tokens in June 2026 were AI-generated. It sampled 5,000 Common Crawl documents per month and labeled token share with Pangram after FineWeb filtering, with the paper also noting a rise to 31.1% by August 2026. The estimate is token-based and detector-based, and FineWeb filtering may favor some AI-heavy formats.",
+              "publicationDate": "2026-09-30"
+            },
+            {
+              "year": 2026,
               "value": 59.0,
               "rawValue": "59.0%",
               "series": "Kapwing / TikTok new-user feed (2026)",
@@ -1559,6 +1586,15 @@
             },
             {
               "year": 2026,
+              "value": 62.8,
+              "rawValue": "62.8%",
+              "series": "Social Media AI Tracker Report: July 2026",
+              "source": "https://originality.ai/blog/social-media-tracker-july",
+              "notes": "Originality.ai reports that 62.8% of sampled long-form English X posts from January to July 2026 were likely at least 15% AI-generated. It analyzed 1,143 posts of 100 words or more with its detector and thresholded posts as Likely AI when confidence exceeded 50%. The sample is limited to long-form English text and relies on a proprietary detector and threshold choice.",
+              "publicationDate": "2026-10-01"
+            },
+            {
+              "year": 2026,
               "value": 7.0,
               "rawValue": "7%",
               "series": "Totally Human Media / Steam game library with GenAI disclosures",
@@ -1602,18 +1638,18 @@
             },
             {
               "year": 2024,
-              "value": 18.7304,
-              "estimateCount": 46
-            },
-            {
-              "year": 2025,
-              "value": 28.6047,
+              "value": 18.5468,
               "estimateCount": 47
             },
             {
+              "year": 2025,
+              "value": 28.3442,
+              "estimateCount": 48
+            },
+            {
               "year": 2026,
-              "value": 34.4873,
-              "estimateCount": 26
+              "value": 35.2489,
+              "estimateCount": 28
             }
           ]
         }
@@ -1623,11 +1659,11 @@
       "refresh": {
         "status": "current",
         "latestObservedMonth": null,
-        "nextAttemptAt": "2026-10-26T09:30:00Z",
+        "nextAttemptAt": "2026-11-02T09:30:00Z",
         "attemptKind": "scheduled",
         "consecutiveFailures": 0,
-        "lastAttemptAt": "2026-10-19T16:34:07Z",
-        "lastSuccessfulFetchAt": "2026-10-19T16:34:07Z"
+        "lastAttemptAt": "2026-10-26T16:14:23Z",
+        "lastSuccessfulFetchAt": "2026-10-26T16:14:23Z"
       }
     },
     {
