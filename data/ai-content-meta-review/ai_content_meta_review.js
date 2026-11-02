@@ -1,6 +1,6 @@
 window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-10-26",
+    "lastRefreshed": "2026-11-02",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -931,6 +931,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "publication_date": "2026-07-24"
         },
         {
+            "series": "More than half of recent astronomy papers are written with language-model assistance",
+            "year": 2025,
+            "value": "54.0%",
+            "source": "https://arxiv.org/abs/2609.10664",
+            "notes": "It estimated that 54.0% of 2025 astro-ph papers carried language-model assistance in their prose. The study modeled marker-word counts in 207,111 full texts and calibrated assisted writing with 392 papers that disclosed model use. The estimate is field-specific and depends on assumptions about the background rate those words would have had without LLMs.",
+            "publication_date": "2026-09-09"
+        },
+        {
             "series": "Originality / AI-related journal abstracts",
             "year": 2025,
             "value": "73%",
@@ -1275,6 +1283,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "publication_date": "2026-09-25"
         },
         {
+            "series": "More than half of recent astronomy papers are written with language-model assistance",
+            "year": 2026,
+            "value": "87.0%",
+            "source": "https://arxiv.org/abs/2609.10664",
+            "notes": "It estimated that 87.0% of astro-ph papers in the first half of 2026 carried language-model assistance in their prose. The study modeled marker-word counts in 207,111 full texts and calibrated assisted writing with 392 papers that disclosed model use. The estimate is field-specific and reflects mid-2026 rather than a full calendar year.",
+            "publication_date": "2026-09-09"
+        },
+        {
             "series": "Originality / Brown Brothers Media articles",
             "year": 2026,
             "value": "100.0%",
@@ -1393,6 +1409,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://originality.ai/blog/social-media-tracker-july",
             "notes": "Originality.ai reports that 62.8% of sampled long-form English X posts from January to July 2026 were likely at least 15% AI-generated. It analyzed 1,143 posts of 100 words or more with its detector and thresholded posts as Likely AI when confidence exceeded 50%. The sample is limited to long-form English text and relies on a proprietary detector and threshold choice.",
             "publication_date": "2026-10-01"
+        },
+        {
+            "series": "The uneven rise of AI-generated web content",
+            "year": 2026,
+            "value": "23.6%",
+            "source": "https://arxiv.org/abs/2610.36631",
+            "notes": "It estimated that 23.6% of crawlable webpages in an August 2026 snapshot contained AI-generated or AI-edited text. The study sampled 5.1 million pages from 2019 to 2026 and combined multiple detectors in a Bayesian measurement-error model with poststratification. It covers crawlable pages rather than the whole internet and counts both fully generated and AI-edited text.",
+            "publication_date": "2026-10-27"
         },
         {
             "series": "Totally Human Media / Steam game library with GenAI disclosures",

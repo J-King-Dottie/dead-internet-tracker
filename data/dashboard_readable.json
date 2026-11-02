@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-10-26",
+  "generatedAt": "2026-11-02",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-10-26",
+      "lastRefreshed": "2026-11-02",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -1073,6 +1073,15 @@
             },
             {
               "year": 2025,
+              "value": 54.0,
+              "rawValue": "54.0%",
+              "series": "More than half of recent astronomy papers are written with language-model assistance",
+              "source": "https://arxiv.org/abs/2609.10664",
+              "notes": "It estimated that 54.0% of 2025 astro-ph papers carried language-model assistance in their prose. The study modeled marker-word counts in 207,111 full texts and calibrated assisted writing with 392 papers that disclosed model use. The estimate is field-specific and depends on assumptions about the background rate those words would have had without LLMs.",
+              "publicationDate": "2026-09-09"
+            },
+            {
+              "year": 2025,
               "value": 73.0,
               "rawValue": "73%",
               "series": "Originality / AI-related journal abstracts",
@@ -1460,6 +1469,15 @@
             },
             {
               "year": 2026,
+              "value": 87.0,
+              "rawValue": "87.0%",
+              "series": "More than half of recent astronomy papers are written with language-model assistance",
+              "source": "https://arxiv.org/abs/2609.10664",
+              "notes": "It estimated that 87.0% of astro-ph papers in the first half of 2026 carried language-model assistance in their prose. The study modeled marker-word counts in 207,111 full texts and calibrated assisted writing with 392 papers that disclosed model use. The estimate is field-specific and reflects mid-2026 rather than a full calendar year.",
+              "publicationDate": "2026-09-09"
+            },
+            {
+              "year": 2026,
               "value": 100.0,
               "rawValue": "100.0%",
               "series": "Originality / Brown Brothers Media articles",
@@ -1595,6 +1613,15 @@
             },
             {
               "year": 2026,
+              "value": 23.6,
+              "rawValue": "23.6%",
+              "series": "The uneven rise of AI-generated web content",
+              "source": "https://arxiv.org/abs/2610.36631",
+              "notes": "It estimated that 23.6% of crawlable webpages in an August 2026 snapshot contained AI-generated or AI-edited text. The study sampled 5.1 million pages from 2019 to 2026 and combined multiple detectors in a Bayesian measurement-error model with poststratification. It covers crawlable pages rather than the whole internet and counts both fully generated and AI-edited text.",
+              "publicationDate": "2026-10-27"
+            },
+            {
+              "year": 2026,
               "value": 7.0,
               "rawValue": "7%",
               "series": "Totally Human Media / Steam game library with GenAI disclosures",
@@ -1643,13 +1670,13 @@
             },
             {
               "year": 2025,
-              "value": 28.3442,
-              "estimateCount": 48
+              "value": 28.8678,
+              "estimateCount": 49
             },
             {
               "year": 2026,
-              "value": 35.2489,
-              "estimateCount": 28
+              "value": 36.5857,
+              "estimateCount": 30
             }
           ]
         }
@@ -1659,11 +1686,11 @@
       "refresh": {
         "status": "current",
         "latestObservedMonth": null,
-        "nextAttemptAt": "2026-11-02T09:30:00Z",
+        "nextAttemptAt": "2026-11-09T09:30:00Z",
         "attemptKind": "scheduled",
         "consecutiveFailures": 0,
-        "lastAttemptAt": "2026-10-26T16:14:23Z",
-        "lastSuccessfulFetchAt": "2026-10-26T16:14:23Z"
+        "lastAttemptAt": "2026-11-02T19:40:16Z",
+        "lastSuccessfulFetchAt": "2026-11-02T19:40:16Z"
       }
     },
     {
@@ -1672,7 +1699,7 @@
       "description": "This estimates how much of total web traffic is AI bots. It matters because it gets closer to the machine share of web traversal than general bot traffic does.",
       "source": "Cloudflare Radar bot share and bot category time series",
       "sourceSnapshot": "data/cloudflare/cloudflare.json",
-      "lastRefreshed": "2026-10-02",
+      "lastRefreshed": "2026-11-02",
       "method": "We estimate AI bot share by combining Cloudflare's bot share of total traffic with its AI bot categories. The chart shows observed monthly values only.",
       "caveats": "Crawlers learn from the internet. Search bots use it. Cloudflare sees a large but incomplete slice of the web, with weaker coverage in places like China. This tracks AI bot traffic, not all AI activity. AI search only appears separately from June 2025, so the measure gets better over time.",
       "axisValueFormat": "percent1",
@@ -1702,7 +1729,8 @@
         "2026-06",
         "2026-07",
         "2026-08",
-        "2026-09"
+        "2026-09",
+        "2026-10"
       ],
       "series": [
         {
@@ -1808,6 +1836,10 @@
             {
               "period": "2026-09",
               "value": 10.77
+            },
+            {
+              "period": "2026-10",
+              "value": 10.54
             }
           ],
           "color": "#ff79c6"
@@ -1815,20 +1847,20 @@
       ],
       "latestValues": {
         "AI bots": {
-          "period": "2026-09",
-          "value": 10.77
+          "period": "2026-10",
+          "value": 10.54
         }
       },
       "intent": "The dead internet theory is not just about AI writing the web. It is also about AI systems increasingly reading, crawling, and traversing it.",
       "sourceLag": "This chart runs about one month behind because it uses completed monthly totals.",
       "refresh": {
         "status": "current",
-        "latestObservedMonth": "2026-09",
-        "nextAttemptAt": "2026-11-02T10:15:00Z",
+        "latestObservedMonth": "2026-10",
+        "nextAttemptAt": "2026-12-02T10:15:00Z",
         "attemptKind": "scheduled",
         "consecutiveFailures": 0,
-        "lastAttemptAt": "2026-10-02T16:16:22Z",
-        "lastSuccessfulFetchAt": "2026-10-02T16:16:22Z"
+        "lastAttemptAt": "2026-11-02T19:40:16Z",
+        "lastSuccessfulFetchAt": "2026-11-02T19:40:16Z"
       }
     },
     {
@@ -2713,7 +2745,7 @@
       "description": "This tracks monthly new questions on Stack Overflow. It matters because it shows whether people are still asking other people for help in public.",
       "source": "Stack Exchange API monthly question counts for Stack Overflow",
       "sourceSnapshot": "data/stackoverflow/stackoverflow.json",
-      "lastRefreshed": "2026-10-02",
+      "lastRefreshed": "2026-11-02",
       "method": "Monthly question counts are pulled from the official Stack Exchange API using each month's creation-date window. The chart shows observed monthly counts only.",
       "caveats": "This is a public web proxy, not a measure of all problem-solving. This monthly feed currently covers questions asked, not answered-question counts.",
       "axisValueFormat": "integer",
@@ -2799,7 +2831,8 @@
         "2026-06",
         "2026-07",
         "2026-08",
-        "2026-09"
+        "2026-09",
+        "2026-10"
       ],
       "series": [
         {
@@ -2808,27 +2841,27 @@
           "values": [
             {
               "period": "2020-01",
-              "value": 146586
+              "value": 146583
             },
             {
               "period": "2020-02",
-              "value": 145013
+              "value": 145010
             },
             {
               "period": "2020-03",
-              "value": 155871
+              "value": 155866
             },
             {
               "period": "2020-04",
-              "value": 182823
+              "value": 182820
             },
             {
               "period": "2020-05",
-              "value": 186385
+              "value": 186375
             },
             {
               "period": "2020-06",
-              "value": 171828
+              "value": 171823
             },
             {
               "period": "2020-07",
@@ -2836,11 +2869,11 @@
             },
             {
               "period": "2020-08",
-              "value": 148258
+              "value": 148251
             },
             {
               "period": "2020-09",
-              "value": 141731
+              "value": 141728
             },
             {
               "period": "2020-10",
@@ -2848,211 +2881,211 @@
             },
             {
               "period": "2020-11",
-              "value": 134894
+              "value": 134890
             },
             {
               "period": "2020-12",
-              "value": 133863
+              "value": 133855
             },
             {
               "period": "2021-01",
-              "value": 139822
+              "value": 139816
             },
             {
               "period": "2021-02",
-              "value": 131624
+              "value": 131618
             },
             {
               "period": "2021-03",
-              "value": 148700
+              "value": 148696
             },
             {
               "period": "2021-04",
-              "value": 135819
+              "value": 135815
             },
             {
               "period": "2021-05",
-              "value": 133738
+              "value": 133731
             },
             {
               "period": "2021-06",
-              "value": 128923
+              "value": 128914
             },
             {
               "period": "2021-07",
-              "value": 123927
+              "value": 123920
             },
             {
               "period": "2021-08",
-              "value": 122032
+              "value": 122028
             },
             {
               "period": "2021-09",
-              "value": 119733
+              "value": 119729
             },
             {
               "period": "2021-10",
-              "value": 118807
+              "value": 118763
             },
             {
               "period": "2021-11",
-              "value": 119019
+              "value": 119017
             },
             {
               "period": "2021-12",
-              "value": 112073
+              "value": 112072
             },
             {
               "period": "2022-01",
-              "value": 119204
+              "value": 119166
             },
             {
               "period": "2022-02",
-              "value": 113736
+              "value": 113638
             },
             {
               "period": "2022-03",
-              "value": 123272
+              "value": 123260
             },
             {
               "period": "2022-04",
-              "value": 113960
+              "value": 113932
             },
             {
               "period": "2022-05",
-              "value": 115917
+              "value": 115910
             },
             {
               "period": "2022-06",
-              "value": 111178
+              "value": 111157
             },
             {
               "period": "2022-07",
-              "value": 110583
+              "value": 110576
             },
             {
               "period": "2022-08",
-              "value": 112530
+              "value": 112525
             },
             {
               "period": "2022-09",
-              "value": 103418
+              "value": 103417
             },
             {
               "period": "2022-10",
-              "value": 105746
+              "value": 105743
             },
             {
               "period": "2022-11",
-              "value": 109122
+              "value": 109120
             },
             {
               "period": "2022-12",
-              "value": 96169
+              "value": 96161
             },
             {
               "period": "2023-01",
-              "value": 96628
+              "value": 96622
             },
             {
               "period": "2023-02",
-              "value": 85573
+              "value": 85569
             },
             {
               "period": "2023-03",
-              "value": 87129
+              "value": 87123
             },
             {
               "period": "2023-04",
-              "value": 68357
+              "value": 68351
             },
             {
               "period": "2023-05",
-              "value": 66341
+              "value": 66340
             },
             {
               "period": "2023-06",
-              "value": 63497
+              "value": 63491
             },
             {
               "period": "2023-07",
-              "value": 62563
+              "value": 62557
             },
             {
               "period": "2023-08",
-              "value": 59945
+              "value": 59938
             },
             {
               "period": "2023-09",
-              "value": 52685
+              "value": 52684
             },
             {
               "period": "2023-10",
-              "value": 52339
+              "value": 52334
             },
             {
               "period": "2023-11",
-              "value": 50280
+              "value": 50273
             },
             {
               "period": "2023-12",
-              "value": 42287
+              "value": 42283
             },
             {
               "period": "2024-01",
-              "value": 47576
+              "value": 47570
             },
             {
               "period": "2024-02",
-              "value": 45926
+              "value": 45922
             },
             {
               "period": "2024-03",
-              "value": 44714
+              "value": 44707
             },
             {
               "period": "2024-04",
-              "value": 42364
+              "value": 42361
             },
             {
               "period": "2024-05",
-              "value": 40024
+              "value": 40021
             },
             {
               "period": "2024-06",
-              "value": 31935
+              "value": 31930
             },
             {
               "period": "2024-07",
-              "value": 31439
+              "value": 31435
             },
             {
               "period": "2024-08",
-              "value": 27785
+              "value": 27779
             },
             {
               "period": "2024-09",
-              "value": 24735
+              "value": 24730
             },
             {
               "period": "2024-10",
-              "value": 23163
+              "value": 23161
             },
             {
               "period": "2024-11",
-              "value": 20810
+              "value": 20806
             },
             {
               "period": "2024-12",
-              "value": 17919
+              "value": 17913
             },
             {
               "period": "2025-01",
-              "value": 18183
+              "value": 18182
             },
             {
               "period": "2025-02",
-              "value": 15502
+              "value": 15498
             },
             {
               "period": "2025-03",
@@ -3060,75 +3093,79 @@
             },
             {
               "period": "2025-04",
-              "value": 11389
+              "value": 11385
             },
             {
               "period": "2025-05",
-              "value": 9646
+              "value": 9645
             },
             {
               "period": "2025-06",
-              "value": 7749
+              "value": 7748
             },
             {
               "period": "2025-07",
-              "value": 6623
+              "value": 6621
             },
             {
               "period": "2025-08",
-              "value": 5021
+              "value": 5020
             },
             {
               "period": "2025-09",
-              "value": 5204
+              "value": 5072
             },
             {
               "period": "2025-10",
-              "value": 5329
+              "value": 5262
             },
             {
               "period": "2025-11",
-              "value": 5357
+              "value": 5345
             },
             {
               "period": "2025-12",
-              "value": 4190
+              "value": 4162
             },
             {
               "period": "2026-01",
-              "value": 3659
+              "value": 3608
             },
             {
               "period": "2026-02",
-              "value": 3108
+              "value": 3042
             },
             {
               "period": "2026-03",
-              "value": 3124
+              "value": 2987
             },
             {
               "period": "2026-04",
-              "value": 2389
+              "value": 2322
             },
             {
               "period": "2026-05",
-              "value": 1997
+              "value": 1986
             },
             {
               "period": "2026-06",
-              "value": 1713
+              "value": 1700
             },
             {
               "period": "2026-07",
-              "value": 1180
+              "value": 1175
             },
             {
               "period": "2026-08",
-              "value": 1047
+              "value": 1019
             },
             {
               "period": "2026-09",
-              "value": 1113
+              "value": 965
+            },
+            {
+              "period": "2026-10",
+              "value": 1027
             }
           ],
           "color": "#7af59d"
@@ -3136,20 +3173,20 @@
       ],
       "latestValues": {
         "Total new questions asked": {
-          "period": "2026-09",
-          "value": 1113
+          "period": "2026-10",
+          "value": 1027
         }
       },
       "intent": "Stack Overflow is a sharper example of public human exchange falling away. It shows what happens when people stop asking other people for help in public and shift to AI instead.",
       "sourceLag": "This chart runs about one month behind because it uses completed monthly totals.",
       "refresh": {
         "status": "current",
-        "latestObservedMonth": "2026-09",
-        "nextAttemptAt": "2026-11-02T10:15:00Z",
+        "latestObservedMonth": "2026-10",
+        "nextAttemptAt": "2026-12-02T10:15:00Z",
         "attemptKind": "scheduled",
         "consecutiveFailures": 0,
-        "lastAttemptAt": "2026-10-02T16:16:22Z",
-        "lastSuccessfulFetchAt": "2026-10-02T16:16:22Z"
+        "lastAttemptAt": "2026-11-02T19:40:16Z",
+        "lastSuccessfulFetchAt": "2026-11-02T19:40:16Z"
       }
     }
   ]

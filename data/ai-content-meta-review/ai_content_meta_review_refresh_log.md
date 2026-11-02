@@ -721,3 +721,22 @@ For the actual sweep standard and what context to store per estimate, use:
   - How Much Is an AI Token Worth? Scaling Laws for Wild AI-Generated Web Text (2025)
   - How Much Is an AI Token Worth? Scaling Laws for Wild AI-Generated Web Text (2026)
   - Social Media AI Tracker Report: July 2026 (2026)
+
+
+## 2026-11-02 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint discovery
+  - industry/platform reports
+  - institutional/transparency reports
+  - media/analyst discovery for secondary-to-primary tracing
+  - social-platform prevalence queries
+  - review-platform and local-search review queries
+  - web-page/article prevalence queries
+  - music/video/code corpus queries
+- added:
+  - The uneven rise of AI-generated web content (2026)
+  - More than half of recent astronomy papers are written with language-model assistance (2025)
+  - More than half of recent astronomy papers are written with language-model assistance (2026)

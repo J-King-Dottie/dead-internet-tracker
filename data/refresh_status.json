@@ -1,21 +1,21 @@
 {
   "stack-overflow": {
     "status": "current",
-    "latestObservedMonth": "2026-09",
-    "nextAttemptAt": "2026-11-02T10:15:00Z",
+    "latestObservedMonth": "2026-10",
+    "nextAttemptAt": "2026-12-02T10:15:00Z",
     "attemptKind": "scheduled",
     "consecutiveFailures": 0,
-    "lastAttemptAt": "2026-10-02T16:16:22Z",
-    "lastSuccessfulFetchAt": "2026-10-02T16:16:22Z"
+    "lastAttemptAt": "2026-11-02T19:40:16Z",
+    "lastSuccessfulFetchAt": "2026-11-02T19:40:16Z"
   },
   "traffic-bot-human": {
     "status": "current",
-    "latestObservedMonth": "2026-09",
-    "nextAttemptAt": "2026-11-02T10:15:00Z",
+    "latestObservedMonth": "2026-10",
+    "nextAttemptAt": "2026-12-02T10:15:00Z",
     "attemptKind": "scheduled",
     "consecutiveFailures": 0,
-    "lastAttemptAt": "2026-10-02T16:16:22Z",
-    "lastSuccessfulFetchAt": "2026-10-02T16:16:22Z"
+    "lastAttemptAt": "2026-11-02T19:40:16Z",
+    "lastSuccessfulFetchAt": "2026-11-02T19:40:16Z"
   },
   "wikipedia": {
     "status": "current",
@@ -29,10 +29,10 @@
   "ai-content-meta-review": {
     "status": "current",
     "latestObservedMonth": null,
-    "nextAttemptAt": "2026-11-02T09:30:00Z",
+    "nextAttemptAt": "2026-11-09T09:30:00Z",
     "attemptKind": "scheduled",
     "consecutiveFailures": 0,
-    "lastAttemptAt": "2026-10-26T16:14:23Z",
-    "lastSuccessfulFetchAt": "2026-10-26T16:14:23Z"
+    "lastAttemptAt": "2026-11-02T19:40:16Z",
+    "lastSuccessfulFetchAt": "2026-11-02T19:40:16Z"
   }
 }
