@@ -1,6 +1,6 @@
 window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-11-02",
+    "lastRefreshed": "2026-11-09",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -65,6 +65,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://originality.ai/blog/ai-walmart-reviews",
             "notes": "Originality.AI estimated that 4.55% of Walmart product reviews in 2020 were likely AI-generated. It analyzed Walmart mobile-app reviews of at least 50 words and classified them with its detector across a year-by-year series. This is a detector-based estimate inside one retail-review platform, not a broad web-content measure.",
             "publication_date": "2025-10-19"
+        },
+        {
+            "series": "First Page Sage / social media content by platform median",
+            "year": 2021,
+            "value": "5.0%",
+            "source": "https://firstpagesage.com/seo-blog/ai-content-creation-statistics-report",
+            "notes": "The report implies a 5% median AI-generated share across five major social platforms in 2021. It sampled about 1.7 million public posts, normalized cross-platform results, and published a historical 2021-2026 platform table. The 2021 figure is a modeled historical median from five platform slices, not a direct all-social-media census.",
+            "publication_date": "2026-10-28"
         },
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -137,6 +145,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://aclanthology.org/2024.wikinlp-1.12/",
             "notes": "It found 1.6% of UN country-team press releases published in 2022 were flagged as AI-generated. The study collected 8,326 press releases across 60 country teams and scored them with GPTZero at a 0.5 threshold. This is a detector-based lower-bound estimate and translations may inflate flags.",
             "publication_date": "2024-11-05"
+        },
+        {
+            "series": "First Page Sage / social media content by platform median",
+            "year": 2022,
+            "value": "9.0%",
+            "source": "https://firstpagesage.com/seo-blog/ai-content-creation-statistics-report",
+            "notes": "The report implies a 9% median AI-generated share across five major social platforms in 2022. It sampled about 1.7 million public posts, normalized cross-platform results, and published a historical 2021-2026 platform table. The 2022 figure is a modeled historical median from five platform slices, not a direct all-social-media census.",
+            "publication_date": "2026-10-28"
         },
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -227,6 +243,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "publication_date": "2026-01-30"
         },
         {
+            "series": "Access to Justice in the Age of AI / federal civil complaints",
+            "year": 2023,
+            "value": "1.0%",
+            "source": "https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf",
+            "notes": "The paper estimates that 1.0% of sampled federal civil complaints filed in 2023 contained AI-generated text. It used the Pangram detector on 200 random complaints for the year after removing PACER boilerplate. The RECAP archive is incomplete and may undercount some filings.",
+            "publication_date": "2026-05-21"
+        },
+        {
             "series": "Bradshaw et al. / Seeking Alpha articles",
             "year": 2023,
             "value": "13.4%",
@@ -241,6 +265,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://aclanthology.org/2024.wikinlp-1.12/",
             "notes": "It found 12.5% of UN country-team press releases published in 2023 were flagged as AI-generated. The study collected 8,326 press releases across 60 country teams and scored them with GPTZero at a 0.5 threshold. This is a detector-based lower-bound estimate and translations may inflate flags.",
             "publication_date": "2024-11-05"
+        },
+        {
+            "series": "First Page Sage / social media content by platform median",
+            "year": 2023,
+            "value": "16.0%",
+            "source": "https://firstpagesage.com/seo-blog/ai-content-creation-statistics-report",
+            "notes": "The report implies a 16% median AI-generated share across five major social platforms in 2023. It sampled about 1.7 million public posts, normalized cross-platform results, and published a historical 2021-2026 platform table. The 2023 figure is a modeled historical median from five platform slices, not a direct all-social-media census.",
+            "publication_date": "2026-10-28"
         },
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -427,6 +459,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "publication_date": "2024-04-22"
         },
         {
+            "series": "Access to Justice in the Age of AI / federal civil complaints",
+            "year": 2024,
+            "value": "3.5%",
+            "source": "https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf",
+            "notes": "The paper estimates that 3.5% of sampled federal civil complaints filed in 2024 contained AI-generated text. It used the Pangram detector on 200 random complaints for the year after removing PACER boilerplate. The RECAP archive is incomplete and may undercount some filings.",
+            "publication_date": "2026-05-21"
+        },
+        {
             "series": "ACL social media platforms",
             "year": 2024,
             "value": "37.03%",
@@ -489,6 +529,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://pubmed.ncbi.nlm.nih.gov/41954399/",
             "notes": "A 2026 plastic-surgery literature study found that 17% of 2024 articles in 10 major journals crossed its threshold for substantial AI involvement. The authors ran ZeroGPT on 1,627 manuscripts from 2024-2025 and set a 22.5% threshold using 300 pre-ChatGPT papers from 2010-2011. The estimate depends on one commercial detector and covers a narrow medical specialty.",
             "publication_date": "2026-04-09"
+        },
+        {
+            "series": "First Page Sage / social media content by platform median",
+            "year": 2024,
+            "value": "25.0%",
+            "source": "https://firstpagesage.com/seo-blog/ai-content-creation-statistics-report",
+            "notes": "The report implies a 25% median AI-generated share across five major social platforms in 2024. It sampled about 1.7 million public posts, normalized cross-platform results, and published a historical 2021-2026 platform table. The 2024 figure is a modeled historical median from five platform slices, not a direct all-social-media census.",
+            "publication_date": "2026-10-28"
         },
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -811,6 +859,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "publication_date": "2026-01-30"
         },
         {
+            "series": "Access to Justice in the Age of AI / federal civil complaints",
+            "year": 2025,
+            "value": "10.5%",
+            "source": "https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf",
+            "notes": "The paper estimates that 10.5% of sampled federal civil complaints filed in 2025 contained AI-generated text. It used the Pangram detector on 200 random complaints for the year after removing PACER boilerplate. The RECAP archive is incomplete and may undercount some filings.",
+            "publication_date": "2026-05-21"
+        },
+        {
             "series": "Ahrefs / new webpages with AI content",
             "year": 2025,
             "value": "74.2%",
@@ -833,6 +889,14 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://newsroom-deezer.com/2025/11/deezer-ipsos-survey-97-of-people-cant-tell-the-difference-between-fully-ai-generated-and-human-made-music-clear-desire-for-transparency-and-fairness-for-artists/",
             "notes": "Deezer reported that 34% of all daily music deliveries to its platform in late 2025 were fully AI-generated tracks. It said its in-house AI-music detection system was identifying roughly 50,000 fully AI-generated uploads per day by the November 2025 update. This is a direct platform-level prevalence estimate, but it is narrowly about one music-streaming service and fully synthetic tracks rather than AI-assisted content more broadly.",
             "publication_date": "2025-11-12"
+        },
+        {
+            "series": "First Page Sage / social media content by platform median",
+            "year": 2025,
+            "value": "32.0%",
+            "source": "https://firstpagesage.com/seo-blog/ai-content-creation-statistics-report",
+            "notes": "The report implies a 32% median AI-generated share across five major social platforms in 2025. It sampled about 1.7 million public posts, normalized cross-platform results, and published a historical 2021-2026 platform table. The 2025 figure is a modeled historical median from five platform slices, not a direct all-social-media census.",
+            "publication_date": "2026-10-28"
         },
         {
             "series": "Fortenbach et al. / ophthalmology research articles",
@@ -1193,6 +1257,22 @@ window.__AI_CONTENT_META_REVIEW_SNAPSHOT__ = {
             "source": "https://www.yelp-press.com/press-releases/press-release-details/2026/Yelp-Releases-2025-Trust--Safety-Report/default.aspx",
             "notes": "Yelp said about 2.3% of reviews contributed in 2025 were suspected AI-generated reviews filtered by its systems, based on nearly 500,000 out of about 22 million submissions. The estimate is a recoverable platform-level share from Yelp’s 2025 Trust & Safety Report, which describes automated detection of reviews exhibiting AI-generated characteristics. It is a removed-content measure rather than a direct estimate of all AI-written reviews that remained visible.",
             "publication_date": "2026-02-25"
+        },
+        {
+            "series": "Access to Justice in the Age of AI / federal civil complaints",
+            "year": 2026,
+            "value": "18.0%",
+            "source": "https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf",
+            "notes": "The paper estimates that 18.0% of sampled federal civil complaints filed in early 2026 contained AI-generated text. It used the Pangram detector on 200 random complaints for the year after removing PACER boilerplate. The 2026 sample is early and the RECAP archive is incomplete.",
+            "publication_date": "2026-05-21"
+        },
+        {
+            "series": "AI-Assisted Writing Across Medical Journals / publication-volume-weighted",
+            "year": 2026,
+            "value": "66.7%",
+            "source": "https://www.medrxiv.org/content/10.64898/2026.10.24.26366055v1",
+            "notes": "The preprint estimates that 66.7% of sampled abstracts across 12 general medical journals showed signs of AI-generated text in 2026 through August 8. It scored 15,268 abstracts with GPTZero using journal-specific thresholds calibrated to a 1% false-positive rate in 2020-2021 and then publication-volume weighted the journals. It covers abstracts rather than full papers and relies on detector thresholds that may not generalize cleanly across journals.",
+            "publication_date": "2026-10-26"
         },
         {
             "series": "AntiSlop / category-balanced web pages",

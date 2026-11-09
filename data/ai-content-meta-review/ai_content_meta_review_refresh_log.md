@@ -740,3 +740,31 @@ For the actual sweep standard and what context to store per estimate, use:
   - The uneven rise of AI-generated web content (2026)
   - More than half of recent astronomy papers are written with language-model assistance (2025)
   - More than half of recent astronomy papers are written with language-model assistance (2026)
+
+
+## 2026-11-09 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - academic/preprint discovery
+  - industry and platform blogs/newsrooms
+  - institutional and research-center reports
+  - media and analyst discovery
+  - social-platform prevalence studies
+  - webpage and publishing prevalence studies
+  - reviews and marketplace content studies
+  - legal and government-document corpora
+  - medical and scholarly-writing prevalence studies
+  - music/video/code/app adjacent lanes for missed estimates
+- added:
+  - First Page Sage / social media content by platform median (2021)
+  - First Page Sage / social media content by platform median (2022)
+  - First Page Sage / social media content by platform median (2023)
+  - First Page Sage / social media content by platform median (2024)
+  - First Page Sage / social media content by platform median (2025)
+  - AI-Assisted Writing Across Medical Journals / publication-volume-weighted (2026)
+  - Access to Justice in the Age of AI / federal civil complaints (2023)
+  - Access to Justice in the Age of AI / federal civil complaints (2024)
+  - Access to Justice in the Age of AI / federal civil complaints (2025)
+  - Access to Justice in the Age of AI / federal civil complaints (2026)

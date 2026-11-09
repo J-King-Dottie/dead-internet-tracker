@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-11-02",
+  "generatedAt": "2026-11-09",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-11-02",
+      "lastRefreshed": "2026-11-09",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -101,6 +101,15 @@
             },
             {
               "year": 2021,
+              "value": 5.0,
+              "rawValue": "5.0%",
+              "series": "First Page Sage / social media content by platform median",
+              "source": "https://firstpagesage.com/seo-blog/ai-content-creation-statistics-report",
+              "notes": "The report implies a 5% median AI-generated share across five major social platforms in 2021. It sampled about 1.7 million public posts, normalized cross-platform results, and published a historical 2021-2026 platform table. The 2021 figure is a modeled historical median from five platform slices, not a direct all-social-media census.",
+              "publicationDate": "2026-10-28"
+            },
+            {
+              "year": 2021,
               "value": 3.06,
               "rawValue": "3.06%",
               "series": "Graphite / Common Crawl new web articles",
@@ -179,6 +188,15 @@
               "source": "https://aclanthology.org/2024.wikinlp-1.12/",
               "notes": "It found 1.6% of UN country-team press releases published in 2022 were flagged as AI-generated. The study collected 8,326 press releases across 60 country teams and scored them with GPTZero at a 0.5 threshold. This is a detector-based lower-bound estimate and translations may inflate flags.",
               "publicationDate": "2024-11-05"
+            },
+            {
+              "year": 2022,
+              "value": 9.0,
+              "rawValue": "9.0%",
+              "series": "First Page Sage / social media content by platform median",
+              "source": "https://firstpagesage.com/seo-blog/ai-content-creation-statistics-report",
+              "notes": "The report implies a 9% median AI-generated share across five major social platforms in 2022. It sampled about 1.7 million public posts, normalized cross-platform results, and published a historical 2021-2026 platform table. The 2022 figure is a modeled historical median from five platform slices, not a direct all-social-media census.",
+              "publicationDate": "2026-10-28"
             },
             {
               "year": 2022,
@@ -281,6 +299,15 @@
             },
             {
               "year": 2023,
+              "value": 1.0,
+              "rawValue": "1.0%",
+              "series": "Access to Justice in the Age of AI / federal civil complaints",
+              "source": "https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf",
+              "notes": "The paper estimates that 1.0% of sampled federal civil complaints filed in 2023 contained AI-generated text. It used the Pangram detector on 200 random complaints for the year after removing PACER boilerplate. The RECAP archive is incomplete and may undercount some filings.",
+              "publicationDate": "2026-05-21"
+            },
+            {
+              "year": 2023,
               "value": 13.4,
               "rawValue": "13.4%",
               "series": "Bradshaw et al. / Seeking Alpha articles",
@@ -296,6 +323,15 @@
               "source": "https://aclanthology.org/2024.wikinlp-1.12/",
               "notes": "It found 12.5% of UN country-team press releases published in 2023 were flagged as AI-generated. The study collected 8,326 press releases across 60 country teams and scored them with GPTZero at a 0.5 threshold. This is a detector-based lower-bound estimate and translations may inflate flags.",
               "publicationDate": "2024-11-05"
+            },
+            {
+              "year": 2023,
+              "value": 16.0,
+              "rawValue": "16.0%",
+              "series": "First Page Sage / social media content by platform median",
+              "source": "https://firstpagesage.com/seo-blog/ai-content-creation-statistics-report",
+              "notes": "The report implies a 16% median AI-generated share across five major social platforms in 2023. It sampled about 1.7 million public posts, normalized cross-platform results, and published a historical 2021-2026 platform table. The 2023 figure is a modeled historical median from five platform slices, not a direct all-social-media census.",
+              "publicationDate": "2026-10-28"
             },
             {
               "year": 2023,
@@ -506,6 +542,15 @@
             },
             {
               "year": 2024,
+              "value": 3.5,
+              "rawValue": "3.5%",
+              "series": "Access to Justice in the Age of AI / federal civil complaints",
+              "source": "https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf",
+              "notes": "The paper estimates that 3.5% of sampled federal civil complaints filed in 2024 contained AI-generated text. It used the Pangram detector on 200 random complaints for the year after removing PACER boilerplate. The RECAP archive is incomplete and may undercount some filings.",
+              "publicationDate": "2026-05-21"
+            },
+            {
+              "year": 2024,
               "value": 37.03,
               "rawValue": "37.03%",
               "series": "ACL social media platforms",
@@ -575,6 +620,15 @@
               "source": "https://pubmed.ncbi.nlm.nih.gov/41954399/",
               "notes": "A 2026 plastic-surgery literature study found that 17% of 2024 articles in 10 major journals crossed its threshold for substantial AI involvement. The authors ran ZeroGPT on 1,627 manuscripts from 2024-2025 and set a 22.5% threshold using 300 pre-ChatGPT papers from 2010-2011. The estimate depends on one commercial detector and covers a narrow medical specialty.",
               "publicationDate": "2026-04-09"
+            },
+            {
+              "year": 2024,
+              "value": 25.0,
+              "rawValue": "25.0%",
+              "series": "First Page Sage / social media content by platform median",
+              "source": "https://firstpagesage.com/seo-blog/ai-content-creation-statistics-report",
+              "notes": "The report implies a 25% median AI-generated share across five major social platforms in 2024. It sampled about 1.7 million public posts, normalized cross-platform results, and published a historical 2021-2026 platform table. The 2024 figure is a modeled historical median from five platform slices, not a direct all-social-media census.",
+              "publicationDate": "2026-10-28"
             },
             {
               "year": 2024,
@@ -938,6 +992,15 @@
             },
             {
               "year": 2025,
+              "value": 10.5,
+              "rawValue": "10.5%",
+              "series": "Access to Justice in the Age of AI / federal civil complaints",
+              "source": "https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf",
+              "notes": "The paper estimates that 10.5% of sampled federal civil complaints filed in 2025 contained AI-generated text. It used the Pangram detector on 200 random complaints for the year after removing PACER boilerplate. The RECAP archive is incomplete and may undercount some filings.",
+              "publicationDate": "2026-05-21"
+            },
+            {
+              "year": 2025,
               "value": 74.2,
               "rawValue": "74.2%",
               "series": "Ahrefs / new webpages with AI content",
@@ -962,6 +1025,15 @@
               "source": "https://newsroom-deezer.com/2025/11/deezer-ipsos-survey-97-of-people-cant-tell-the-difference-between-fully-ai-generated-and-human-made-music-clear-desire-for-transparency-and-fairness-for-artists/",
               "notes": "Deezer reported that 34% of all daily music deliveries to its platform in late 2025 were fully AI-generated tracks. It said its in-house AI-music detection system was identifying roughly 50,000 fully AI-generated uploads per day by the November 2025 update. This is a direct platform-level prevalence estimate, but it is narrowly about one music-streaming service and fully synthetic tracks rather than AI-assisted content more broadly.",
               "publicationDate": "2025-11-12"
+            },
+            {
+              "year": 2025,
+              "value": 32.0,
+              "rawValue": "32.0%",
+              "series": "First Page Sage / social media content by platform median",
+              "source": "https://firstpagesage.com/seo-blog/ai-content-creation-statistics-report",
+              "notes": "The report implies a 32% median AI-generated share across five major social platforms in 2025. It sampled about 1.7 million public posts, normalized cross-platform results, and published a historical 2021-2026 platform table. The 2025 figure is a modeled historical median from five platform slices, not a direct all-social-media census.",
+              "publicationDate": "2026-10-28"
             },
             {
               "year": 2025,
@@ -1370,6 +1442,24 @@
             },
             {
               "year": 2026,
+              "value": 18.0,
+              "rawValue": "18.0%",
+              "series": "Access to Justice in the Age of AI / federal civil complaints",
+              "source": "https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf",
+              "notes": "The paper estimates that 18.0% of sampled federal civil complaints filed in early 2026 contained AI-generated text. It used the Pangram detector on 200 random complaints for the year after removing PACER boilerplate. The 2026 sample is early and the RECAP archive is incomplete.",
+              "publicationDate": "2026-05-21"
+            },
+            {
+              "year": 2026,
+              "value": 66.7,
+              "rawValue": "66.7%",
+              "series": "AI-Assisted Writing Across Medical Journals / publication-volume-weighted",
+              "source": "https://www.medrxiv.org/content/10.64898/2026.10.24.26366055v1",
+              "notes": "The preprint estimates that 66.7% of sampled abstracts across 12 general medical journals showed signs of AI-generated text in 2026 through August 8. It scored 15,268 abstracts with GPTZero using journal-specific thresholds calibrated to a 1% false-positive rate in 2020-2021 and then publication-volume weighted the journals. It covers abstracts rather than full papers and relies on detector thresholds that may not generalize cleanly across journals.",
+              "publicationDate": "2026-10-26"
+            },
+            {
+              "year": 2026,
               "value": 23.0,
               "rawValue": "23%",
               "series": "AntiSlop / category-balanced web pages",
@@ -1650,33 +1740,33 @@
             },
             {
               "year": 2021,
-              "value": 4.3533,
-              "estimateCount": 6
+              "value": 4.4457,
+              "estimateCount": 7
             },
             {
               "year": 2022,
-              "value": 4.3807,
-              "estimateCount": 14
+              "value": 4.6887,
+              "estimateCount": 15
             },
             {
               "year": 2023,
-              "value": 13.8257,
-              "estimateCount": 25
+              "value": 13.4312,
+              "estimateCount": 27
             },
             {
               "year": 2024,
-              "value": 18.5468,
-              "estimateCount": 47
-            },
-            {
-              "year": 2025,
-              "value": 28.8678,
+              "value": 18.3714,
               "estimateCount": 49
             },
             {
+              "year": 2025,
+              "value": 28.569,
+              "estimateCount": 51
+            },
+            {
               "year": 2026,
-              "value": 36.5857,
-              "estimateCount": 30
+              "value": 36.9459,
+              "estimateCount": 32
             }
           ]
         }
@@ -1686,11 +1776,11 @@
       "refresh": {
         "status": "current",
         "latestObservedMonth": null,
-        "nextAttemptAt": "2026-11-09T09:30:00Z",
+        "nextAttemptAt": "2026-11-16T09:30:00Z",
         "attemptKind": "scheduled",
         "consecutiveFailures": 0,
-        "lastAttemptAt": "2026-11-02T19:40:16Z",
-        "lastSuccessfulFetchAt": "2026-11-02T19:40:16Z"
+        "lastAttemptAt": "2026-11-09T19:56:47Z",
+        "lastSuccessfulFetchAt": "2026-11-09T19:56:47Z"
       }
     },
     {
