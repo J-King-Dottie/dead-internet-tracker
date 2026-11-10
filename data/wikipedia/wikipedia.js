@@ -3,7 +3,7 @@ window.__WIKIPEDIA_SNAPSHOT__ = {
   "title": "Wikipedia activity",
   "description": "This tracks monthly human editors on English Wikipedia content pages. It matters because it shows whether people are still doing sustained public knowledge work.",
   "source": "Wikimedia editor analytics for en.wikipedia.org content pages",
-  "lastRefreshed": "2026-10-10",
+  "lastRefreshed": "2026-11-10",
   "method": "Active editors are users making 5 or more edits in a month. The chart shows observed monthly counts only.",
   "caveats": "This is English Wikipedia only, not all Wikipedias. It measures editor participation, not article quality or total knowledge output.",
   "xValues": [
@@ -87,7 +87,8 @@ window.__WIKIPEDIA_SNAPSHOT__ = {
     "2026-06",
     "2026-07",
     "2026-08",
-    "2026-09"
+    "2026-09",
+    "2026-10"
   ],
   "axisValueFormat": "integer",
   "tooltipValueFormat": "integer",
@@ -175,8 +176,9 @@ window.__WIKIPEDIA_SNAPSHOT__ = {
         94218,
         89533,
         89626,
-        89826,
-        90585
+        89831,
+        90604,
+        93878
       ]
     },
     {
@@ -263,9 +265,10 @@ window.__WIKIPEDIA_SNAPSHOT__ = {
         29808,
         29493,
         29204,
-        28773
+        28794,
+        29492
       ]
     }
   ],
-  "latestObservedMonth": "2026-09"
+  "latestObservedMonth": "2026-10"
 };

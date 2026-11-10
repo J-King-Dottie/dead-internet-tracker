@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-11-09",
+  "generatedAt": "2026-11-10",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -2055,7 +2055,7 @@
       "description": "This tracks monthly human editors on English Wikipedia content pages. It matters because it shows whether people are still doing sustained public knowledge work.",
       "source": "Wikimedia editor analytics for en.wikipedia.org content pages",
       "sourceSnapshot": "data/wikipedia/wikipedia.json",
-      "lastRefreshed": "2026-10-10",
+      "lastRefreshed": "2026-11-10",
       "method": "Active editors are users making 5 or more edits in a month. The chart shows observed monthly counts only.",
       "caveats": "This is English Wikipedia only, not all Wikipedias. It measures editor participation, not article quality or total knowledge output.",
       "axisValueFormat": "integer",
@@ -2141,7 +2141,8 @@
         "2026-06",
         "2026-07",
         "2026-08",
-        "2026-09"
+        "2026-09",
+        "2026-10"
       ],
       "series": [
         {
@@ -2466,11 +2467,15 @@
             },
             {
               "period": "2026-08",
-              "value": 89826
+              "value": 89831
             },
             {
               "period": "2026-09",
-              "value": 90585
+              "value": 90604
+            },
+            {
+              "period": "2026-10",
+              "value": 93878
             }
           ],
           "color": "#58e6ff"
@@ -2801,7 +2806,11 @@
             },
             {
               "period": "2026-09",
-              "value": 28773
+              "value": 28794
+            },
+            {
+              "period": "2026-10",
+              "value": 29492
             }
           ],
           "color": "#ff9a62"
@@ -2809,24 +2818,24 @@
       ],
       "latestValues": {
         "All editors (1+)": {
-          "period": "2026-09",
-          "value": 90585
+          "period": "2026-10",
+          "value": 93878
         },
         "Active editors (5+)": {
-          "period": "2026-09",
-          "value": 28773
+          "period": "2026-10",
+          "value": 29492
         }
       },
       "intent": "Wikipedia is a useful slow-decline signal for public human contribution. It shows whether people are still doing sustained knowledge work together in the open.",
       "sourceLag": "This chart runs about one month behind, with data released early the following month.",
       "refresh": {
         "status": "current",
-        "latestObservedMonth": "2026-09",
-        "nextAttemptAt": "2026-11-10T10:15:00Z",
+        "latestObservedMonth": "2026-10",
+        "nextAttemptAt": "2026-12-10T10:15:00Z",
         "attemptKind": "scheduled",
         "consecutiveFailures": 0,
-        "lastAttemptAt": "2026-10-10T15:52:31Z",
-        "lastSuccessfulFetchAt": "2026-10-10T15:52:31Z"
+        "lastAttemptAt": "2026-11-10T17:49:47Z",
+        "lastSuccessfulFetchAt": "2026-11-10T17:49:47Z"
       }
     },
     {
