@@ -1,6 +1,6 @@
 {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-11-09",
+    "lastRefreshed": "2026-11-16",
     "rows": [
         {
             "series": "Graphite / Common Crawl new web articles",
@@ -17,6 +17,14 @@
             "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10277011/",
             "notes": "21.7% of sampled MEDLINE randomized-trial abstracts in the first half of 2020 had a >=90% predicted probability of AI-generated text. The study randomly sampled 30 abstracts per quarter from January 2020 to March 2023 and scored them with Originality.AI after validating the detector on control sets. It only covers biomedical RCT abstracts and relies on a detector threshold rather than direct attribution.",
             "publication_date": "2023-05-19"
+        },
+        {
+            "series": "Originality / Amazon health books",
+            "year": 2020,
+            "value": "2.7%",
+            "source": "https://originality.ai/blog/amazon-health-books-study",
+            "notes": "Among sampled Amazon health bestsellers published in 2020, 2.7% were flagged as likely AI-written. Originality.ai scanned book-sample text from 225 titles in a February 2026 snapshot of 4,984 bestselling health-related books. This is detector-based and limited to sampled bestseller titles rather than all Amazon books.",
+            "publication_date": "2026-11-16"
         },
         {
             "series": "Originality / Canadian Parliament Hansard",
@@ -81,6 +89,14 @@
             "source": "https://docs.google.com/spreadsheets/d/1WamFyVahPDtAPFtvly30BG2QjyA-L1KYkO2UEYGKKcg/edit?gid=0",
             "notes": "Graphite estimated that 3.06% of newly published English web articles in 2021 were AI-generated. It filtered Common Crawl pages by article markup, English language, and publish date, then classified them with Surfer's AI detector using a greater-than-50% threshold. This is one of the closest direct measures in the table, but it only covers newly published English articles and depends on detector performance.",
             "publication_date": "2024-05-07"
+        },
+        {
+            "series": "Originality / Amazon health books",
+            "year": 2021,
+            "value": "5.6%",
+            "source": "https://originality.ai/blog/amazon-health-books-study",
+            "notes": "Among sampled Amazon health bestsellers published in 2021, 5.6% were flagged as likely AI-written. Originality.ai scanned book-sample text from 301 titles in a February 2026 snapshot of 4,984 bestselling health-related books. This is detector-based and limited to sampled bestseller titles rather than all Amazon books.",
+            "publication_date": "2026-11-16"
         },
         {
             "series": "Originality / Canadian Parliament Hansard",
@@ -169,6 +185,14 @@
             "source": "https://arxiv.org/abs/2603.19316",
             "notes": "The January 2022 baseline put significant AI-generated text at 0.0% of JAMA Network Open articles. The study uses Originality.AI on a monthly series covering original investigations, research letters, and invited commentaries from January 2022 through March 2025. This is a narrow but still direct content-share estimate for one medical publishing venue.",
             "publication_date": "2026-03-15"
+        },
+        {
+            "series": "Originality / Amazon health books",
+            "year": 2022,
+            "value": "9%",
+            "source": "https://originality.ai/blog/amazon-health-books-study",
+            "notes": "Among sampled Amazon health bestsellers published in 2022, 9% were flagged as likely AI-written. Originality.ai scanned book-sample text from 234 titles in a February 2026 snapshot of 4,984 bestselling health-related books. This is detector-based and limited to sampled bestseller titles rather than all Amazon books.",
+            "publication_date": "2026-11-16"
         },
         {
             "series": "Originality / Canadian Parliament Hansard",
@@ -329,6 +353,14 @@
             "source": "https://phys.org/news/2026-08-marker-words-sharp-ai-biomedical.html",
             "notes": "Phys.org reports that 19.0% of open-access biomedical papers in PubMed Central showed signs of LLM-assisted writing or editing in 2023. The estimate is based on shifts in 379 LLM-associated marker words across a large corpus of full-text papers. It is an indirect corpus-level signal reported by a secondary source rather than direct proof of author workflow.",
             "publication_date": "2026-08-24"
+        },
+        {
+            "series": "Originality / Amazon health books",
+            "year": 2023,
+            "value": "20.9%",
+            "source": "https://originality.ai/blog/amazon-health-books-study",
+            "notes": "Among sampled Amazon health bestsellers published in 2023, 20.9% were flagged as likely AI-written. Originality.ai scanned book-sample text from 373 titles in a February 2026 snapshot of 4,984 bestselling health-related books. This is detector-based and limited to sampled bestseller titles rather than all Amazon books.",
+            "publication_date": "2026-11-16"
         },
         {
             "series": "Originality / Canadian Parliament Hansard",
@@ -595,6 +627,14 @@
             "publication_date": "2026-09-11"
         },
         {
+            "series": "Made With AI / TikTok disclosed AIGC posts",
+            "year": 2024,
+            "value": "0.24%",
+            "source": "https://doi.org/10.1093/jcr/ucag013",
+            "notes": "In a large US TikTok sample from the post-policy period, 0.24% of posts carried an AI-generated-content disclosure. The study counted 2,749 labeled posts in a final dataset of 1,135,817 posts from 8,650 public adult creators. This measures disclosed AI use after TikTok's policy rollout, not all AI-made content.",
+            "publication_date": "2026-05-07"
+        },
+        {
             "series": "McCreery & Naser / engineering abstracts",
             "year": 2024,
             "value": "21.0%",
@@ -609,6 +649,14 @@
             "source": "https://phys.org/news/2026-08-marker-words-sharp-ai-biomedical.html",
             "notes": "Phys.org reports that 52.0% of open-access biomedical papers in PubMed Central showed signs of LLM-assisted writing or editing in 2024. The estimate is based on shifts in 379 LLM-associated marker words across a large corpus of full-text papers. It is an indirect corpus-level signal reported by a secondary source rather than direct proof of author workflow.",
             "publication_date": "2026-08-24"
+        },
+        {
+            "series": "Originality / Amazon health books",
+            "year": 2024,
+            "value": "41.4%",
+            "source": "https://originality.ai/blog/amazon-health-books-study",
+            "notes": "Among sampled Amazon health bestsellers published in 2024, 41.4% were flagged as likely AI-written. Originality.ai scanned book-sample text from 665 titles in a February 2026 snapshot of 4,984 bestselling health-related books. This is detector-based and limited to sampled bestseller titles rather than all Amazon books.",
+            "publication_date": "2026-11-16"
         },
         {
             "series": "Originality / Canadian Parliament Hansard",
@@ -1011,6 +1059,14 @@
             "publication_date": "2025-10-10"
         },
         {
+            "series": "Originality / Amazon health books",
+            "year": 2025,
+            "value": "64.1%",
+            "source": "https://originality.ai/blog/amazon-health-books-study",
+            "notes": "Among sampled Amazon health bestsellers published in 2025, 64.1% were flagged as likely AI-written. Originality.ai scanned book-sample text from 1,338 titles in a February 2026 snapshot of 4,984 bestselling health-related books. This is detector-based and limited to sampled bestseller titles rather than all Amazon books.",
+            "publication_date": "2026-11-16"
+        },
+        {
             "series": "Originality / Amazon pet-loss books",
             "year": 2025,
             "publication_date": "2026-03-05",
@@ -1371,6 +1427,22 @@
             "publication_date": "2026-09-09"
         },
         {
+            "series": "Originality / Amazon health books",
+            "year": 2026,
+            "value": "65.4%",
+            "source": "https://originality.ai/blog/amazon-health-books-study",
+            "notes": "Among sampled Amazon health bestsellers published in January-February 2026, 65.4% were flagged as likely AI-written. Originality.ai scanned book-sample text from 211 titles in a February 2026 snapshot of 4,984 bestselling health-related books. This is detector-based and limited to an early-2026 slice of sampled bestseller titles rather than all Amazon books.",
+            "publication_date": "2026-11-16"
+        },
+        {
+            "series": "Originality / Amazon religious books",
+            "year": 2026,
+            "value": "63%",
+            "source": "https://originality.ai/blog/religious-books-on-amazon-study",
+            "notes": "Among 2,034 newly published Amazon religion and spirituality books, 63% were flagged as likely AI-written. Originality.ai scraped eligible 2026 releases across 14 religious subcategories and scored book descriptions, bios, and especially sample text with its detector. This is detector-based and limited to English-language Amazon releases meeting the study's screening rules.",
+            "publication_date": "2026-08-19"
+        },
+        {
             "series": "Originality / Brown Brothers Media articles",
             "year": 2026,
             "value": "100.0%",
@@ -1473,6 +1545,14 @@
             "source": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/",
             "notes": "Pew found that 10% of English-language webpages in a July 2026 snapshot showed significant signs of AI authorship, with the share rising to 35% among pages published after ChatGPT’s November 30, 2022 launch. It sampled nearly 490,000 Common Crawl pages from 2021-2026 and scored page text with Open Pangram for likely AI writing or substantial AI editing. The estimate is detector-based and the broader 10% snapshot mixes old and new pages, so it is not a clean measure of only newly created content.",
             "publication_date": "2026-08-20"
+        },
+        {
+            "series": "Postdom / TikTok small-business posts labeled as AI",
+            "year": 2026,
+            "value": "3.0%",
+            "source": "https://postdom.com/research/ai-content-index",
+            "notes": "At least 3.0% of recent TikTok posts from sampled small-business accounts were labeled as AI in October 2026. Postdom counted platform or creator AI labels on 260 of 8,633 posts from 300 accounts in 10 business types. This is a lower bound because labels capture disclosed or detected AI rather than all AI use.",
+            "publication_date": "2026-10-11"
         },
         {
             "series": "Robbes et al. / new GitHub projects with coding-agent adoption (2026)",

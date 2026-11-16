@@ -768,3 +768,29 @@ For the actual sweep standard and what context to store per estimate, use:
   - Access to Justice in the Age of AI / federal civil complaints (2024)
   - Access to Justice in the Age of AI / federal civil complaints (2025)
   - Access to Justice in the Age of AI / federal civil complaints (2026)
+
+
+## 2026-11-16 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - recent web/news and analyst posts since 2026-11-09
+  - academic/preprint discovery on arXiv, PubMed, ACL Anthology, SSRN, and DOI pages
+  - industry/platform studies on Originality.ai, Graphite, Pangram, Copyleaks, Deezer, and platform-adjacent domains
+  - social-platform prevalence studies for TikTok, Instagram, Facebook, X, LinkedIn, and Steam disclosures
+  - webpage and publishing prevalence studies
+  - reviews, books, and ecommerce content studies
+  - image/video/music/code and game-content lanes
+  - secondary-source sweeps to locate otherwise hard-to-find primary studies
+- added:
+  - Originality / Amazon health books (2020)
+  - Originality / Amazon health books (2021)
+  - Originality / Amazon health books (2022)
+  - Originality / Amazon health books (2023)
+  - Originality / Amazon health books (2024)
+  - Originality / Amazon health books (2025)
+  - Originality / Amazon health books (2026)
+  - Originality / Amazon religious books (2026)
+  - Made With AI / TikTok disclosed AIGC posts (2024)
+  - Postdom / TikTok small-business posts labeled as AI (2026)
