@@ -794,3 +794,28 @@ For the actual sweep standard and what context to store per estimate, use:
   - Originality / Amazon religious books (2026)
   - Made With AI / TikTok disclosed AIGC posts (2024)
   - Postdom / TikTok small-business posts labeled as AI (2026)
+
+
+## 2026-11-23 - Automated Weekly Recent-Source Sweep
+
+- scope: recent priority plus `2026` missed-source search; older publication dates allowed when discovered
+- query iterations reported: 10
+- lanes searched:
+  - recent web/news sweep since 2026-11-16
+  - academic/preprint discovery on arXiv and ACL Anthology
+  - PubMed / medRxiv medical-writing prevalence sweep
+  - industry and platform newsroom/report sweep
+  - social-platform prevalence sweep for Facebook/Instagram/X/TikTok
+  - reviews and marketplace sweep
+  - video/music prevalence sweep
+  - Pangram / Graphite / Originality / Copyleaks targeted site queries
+  - secondary coverage used only for discovery and dedupe checks
+  - time-series backfill extraction from newly found 2026 sources
+- added:
+  - AI-Assisted Writing Across Medical Journals (2020)
+  - AI-Assisted Writing Across Medical Journals (2021)
+  - AI-Assisted Writing Across Medical Journals (2022)
+  - AI-Assisted Writing Across Medical Journals (2023)
+  - AI-Assisted Writing Across Medical Journals (2024)
+  - AI-Assisted Writing Across Medical Journals (2025)
+  - Revid / TikTok tracked-index sample (2026)

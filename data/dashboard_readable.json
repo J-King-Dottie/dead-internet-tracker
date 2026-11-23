@@ -2,7 +2,7 @@
   "title": "Dead Internet Tracker machine-readable chart data",
   "canonicalUrl": "https://dead-internet.onrender.com/",
   "description": "Normalized chart data for AI and search crawlers. This file contains the data actually plotted on the public page, plus source snapshot links and short method/caveat fields.",
-  "generatedAt": "2026-11-16",
+  "generatedAt": "2026-11-23",
   "charts": [
     {
       "chartKey": "ai-content-meta-review",
@@ -10,7 +10,7 @@
       "description": "Published estimates of AI-generated or materially AI-assisted content, shown as a scatter plot with an annual average line.",
       "source": "Curated AI research of published sources.",
       "sourceSnapshot": "data/ai-content-meta-review/ai_content_meta_review.json",
-      "lastRefreshed": "2026-11-16",
+      "lastRefreshed": "2026-11-23",
       "method": "AI-assisted research follows a fixed prompt with include and exclude rules, then stores a verified summary of each accepted estimate. Dots are published estimates; the line is the annual average of included estimates.",
       "caveats": "The dots come from different studies, platforms, and methods, so they are not directly comparable. The average line is only a rough trend signal, not a true whole-internet rate.",
       "unit": "percent",
@@ -27,6 +27,15 @@
         {
           "name": "Published estimates",
           "values": [
+            {
+              "year": 2020,
+              "value": 1.0,
+              "rawValue": "1.0%",
+              "series": "AI-Assisted Writing Across Medical Journals",
+              "source": "https://www.medrxiv.org/content/10.64898/2026.10.24.26366055v1",
+              "notes": "The study implies a 1.0% median prevalence of AI-generated text across sampled medical-journal abstracts in 2020. It sampled up to 200 abstracts per journal-year and used GPTZero with journal-specific thresholds calibrated to a 1% pre-AI false-positive rate. This row is an approximate median reconstructed from Figure 1 journal slices rather than a published volume-weighted 2020 aggregate.",
+              "publicationDate": "2026-10-26"
+            },
             {
               "year": 2020,
               "value": 2.48,
@@ -110,6 +119,15 @@
             },
             {
               "year": 2021,
+              "value": 1.0,
+              "rawValue": "1.0%",
+              "series": "AI-Assisted Writing Across Medical Journals",
+              "source": "https://www.medrxiv.org/content/10.64898/2026.10.24.26366055v1",
+              "notes": "The study implies a 1.0% median prevalence of AI-generated text across sampled medical-journal abstracts in 2021. It sampled up to 200 abstracts per journal-year and used GPTZero with journal-specific thresholds calibrated to a 1% pre-AI false-positive rate. This row is an approximate median reconstructed from Figure 1 journal slices rather than a published volume-weighted 2021 aggregate.",
+              "publicationDate": "2026-10-26"
+            },
+            {
+              "year": 2021,
               "value": 5.0,
               "rawValue": "5.0%",
               "series": "First Page Sage / social media content by platform median",
@@ -188,6 +206,15 @@
               "source": "https://arxiv.org/abs/2412.18148",
               "notes": "The study-year median across Medium, Quora, and Reddit put AI-generated social-media posts at 1.77% in 2022. The paper trained and selected an AIGT detector, then applied it to a 2.4 million post corpus spanning January 2022 to October 2024. This gives one value for a major social-content dataset, but it remains platform-bound and detector-dependent.",
               "publicationDate": "2024-12-24"
+            },
+            {
+              "year": 2022,
+              "value": 1.0,
+              "rawValue": "1.0%",
+              "series": "AI-Assisted Writing Across Medical Journals",
+              "source": "https://www.medrxiv.org/content/10.64898/2026.10.24.26366055v1",
+              "notes": "The study implies a 1.0% median prevalence of AI-generated text across sampled medical-journal abstracts in 2022. It sampled up to 200 abstracts per journal-year and used GPTZero with journal-specific thresholds calibrated to a 1% pre-AI false-positive rate. This row is an approximate median reconstructed from Figure 1 journal slices rather than a published volume-weighted 2022 aggregate.",
+              "publicationDate": "2026-10-26"
             },
             {
               "year": 2022,
@@ -332,6 +359,15 @@
               "source": "https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf",
               "notes": "The paper estimates that 1.0% of sampled federal civil complaints filed in 2023 contained AI-generated text. It used the Pangram detector on 200 random complaints for the year after removing PACER boilerplate. The RECAP archive is incomplete and may undercount some filings.",
               "publicationDate": "2026-05-21"
+            },
+            {
+              "year": 2023,
+              "value": 4.5,
+              "rawValue": "4.5%",
+              "series": "AI-Assisted Writing Across Medical Journals",
+              "source": "https://www.medrxiv.org/content/10.64898/2026.10.24.26366055v1",
+              "notes": "The study implies a 4.5% median prevalence of AI-generated text across sampled medical-journal abstracts in 2023. It sampled up to 200 abstracts per journal-year and used GPTZero with journal-specific thresholds calibrated to a 1% pre-AI false-positive rate. This row is an approximate median reconstructed from Figure 1 journal slices rather than a published volume-weighted 2023 aggregate.",
+              "publicationDate": "2026-10-26"
             },
             {
               "year": 2023,
@@ -593,6 +629,15 @@
               "source": "https://arxiv.org/abs/2412.18148",
               "notes": "The study-year median across Medium, Quora, and Reddit put AI-generated social-media posts at 37.03% in 2024. The paper trained and selected an AIGT detector, then applied it to a 2.4 million post corpus spanning January 2022 to October 2024. This gives one value for a major social-content dataset, but it remains platform-bound and detector-dependent.",
               "publicationDate": "2024-12-24"
+            },
+            {
+              "year": 2024,
+              "value": 12.0,
+              "rawValue": "12.0%",
+              "series": "AI-Assisted Writing Across Medical Journals",
+              "source": "https://www.medrxiv.org/content/10.64898/2026.10.24.26366055v1",
+              "notes": "The study implies a 12.0% median prevalence of AI-generated text across sampled medical-journal abstracts in 2024. It sampled up to 200 abstracts per journal-year and used GPTZero with journal-specific thresholds calibrated to a 1% pre-AI false-positive rate. This row is an approximate median reconstructed from Figure 1 journal slices rather than a published volume-weighted 2024 aggregate.",
+              "publicationDate": "2026-10-26"
             },
             {
               "year": 2024,
@@ -1070,6 +1115,15 @@
               "source": "https://aiforensics.org/uploads/GenAI%20Report.pdf",
               "notes": "AI Forensics estimated that 17.3% of top search results across TikTok and Instagram in June 2025 contained synthetic AI imagery. It manually annotated 2,100 search results collected in Spain, Germany, and Poland and then built a weighted aggregate from the report's country-level counts. This is a useful direct social-platform estimate, but it is query-based, image-focused, and tied to search results rather than all feed content.",
               "publicationDate": "2025-07-31"
+            },
+            {
+              "year": 2025,
+              "value": 36.5,
+              "rawValue": "36.5%",
+              "series": "AI-Assisted Writing Across Medical Journals",
+              "source": "https://www.medrxiv.org/content/10.64898/2026.10.24.26366055v1",
+              "notes": "The study implies a 36.5% median prevalence of AI-generated text across sampled medical-journal abstracts in 2025. It sampled up to 200 abstracts per journal-year and used GPTZero with journal-specific thresholds calibrated to a 1% pre-AI false-positive rate. This row is an approximate median reconstructed from Figure 1 journal slices rather than a published volume-weighted 2025 aggregate.",
+              "publicationDate": "2026-10-26"
             },
             {
               "year": 2025,
@@ -1775,6 +1829,15 @@
             },
             {
               "year": 2026,
+              "value": 8.2,
+              "rawValue": "8.2%",
+              "series": "Revid / TikTok tracked-index sample",
+              "source": "https://www.revid.ai/case-studies/ai-generated-tiktok-share",
+              "notes": "Revid estimates that 8.2% of sampled 2026 TikToks in its tracked public index were AI-generated. It randomly sampled 3,964 indexed TikToks from January to November 2026 and had Gemini 3.8 Flash classify each video’s visual origin. The estimate is not platform-wide because Revid’s index follows tracked hashtags and keywords and only inspects the first 20 to 40 seconds.",
+              "publicationDate": "2026-11-23"
+            },
+            {
+              "year": 2026,
               "value": 71.83,
               "rawValue": "71.83%",
               "series": "Robbes et al. / new GitHub projects with coding-agent adoption (2026)",
@@ -1825,38 +1888,38 @@
           "values": [
             {
               "year": 2020,
-              "value": 4.52,
-              "estimateCount": 9
+              "value": 4.168,
+              "estimateCount": 10
             },
             {
               "year": 2021,
-              "value": 4.59,
-              "estimateCount": 8
+              "value": 4.1911,
+              "estimateCount": 9
             },
             {
               "year": 2022,
-              "value": 4.9581,
-              "estimateCount": 16
+              "value": 4.7253,
+              "estimateCount": 17
             },
             {
               "year": 2023,
-              "value": 13.6979,
-              "estimateCount": 28
+              "value": 13.3808,
+              "estimateCount": 29
             },
             {
               "year": 2024,
-              "value": 18.4675,
-              "estimateCount": 51
-            },
-            {
-              "year": 2025,
-              "value": 29.2523,
+              "value": 18.3431,
               "estimateCount": 52
             },
             {
+              "year": 2025,
+              "value": 29.3891,
+              "estimateCount": 53
+            },
+            {
               "year": 2026,
-              "value": 37.5334,
-              "estimateCount": 35
+              "value": 36.7186,
+              "estimateCount": 36
             }
           ]
         }
@@ -1866,11 +1929,11 @@
       "refresh": {
         "status": "current",
         "latestObservedMonth": null,
-        "nextAttemptAt": "2026-11-23T09:30:00Z",
+        "nextAttemptAt": "2026-11-30T09:30:00Z",
         "attemptKind": "scheduled",
         "consecutiveFailures": 0,
-        "lastAttemptAt": "2026-11-16T19:45:01Z",
-        "lastSuccessfulFetchAt": "2026-11-16T19:45:01Z"
+        "lastAttemptAt": "2026-11-23T21:35:59Z",
+        "lastSuccessfulFetchAt": "2026-11-23T21:35:59Z"
       }
     },
     {

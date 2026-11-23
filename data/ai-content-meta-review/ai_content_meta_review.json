@@ -1,7 +1,15 @@
 {
     "question": "How much of the content on the internet is AI generated?",
-    "lastRefreshed": "2026-11-16",
+    "lastRefreshed": "2026-11-23",
     "rows": [
+        {
+            "series": "AI-Assisted Writing Across Medical Journals",
+            "year": 2020,
+            "value": "1.0%",
+            "source": "https://www.medrxiv.org/content/10.64898/2026.10.24.26366055v1",
+            "notes": "The study implies a 1.0% median prevalence of AI-generated text across sampled medical-journal abstracts in 2020. It sampled up to 200 abstracts per journal-year and used GPTZero with journal-specific thresholds calibrated to a 1% pre-AI false-positive rate. This row is an approximate median reconstructed from Figure 1 journal slices rather than a published volume-weighted 2020 aggregate.",
+            "publication_date": "2026-10-26"
+        },
         {
             "series": "Graphite / Common Crawl new web articles",
             "year": 2020,
@@ -75,6 +83,14 @@
             "publication_date": "2025-10-19"
         },
         {
+            "series": "AI-Assisted Writing Across Medical Journals",
+            "year": 2021,
+            "value": "1.0%",
+            "source": "https://www.medrxiv.org/content/10.64898/2026.10.24.26366055v1",
+            "notes": "The study implies a 1.0% median prevalence of AI-generated text across sampled medical-journal abstracts in 2021. It sampled up to 200 abstracts per journal-year and used GPTZero with journal-specific thresholds calibrated to a 1% pre-AI false-positive rate. This row is an approximate median reconstructed from Figure 1 journal slices rather than a published volume-weighted 2021 aggregate.",
+            "publication_date": "2026-10-26"
+        },
+        {
             "series": "First Page Sage / social media content by platform median",
             "year": 2021,
             "value": "5.0%",
@@ -145,6 +161,14 @@
             "source": "https://arxiv.org/abs/2412.18148",
             "notes": "The study-year median across Medium, Quora, and Reddit put AI-generated social-media posts at 1.77% in 2022. The paper trained and selected an AIGT detector, then applied it to a 2.4 million post corpus spanning January 2022 to October 2024. This gives one value for a major social-content dataset, but it remains platform-bound and detector-dependent.",
             "publication_date": "2024-12-24"
+        },
+        {
+            "series": "AI-Assisted Writing Across Medical Journals",
+            "year": 2022,
+            "value": "1.0%",
+            "source": "https://www.medrxiv.org/content/10.64898/2026.10.24.26366055v1",
+            "notes": "The study implies a 1.0% median prevalence of AI-generated text across sampled medical-journal abstracts in 2022. It sampled up to 200 abstracts per journal-year and used GPTZero with journal-specific thresholds calibrated to a 1% pre-AI false-positive rate. This row is an approximate median reconstructed from Figure 1 journal slices rather than a published volume-weighted 2022 aggregate.",
+            "publication_date": "2026-10-26"
         },
         {
             "series": "Balas et al. / ophthalmology manuscripts",
@@ -273,6 +297,14 @@
             "source": "https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf",
             "notes": "The paper estimates that 1.0% of sampled federal civil complaints filed in 2023 contained AI-generated text. It used the Pangram detector on 200 random complaints for the year after removing PACER boilerplate. The RECAP archive is incomplete and may undercount some filings.",
             "publication_date": "2026-05-21"
+        },
+        {
+            "series": "AI-Assisted Writing Across Medical Journals",
+            "year": 2023,
+            "value": "4.5%",
+            "source": "https://www.medrxiv.org/content/10.64898/2026.10.24.26366055v1",
+            "notes": "The study implies a 4.5% median prevalence of AI-generated text across sampled medical-journal abstracts in 2023. It sampled up to 200 abstracts per journal-year and used GPTZero with journal-specific thresholds calibrated to a 1% pre-AI false-positive rate. This row is an approximate median reconstructed from Figure 1 journal slices rather than a published volume-weighted 2023 aggregate.",
+            "publication_date": "2026-10-26"
         },
         {
             "series": "Bradshaw et al. / Seeking Alpha articles",
@@ -505,6 +537,14 @@
             "source": "https://arxiv.org/abs/2412.18148",
             "notes": "The study-year median across Medium, Quora, and Reddit put AI-generated social-media posts at 37.03% in 2024. The paper trained and selected an AIGT detector, then applied it to a 2.4 million post corpus spanning January 2022 to October 2024. This gives one value for a major social-content dataset, but it remains platform-bound and detector-dependent.",
             "publication_date": "2024-12-24"
+        },
+        {
+            "series": "AI-Assisted Writing Across Medical Journals",
+            "year": 2024,
+            "value": "12.0%",
+            "source": "https://www.medrxiv.org/content/10.64898/2026.10.24.26366055v1",
+            "notes": "The study implies a 12.0% median prevalence of AI-generated text across sampled medical-journal abstracts in 2024. It sampled up to 200 abstracts per journal-year and used GPTZero with journal-specific thresholds calibrated to a 1% pre-AI false-positive rate. This row is an approximate median reconstructed from Figure 1 journal slices rather than a published volume-weighted 2024 aggregate.",
+            "publication_date": "2026-10-26"
         },
         {
             "series": "arXiv computer science abstracts",
@@ -929,6 +969,14 @@
             "source": "https://aiforensics.org/uploads/GenAI%20Report.pdf",
             "notes": "AI Forensics estimated that 17.3% of top search results across TikTok and Instagram in June 2025 contained synthetic AI imagery. It manually annotated 2,100 search results collected in Spain, Germany, and Poland and then built a weighted aggregate from the report's country-level counts. This is a useful direct social-platform estimate, but it is query-based, image-focused, and tied to search results rather than all feed content.",
             "publication_date": "2025-07-31"
+        },
+        {
+            "series": "AI-Assisted Writing Across Medical Journals",
+            "year": 2025,
+            "value": "36.5%",
+            "source": "https://www.medrxiv.org/content/10.64898/2026.10.24.26366055v1",
+            "notes": "The study implies a 36.5% median prevalence of AI-generated text across sampled medical-journal abstracts in 2025. It sampled up to 200 abstracts per journal-year and used GPTZero with journal-specific thresholds calibrated to a 1% pre-AI false-positive rate. This row is an approximate median reconstructed from Figure 1 journal slices rather than a published volume-weighted 2025 aggregate.",
+            "publication_date": "2026-10-26"
         },
         {
             "series": "Deezer / new music uploads",
@@ -1553,6 +1601,14 @@
             "source": "https://postdom.com/research/ai-content-index",
             "notes": "At least 3.0% of recent TikTok posts from sampled small-business accounts were labeled as AI in October 2026. Postdom counted platform or creator AI labels on 260 of 8,633 posts from 300 accounts in 10 business types. This is a lower bound because labels capture disclosed or detected AI rather than all AI use.",
             "publication_date": "2026-10-11"
+        },
+        {
+            "series": "Revid / TikTok tracked-index sample",
+            "year": 2026,
+            "value": "8.2%",
+            "source": "https://www.revid.ai/case-studies/ai-generated-tiktok-share",
+            "notes": "Revid estimates that 8.2% of sampled 2026 TikToks in its tracked public index were AI-generated. It randomly sampled 3,964 indexed TikToks from January to November 2026 and had Gemini 3.8 Flash classify each video’s visual origin. The estimate is not platform-wide because Revid’s index follows tracked hashtags and keywords and only inspects the first 20 to 40 seconds.",
+            "publication_date": "2026-11-23"
         },
         {
             "series": "Robbes et al. / new GitHub projects with coding-agent adoption (2026)",
